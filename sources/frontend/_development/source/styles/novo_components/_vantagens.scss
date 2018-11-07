@@ -1,0 +1,168 @@
+.lp_controle_vantagens {
+
+    .container-vantagens {
+        padding-top: 80px;
+        padding-bottom: 61px;
+
+        @include mobile {
+            padding-top: 36px;
+        }
+
+        h1 {}
+
+        .grid_vantagens {
+            display: flex;
+            flex-wrap: wrap;
+
+            @include mobile {
+                margin-top: 20px;
+            }
+
+            .item_vantagens {
+                display: flex;
+                padding-right: 40px;
+                padding-top: 20px;
+                width: 50%;
+
+                @include mobile {
+                    padding-top: 20px;
+                    padding-right: 0px;
+                    margin-bottom: -13px;
+                }
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                .item_vantagens_info {
+                    width: 52%;
+
+                    h2 {
+                        margin-top: 48px;
+                        line-height: 25px;
+
+                        @include mobile {
+                            margin-top: 6px;
+                        }
+                    }
+
+                    p {
+                        line-height: 21px;
+                    }
+
+                    @include mobile {
+                        width: 60%;
+                    }
+                }
+
+                img {
+                    max-height: 127px;
+                    margin: auto;
+                    margin-top: 46px;
+                    margin-right: 32px;
+
+                    @include mobile {
+                        max-width: 136px;
+                        margin-left: 20px;
+                        height: auto;
+                    }
+                }
+
+                &.livre {
+                    img {
+                        margin-right: 24px;
+                        margin-top: 63px;
+
+                        @include mobile {
+                            margin-right: -10px;
+                            margin-top: 34px;
+                        }
+                    }
+                }
+
+                &.precio {
+
+                    .item_vantagens_info {
+                        @include desktop {
+                            margin-left: 8px;
+                        }
+                    }
+
+                    p {
+                        margin-right: -10px;
+                    }
+
+                    @include mobile {
+                        img {
+                            margin-top: 18px;
+                            max-width: 85px;
+                            margin-right: -10px;
+                        }
+                    }
+                }
+
+                &.internet {
+                    img {
+                        margin-right: 56px;
+                        margin-top: 43px;
+                        max-height: 100%;
+
+                        @include mobile {
+                            max-width: 109px;
+                            margin: auto;
+                            margin-left: 0px;
+                        }
+                    }
+
+                    h2 {
+                        margin-top: 44px;
+
+                        @include mobile {
+                            margin-top: 22px;
+                        }
+                    }
+
+                }
+
+                &.i4g {
+                    img {
+                        margin-right: 39px;
+
+                        @include mobile {
+                            margin-left: 36px;
+                            width: 96px;
+                            margin-top: 18px;
+                            margin-right: -13px;
+                        }
+                    }
+
+                    h2 {
+                        margin-top: 44px;
+
+                        @include mobile {
+                            margin-top: 3px;
+                            margin-right: -10px;
+                        }
+                    }
+
+                    .item_vantagens_info {
+                        @include desktop {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+
+                p {
+                    @include mobile {
+                        margin-right: -20px;
+                    }
+
+                    &:nth-child(2){
+                        margin-right: -23px;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,297 @@
+@import "../base/variables";
+@import "../mixins/media-queries";
+@import "../mixins/layout";
+@import "../mixins/border-radius";
+
+[id^='livechat']{
+	display: none;
+}
+
+.bussola_onpage {
+	
+	.hw-wrapper{
+		max-width: 1000px; 
+	}
+	overflow: visible;
+	.nova_bussola {
+		@include desktop(){
+			height: 190px;
+		}
+		overflow: visible;
+		position: static;
+		display: block;
+
+		.bussola_recomendations{
+			padding-left: 0;
+			padding-right: 0;
+			color: #fff;
+		}
+
+		.nova_bussola .bussola_recomendations-container{
+			display: inline;
+		}
+
+		.bussola_recomendations-container li{
+			color: #fff;
+			border-bottom-color: #fff;
+		}
+
+		.bussola_recomendations-container li:hover{
+			opacity: 0.7;
+		}
+
+		.container {
+			.bussola {
+				.title {			
+					font-size: 27px;
+				}
+				.icon-close{
+					display:none;
+				}
+			}
+		}
+
+		&-iconLocation{
+			float:left;
+			height:56px;
+			margin-right:1em;
+			background-image: url("../img/icon-location.png");
+			background-size:cover;
+			background-repeat:no-repeat;
+			width:41px;
+			
+			@media(max-width:480px){
+				display:none;
+			}
+		}
+
+		&-col {
+			@include desktop(){
+				float: left;
+			}
+		}
+		&-col-50 {
+			@include desktop(){
+				&:first-child{
+					width: 48%;
+				}
+				&:last-child{
+					width: 52%;
+				}
+			}
+		}
+		&_title{
+			padding: 20px;
+			&-confirme {
+				display: none;
+			}
+			&-informe {
+				font-weight: 300;
+				@include maxWidth(359) {
+					font-size: 22px !important;
+					small {
+						font-size: 22px !important;
+					}
+				}
+				.bussola_subtitle-info--city {
+					font-size: inherit;
+					// font-family: $font-bold;
+				}
+				span {
+					text-align: center;
+					@include desktop(){
+						float: left;
+						text-align: left;
+						width: calc(100% - 100px);
+					}
+				}
+				img{
+					width: 60px;
+					padding-right: 20px;
+					float: left;
+					display: none;
+				}
+				small{
+					font-size: 25px;
+					@include desktop(){
+						font-size: 18px;
+						// font-family: $font-regular;
+						font-weight: 100;
+						opacity: .7;
+					}
+				}
+			}
+		}
+		.container-ciudade {
+			overflow: visible;
+			background: transparent;
+		 	.bussola {
+				min-height: 100%;
+				height: 100%;
+				padding: 0;
+				&_subtitle {
+					&-text{
+						display: none;
+					}
+				}
+				#formBussola{
+					padding: 50px 0 0;
+					@media (max-width: 1023px){
+						padding: 20px 0 30px;
+					}
+					position: static;
+					transform: none;
+					.title {
+						@include max-width(767){
+							padding-top: 20px;
+							padding-bottom: 10px;
+							line-height: 1.2;
+						}
+					}
+					.bussola_autocomplete {
+						margin: 0;
+						&-icon {
+							@include max-width(767){
+								bottom: 16%;
+							}
+						}
+					}
+					.awesomplete {
+						width: 100px !important;
+						input {
+							width: 100% !important;
+						}
+					}
+					.awesomplete--pre-ul {
+						width: 100% !important;
+						left: 0;
+						top: 0;
+						box-shadow: 1px 3px 6px 0px rgba(134, 134, 134, 0.267);
+					}
+					ul {
+						@include desktop(){
+							padding: 0 10px;
+						}
+					}
+				}
+				#formBussola.confirm {
+					.bussola_autocomplete {
+						margin-top: 25px !important;
+						@include desktop(){
+							margin-top: 0 !important;
+							width: calc(100% - 170px);
+							padding-left: 20px;
+						}
+					}
+					#submit {
+						margin: auto;
+						margin-top: 15px;
+						@include desktop(){
+							margin-top: 0;
+							margin: 0;
+							float: right;
+							margin-left: 33px;
+							width: 137px;
+						}
+						width: 100%;
+						font-size: 14px;
+						padding: 7.5px;
+					}
+				}
+				background: transparent;		
+				.title {
+					color: #fff;
+					line-height: 1;
+					text-align: left;
+					@media(max-width:480px){
+						text-align:center;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.nova_bussola-sticky-footer{
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 79px;
+	background-color: $orange-dark;
+	z-index: 4;
+	&-content {
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+		&-text {
+			// font-family: ITCOfficinaSerifBold;
+			font-family: Roboto;
+			font-weight: 300;
+			font-size: 22px;
+			color: $white;
+			margin-top: 15px;  
+			margin-right: 10px;                  
+		}
+	}
+}
+@include max-width(767){
+	.nova_bussola-sticky-footer{
+		display: none;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 79px;
+		background-color: $orange-dark;
+		z-index: 4;
+		&-content {
+			width: 100%;
+			text-align: center;
+			padding: 10px;
+			position: relative;
+			&-text {
+				// font-family: "ITCOfficinaSerifBookRegular";
+				font-family: Roboto;
+				text-align: left;
+				font-weight: lighter;
+				font-size: 20px;
+				color: $white;
+				margin-top: 5px;  
+				margin-left: -40px;
+				margin-right: 10px;    
+				@media (max-width: 1023px){
+					margin-left: 0;
+				}              
+			}
+		}
+	
+		.nova_bussola-actions{
+			&__btn{
+				position: relative;
+				top: 0px;
+				// font-family: ITCOfficinaSerifBold;
+				font-family: Roboto;
+				font-weight: 300;
+				font-size: 16px;
+				border-radius: 5px;
+				margin-top: -15px;
+				padding: 15px 20px 15px 20px;
+				color: $gray-white;
+				margin-left: 20px;
+
+				@media (max-width: 1023px){
+					padding-left: 50px;
+					padding-right: 50px;
+					position: absolute;
+					right: 10px;
+					top: 15px;
+					transform: none;
+					margin: 0;
+				}
+			}
+		}
+	}
+}

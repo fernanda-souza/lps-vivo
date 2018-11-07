@@ -1,0 +1,111 @@
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: -255px;
+    // right: 0px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+
+    .mobile-ciudad {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-flow: row-reverse;
+        height: 40px;
+        margin-top: 20px;
+       
+        p {
+            margin: auto auto auto 10px;
+        }
+
+        img {
+            width: 10%;
+        }
+    }
+
+    ul {
+        margin-top: 40px;
+        list-style: none;
+        padding: 0 20px 0 20px;
+
+        li a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 19px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+            font-weight: 300;
+
+            &:hover,
+            &:active {
+                color: #660099;
+                ;
+            }
+        }
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 36px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding: 0px;
+        cursor: pointer;
+        font-weight: 300;
+        color: #660099;
+    }
+}
+
+.btn-menu-mobile {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+.barra-menu {
+    height: 80px;
+
+    img {
+        height: 33px;
+        margin: 25px 30px 30px 20px;
+    }
+
+    a {
+        img {
+            height: 20px;
+            margin: 0px;
+        }
+    }
+}
+
+@include mobile {
+    .sidenav {
+        padding-top: 15px;
+
+        a {
+            font-size: 18px;
+        }
+    }
+
+    .barra-menu {
+        img {
+            max-width: 70%;
+            height: auto;
+            max-height: 35px;
+        }
+    }
+}

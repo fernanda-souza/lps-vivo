@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'VIVO';
+    src: url('../fonts/VIVO-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VIVO-Bold.woff2') format('woff2'),
+        url('../fonts/VIVO-Bold.woff') format('woff'),
+        url('../fonts/VIVO-Bold.ttf') format('truetype'),
+        url('../fonts/VIVO-Bold.svg#VIVO-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ITCOfficinaSerifBold';
+    src: url("../fonts/officinaserif-bold-webfont.eot");
+    src: url("../fonts/officinaserif-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/officinaserif-bold-webfont.woff") format("woff"), url("../fonts/officinaserif-bold-webfont.ttf") format("truetype"), url("../fonts/officinaserif-bold-webfont.svg#ITCOfficinaSerifBold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ITCOfficinaSerifBookRegular';
+    src: url("../fonts/officinaserif-book-webfont.eot");
+    src: url("../fonts/officinaserif-book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/officinaserif-book-webfont.woff") format("woff"), url("../fonts/officinaserif-book-webfont.ttf") format("truetype"), url("../fonts/officinaserif-book-webfont.svg#ITCOfficinaSerifBookRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');

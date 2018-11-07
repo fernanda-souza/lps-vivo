@@ -1,0 +1,283 @@
+header {
+    background: white;
+    min-width: 100vw;
+    margin: auto;
+    position: fixed;
+    z-index: 999;
+    transition: ease-in-out 0.3s;
+    top: 0px;
+    z-index: 2;
+
+    &.relative {
+        position: relative !important;
+    }
+    &.fixo-show {
+        position: fixed;
+        animation-name: stickyshow;
+        animation-duration: 0.3s;
+        z-index: 10;
+    }
+
+    &.fixo-hide {
+        animation-name: stickyhide;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes stickyshow {
+        from {
+            top: -96px;
+        }
+
+        to {
+            top: 0px;
+        }
+    }
+
+    @keyframes stickyhide {
+        0% {
+            top: 0px;
+        }
+
+        50% {
+            top: -96px;
+        }
+
+        100% {
+            position: absolute;
+            top: 0px;
+        }
+    }
+
+    .container-header {
+        display: flex;
+        height: 96px;
+        align-content: center;
+        padding-right: 0px;
+
+        @include mobile {
+            height: 65px;
+            padding: 0 30px;
+            justify-content: space-between;
+
+            @media( max-width: 320px ){
+                padding-left: 20px;
+            }
+        }
+
+        @include desktop-md {
+            justify-content: space-around;
+        }
+
+        @include tablet {
+            justify-content: space-around;
+        }
+
+        .logo-vivo {
+            width: 201px;
+            align-self: center;
+            min-width: 201px;
+            margin-bottom: 5px;
+
+            @include mobile {
+                width: 151px;
+                min-width: 151px;
+                margin: 0px;
+                padding: 0px;
+
+                @media( max-width: 320px ){
+                    min-width: 121px;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            align-content: center;
+            list-style-type: none;
+            margin-bottom: 5px;
+
+            @include desktop {
+                margin-left: 60px;
+                margin-right: 6px;
+            }
+
+            &.only-desktop {
+                @include max-width(1023) {
+                    display: none;
+                }
+            }
+
+            li {
+                margin-right: 17px;
+                display: flex;
+                align-items: center;
+
+                a {
+                    font-size: 14px;
+                    color: #9B9B9B;
+                }
+            }
+
+        }
+
+        .menu-planos {
+            display: flex;
+        }
+
+        .ver-planos {
+
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: white;
+            background: #660099;
+            border: none;
+            padding: 0px;
+            height: 40px;
+            align-self: center;
+            width: 144px;
+            margin-top: 6px;
+            line-height: 40px;
+            text-align: center;
+
+            @include mobile {
+                font-size: 12px;
+                width: 92px;
+                height: 32px;
+                padding: 0;
+                margin-left: 28px;
+                margin-top: 0;
+                line-height: 32px;
+            }
+        }
+
+        .ciudad {
+            justify-content: right;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            padding-left: 16px;
+            padding-top: 12px;
+
+            @include desktop {
+                margin-left: 54px;
+            }
+
+            @include desktop-md {
+                display: none !important;
+            }
+
+            @include tablet {
+                display: none !important;
+            }
+
+            p {
+                height: auto;
+                font-weight: 600;
+                color: #660099;
+                float: left;
+                font-size: 14px;
+
+            }
+
+            img {
+                width: 22px;
+                height: 22px;
+                margin-left: 6px;
+                float: left;
+            }
+        }
+
+    }
+
+    .actual-location {
+        background: #f6f6f6;
+        display: none;
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center;
+
+        img {
+            height: 18px;
+            width: 18px;
+            margin-right: 10px;
+        }
+    }
+
+    .modal-locations {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        top: 0px;
+        z-index: 9999999999;
+        display: none;
+
+        .modal-locations-header {
+            display: flex;
+            margin: 20px 10px;
+            flex-wrap: wrap;
+
+            .modal_title {
+                display: flex;
+                align-items: center;
+                margin: 0 15px 30px 15px;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+
+                h2 {
+                    margin: 0px;
+
+                    @include mobile {
+                        display: inline-block;
+                        width: 100%;
+                        vertical-align: top;
+                    }
+
+                }
+
+                img {
+                    margin-right: 10px;
+                    width: 20px;
+                }
+
+                .back_button {
+                    width: 40px;
+                    height: 45px;
+                    padding: 10px;
+                }
+            }
+
+            .bussola_enter_location {
+                width: 90%;
+
+                ul {
+                    border: none;
+                    box-shadow: none;
+                    margin-top: 20px;
+
+                    li {
+                        padding-left: 0px;
+                        margin: 0px 5px 0px 31px;
+                        font-size: 15px !important;
+                        color: #a8a8a8 !important;
+                        border: none;
+                        line-height: 32px;
+
+                        @include tablet {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .icon-close {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
+}

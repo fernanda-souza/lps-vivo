@@ -1,0 +1,74 @@
+html, body{
+    font-family: "Roboto";
+    overflow-x: hidden;
+}
+.section__wrapper, header{
+    padding: 0px !important;
+    background-color: #f8f8f8;
+    // max-width: 1224px !important;
+    margin: auto;
+}
+
+.container-box{
+    width: 100%;
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 140px;
+
+    @include mobile{
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    @include tablet{
+        width: 100%;
+        padding: 0 60px;
+    }
+
+    @include desktop-md{
+        width: 100%;
+        padding: 0 60px;
+    }
+
+}
+
+.only-desktop{
+    @include mobile{
+        display: none !important;
+    }
+}
+
+.only-mobile{
+    @include desktop{
+        display: none !important;
+    }
+}
+
+@include min-mobile{
+    br{
+        display: none !important;
+    }
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 300;
+
+    @include mobile{
+        font-size: 32px;
+    }
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+p{
+    font-size: 16px;
+    color: #888888;
+}
+
+
+$sections-padding: 60px 120px;

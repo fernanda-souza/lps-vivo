@@ -1,0 +1,716 @@
+.lp_controle_conteudos {
+    .conteudos {
+        h1 {
+            padding-bottom: 46px;
+            padding-top: 5px;
+
+            @include desktop {
+                padding-top: 28px;
+            }
+
+            @include mobile {
+                font-size: 36px;
+                padding-bottom: 22px;
+            }
+
+            @include min-mobile {
+                font-size: 27px;
+                margin-top: 18px;
+            }
+        }
+
+        .container-whatsapp {
+            background-color: #25d366;
+
+            .inner-whatsapp {
+                display: flex;
+                padding-bottom: 0px;
+                position: relative;
+                background-image: url(../img/novo/icons/whatsapp_logo.svg);
+                background-repeat: no-repeat;
+                background-size: 644px 644px;
+                background-position: 510px -117px;
+
+                @include mobile {
+                    display: block;
+                    background-image: none;
+                }
+
+                .logo-whatsapp {
+                    width: 60%;
+                    position: absolute;
+                    right: 0;
+                    display: none;
+
+                    img {
+                        @include tablet {
+                            max-height: 652px;
+                            justify-self: right;
+                            margin-top: -19px;
+                            margin-left: 111px;
+                        }
+
+                        max-height: 644px;
+                        justify-self: right;
+                        margin-top: -117px;
+                        margin-left: 22px;
+                    }
+                }
+
+                .info-whatsapp {
+                    padding-top: 28px;
+                    width: 40%;
+
+                    @include mobile {
+                        width: 100%;
+                        padding-top: 45px;
+                    }
+
+                    h2 {
+                        color: white;
+                        font-weight: 600;
+
+                        @include desktop {
+                            font-size: 33px;
+                            margin-bottom: 15px;
+                        }
+
+                        @include mobile {
+                            margin-top: 0px;
+                        }
+                    }
+
+                    p {
+                        color: #075e54;
+                        line-height: 22px;
+                    }
+
+                    .features-whatsapp {
+                        display: flex;
+                        flex-flow: row;
+                        margin-top: 34px;
+                        flex-wrap: wrap;
+
+                        @include mobile {
+                            justify-content: center;
+                            margin: 30px 0;
+                            margin-top: 43px;
+                        }
+
+                        .feature-item-whatsapp {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 26px;
+                            width: 100%;
+
+                            @include mobile {
+                                width: auto;
+                                text-align: center;
+                                display: block;
+                                min-width: 23%;
+                                align-self: baseline;
+                            }
+
+                            @include min-mobile {
+                                max-width: 25%;
+                            }
+
+                            img {
+                                margin: 0px;
+                                margin-right: 23px;
+                                width: 34px;
+                                margin-left: 4px;
+                                align-self: center;
+
+                                @include mobile {
+                                    margin-right: 0px;
+                                    margin-bottom: 10px;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                img {
+                                    width: 22px;
+                                    margin-left: 10px;
+                                    margin-top: -4px;
+
+                                    @include mobile {
+                                        margin-top: auto;
+                                        margin-left: auto;
+                                    }
+                                }
+
+                                p {
+                                    margin-left: 10px;
+
+                                    @include mobile {
+                                        margin-left: auto;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                img {
+                                    width: 41.11px;
+                                    margin-top: -7px;
+                                    margin-left: -1px;
+                                }
+
+                                @include mobile {
+                                    margin-top: auto;
+                                    margin-left: 0px;
+                                }
+                            }
+
+                            p {
+                                color: #075e54;
+
+                                @include min-mobile {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .image-whatsapp {
+                    width: 60%;
+
+                    @include mobile {
+                        width: 100%;
+                        text-align: center;
+                        margin-top: -41px;
+                        max-height: 383px;
+                        overflow: hidden;
+                    }
+
+                    img {
+                        max-height: 484px;
+                        justify-self: left;
+                        margin-left: -72px;
+                        margin-top: -33px;
+
+                        @include tablet {
+                            max-height: 484px;
+                            justify-self: left;
+                            margin-left: -72px;
+                            margin-top: -33px;
+                        }
+
+                        @include mobile {
+                            width: 260px;
+                            margin: 0 auto;
+                            position: relative;
+                            margin-bottom: -75px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-gigas {
+            background: #e4e4e4;
+
+            &:after {
+                content: "";
+                display: block;
+                margin: 0 auto;
+                width: 80%;
+                padding-top: 20px;
+                border-bottom: 1px solid #888888;
+            }
+
+            .container-gigas {
+                display: flex;
+                padding-top: 50px;
+                padding-bottom: 57px;
+
+                @include tablet {
+                    flex-wrap: wrap;
+                }
+
+                @include mobile {
+                    display: block;
+                    padding-top: 60px;
+                    padding-bottom: 45px;
+                }
+
+                .image-gigas {
+                    margin-top: -18px;
+                    margin-right: -13px;
+
+                    @include mobile {
+                        margin-top: 30px;
+                    }
+
+                    @include tablet {
+                        width: 100%;
+                    }
+
+                    @include desktop-md {
+                        width: 50%;
+                    }
+
+                    img {
+                        max-width: 100%;
+
+                        @include desktop {
+                            width: 456px;
+                            margin-left: 28px;
+                            margin-top: 63px;
+                        }
+                    }
+                }
+
+                .slider-gigas {
+                    // margin: 30px -30px 0px 30px;
+                    margin-left: -15px;
+                    margin-right: -31px;
+
+                    .image-gigas {
+                        width: 275px;
+
+                        img {
+                            align-self: center;
+                            max-width: 100%;
+                            // width: 544px;
+                            margin: auto;
+                            width: 208px;
+                            margin-top: 31px;
+                        }
+                    }
+
+                    .image-gigas.slick-slide {
+                        img {
+                            margin-left: -5px;
+                            transition: ease-in-out 0.3s;
+                            transform: scale(0.77);
+                            transform-origin: left 333px;
+                        }
+                    }
+
+                    .image-gigas.slick-slide.slick-current {
+                        // img {
+                        //     margin-left: auto;
+                        //     transform: none;
+                        // }
+                    }
+
+                    .slick-dots {
+                        bottom: -38px;
+                    }
+                }
+
+                .info-gigas {
+                    width: 50%;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+
+                    @include tablet {
+                        width: 100%;
+                    }
+
+                    @include desktop {
+                        width: 40%;
+                    }
+
+                    @include desktop-md {
+                        width: 50%;
+                    }
+
+                    .inner-gigas-info {
+                        width: 100%;
+
+                        h2 {
+                            font-weight: 400;
+                            font-size: 32px;
+
+                            @include desktop {
+                                margin-bottom: 16px;
+                            }
+                        }
+
+                        @include mobile {
+                            width: 100%;
+                        }
+
+                        p {
+                            line-height: 24px;
+                        }
+
+                        .features-gigas {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-top: 10px;
+                            width: 80%;
+
+                            @include tablet {
+                                margin: 0 auto;
+                                width: 40%;
+                                margin-bottom: 50px;
+                            }
+
+                            @include mobile {
+                                margin-top: 16px;
+                                margin-left: -16px;
+                                width: 100%;
+                            }
+
+                            .feature-item-gigas {
+                                width: 50%;
+                                padding: 20px 40px 12px 0px;
+
+                                @include mobile {
+                                    margin-right: 0px;
+                                    padding: 20px;
+                                    text-align: center;
+                                }
+
+                                img {
+                                    margin: 0px;
+                                    align-self: center;
+                                    width: auto;
+                                    align-self: center;
+                                    justify-self: center;
+                                    max-width: 107px;
+
+                                    @include mobile {
+                                        margin-right: 0px;
+                                    }
+                                }
+
+                                .netflix_logo {
+                                    margin-left: 7px;
+                                    margin-top: 4px;
+                                    width: 96px;
+                                    max-width: 100%;
+                                }
+
+                                .youtube_logo {
+                                    margin-left: 21px;
+                                    margin-top: 4px;
+                                    margin-right: -15px;
+
+                                    @include mobile {
+                                        margin-left: 8px;
+                                        margin-top: 4px;
+                                        margin-right: -6px;
+                                    }
+                                }
+
+                                .tidal_logo {
+                                    margin-left: 10px;
+                                    margin-right: -28px;
+                                    max-width: 1000px;
+                                    margin-top: 10px;
+                                    max-width: 126px;
+
+                                    @include mobile {
+                                        margin-left: 3px;
+                                        margin-right: -9px;
+                                        max-width: 128px;
+                                        margin-top: 7px;
+                                    }
+                                }
+
+                                &.vivo_musica_item {
+                                    width: 100%;
+                                    text-align: center;
+
+                                    .vivo_musica {
+                                        width: 212px;
+                                        max-width: inherit;
+                                        margin: 5px 0 0 39px;
+                                    }
+                                }
+
+                                .spotify_logo {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-aplicativos {
+            display: flex;
+            flex-wrap: wrap;
+
+            @include tablet {
+                display: block;
+                margin-top: 39px;
+            }
+
+            @include mobile {
+                display: block;
+                margin-top: 39px;
+            }
+
+            @include desktop {
+                margin-top: 84px;
+            }
+
+            .info-aplicativos {
+                width: 40%;
+
+                h2 {
+                    @include desktop {
+                        margin-top: 4px;
+                    }
+                }
+
+                @include mobile {
+                    width: 100%;
+                    margin-bottom: 46px;
+                }
+
+                @include tablet {
+                    width: 100%;
+                }
+            }
+
+            .slider-aplicativos {
+
+                .slick-track {
+                    transition: transform ease-out 0.5s;
+                    height: 142px;
+                }
+
+                @include desktop {
+                    width: 60%;
+                    max-width: 550px;
+                    padding-top: 9px;
+                    padding-left: 23px;
+                    padding-right: 40px;
+                    height: 152px;
+                    margin-bottom: 20px;
+                }
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {
+                    margin: -7px -30px 6px -30px;
+                    min-height: 193px;
+                }
+
+                .item-aplicativos {
+                    width: 128px;
+                    height: 128px;
+                    display: block;
+                    align-items: center;
+                    justify-content: center;
+                    transition: ease-in-out 0.3s;
+                    padding: 0px;
+                    cursor: pointer;
+
+
+                    @include desktop {
+                        margin-right: -28px;
+                        // width: 64px;
+                        // width: 142px;
+                        // height: 142px;
+                        width: 71px;
+                        height: 71px;
+                        // transform: scale(0.49);
+                        transition: ease-in-out 0.3s;
+
+                        // &.slick-active[data-slick-index="1"]{
+                        //     transform: translateX( 0 ) scale(0.49);
+                        // }
+                        // &.slick-active[data-slick-index="2"]{
+                        //     transform: translateX( -26px ) scale(0.49);
+                        // }
+                        // &.slick-active[data-slick-index="3"]{
+                        //     transform: translateX( -78px ) scale(0.49);
+                        // }
+                        // &.slick-active[data-slick-index="4"]{
+                        //     transform: translateX( -104px ) scale(0.49);
+                        // }
+                        // &.slick-active[data-slick-index="5"]{
+                        //     transform: translateX( -130px ) scale(0.49);
+                        // }
+                        // &.slick-active[data-slick-index="6"]{
+                        //     transform: translateX( -156px ) scale(0.49);
+                        // }
+
+                        &:nth-child(5) {
+                            transition: ease 0.6s;
+                        }
+
+                        img {
+                            display: block;
+                            width: 64px;
+                            margin: auto;
+                            // transform: translateX( 16px );
+                        }
+                    }
+
+                    @include mobile {
+                        width: 194px;
+                        height: 194px;
+                    }
+
+                    .image-aplicativos {
+                        // justify-self: left;
+                        // max-height: 400px;
+                        // margin: 50px;
+                        max-width: 100%;
+                        width: 128px;
+                        height: 128px;
+                        // width: 64px;
+                        // height: 64px;
+                        transition: ease-in-out 0.3s;
+                        // transform: translateX( -64px );
+
+
+                        @include desktop {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        @include mobile {
+                            // justify-self: center;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .slick-dots {
+                    bottom: -191px;
+                    z-index: 2;
+
+                    @include mobile {
+                        bottom: -168px;
+                    }
+
+                    @include min-mobile {
+                        bottom: -205px;
+                    }
+
+                    @include desktop {
+                        display: none !important;
+                    }
+                }
+
+                .item-aplicativos.slick-slide.slick-current {
+                    @include tablet {
+                        transform: none;
+                    }
+
+                    @include mobile {
+                        transform: scale(1.1);
+
+                        img {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    @include desktop {
+                        width: 142px;
+                        height: 142px;
+                        margin-top: 0;
+                        // margin: 0px -26px;
+                        // margin-right: 9px;
+                    }
+                }
+
+                .item-aplicativos.slick-slide {
+                    @include mobile {
+                        transform: scale(0.5);
+                        transform-origin: center;
+
+                        img {
+                            margin-top: -17px;
+                        }
+                    }
+
+                    @include tablet {
+                        transform: scale(0.7);
+                        transform-origin: right;
+                    }
+
+                    @include desktop {
+                        margin: 34px 13px 0 0;
+                        transform: translateX(-170px);
+                    }
+
+                    img {
+                        margin: auto;
+                    }
+                }
+
+                .large-icon {
+                    // transform: translateX( 26px ) scale(1, 1);
+                    width: 142px;
+                    height: 142px;
+
+                    img {
+                        margin: auto;
+
+                        // width: 64px;
+                        // height: 64px;
+                        @include desktop {
+                            width: 142px;
+                            height: 142px;
+                            padding: 0px;
+                            // transform: scale( 2 , 2 );
+                            // transform-origin: 0 50%;
+                            // margin-right: 32px;
+                        }
+                    }
+
+                    .image-aplicativos {
+                        // width: 64px;
+                        // height: 64px;
+                        width: 128px;
+                        height: 128px;
+                        // transition: width 1s height 1s;
+
+                        @include desktop {
+                            width: 142px;
+                            height: 142px;
+                        }
+                    }
+                }
+            }
+
+            .aplicativo-info {
+                width: 58%;
+                margin-top: 0px;
+                margin-left: auto;
+                margin-bottom: 60px;
+                padding-left: 5px;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {
+                    width: 100%;
+
+                    margin-left: -4px;
+                    margin-top: -30px;
+                }
+
+                h2 {
+                    margin: 0;
+                }
+
+                p {
+                    margin: 16px 0;
+                    line-height: 25px;
+                }
+
+                a {
+                    color: #660099;
+                }
+            }
+        }
+    }
+}

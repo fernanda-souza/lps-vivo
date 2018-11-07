@@ -1,0 +1,62 @@
+.lp_controle_4g {
+    margin-top: 80px;
+
+    @include mobile {
+        margin-top: 102px;
+    }
+
+    hr {
+        margin: 0 112px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+
+        @include mobile {
+            margin: 0 30px;
+        }
+    }
+
+    .container-4g {
+        padding-bottom: 32px;
+
+        h2 {
+            margin-top: 41px;
+        }
+
+        .grid-4g {
+            display: flex;
+            margin-top: 34px;
+
+            @include mobile {
+                display: block;
+            }
+
+            .item-4g {
+                width: 25%;
+                margin-right: 20px;
+
+                @include mobile {
+                    display: flex;
+                    width: 100%;
+                    align-content: center;
+                    margin-top: 17px;
+                }
+
+                p {
+                    font-size: 14px;
+                    
+                    @include mobile {
+                        line-height: 40px;
+                        margin-left: 20px;
+                        
+                    }
+                }
+
+                img {
+                    margin-bottom: 10px;
+                    width: 32px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

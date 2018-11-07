@@ -1,0 +1,39 @@
+<header id="header" class="container-box">
+    <div class="container-header container-box">
+        <img alt="logo vivo" title="logo vivo" class="logo-vivo" src="img/novo/icons/logo_vivo.svg" />
+        <ul class="only-desktop">
+            <li><a id="ventagens-link" class="anchor" goTo="#vantagens" href="#" data-analytics-id="menu-header" data-analylitcs-item="vantagens">Vantagens</a></li>
+            <li><a id="exlusivo-link" class="anchor" goTo="#conteudos" href="#" data-analytics-id="menu-header" data-analylitcs-item="conteudos-exclusivos">Conteúdos
+                    Exclusivos</a></li>
+            <li><a id="duvidas-link" class="anchor" goTo="#duvidas" href="#" data-analytics-id="menu-header" data-analylitcs-item="duvidas">Dúvidas</a></li>
+        </ul>
+        <div class="menu-planos">
+            <a data-action="anchor" data-target="planos" class="ver-planos" goTo="#planos" href="#" data-analytics-id="click-cta"
+                data-analytics-product-name="planos" data-analytics-position="menu-superior" data-analytics-sku="undefined"
+                data-analytics-label="ver-planos">VER PLANOS</a>
+            <a class="btn-menu-mobile only-tablet">
+                <img alt="" src="img/novo/icons/icon-menu.svg" width="18" height="18" alt="ícone de menu" title="ícone de menu">
+            </a>
+        </div>
+        <a class="ciudad only-desktop">
+            <p>Qual a sua localização?</p>
+            <img alt="icon location" src="img/novo/icons/icon_location.svg" alt="ícone de localização" title="ícone de localização" />
+        </a>
+        <div class="bussola_link">
+            </li>{% include "novo_components/bussolaInput.html" %}</div>
+    </div>
+    <!-- <div class="actual-location only-tablet">
+        <img class="ofertas-pra" alt="ícone de localização" title="ícone de localização" src="img/novo/icons/icon_location.svg" />
+        <p class="ofertas-pra">Ofertas para: <span id="city-mob"></span></p>
+    </div> -->
+    <div class="modal-locations only-tablet">
+        <div class="modal-locations-header">
+            <div class="modal_title">
+                <img src="img/novo/icons/icon_location_b.svg" alt="ícone de localização" title="ícone de localização" />
+                <img class="back_button" src="img/bussola/input/arrow-back.svg" alt="ícone de retorno" title="ícone de retorno">
+                <h2>Informe sua cidade</h2>
+            </div>
+            <div class="bussola_enter_location"></div>
+        </div>
+    </div>
+</header>

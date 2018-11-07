@@ -1,0 +1,186 @@
+.lp_controle_faq {
+    background: white;
+    margin-top: 36px;
+    padding-bottom: 40px;
+
+    .container-faq {
+        padding-top: 36px;
+        position: relative;
+
+        h2 {
+            margin-top: 41px;
+        }
+
+        .container-items-faq {
+            width: 67%;
+
+            @include tablet {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            @include mobile {
+                width: 100%;
+                margin-top: 42px;
+            }
+
+            .item-faq {
+                margin-bottom: 15px;
+
+                margin-bottom: 0px;
+                border-bottom: 1px solid #DDDDDD;
+                margin-top: 10px;
+
+
+                .item-title {
+                    display: flex;
+                    flex-wrap: wrap;
+                    height: 50px;
+
+                    @include mobile {
+                        height: 100%;
+                        min-height: 50px;
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 300;
+                        margin: 0px;
+                        line-height: 50px;
+                        cursor: pointer;
+
+                        @include mobile {
+                            width: 89%;
+                            font-size: 14px;
+                            line-height: 19px;
+                            min-height: auto;
+                            align-self: center;
+                        }
+                    }
+
+                    .arrow-down {
+                        background-image: url("../img/novo/icons/faq_arrow_down.svg");
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                        height: 24px;
+                        width: 24px;
+                        transition-duration: 0.3s;
+                        transition-property: transform;
+                        align-self: center;
+
+
+                        @include desktop {
+                            margin-left: auto;
+                        }
+
+                        @include mobile {
+                            margin-left: auto;
+                            align-self: center;
+                            margin-left: 7px;
+                        }
+
+                        @include min-mobile {
+                            margin-left: 0px;
+                        }
+                    }
+
+                    .open {
+                        transform: rotate(180deg);
+                        background-image: url("../img/novo/icons/faq_arrow_up.svg");
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                        height: 24px;
+                        width: 24px;
+                    }
+
+                }
+
+                .item-content {
+                    display: none;
+
+                    p {
+                        width: 88%;
+                        font-weight: 300;
+                        font-size: 14px;
+                        margin-top: 9px;
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                    }
+
+                    ul li{
+                        width: 88%;
+                        font-weight: 300;
+                        font-size: 14px;
+                        margin-top: 9px;
+                        line-height: 24px;
+                        color: #888;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .link-legal  {
+                margin-bottom: 20px;
+                margin-top: 62px;
+                text-decoration: underline;
+                font-size: 12px;
+                color: #888888;
+                display: block;
+            }
+
+            .info-faq {
+                p {
+                    font-size: 12px;
+                    margin-top: 16px;
+
+                    @include desktop{
+                        padding: 25px 0px;
+                        line-height: 16px;
+                        padding-bottom: 15px;
+                    }
+
+                    @include mobile {
+                        line-height: 15px;
+                        padding: 25px 0px;
+                        padding-bottom: 15px;
+                    }
+
+                    &:nth-child(1) {
+                        @include mobile {
+                            margin-top: 24px;
+                        }
+                    }
+
+                    a {
+                        display: inline;
+                    }
+
+                }
+
+                a {
+                    margin-bottom: 90px;
+                    margin-top: 48px;
+                    text-decoration: underline;
+                    font-size: 12px;
+                    color: #888888;
+                    display: block;
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    border-bottom: 1px solid #DDDDDD;
+                    width: calc(100% - 280px);
+                    max-width: 1224px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    @include mobile{
+                        width: calc(100% - 60px);
+                    }
+                }
+            }
+        }
+
+    }
+}
