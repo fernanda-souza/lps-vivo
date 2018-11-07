@@ -644,6 +644,7 @@ class Compass {
             timeout: 4000,
             success: function(data) {
                 // data.City = "São Paulo";
+                // data.City = "";
                 _this.processGeolocationData( callback , data.City );
             },
             error: function(error) {
