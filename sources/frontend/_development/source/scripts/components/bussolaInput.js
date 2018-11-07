@@ -23,7 +23,7 @@ class BussolaInput {
         this.getcookie_ddd = getcookie_ddd = this.helpers.getCookie('controle_ddd');
         this.getcookie_estado = getcookie_estado = this.helpers.getCookie('controle_estado');
 
-        this.SharedFunctions.initCompass();
+        this.SharedFunctions.initCompass( true );
         this.createPrediction();
         this.checkCookie();
         this.eventListeners();
@@ -112,9 +112,9 @@ class BussolaInput {
         var _this = this;
 
         setTimeout(setCidade, 1000);
-        $(window).on('showBussolaInput' , ( e ) =>{
-            switchModalOnMob();
-        });
+        // $(window).on('showBussolaInput' , ( e ) =>{
+        //     switchModalOnMob();
+        // });
         $('.ciudad').on('click', switchModalOn);
         $('.icon-close').on('click', bussolaOff);
         $('#autocomplete_input').on('focus', reOpenPredictions);
@@ -150,6 +150,9 @@ class BussolaInput {
             $('.bussola_link').show();
             $('#autocomplete_input').focus();
             var datalayer = new DataLayer()
+            _this.getcookie_cidade = decodeURI(_this.helpers.getCookie('controle_cidade'));
+            _this.getcookie_estado = decodeURI(_this.helpers.getCookie('controle_estado'));
+            _this.getcookie_ddd = decodeURI(_this.helpers.getCookie('controle_ddd'));
             datalayer.sendDataLayerLocation('alter-city-compass', _this.getcookie_estado, _this.getcookie_cidade, _this.getcookie_ddd);
         }
 
@@ -164,6 +167,13 @@ class BussolaInput {
                 $('.bussola_onmodal_input').show();
                 $('#autocomplete_input').focus();
                 e.stopImmediatePropagation();
+
+                var datalayer = new DataLayer()
+                _this.getcookie_cidade = decodeURI(_this.helpers.getCookie('controle_cidade'));
+                _this.getcookie_estado = decodeURI(_this.helpers.getCookie('controle_estado'));
+                _this.getcookie_ddd = decodeURI(_this.helpers.getCookie('controle_ddd'));
+                datalayer.sendDataLayerLocation('alter-city-compass', _this.getcookie_estado, _this.getcookie_cidade, _this.getcookie_ddd);
+
             }
         }
 
@@ -186,6 +196,13 @@ class BussolaInput {
                 $('.bussola_onmodal_input', '.bussola_link').hide();
                 $('.ciudad').show();
                 $("#triggerAssistant").show();
+
+                var datalayer = new DataLayer()
+                _this.getcookie_cidade = decodeURI(_this.helpers.getCookie('controle_cidade'));
+                _this.getcookie_estado = decodeURI(_this.helpers.getCookie('controle_estado'));
+                _this.getcookie_ddd = decodeURI(_this.helpers.getCookie('controle_ddd'));
+                datalayer.sendDataLayerLocation('select-city-compass', _this.getcookie_estado, _this.getcookie_cidade, _this.getcookie_ddd);
+
             }
         }
 

@@ -259,7 +259,9 @@ class Functions {
         }else{
             let datalayer = new DataLayer();
             if(value){
-                datalayer.sendDataBussola('show-compass', location.estado, location.ciudad, location.ddd);
+                let ciudad = location.ciudad.split("-")[0];
+                ciudad = ciudad.substr( 0 , ciudad.length-1 );
+                datalayer.sendDataBussola('show-compass', location.estado, ciudad, location.ddd);
             }else{
                 datalayer.sendDataBussola('show-compass', undefined, undefined, undefined);
             }
@@ -889,9 +891,9 @@ class Functions {
             $('#city-mob').text(cidade);
             $('.mobile-ciudad').find('p').text(cidade + '-' + estado);
             $('.mobile-ciudad').css('display', 'flex');
-            $('.mobile-ciudad').on('click', () => {
-                $(window).trigger( "CHANGE_LOCATION" );
-            });
+            // $('.mobile-ciudad').on('click', () => { //DUPLICATED
+            //     $(window).trigger( "CHANGE_LOCATION" );
+            // });
         }
 
         //se debe disparar al click en botón confirmar, no al seleccionar la ciudad
