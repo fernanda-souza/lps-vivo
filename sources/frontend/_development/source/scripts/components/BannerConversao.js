@@ -33,7 +33,7 @@ class BannerConversao extends Banner {
                         <img src="img/novo/icons/icon-ligacoes-big.png">
                     </div>
                     <div class="promo-text-consideracao2">
-                        <span>WHATSAPP E LIGAÇOES</span>
+                        <span>WHATSAPP E LIGAÇÕES</span>
                         <span>ILIMITADAS</span>
                     </div>
                 </div>
@@ -43,8 +43,8 @@ class BannerConversao extends Banner {
                         <span class="partir">Por apenas</span>
                         <div class="preco">
                             <span class="preco">R$</span>
-                            <span class="preco">49</span>
-                            <span class="subprice">,99</span> 
+                            <span class="preco">49,</span>
+                            <span class="subprice">99</span> 
                             <span> <span style="font-family:Arial;">/</span>mês </span>
                         </div>
                         <p data-target="franquia">No plano controle <span class="internet-gb">2,5GB</span></p>
