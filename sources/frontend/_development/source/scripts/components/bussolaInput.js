@@ -180,7 +180,6 @@ class BussolaInput {
     
 
         function switchModalOff(e, self) {
-            
             if( $(e.target).parent().parent().hasClass("bussola_hideonloading_input")){
                 self.setCurrentCity(e.text.label);
                 $('.bussola_onmodal_input', '.bussola_link').hide();

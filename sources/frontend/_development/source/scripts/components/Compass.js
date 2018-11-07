@@ -373,6 +373,7 @@ class Compass {
         $("#autocomplete").on("focus", bussolaModalMobile); 
                         
         $(_inputComplete).on("click", ()=> {
+            window.citySelected = false;
             $("#triggerAssistant").hide();
             this.setDefaultRecomendations();
             this.setDefaultRecomendationsMobileOnly();
@@ -432,7 +433,7 @@ class Compass {
     
         window.addEventListener("awesomplete-selectcomplete", (e) => {
             window.regionalizationFirstTime = false;
-            this.setCurrentCity(e.text.label);
+            this.setCurrentCity(e.text.label , true);
         }, false);
 
 
@@ -469,7 +470,7 @@ class Compass {
         $("html, body").animate({scrollTop: elTop - this.sectionsOffset}, speed);
     }
 
-    setCurrentCity(cityLabel){
+    setCurrentCity(cityLabel , preventHideBussola){
         $('#autocomplete_input').val('');
         var estado, cidade, ddd;
         var id = this.cities.cidades.filter((element,index)=>{
@@ -490,9 +491,9 @@ class Compass {
         if (!window.citySelected) {
             this.sendDataCityToDB(cidade);
         }
-        this.setCookie(estado, cidade, ddd);
+        this.setCookie(estado, cidade, ddd , preventHideBussola);
         window.citySelected = true;
-
+        this.hideBussolaList();
     }
 
     /**
@@ -564,7 +565,7 @@ class Compass {
         }
     }
 
-    setCookie(estado, cidade, ddd) {
+    setCookie(estado, cidade, ddd , preventHideBussola) {
         cookie_estado = "controle_estado=" + estado + ";path=/";
         cookie_cidade = "controle_cidade=" + encodeURI(cidade.split(' - ')[0]) + ";path=/";
         cookie_ddd = "controle_ddd=" + ddd + ";path=/";
@@ -575,7 +576,7 @@ class Compass {
         document.cookie = cookie_ddd;
         document.cookie = cookie_recomendation;
 
-        this.initRegionalization(estado, cidade);
+        this.initRegionalization(estado, cidade , ddd , preventHideBussola);
     }
 
     getWindowSize() {
@@ -758,9 +759,12 @@ class Compass {
         $(label).find('p').text(cidade)
     }
 
-    initRegionalization(estado, cidade, ddd) {
+    initRegionalization(estado, cidade, ddd , preventHideBussola) {
         $('.container-planos .container-box').remove();
-        $('.container_modal').remove();
+        if( !preventHideBussola ){
+            $('.container_modal').remove();
+            // $(this.bussolaSelector).hide();
+        }
         var helpers = new Helpers();
         this.setLabelCity(cidade);
         $('.plans').show();
@@ -775,7 +779,6 @@ class Compass {
         $('.bussola_onmodal_input', '.bussola_link').hide();
         $('#btn_cidade').show();
         $('.label').on('click', this.SharedFunctions.MobileOpenModal);
-        $(this.bussolaSelector).hide();
         $('[data-target="legal-planos"]').show();
         $(".actual-location.only-tablet").css('display','flex');
 

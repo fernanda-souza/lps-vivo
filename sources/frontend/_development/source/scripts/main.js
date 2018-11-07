@@ -16,6 +16,7 @@ import MenuMobile from './components/MenuMobile';
 import QueryStringHandler from './components/QueryStringHandler';
 
 import DataLayer from "./services/DataLayer";
+import BannerConversao from "./components/BannerConversao";
 
 
 var helpers = new Helpers();
@@ -65,9 +66,9 @@ class Main {
         new FAQ();
         new ServicesCards();
         new ModalVivi();
-        // new Gigas();
+        new Gigas();
         new Aplicativos();
-        // new Planos();
+        new Planos();
         new MenuMobile();
         let querystring  = new QueryStringHandler();
         querystring.parseURLParam();

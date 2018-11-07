@@ -28,11 +28,11 @@
 			"excludeFolders": ["data", "components", "macros"]
 		},
 	
-		"htaccess": {
-			"src": "htaccess",
-			"dest": "./",
-			"extensions": ["htaccess"]
-		},
+		"cache": {
+            "src": "cache",
+            "dest": "./",
+            "extensions": ["htaccess"]
+       },
 		
 		"scripts": {
 			"src": "scripts",
