@@ -708,16 +708,14 @@ class Compass {
             }
     
             if (conditional) {
-
                 hasCity = true;
                 var uf = cities[i].data;
                 var ddd = cities[i].ddd;
                 var cidade = cities[i].value;
 
-                // _this.setTemplateBussola(origin, uf, cidade, ddd);
+                console.log(cidade)
 
-                //init correct regionalization
-                // this.setCookie(uf, cidade, ddd);
+                $('#autocomplete').val(cidade);
 
                 callback(true, {
                     estado: uf,
@@ -725,7 +723,7 @@ class Compass {
                     ddd: ddd
                 })
 
-                new Regionalization();
+                // new Regionalization();
             }
         }
 
