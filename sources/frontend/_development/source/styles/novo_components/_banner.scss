@@ -1439,7 +1439,7 @@
             flex-wrap: wrap;
 
             @include mobile {
-                background-image: url("../img/novo/bg-banner-conversao-mobile.png") !important;
+                background-image: url("../img/novo/bg-banner-conversao-mobile-crop.png") !important;
                 background-size: cover;
                 height: auto;
                 background-color: #7102b8;
@@ -1871,7 +1871,7 @@
             flex-wrap: wrap;
 
             @include mobile {
-                background-image: url("../img/novo/bg-banner-conversao-mobile.png") !important;
+                background-image: url("../img/novo/bg-banner-conversao-mobile-crop.png") !important;
                 background-size: cover;
                 height: auto;
                 background-color: #7102b8;
@@ -1977,7 +1977,8 @@
                     @include mobile {
                         font-size: 15px;
                         margin-left: 27px;
-                        margin-top: 135px;
+                        margin-top: 65px;
+                        margin-bottom: 0;
                     }
                 }
 
@@ -2608,7 +2609,7 @@
 
     @include mobile {
         .banner-conversao {
-            background-image: url("../img/novo/bg-banner-conversao-mobile.png") !important;
+            background-image: url("../img/novo/bg-banner-conversao-mobile-crop.png") !important;
             // background-size: auto 100%;
             background-size: cover;
         }
