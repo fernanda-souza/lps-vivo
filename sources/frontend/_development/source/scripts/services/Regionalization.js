@@ -662,9 +662,9 @@ class Regionalization {
 
             if (plano.internet === '2,5GB') {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            } else if (plano.internet === '3,5GB') {
-                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
-            } else if (index == 2) {
+            }else if(plano.internet ===  '3,5GB'){
+                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
+            }else if( index  == 2 ) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
             } else {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
