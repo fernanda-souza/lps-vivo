@@ -564,10 +564,10 @@ class Compass {
     }
 
     setCookie(estado, cidade, ddd , preventHideBussola) {
-        cookie_estado = "controle_estado=" + estado + ";path=/";
-        cookie_cidade = "controle_cidade=" + encodeURI(cidade.split(' - ')[0]) + ";path=/";
-        cookie_ddd = "controle_ddd=" + ddd + ";path=/";
-        cookie_recomendation = "controle_recomendation=" + ((this.cityChosedByRecomendation) ? "1" : "0") + ";path=/";
+        cookie_estado = "controle_estado=" + estado + ";expires=" + this.setExpires() + ";path=/";
+        cookie_cidade = "controle_cidade=" + encodeURI(cidade.split(' - ')[0]) + ";expires=" + this.setExpires() + ";path=/";
+        cookie_ddd = "controle_ddd=" + ddd + ";expires=" + this.setExpires() + ";path=/";
+        cookie_recomendation = "controle_recomendation=" + ((this.cityChosedByRecomendation) ? "1" : "0") + ";expires=" + this.setExpires() + ";path=/";
     
         document.cookie = cookie_estado;
         document.cookie = cookie_cidade;
@@ -575,6 +575,14 @@ class Compass {
         document.cookie = cookie_recomendation;
 
         this.initRegionalization(estado, cidade , ddd , preventHideBussola);
+    }
+
+    setExpires(){
+        var now = new Date();
+        var time = now.getTime();
+        time += 3600 * 1000 * 24 * 30;
+        now.setTime(time);
+        return now.toGMTString();
     }
 
     getWindowSize() {
