@@ -877,6 +877,7 @@ class Functions {
 
     initRegionalization(estado, cidade, ddd) {
         console.log("initRegionalization", cidade)
+        $('.legal-planos').show();
         $('.container-planos .container-box').remove();
         $('.container_modal').remove();
         if (this.helpers.isMobile() || this.helpers.isTablet()) {
