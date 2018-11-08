@@ -76,7 +76,7 @@ class Aplicativos {
     }
 
     dataLayerSlider(product){
-        let _this = this;
+        var _this = this;
         if( $('.container-aplicativos').isOnScreen( $(window) ) ){
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
