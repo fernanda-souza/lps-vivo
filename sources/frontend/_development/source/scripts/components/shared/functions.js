@@ -30,7 +30,8 @@ class Functions {
         this.datalayer = new DataLayer();
 
         if( !window.functionsIsInit ){
-            $('.btn-confirmar').on('click', () => {
+            $('.btn-confirmar').on('click', (e) => {
+                e.preventDefault();
                 
                 let inputBussolaValue = $("#autocomplete").val();
                 if( inputBussolaValue ){
@@ -200,7 +201,7 @@ class Functions {
         let _this = this;
         if( window.hasLocationCookies ){
             let cidadeLocalizada = getcookie_cidade + ' - ' + getcookie_estado;
-            console.log( cidadeLocalizada );
+            $('#autocomplete').val(cidadeLocalizada);
             $('#city-mob').text( cidadeLocalizada );
             $('.ciudad').find('p').text(cidadeLocalizada);
             $('.mobile-ciudad').find('p').text(cidadeLocalizada);
@@ -209,20 +210,9 @@ class Functions {
             $(".label").removeClass("label--hidden");
             $("[id^='livechat']").show();
             $('#btnbackbuss').show();
-    
-            _this.searchDataCity('cookie-success', getcookie_cidade);
-            let datalayer = new DataLayer();
-            // datalayer.sendDataBussola('show-compass', getcookie_estado, getcookie_cidade, getcookie_ddd);
-    
-            // $('.btn-confirmar').on('click', () => {
-            //         datalayer.sendDataLayerLocation('select-city-compass', getcookie_estado, getcookie_cidade, getcookie_ddd); 
-            // });
-    
+
             window.citySelected = true;
-            // window.enableMobileChat()
             var timeout = setInterval(function () {
-                // _this.getGA();
-    
                 if (window.GAParam) {
                     clearInterval(timeout);
                     var reg = new Regionalization();
@@ -257,12 +247,14 @@ class Functions {
 
     geolocationCallback( value, location, checkCookies ){
         console.log( "geolocationCallback" , value , location );
+        var ciudad = location.ciudad.split("-")[0];
+
         if( checkCookies ){
             __this.checkLocationByCookies();
         }else{
+            $('#autocomplete').val(`${ciudad}- ${location.estado}`);
             let datalayer = new DataLayer();
             if(value){
-                let ciudad = location.ciudad.split("-")[0];
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
                 datalayer.sendDataBussola('show-compass', location.estado, ciudad, location.ddd);
             }else{

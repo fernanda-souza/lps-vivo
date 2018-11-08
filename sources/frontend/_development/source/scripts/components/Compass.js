@@ -714,10 +714,10 @@ class Compass {
                 var ddd = cities[i].ddd;
                 var cidade = cities[i].value;
 
-                _this.setTemplateBussola(origin, uf, cidade, ddd);
+                // _this.setTemplateBussola(origin, uf, cidade, ddd);
 
                 //init correct regionalization
-                this.setCookie(uf, cidade, ddd);
+                // this.setCookie(uf, cidade, ddd);
 
                 callback(true, {
                     estado: uf,
