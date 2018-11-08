@@ -583,10 +583,6 @@ class Regionalization {
             }
         }
 
-        if( currentDDD && regional && userReg ){
-            window.isRegionalized = true;
-        }
-
         window.regionalizaStarts = true;
 
         var splitCidade = regional.split(' - ')[0];
@@ -805,20 +801,6 @@ class Regionalization {
         this.vaiRegulamento();
         this.disableRightClickReg();
         // this.toggleCardBody();
-
-        if( !window.regionalizationFirstTime ){
-            console.log("1")
-            if( window.isRegionalized ){
-                console.log("2")
-                $('html, body').animate({
-                    scrollTop: $("#planos").offset().top - $("#header").height()
-                }, 200, 'linear');
-            }
-        }
-
-        console.log( "window.regionalizationFirstTime" , window.regionalizationFirstTime );
-
-        window.regionalizationFirstTime = false;
     }
 
     toggleCardBody() {

@@ -430,11 +430,9 @@ class Compass {
             $(this.bussolaMainSelector + ' .error-select').hide();
         });
     
-        window.addEventListener("awesomplete-selectcomplete", (e) => {
-            window.regionalizationFirstTime = false;
-            this.setCurrentCity(e.text.label);
-        }, false);
-
+        // window.addEventListener("awesomplete-selectcomplete", (e) => {
+        //     this.setCurrentCity(e.text.label);
+        // }, false);
 
         }
         
@@ -611,19 +609,11 @@ class Compass {
             $(this.bussolaMainSelector + ' .bussola_autocomplete-icon').addClass('bussola_autocomplete-icon--close');
         } else {
             callback(false);
-            // console.log( "processGeolocationData" , navigator.geolocation );
             if (navigator.geolocation) {
-                console.log( "processGeolocationData" , navigator.geolocation );
-                navigator.geolocation.getCurrentPosition(
-                    (p)=>{
-                        console.log("p" , p )
-                        this.geolocationPosition(p)
-                    },
-                    function(error) {
-
-                    },{
-                        timeout: 2000
-                    });
+                navigator.geolocation.getCurrentPosition((p)=>{this.geolocationPosition(p)}, function(error) {
+                }, {
+                    timeout: 2000
+                });
             } else {
             }
         }
