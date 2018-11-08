@@ -685,7 +685,7 @@ class Regionalization {
                         <div class="whatsapp-plan">
                             
                             <div class="brand-whatsapp">
-                                <img class="feature-item-gigas" alt="logótipo WhatsApp" title="logótipo WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
+                                <img class="feature-item-gigas" alt="WhatsApp" title="WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
                                 <div>
                                     <h4>WhatsApp Ilimitado</h4>
                                     <p>Para mensagens, vídeos e fotos.</p>
@@ -718,10 +718,10 @@ class Regionalization {
                     e.preventDefault();
                     if ($('.hidden-details').is(":visible")) {
                         $('.hidden-details').slideUp(200);
-                        $(this).text("+ beneficios");
+                        $(".detalhes").text("+ beneficios");
                     } else {
                         $('.hidden-details').slideDown(200);
-                        $(this).text("- beneficios");
+                        $(".detalhes").text("- beneficios");
                     }
                     e.stopImmediatePropagation();
                 });
