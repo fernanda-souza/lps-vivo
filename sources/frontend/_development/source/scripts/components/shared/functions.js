@@ -304,13 +304,13 @@ class Functions {
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
 
-        var offset;
-        if (origin == 'returnShop') {
-            offset = $("#planos").offset().top - 45; //45 margin child
-            // offset = $(this.bussolaMainSelector + " .plans-section").offset().top;
-        } else {
-            offset = 0;
-        }
+        let offset = $("#planos").offset().top - 45; //45 margin child
+        // if (origin == 'returnShop') {
+        //     offset = $("#planos").offset().top - 45; //45 margin child
+        //     // offset = $(this.bussolaMainSelector + " .plans-section").offset().top;
+        // } else {
+        //     offset = 0;
+        // }
         this.helpers.controllScroll('unlock');
 
         if (!(this.getcookie_ddd == "" || this.getcookie_cidade == "" || this.getcookie_estado == "")) {
