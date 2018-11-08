@@ -97,6 +97,7 @@ class Functions {
         let urlParamFluxo = this.helpers.getUrlParameter("fluxo"); 
         if( urlParamCidade || urlParamFluxo ){
             this.compassConfig.moveTo(".bussola_onpage");
+            datalayer.sendDataBussola('show-compass', undefined, undefined, undefined);
             this.compass = new Compass( this.geolocationCallback , urlParamCidade, true );
             this.compassConfig.initFooterOn("#plans_cards", ".comp_0010_footer", this.sectionsOffset);
         } //CHECK COOKIE:
@@ -198,6 +199,8 @@ class Functions {
         let _this = this;
         if( window.hasLocationCookies ){
             let cidadeLocalizada = getcookie_cidade + ' - ' + getcookie_estado;
+            this.datalayer.sendDataBussola('show-compass', getcookie_estado,  getcookie_cidade, getcookie_ddd);
+
             $('#autocomplete').val(cidadeLocalizada);
             $('#city-mob').text( cidadeLocalizada );
             $('.ciudad').find('p').text(cidadeLocalizada);
