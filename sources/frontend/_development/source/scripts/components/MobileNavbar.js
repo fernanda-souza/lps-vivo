@@ -12,8 +12,6 @@ class MobileNav {
                 $('html, body').animate({
                     scrollTop: $($(this).attr('goTo')).offset().top - $("#header").height()
                 }, 500, 'linear');
-            }else{
-                $("#modalChatvivi").fadeOut("slow");
             }
         });
 
