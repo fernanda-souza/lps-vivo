@@ -3,11 +3,11 @@
 import Planos from '../components/Planos';
 import QueryStringHandler from '../components/QueryStringHandler';
 
-var isArray = Function.isArray || function(o) {
+var isArray = Function.isArray || function (o) {
     return typeof o === 'object' && Object.prototype.toString.call(o).slice(8, -1) === 'Array';
 };
 
-var Plan = (function() {
+var Plan = (function () {
     Plan = function Plan(data) {
         for (var key in data) {
             if (!data.hasOwnProperty(key)) continue;
@@ -16,7 +16,7 @@ var Plan = (function() {
         }
     };
 
-    Plan.prototype.toJSON = function() {
+    Plan.prototype.toJSON = function () {
         var o = {};
 
         for (key in this) {
@@ -27,11 +27,11 @@ var Plan = (function() {
         return o;
     };
 
-    Plan.prototype.getPriceFull = function() {
+    Plan.prototype.getPriceFull = function () {
         return this.price.amount;
     };
 
-    Plan.prototype.getPrice = function() {
+    Plan.prototype.getPrice = function () {
         var calcPrice = Math.round((this.price.amount - this.price.discount) * 100) / 100;
         return calcPrice.toFixed(2);
     };
@@ -39,7 +39,7 @@ var Plan = (function() {
     return Plan;
 }());
 
-var Documento = (function() {
+var Documento = (function () {
     Documento = function Documento(data) {
         var keys = ['region', 'nome', 'link'];
 
@@ -55,7 +55,7 @@ var Documento = (function() {
 }());
 
 
-var Banner = (function() {
+var Banner = (function () {
     Banner = function Banner(data) {
         var keys = ['region', 'franquia', 'minutos', 'valor'];
 
@@ -72,8 +72,8 @@ var Banner = (function() {
 
 
 
-var RegionItems = (function() {
-    var _addItem = function(region, item, items) {
+var RegionItems = (function () {
+    var _addItem = function (region, item, items) {
 
         if ((!isArray(region)) && typeof region !== "string" && typeof region !== "number") {
             throw new TypeError("region must be a string, number or array");
@@ -109,7 +109,7 @@ var RegionItems = (function() {
         for (var key in this._region_items) {
             if (!this._region_items.hasOwnProperty(key)) continue;
             if (!isArray(this._region_items[key])) continue;
-            this._region_items[key].sort(function(a, b) {
+            this._region_items[key].sort(function (a, b) {
                 if (!("internet" in a || "internet" in b)) return 0;
                 var quantiaA = a.internet.match(regexInt);
                 var quantiaB = b.internet.match(regexInt);
@@ -124,11 +124,11 @@ var RegionItems = (function() {
         }
     };
 
-    RegionItems.prototype.get = function(key) {
+    RegionItems.prototype.get = function (key) {
         return this._region_items[key];
     };
 
-    RegionItems.prototype.toJSON = function() {
+    RegionItems.prototype.toJSON = function () {
         return this._region_items;
     };
 
@@ -138,131 +138,131 @@ var RegionItems = (function() {
 var regions = require('../fill/regions.js').regions;
 
 var plansControle = [
-        // nacional
-        new Plan({
-            region: regions.nacional,
-            internet: '5,5GB',
-            TJinternet: '5GB + 500MB de bônus*',
-            mainoffer: true,
-            appname: "vivocontrolenba",
-            SKU: ['VC00031', 'VIVOCTRLF29N'],
-            combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
-            portal: false,
-            price: {
-                amount: 89.99,
-                discount: 0,
-                perLine: 0
-            }
-        }),
-        new Plan({
-            region: regions.nacional,
-            internet: '4,5GB',
-            TJinternet: '4GB + 500MB de bônus*',
-            mainoffer: true,
-            appname: "vivocontrolekantoo",
-            SKU: ['VC00030', 'VIVOCTRLF30N'],
-            combo: "GoRead - NBA - Sync - Kantoo",
-            portal: false,
-            price: {
-                amount: 79.99,
-                discount: 0,
-                perLine: 0
-            }
-        }),
-        new Plan({
-            region: regions.nacional,
-            internet: '3,5GB',
-            TJinternet: '3GB + 500MB de bônus*',
-            mainoffer: true,
-            appname: "vivocontrolekantoo",
-            SKU: ['VC00030', 'VIVOCTRLF28N'],
-            combo: "GoRead - NBA - Sync - Kantoo",
-            portal: false,
-            price: {
-                amount: 64.99,
-                discount: 0,
-                perLine: 0
-            }
-        }),
-        new Plan({
-            region: regions.nacional,
-            internet: '2,5GB',
-            TJinternet: '2GB + 500MB de bônus*',
-            mainoffer: true,
-            SKU: ['VC00028', 'VIVOCTRLF27N'],
-            combo: "GoRead - NBA - Sync",
-            portal: false,
-            appname: "vivocontrolegoread",
-            price: {
-                amount: 49.99,
-                discount: 0,
-                perLine: 0
-            }
-        }),
-    
-        // criticos, NE e 21
-        new Plan({
-            region: [regions.criticos, regions.ddd21, regions.ne],
-            internet: '6,5GB',
-            TJinternet: '6GB + 500MB de bônus*',
-            mainoffer: true,
-            appname: "vivocontrolenba",
-            SKU: ['VC00031', 'VIVOCTRLF29A'],
-            combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
-            portal: false,
-            price: {
-                amount: 89.99,
-                discount: 0,
-                perLine: 0
-            }
-        }),
-        new Plan({
-            region: [regions.criticos, regions.ddd21, regions.ne],
-            internet: '5,5GB',
-            TJinternet: '5GB + 500MB de bônus*',
-            mainoffer: true,
-            appname: "vivocontrolekantoo",
-            SKU: ['VC00031', 'VIVOCTRLF30A'],
-            combo: "GoRead - NBA - Sync - Kantoo",
-            portal: false,
-            price: {
-                amount: 79.99,
-                discount: 0,
-                perLine: 0
-            }
-        }),
-        new Plan({
-            region: [regions.criticos, regions.ddd21, regions.ne],
-            internet: '4,5GB',
-            TJinternet: '4GB + 500MB de bônus*',
-            mainoffer: true,
-            appname: "vivocontrolekantoo",
-            SKU: ['VC00031', 'VIVOCTRLF28A'],
-            combo: "GoRead - NBA - Sync - Kantoo",
-            portal: false,
-            price: {
-                amount: 64.99,
-                discount: 0,
-                perLine: 0
-            }
-        }),
-        new Plan({
-            region: [regions.criticos, regions.ddd21, regions.ne],
-            internet: '3,5GB',
-            TJinternet: '3GB + 500MB de bônus*',
-            mainoffer: true,
-            appname: "vivocontrolegoread",
-            SKU: ['VC00029', 'VIVOCTRLF27A'],
-            combo: "GoRead - NBA - Sync",
-            portal: false,
-            price: {
-                amount: 49.99,
-                discount: 0,
-                perLine: 0
-            },
-            linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
-        })
-    ]
+    // nacional
+    new Plan({
+        region: regions.nacional,
+        internet: '5,5GB',
+        TJinternet: '5GB + 500MB de bônus*',
+        mainoffer: true,
+        appname: "vivocontrolenba",
+        SKU: ['VC00031', 'VIVOCTRLF29N'],
+        combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
+        portal: false,
+        price: {
+            amount: 89.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.nacional,
+        internet: '4,5GB',
+        TJinternet: '4GB + 500MB de bônus*',
+        mainoffer: true,
+        appname: "vivocontrolekantoo",
+        SKU: ['VC00030', 'VIVOCTRLF30N'],
+        combo: "GoRead - NBA - Sync - Kantoo",
+        portal: false,
+        price: {
+            amount: 79.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.nacional,
+        internet: '3,5GB',
+        TJinternet: '3GB + 500MB de bônus*',
+        mainoffer: true,
+        appname: "vivocontrolekantoo",
+        SKU: ['VC00030', 'VIVOCTRLF28N'],
+        combo: "GoRead - NBA - Sync - Kantoo",
+        portal: false,
+        price: {
+            amount: 64.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.nacional,
+        internet: '2,5GB',
+        TJinternet: '2GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: ['VC00028', 'VIVOCTRLF27N'],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 49.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+
+    // criticos, NE e 21
+    new Plan({
+        region: [regions.criticos, regions.ddd21, regions.ne],
+        internet: '6,5GB',
+        TJinternet: '6GB + 500MB de bônus*',
+        mainoffer: true,
+        appname: "vivocontrolenba",
+        SKU: ['VC00031', 'VIVOCTRLF29A'],
+        combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
+        portal: false,
+        price: {
+            amount: 89.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: [regions.criticos, regions.ddd21, regions.ne],
+        internet: '5,5GB',
+        TJinternet: '5GB + 500MB de bônus*',
+        mainoffer: true,
+        appname: "vivocontrolekantoo",
+        SKU: ['VC00031', 'VIVOCTRLF30A'],
+        combo: "GoRead - NBA - Sync - Kantoo",
+        portal: false,
+        price: {
+            amount: 79.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: [regions.criticos, regions.ddd21, regions.ne],
+        internet: '4,5GB',
+        TJinternet: '4GB + 500MB de bônus*',
+        mainoffer: true,
+        appname: "vivocontrolekantoo",
+        SKU: ['VC00031', 'VIVOCTRLF28A'],
+        combo: "GoRead - NBA - Sync - Kantoo",
+        portal: false,
+        price: {
+            amount: 64.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: [regions.criticos, regions.ddd21, regions.ne],
+        internet: '3,5GB',
+        TJinternet: '3GB + 500MB de bônus*',
+        mainoffer: true,
+        appname: "vivocontrolegoread",
+        SKU: ['VC00029', 'VIVOCTRLF27A'],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        price: {
+            amount: 49.99,
+            discount: 0,
+            perLine: 0
+        },
+        linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
+    })
+]
 
 plansControle = new RegionItems(plansControle);
 
@@ -479,13 +479,13 @@ var documentosModal = [
     }),
     new Documento({
         region: regions.nacionalRs,
-        nome: 'Contrato de adesão ao serviço Vivo Internet Móvel',        
+        nome: 'Contrato de adesão ao serviço Vivo Internet Móvel',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_184194',
         lightBox: false
     }),
     new Documento({
         region: regions.rs,
-        nome: 'Contrato de prestação de serviço móvel pessoal pós-pago',        
+        nome: 'Contrato de prestação de serviço móvel pessoal pós-pago',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_186410',
         lightBox: false
     }),
@@ -519,7 +519,7 @@ var documentosModal = [
         nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
         lightBox: false
-    })    
+    })
 
 ];
 
@@ -545,17 +545,17 @@ class Regionalization {
         var datalayer = new DataLayer();
 
         var currentDDD = this.getCookie('controle_ddd');
-        var decodeCidade =  this.getCookie('controle_cidade');
+        var decodeCidade = this.getCookie('controle_cidade');
         var regional = decodeURI(decodeCidade);
-        var userReg =  this.getCookie('controle_estado');
+        var userReg = this.getCookie('controle_estado');
         var parameters = window.location.search;
         var appname = this.getUrlParameter('banner');
 
         // $('#currentCity, .label__text').text(regional + ' - ' + userReg); //old
-        $('.ciudad').find('p').text( regional + ' - ' + userReg );
-        $('.mobile-ciudad').find('p').text( regional + ' - ' + userReg );
+        $('.ciudad').find('p').text(regional + ' - ' + userReg);
+        $('.mobile-ciudad').find('p').text(regional + ' - ' + userReg);
 
-        
+
 
         if (helpers.isMobile() || helpers.isTablet()) $('body').addClass("regionalized");
 
@@ -592,7 +592,7 @@ class Regionalization {
         var getCidade = splitCidade;
         var locationSearch = window.location.search,
             splitSearch = locationSearch.replace('?', '').split('&');
-    
+
         var _banner = $('.banner__content'),
             _logoBanner = $('.banner__content .banner__logo'),
             _subtitle = $('.banner__subtitle'),
@@ -605,7 +605,7 @@ class Regionalization {
         // }, 1000);
 
         var linkPlan;
-    
+
         //MONTAGEM DOS CARDS
         // console.log(currentDDD)
         var currentPlans = plansControle.get(appname) || plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
@@ -618,58 +618,60 @@ class Regionalization {
         container__plans.empty();
         container__plansMob.empty();
         container__StaticPlanos.empty();
-    
-        var planosAnanke = currentPlans.filter(function(e) {
+
+        var planosAnanke = currentPlans.filter(function (e) {
             return !e.portal;
         }).length;
-    
+
         var mainoffer_active = false;
         var self = this;
 
-        if($('.inner-planos-mobile').hasClass('slick-initialized')){
+        if ($('.inner-planos-mobile').hasClass('slick-initialized')) {
             $(".inner-planos-mobile").slick("unslick");
         }
         $('.item-plan').remove();
 
-   
-    
-        currentPlans.sort(function(a, b){return a.price.amount-b.price.amount})
+
+
+        currentPlans.sort(function (a, b) {
+            return a.price.amount - b.price.amount
+        })
 
         var prices = `${currentPlans[0].price.amount}`.split('.');
 
-         //Re-init default banner with prices
-         this.queryStringHandler = new QueryStringHandler();
-         this.queryStringHandler.parseURLParam();
+        //Re-init default banner with prices
+        this.queryStringHandler = new QueryStringHandler();
+        this.queryStringHandler.parseURLParam();
 
         // $('span.preco').text(`${prices[0]},`);
         // $('.subprice').text(prices[1]);
         $('.internet-gb').text(currentPlans[0].internet);
 
         let btnAssineJa = $('[data-target="link-banner-assine-ja"]');
-        btnAssineJa.attr("href" , `https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${currentPlans[0].SKU[1]}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga` );
-        btnAssineJa.attr("data-analytics-id" , "click-cta" );
-        btnAssineJa.attr("data-analytics-product-name" , `${currentPlans[0].internet}` );
-        btnAssineJa.attr("data-analytics-position" , "destaque" );
-        btnAssineJa.attr("data-analytics-sku" , `${currentPlans[0].SKU[1]}` );
-        btnAssineJa.attr("data-analytics-label" , "assine-ja" );
+        btnAssineJa.attr("href", `https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${currentPlans[0].SKU[1]}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga`);
+        btnAssineJa.attr("data-analytics-id", "click-cta");
+        btnAssineJa.attr("data-analytics-product-name", `${currentPlans[0].internet}`);
+        btnAssineJa.attr("data-analytics-position", "destaque");
+        btnAssineJa.attr("data-analytics-sku", `${currentPlans[0].SKU[1]}`);
+        btnAssineJa.attr("data-analytics-label", "assine-ja");
 
-        currentPlans.map(function(plano, index){
+        currentPlans.map(function (plano, index) {
 
             var prices = `${plano.price.amount}`.split('.');
             var linkPlan = plano.SKU[1];
 
-            if(plano.internet === '2,5GB'){
+            if (plano.internet === '2,5GB') {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            }else if(plano.internet ===  '3,5GB'){
+            } else if (plano.internet === '3,5GB') {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
-            }else if( index  == 2 ) {
+            } else if (index == 2) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
-            }else {
+            } else {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
             }
 
-            if(currentPlans.length-1 !== index){
-                
+            if (currentPlans.length - 1 !== index) {
+
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
                         <div class="quantidade-plan">
@@ -679,7 +681,7 @@ class Regionalization {
                         <div class="whatsapp-plan">
                             
                             <div class="brand-whatsapp">
-                                <img class="feature-item-gigas" alt="logo WhatsApp" title="logo WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
+                                <img class="feature-item-gigas" alt="WhatsApp" title="WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
                                 <div>
                                     <h4>WhatsApp Ilimitado</h4>
                                     <p>Para mensagens, vídeos e fotos.</p>
@@ -706,26 +708,28 @@ class Regionalization {
 
                 $(".item-plan").css("opacity", "1").css("display", "block");
                 $(".blur-gb").css("display", "none");
-                    
-                $('.detalhes').on('click', function(e){
+
+                $('.detalhes').on('click', function (e) {
                     e.preventDefault();
-                    if( $('.hidden-details').is(":visible") ){
+                    if ($('.hidden-details').is(":visible")) {
                         $('.hidden-details').slideUp(200);
-                    }else{
+                        $(".detalhes").text("+ beneficios");
+                    } else {
                         $('.hidden-details').slideDown(200);
+                        $(".detalhes").text("- beneficios");
                     }
                     e.stopImmediatePropagation();
                 });
             }
         });
 
-        
-        if(helpers.isMobile() || helpers.isTablet()){
+
+        if (helpers.isMobile() || helpers.isTablet()) {
             // $( window ).trigger( "regionalized" );
             var planos = new Planos();
         }
-        
-        $(".btn--sigin").on('click', function(e) {
+
+        $(".btn--sigin").on('click', function (e) {
             var link = $(this).data('link');
             var sku = $(this).data('sku');
             var evento;
@@ -736,8 +740,8 @@ class Regionalization {
             }
             datalayer.sendDataLayerProducts(evento, userReg, regional, currentDDD, sku)
         })
-    
-        $(".toggle-card-body, .click_modal").on('click', function(e) {
+
+        $(".toggle-card-body, .click_modal").on('click', function (e) {
             var evento;
             var sku = $(this).data('sku');
             if ($(this).hasClass('toggle-card-body')) {
@@ -747,17 +751,17 @@ class Regionalization {
             }
             datalayer.sendDataLayerProducts(evento, userReg, regional, currentDDD, sku)
         })
-    
-    
+
+
         var cards = $('.plans__card');
         var apps;
         var padding = 10;
         var currentCardContent;
         var nextCardContent;
         var windowWidth = $(window).width();
-    
+
         $('.plans__card.only-portal').remove();
-    
+
         if ($(window).width() >= 768) {
             this.setCardWidth();
         }
@@ -783,8 +787,8 @@ class Regionalization {
             listaRegulamentosModal.append(linkModal);
         }
 
-        if(helpers.isDesktop()) {
-            for(var j = cards.length; j > 0; j--) {
+        if (helpers.isDesktop()) {
+            for (var j = cards.length; j > 0; j--) {
                 currentCardContent = $('#card_' + j).find('.card__cont');
                 nextCardContent = $('#card_' + (j - 1)).find('.card__cont');
                 var calcPadding = (50 - (j * 10));
@@ -804,11 +808,11 @@ class Regionalization {
     }
 
     toggleCardBody() {
-        $('.toggle-card-body').bind('click', function(e) {
+        $('.toggle-card-body').bind('click', function (e) {
             var _boxTarget = $(e.currentTarget).parent().parent().parent();
             _boxTarget.find('.card__advantages').slideToggle();
-    
-    
+
+
             if ($(this).text() == '- Detalhes') {
                 _boxTarget.find('.toggle-card-body').text('+ Detalhes');
             } else {
@@ -819,7 +823,7 @@ class Regionalization {
 
     initCarousel() {
         var currentDDD = this.getCookie('controle_ddd');
-        var decodeCidade =  this.getCookie('controle_cidade');
+        var decodeCidade = this.getCookie('controle_cidade');
         var regional = decodeURI(decodeCidade);
         var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
 
@@ -841,11 +845,11 @@ class Regionalization {
                 prevEl: '.plans .swiper-button-prev',
             },
 
-            simulateTouch: false, 
+            simulateTouch: false,
             slidesPerView: currentPlans.length,
             spaceBetween: 30
         });
-        
+
         if ($('.swiper-pagination-bullet').length == 3) {
             $('.swiper-buttons#bottom .swiper-button-prev').addClass('buttons-left');
             $('.swiper-buttons#bottom .swiper-button-next').addClass('buttons-right');
@@ -858,16 +862,16 @@ class Regionalization {
             paginationItems.remove();
         }
         // End loading / show plans ...
-        
-        
+
+
     }
 
     setCardWidth() {
         var currentDDD = this.getCookie('controle_ddd');
-        var decodeCidade =  this.getCookie('controle_cidade');
+        var decodeCidade = this.getCookie('controle_cidade');
         var regional = decodeURI(decodeCidade);
         var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
-        var planosAnanke = currentPlans.filter(function(e) {
+        var planosAnanke = currentPlans.filter(function (e) {
             return !e.portal;
         }).length;
 
@@ -912,7 +916,7 @@ class Regionalization {
         }
 
 
-        $(".click_modal").bind('click', function() {
+        $(".click_modal").bind('click', function () {
             $(".box-overlay, .boxModalContent").fadeIn()
             $(".box-modal").addClass("modal-on");
             $(".box-modal").removeClass("modal-off");
@@ -931,7 +935,7 @@ class Regionalization {
         //     $(".box-modal").removeClass("modal-on");
         // });
 
-        $(document).keyup(function(e) {
+        $(document).keyup(function (e) {
             if (e.keyCode == 27) {
                 $(".modal-informacoes-adicionais").css("display", "none");
                 $(".box-overlay, .boxModalContent").fadeOut();
@@ -941,7 +945,7 @@ class Regionalization {
     }
 
     abasLista() {
-        $(".boxModalContent__box-seletor li").bind('click', 'li', function() {
+        $(".boxModalContent__box-seletor li").bind('click', 'li', function () {
 
             $(".boxModalContent__box-seletor li").removeClass("active");
 
@@ -957,7 +961,7 @@ class Regionalization {
 
 
     vaiRegulamento() {
-        $("#goto_regu").bind('click', function() {
+        $("#goto_regu").bind('click', function () {
 
             $(".boxModalContent__box-seletor li").removeClass("active");
             $(".boxModalContent__box-seletor").find("[data-choose='3']").addClass("active");
@@ -969,7 +973,7 @@ class Regionalization {
     }
 
     disableRightClickReg() {
-        $('#goto_regu').bind("contextmenu", function(e) {
+        $('#goto_regu').bind("contextmenu", function (e) {
             e.preventDefault();
         });
     }
@@ -1008,18 +1012,18 @@ class Regionalization {
         }
     }
 
-    UrlParameter() { 
+    UrlParameter() {
         // ALTERA O BANNER CASO A URL VENHA PARAMETRIZADA
         var getEstadoBan = this.getCookie('controle_estado');
         var getDDDBan = this.getCookie('controle_ddd');
-        var decodeCidade =  this.getCookie('controle_cidade');
+        var decodeCidade = this.getCookie('controle_cidade');
         var regional = decodeURI(decodeCidade);
         var splitCidade = regional.split(' - ')[0];
         if (splitCidade.substring(splitCidade.length - 3, splitCidade.length) == "%20") {
             splitCidade = splitCidade.substring(0, splitCidade.length - 3);
         }
         var getCidade = splitCidade;
-    
+
         var _nameBtn = 'Contrate já',
             _banner = $('.banner'),
             _bannerContentOne = $('.banner__content--01'),
@@ -1027,10 +1031,10 @@ class Regionalization {
             _bannerContentImg = $('.banner__content--01 .content__img'),
             _logoBanner = $('.banner__content--02 .content__logo'),
             _subtitle = $('.content__subtitle'),
-        _subtitleIcon = $('.subtitle__icon'),
-        _internetSizeBanner = $('.banner__content--02 .content__call .call__block .block__text'),
-        _priceBanner = $('.banner__content--02 .content__price .price__block'),
-        _paramBanner = this.getUrlParameter('banner');
+            _subtitleIcon = $('.subtitle__icon'),
+            _internetSizeBanner = $('.banner__content--02 .content__call .call__block .block__text'),
+            _priceBanner = $('.banner__content--02 .content__price .price__block'),
+            _paramBanner = this.getUrlParameter('banner');
 
         if (_paramBanner == 'vivocontrolenba') {
             _banner.addClass('banner--green');
@@ -1088,24 +1092,24 @@ class Regionalization {
             _priceBanner.addClass('price__block--orange');
             _priceBanner.find('.cents__monthly--with').addClass('hide');
 
-        // if( !window.isSlickCardsInit ){
-        //     $('.plans-carousel-mob').slick({
-        //         arrows: false,
-        //         dots: true,
-        //         centerMode: true,
-        //         centerPadding: "20px",
-        //         slidesToShow: 1,
-        //         infinite: false,
-        //         variableWidth: true
-        //     });
+            // if( !window.isSlickCardsInit ){
+            //     $('.plans-carousel-mob').slick({
+            //         arrows: false,
+            //         dots: true,
+            //         centerMode: true,
+            //         centerPadding: "20px",
+            //         slidesToShow: 1,
+            //         infinite: false,
+            //         variableWidth: true
+            //     });
         }
 
         // for (var size = 0; size < splitSearch.length; size++) {
         //     $('#banner_goread').hide();
         // }
-    
+
         // ESPERA MONTAR O BANNER E MOSTRA
-    
+
         // setTimeout(function() {
         //     _banner.fadeIn();
         // }, 1000);
