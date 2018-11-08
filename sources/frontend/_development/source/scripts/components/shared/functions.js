@@ -219,6 +219,8 @@ class Functions {
             $("[id^='livechat']").show();
             $('#btnbackbuss').show();
 
+            _this.searchDataCity('cookie-success', getcookie_cidade);
+
             window.citySelected = true;
             var timeout = setInterval(function () {
                 if (window.GAParam) {
