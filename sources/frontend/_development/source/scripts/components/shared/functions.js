@@ -620,7 +620,7 @@ class Functions {
     setCurrentCity(cityLabel) {
         $('#autocomplete_input').val('');
         var estado, cidade, ddd;
-        var id = this.cities.cidades.find((element, index) => {
+        var id = this.cities.cidades.filter((element, index) => {
             if (element.value == cityLabel) {
                 estado = element.data;
                 cidade = element.value;
