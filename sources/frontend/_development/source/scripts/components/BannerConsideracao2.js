@@ -23,7 +23,7 @@ class BannerConsideracao extends Banner{
 
                 <div class="banner-second-block">
                     <div class="promo-icons-wrap">
-                        <img src="img/novo/icons/icon-whatsapp-big.png">
+                        <img src="img/novo/icons/logo_whatsapp_2.png">
                         <img src="img/novo/icons/icon-ligacoes-big.png">
                     </div>
                     <div class="promo-text-consideracao2 only-desktop">
