@@ -97,7 +97,7 @@ class Functions {
         let urlParamFluxo = this.helpers.getUrlParameter("fluxo"); 
         if( urlParamCidade || urlParamFluxo ){
             this.compassConfig.moveTo(".bussola_onpage");
-            datalayer.sendDataBussola('show-compass', undefined, undefined, undefined);
+            this.datalayer.sendDataBussola('show-compass', undefined, undefined, undefined);
             this.compass = new Compass( this.geolocationCallback , urlParamCidade, true );
             this.compassConfig.initFooterOn("#plans_cards", ".comp_0010_footer", this.sectionsOffset);
         } //CHECK COOKIE:
