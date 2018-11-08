@@ -6,10 +6,15 @@ class MobileNav {
         this.comp_0002_banner_param();
 
         $('a[href*="#"]').on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $($(this).attr('goTo')).offset().top - $("#header").height()
-            }, 500, 'linear');
+
+            if( $(e.currentTarget ).attr('id') !== "box-btn_right"){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('goTo')).offset().top - $("#header").height()
+                }, 500, 'linear');
+            }else{
+                $("#modalChatvivi").fadeOut("slow");
+            }
         });
 
     }
