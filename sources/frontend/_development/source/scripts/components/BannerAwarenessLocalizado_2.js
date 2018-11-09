@@ -9,14 +9,13 @@ class BannerAwareness extends Banner{
 
     setupTemplate(){
         var htmlCode = `
-            <div class="banner-item banner-awareness3">
+            <div class="banner-item banner-awareness-localizado2">
 
             <div class="banner-item__inner">
-
                 <div class="banner-first-block">
-                    <span>sua vida sob controle</span>
+                    <span>Seu plano sem fidelidade </span>
                     <span>na maior cobertura de</span>
-                    <span>internet móvel do Brasil.</span>
+                    <span>internet móvel do Brasil.</span>                  
                 </div>
 
                 <div class="banner-third-block">

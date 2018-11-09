@@ -1,7 +1,7 @@
 import BannerConversao from "./BannerConversao";
 import BannerConsideracao2 from "./BannerConsideracao2";
 import BannerAwareness from "./BannerAwareness";
-import BannerAwarenessLocalizado from "./BannerAwarenessLocalizado";
+import BannerAwarenessLocalizado2 from "./BannerAwarenessLocalizado_2";
 import Helpers from "../services/Helpers"
 
 class QueryStringHandler {
@@ -52,7 +52,7 @@ class QueryStringHandler {
 
                 case 'middle_2': 
 
-                    this.banner = new BannerAwarenessLocalizado( $('.container_banner') );
+                    this.banner = new BannerAwarenessLocalizado2( $('.container_banner') );
                     this.banner.setupTemplate();
                 break;
 
