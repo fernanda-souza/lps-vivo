@@ -96,6 +96,11 @@ class Functions {
         let urlParamCidade = this.helpers.getUrlParameter("cidade");
         let urlParamFluxo = this.helpers.getUrlParameter("fluxo"); 
         if( urlParamCidade || urlParamFluxo ){
+
+            $('html, body').animate({
+                scrollTop: $("#planos").offset().top - $("#header").height()
+            }, 200, 'linear');
+            
             this.compassConfig.moveTo(".bussola_onpage");
             this.datalayer.sendDataBussola('show-compass', undefined, undefined, undefined);
             this.compass = new Compass( function(result){ console.log(result) } , urlParamCidade, true );
