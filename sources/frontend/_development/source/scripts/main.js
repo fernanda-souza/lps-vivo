@@ -128,7 +128,7 @@ closeModal.click(function (e) {
 
 let openChat = $("#box-btn_right");
 openChat.click(function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     $("#modalChatvivi").fadeOut("slow");
     $("#web").trigger("click");
 });
