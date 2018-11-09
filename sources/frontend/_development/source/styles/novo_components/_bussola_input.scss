@@ -97,6 +97,10 @@
 .bussola_link {
     display: none;
     align-self: center;
+
+    @media ( min-width: 769px ) and  (max-width: 1268px ){
+        margin-right: 20px;
+    }
 }
 
 @include mobile {

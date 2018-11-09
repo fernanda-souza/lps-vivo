@@ -102,6 +102,10 @@ header {
                 margin-right: 6px;
             }
 
+            @media ( min-width: 769px ) and  (max-width: 1268px ){
+                margin-left: 30px;
+            }
+
             &.only-desktop {
                 @include max-width(1023) {
                     display: none;
@@ -164,13 +168,23 @@ header {
                 margin-left: 54px;
             }
 
-            @include desktop-md {
+            @media ( max-width: 1023px ){
                 display: none !important;
             }
 
-            @include tablet {
-                display: none !important;
+            @media ( min-width: 769px ) and  (max-width: 1268px ){
+                margin-left: 20px;
+                margin-right: 0;
+                display: inherit;
             }
+
+            // @include desktop-md {
+            //     display: none !important;
+            // }
+
+            // @include tablet {
+            //     display: none !important;
+            // }
 
             p {
                 height: auto;
