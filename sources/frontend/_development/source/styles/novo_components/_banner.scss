@@ -1724,6 +1724,10 @@
             display: flex;
             flex-wrap: wrap;
 
+            @media ( min-width: 769px ) and  (max-width: 1024px ){
+                background-position: -130px 0px;
+            }
+
             @include mobile {
                 background-image: url("../img/novo/bg-banner-conversao-mobile.png") !important;
                 background-size: cover;
@@ -1743,6 +1747,10 @@
                 padding-left: 241px;
                 height: auto;
                 margin-top: 38px;
+
+                @media ( min-width: 769px ) and  (max-width: 1024px ){
+                    padding-left: 130px;
+                }
 
                 @include mobile {
                     width: 100%;
