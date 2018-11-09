@@ -37,11 +37,14 @@ class Functions {
                 if( inputBussolaValue ){
                     this.setCurrentCity( inputBussolaValue );
                     $('.ciudad').find('p').text(inputBussolaValue);
+                    let getcookie_cidade;
+                    let getcookie_ddd;
+                    let getcookie_estado;
+                    this.getcookie_cidade = getcookie_cidade = decodeURI( this.helpers.getCookie('controle_cidade'));
+                    this.getcookie_ddd = getcookie_ddd = this.helpers.getCookie('controle_ddd');
+                    this.getcookie_estado = getcookie_estado = this.helpers.getCookie('controle_estado');
+                    this.datalayer.sendDataLayerLocation('select-city-compass', getcookie_estado, getcookie_cidade, getcookie_ddd); 
                 }
-                let getcookie_estado = this.getcookie_estado;
-                let getcookie_cidade = this.getcookie_cidade;
-                let getcookie_ddd = this.getcookie_ddd;
-                this.datalayer.sendDataLayerLocation('select-city-compass', getcookie_estado, getcookie_cidade, getcookie_ddd); 
             });
         }
 
@@ -305,12 +308,13 @@ class Functions {
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
 
-        var offset;
-        if (origin == 'returnShop') {
-            offset = $(this.bussolaMainSelector + " .plans-section").offset().top;
-        } else {
-            offset = 0;
-        }
+        let offset = $("#planos").offset().top - 45; //45 margin child
+        // if (origin == 'returnShop') {
+        //     offset = $("#planos").offset().top - 45; //45 margin child
+        //     // offset = $(this.bussolaMainSelector + " .plans-section").offset().top;
+        // } else {
+        //     offset = 0;
+        // }
         this.helpers.controllScroll('unlock');
 
         if (!(this.getcookie_ddd == "" || this.getcookie_cidade == "" || this.getcookie_estado == "")) {
@@ -331,7 +335,7 @@ class Functions {
 
         window.isSlickCardsInit = false;
         
-        // this.animScrollTo("#plans_cards");
+        this.animScrollTo(offset);
         this.compassConfig.initFooterOn(false);
         
         // var datalayer = new DataLayer();

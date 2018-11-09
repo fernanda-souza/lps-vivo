@@ -583,10 +583,6 @@ class Regionalization {
             }
         }
 
-        if (currentDDD && regional && userReg) {
-            window.isRegionalized = true;
-        }
-
         window.regionalizaStarts = true;
 
         var splitCidade = regional.split(' - ')[0];
@@ -698,8 +694,7 @@ class Regionalization {
                             <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>
                             <p class="hidden-details"><strong>SMS ilimitado</strong> para qualquer operadora do Brasil.</p>
                         </div>
-                        <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="nome do
-                        produto" data-analytics-position="card-ofertas" data-analytics-sku="undefined" data-analytics-label="mais-detalhes">+ benefícios</a>
+                        <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
                         <div class="precio-plan">
                             <h1>R$ ${prices[0]}</h1>
                             <p>,${prices[1]} <span>/mês</span></p>
@@ -810,20 +805,6 @@ class Regionalization {
         this.vaiRegulamento();
         this.disableRightClickReg();
         // this.toggleCardBody();
-
-        if (!window.regionalizationFirstTime) {
-            console.log("1")
-            if (window.isRegionalized) {
-                console.log("2")
-                $('html, body').animate({
-                    scrollTop: $("#planos").offset().top - $("#header").height()
-                }, 200, 'linear');
-            }
-        }
-
-        console.log("window.regionalizationFirstTime", window.regionalizationFirstTime);
-
-        window.regionalizationFirstTime = false;
     }
 
     toggleCardBody() {

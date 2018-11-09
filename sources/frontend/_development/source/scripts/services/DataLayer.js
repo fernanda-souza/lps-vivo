@@ -19,9 +19,7 @@ class DataLayer {
                     'user-state': ( estado? this.helpers.stringSanitize(estado) : undefined ), // obrigatório em todos os casos
                     'user-city': ( cidade? this.helpers.stringSanitize(cidade) : undefined ), // obrigatório em todos os casos
                     'ddd': ( ddd? ddd : undefined ), // obrigatório em todos os casos
-                    'id-origem-vivo' : origem,
-                    'init-session':'vivo-controlegiga:b2c:movel',
-                    'position-cards': ( this.positionCard? this.positionCard : undefined )                            
+                    'id-origem-vivo' : origem
                 }
             }
         });

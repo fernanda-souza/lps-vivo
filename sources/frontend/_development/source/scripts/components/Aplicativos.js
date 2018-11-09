@@ -76,6 +76,7 @@ class Aplicativos {
     }
 
     dataLayerSlider(product){
+        var _this = this;
         if( $('.container-aplicativos').isOnScreen( $(window) ) ){
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -84,7 +85,7 @@ class Aplicativos {
                 'title': document.title,
                 'custom': {
                         'dimensions': {
-                        'product-name': product.name,
+                        'product-name': _this.helpers.stringSanitize(product.name),
                     }
                 }
             });
@@ -98,7 +99,7 @@ class Aplicativos {
         $('#saiba-mais').attr('data-analytics-position', 'svas');
         $('#saiba-mais').attr('data-analytics-sku', product.sku);
         $('#saiba-mais').attr('data-analytics-label', 'saiba-mais');
-        // this.dataLayerSlider(product)
+        this.dataLayerSlider(product);
     }
 
     initSlick(element, settings) {
@@ -110,6 +111,8 @@ class Aplicativos {
             _this.changeImageSize(slick, currentSlide, nextSlide);
             _this.getTextByPosition(nextSlide);
         });
+
+        _this.getTextByPosition(0);
     }
 
     changeImageSize(slick, currentSlide, nextSlide) {
