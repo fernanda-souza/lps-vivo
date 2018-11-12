@@ -163,6 +163,7 @@ header {
             align-items: center;
             padding-left: 16px;
             padding-top: 12px;
+            cursor: pointer;
 
             @include desktop {
                 margin-left: 54px;

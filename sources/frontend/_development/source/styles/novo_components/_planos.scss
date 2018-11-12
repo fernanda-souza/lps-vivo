@@ -1,8 +1,8 @@
 .regionalized {
 
-    .lp_controle_planos{
-        .container_planos{
-            @include mobile{
+    .lp_controle_planos {
+        .container_planos {
+            @include mobile {
                 display: block;
             }
         }
@@ -28,7 +28,7 @@
             margin-top: 45px;
         }
 
-        @include mobile{
+        @include mobile {
             display: none;
         }
 
@@ -87,6 +87,7 @@
             .item-plan:nth-child(4)>.quantidade-plan {
                 background-image: linear-gradient(to right, #640B76, #6F1076);
             }
+
             // end cores
 
             .item-plan.slick-slide {
@@ -370,6 +371,10 @@
                 padding-bottom: 5px;
                 font-size: 12px;
                 line-height: 13px;
+
+                @media all and (-ms-high-contrast: none) {
+                    width: 50%;
+                }
             }
 
             .precio-plan {
