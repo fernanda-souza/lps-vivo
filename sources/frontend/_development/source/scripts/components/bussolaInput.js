@@ -95,11 +95,12 @@ class BussolaInput {
         });
 
         if( estado && cidade && ddd ){
+            var datalayer = new DataLayer();
+            datalayer.sendDataLayerLocation('alter-city-compass', estado, cidade, ddd);
             this.SharedFunctions.setCookie(estado, cidade, ddd); //TODO:
             let ciudad = cidade.split("-")[0];
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
             var datalayer = new DataLayer();
-            datalayer.sendDataLayerLocation('select-city-compass', estado, ciudad, ddd);
         }else if( !this.getcookie_cidade || this.getcookie_estado || this.getcookie_ddd ){
             // console.log( "setCookie line 90 bussolaInput.js" , this.getcookie_estado , this.getcookie_cidade, this.getcookie_ddd );
             //fallback for empty cookie data when bussolaInput it's initialized
@@ -152,11 +153,9 @@ class BussolaInput {
             $('.bussola_onmodal_input').show();
             $('.bussola_link').show();
             $('#autocomplete_input').focus();
-            var datalayer = new DataLayer();
             _this.getcookie_cidade = decodeURI(_this.helpers.getCookie('controle_cidade'));
             _this.getcookie_estado = decodeURI(_this.helpers.getCookie('controle_estado'));
             _this.getcookie_ddd = decodeURI(_this.helpers.getCookie('controle_ddd'));
-            datalayer.sendDataLayerLocation('alter-city-compass', _this.getcookie_estado, _this.getcookie_cidade, _this.getcookie_ddd);
         }
 
         
@@ -186,7 +185,6 @@ class BussolaInput {
     
 
         function switchModalOff(e, self) {
-            
             if( $(e.target).parent().parent().hasClass("bussola_hideonloading_input")){
                 self.setCurrentCity(e.text.label);
                 $('.bussola_onmodal_input', '.bussola_link').hide();
