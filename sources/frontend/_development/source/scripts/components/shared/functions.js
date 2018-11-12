@@ -79,7 +79,7 @@ class Functions {
         this.maxRecomendationsLength = 4;
 
         var returnParameterShop = window.location.search.split('=')[1];
-        this.returnFromShop(returnParameterShop);
+        // this.returnFromShop(returnParameterShop);
 
         this.getcookie_cidade = getcookie_cidade = decodeURI( this.helpers.getCookie('controle_cidade'));
         this.getcookie_ddd = getcookie_ddd = this.helpers.getCookie('controle_ddd');
