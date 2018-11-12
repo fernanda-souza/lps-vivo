@@ -7,7 +7,8 @@ import Helpers from "../services/Helpers"
 class QueryStringHandler {
     constructor() {
         this.helpers = new Helpers();
-        this.urlParam = this.helpers.getUrlParameter("cards");
+        // this.urlParam = this.helpers.getUrlParameter("cards");
+        this.urlParam = '';
         this.banner;
     }
 
