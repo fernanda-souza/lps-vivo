@@ -620,7 +620,7 @@ class Compass {
     }
 
     regionalizaGeoIP(callback) {
-        var urlGeoip = 'https://sslplataformavivow.clientes.ananke.com.br/vgeolocal/api/geolocation[FAIL]';
+        var urlGeoip = 'https://sslplataformavivow.clientes.ananke.com.br/vgeolocal/api/geolocation';
         var _this = this;
         var result = false;
     
