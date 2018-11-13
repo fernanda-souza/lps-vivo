@@ -12,8 +12,8 @@ class ChatController {
         this.helpers = new Helpers();
         let date = new Date();
         this.today = {
-            day: date.getDay(),
-            month: date.getMonth(),
+            day: date.getDate(),
+            month: date.getMonth() + 1,
             year: date.getFullYear()
         }
         this.token = 'bWF0ZXVzLm9saXZlaXJhLmV4dEB3dW5kZXJtYW4uY29tJmhhc2g9ODkxMzY2NTU';
@@ -42,6 +42,7 @@ class ChatController {
     verifyTime(isHoliday) {
         if(isHoliday){
             $('.btnnull').hide();
+            $('#triggerAssistant').hide();
         } 
         else{
             $.ajax(`${url}/getTime.php`, {
