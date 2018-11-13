@@ -2,9 +2,9 @@ import Helpers from "../services/Helpers"
 import config from '../../config.js'
 
 if(config.env === 'development'){
-    var url = 'http://hmlvivoparasuacasa.clientes.ananke.com.br/server';
+    var url = '//vivoparasuacasa.clientes.ananke.com.br/server';
 }else{
-    var url = 'http://vivoparasuacasa.clientes.ananke.com.br/server';
+    var url = '//vivoparasuacasa.clientes.ananke.com.br/server';
 }
 
 class ChatController {
@@ -57,8 +57,21 @@ class ChatController {
             }).done(function(res){
                 if(!res.date){
                     $('.btnnull').hide();
+                    $('#triggerAssistant').hide();
+                }else{
+                    showButtonChat();
                 }
             });
+        }
+    }
+
+    showButtonChat(){
+        if ($(window).width() < 426) {
+            $('#triggerAssistant').show();
+            $(".btnnull").hide();
+        } else {
+            $('#triggerAssistant').hide();
+            $(".btnnull").show();
         }
     }
   

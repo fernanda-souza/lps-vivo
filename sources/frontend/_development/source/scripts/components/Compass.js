@@ -81,13 +81,14 @@ class Compass {
 
             var viviShowerLogic = { active: true, percent: 100 };
 
-            if ($(window).width() < 426) {
-                $('#triggerAssistant').show();
-                $(".btnnull").hide();
-            } else {
-                $('#triggerAssistant').hide();
-                $(".btnnull").show();
-            }
+            // if ($(window).width() < 426) {
+            //     $('#triggerAssistant').show();
+            //     $(".btnnull").hide();
+            // } else {
+            //     $('#triggerAssistant').hide();
+            //     $(".btnnull").show();
+            // }
+
         // } else {
             // $("#livechat-eye-catcher, #livechat-compact-container, #livechat-full").show();
             // $(".btnnull,#triggerAssistant").hide();
