@@ -1,4 +1,11 @@
 import Helpers from "../services/Helpers"
+import config from '../../config.js'
+
+if(config.env === 'development'){
+    var url = 'http://hmlvivoparasuacasa.clientes.ananke.com.br/server';
+}else{
+    var url = 'http://vivoparasuacasa.clientes.ananke.com.br/server';
+}
 
 class ChatController {
     constructor() {
@@ -37,7 +44,7 @@ class ChatController {
             $('.btnnull').hide();
         } 
         else{
-            $.ajax(`http://secureform.local/getTime.php`, {
+            $.ajax(`${url}/getTime.php`, {
                 method: 'GET'
             }).done(function(res){
                 if(!res.date){
