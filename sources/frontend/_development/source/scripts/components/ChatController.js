@@ -47,6 +47,7 @@ class ChatController {
     }
 
     verifyTime(isHoliday) {
+        var _this = this;
         if(isHoliday){
             $('.btnnull').hide();
             $('#triggerAssistant').hide();
@@ -59,7 +60,7 @@ class ChatController {
                     $('.btnnull').hide();
                     $('#triggerAssistant').hide();
                 }else{
-                    showButtonChat();
+                    _this.showButtonChat();
                 }
             });
         }
