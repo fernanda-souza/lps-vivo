@@ -11,13 +11,15 @@ class ChatController {
     constructor() {
         this.helpers = new Helpers();
         let date = new Date();
+        let day = (date.getDate() < 10 ? `0${date.getDate()}` : date.getDate())
         this.today = {
-            day: date.getDate(),
+            day: day,
             month: date.getMonth() + 1,
             year: date.getFullYear()
         }
         this.token = 'bWF0ZXVzLm9saXZlaXJhLmV4dEB3dW5kZXJtYW4uY29tJmhhc2g9ODkxMzY2NTU';
         this.limit = 0;
+        console.log(this.today)
         this.checkHoliday();
     }
 
@@ -29,8 +31,11 @@ class ChatController {
         }).done(function(holidays){
             const dates = [];
             holidays.forEach(holiday => {
-                dates.push(holiday.date)
+                if(holiday.type === 'Feriado Nacional'){
+                    dates.push(holiday.date)
+                }
             });
+            console.log(dates)
             if(dates.includes(date)){
                 _this.verifyTime(true);
             }else{
