@@ -12,7 +12,6 @@ class QueryStringHandler {
     }
 
     relocateContent(){
-        console.log("endt")
         if( this.urlParam ){
             switch(this.urlParam) {
                 case 'top': 
@@ -34,7 +33,6 @@ class QueryStringHandler {
     }
 
     parseURLParam(){
-        
         if( this.urlParam ){
             switch(this.urlParam) {
                 case 'top': 

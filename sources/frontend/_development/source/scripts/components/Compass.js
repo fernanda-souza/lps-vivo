@@ -20,6 +20,7 @@ class Compass {
         this.compassConfig = new CompassConfig(this.bussolaMainSelector);
         this.helpers = new Helpers();
         this.SharedFunctions = new SharedFunctions();
+        this.datalayer = new DataLayer();
         this.configAutocomplete();
         this.sectionsOffset = (this.helpers.isMobile()) ? 120 : 60;  
         $('.bussola_loading').hide();
@@ -141,11 +142,7 @@ class Compass {
 
     showCompass(event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
         $(this.bussolaMainSelector).fadeIn(100);
-        var helpers = new Helpers();
-        var datalayer = new DataLayer();
-        console.log('LOCK');
-        // helpers.controllScroll('lock');
-        // datalayer.sendDataLayerLocation(event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola);
+        this.datalayer.sendDataBussola('show-compass', estado, cidade, ddd);
     }
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
@@ -169,23 +166,13 @@ class Compass {
             return;
         }
 
-        // $("[id^='modalChatvivi']").show();
         $(this.bussolaMainSelector).fadeOut(100);   
         $(".label").removeClass("label--hidden"); 
         $(".plans__title").show();      
         $('.bussola_onpage').hide();    
         $('#btnbackbuss').show();
-
-        //this.setCookie(estado, cidade, ddd);
-        var datalayer = new DataLayer();
         window.isSlickCardsInit = false;
-        var reg = new Regionalization();
-
-        // this.animScrollTo("#plans_cards");
         this.compassConfig.initFooterOn(false);
-         
-        // datalayer.sendDataLayerLocation(event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola);
-
     }
 
     checkMaxRecomendations(){
@@ -650,11 +637,9 @@ class Compass {
                 callback(false);
             }
         });
-        console.log(result)
     }
 
     geolocationPosition(currentPosition) {
-        console.log( "geolocationPosition" );
         var _this = this;
         var lat = currentPosition.coords.latitude;
         var lng = currentPosition.coords.longitude;

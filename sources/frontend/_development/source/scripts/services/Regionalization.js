@@ -531,16 +531,12 @@ import DataLayer from "../services/DataLayer";
 
 class Regionalization {
     constructor() {
-        // $(".plans-carousel-mob").on( "init" , ()=>window.isSlickCardsInit = true); //@TODO NEW NOT USE?
         this.initRegionalization();
         this.initCarousel();
         this.toggleCardBody();
     }
 
     initRegionalization() {
-        console.log('init regionalization')
-        // $(".banner-generic__content").hide(); //@TODO NEW
-        // $(".comp_0002_banner_param").removeClass("comp_0002_banner_param__banner-generic"); //@TODO NEW
         var helpers = new Helpers();
         var datalayer = new DataLayer();
 
@@ -551,27 +547,10 @@ class Regionalization {
         var parameters = window.location.search;
         var appname = this.getUrlParameter('banner');
 
-        // $('#currentCity, .label__text').text(regional + ' - ' + userReg); //old
         $('.ciudad').find('p').text( regional + ' - ' + userReg );
         $('.mobile-ciudad').find('p').text( regional + ' - ' + userReg );
 
-        
-
         if (helpers.isMobile() || helpers.isTablet()) $('body').addClass("regionalized");
-
-        /**
-         * Inclui o script cd-modal dentro da pagina http://www.vivocontrolegiga.com.br/
-         * esse script foi retirado conforme a tarefa: 633.
-         */
-        // var cdModal = document.createElement('script');
-        // cdModal.type = 'text/javascript';
-        // cdModal.async = false;
-        // var ambiente = window.location.hostname;
-        // cdModal.src = ('https:' ===
-        //         document.location.protocol ? 'https://' : 'http://') +
-        //     'cdn.celulardireto.com.br/Vivo/Modais/cd-modal.js';
-        // var s = document.getElementsByTagName('script')[0];
-        // s.parentNode.insertBefore(cdModal, s);
 
         parameters = window.location.search;
 
@@ -600,9 +579,6 @@ class Regionalization {
             _priceBanner = $('.banner__content .banner__info__price .price__block'),
             _paramBanner = "vivocontrolegoread";
 
-        // setTimeout(function() {
-        //     _banner.fadeIn();
-        // }, 1000);
 
         var linkPlan;
     

@@ -92,7 +92,6 @@ class Functions {
 
         this.queryStringHandler = new QueryStringHandler();
         this.queryStringHandler.relocateContent();
-        this.datalayer = new DataLayer();
 
         // CHECK CIDADE URL PARAM
         let urlParamCidade = this.helpers.getUrlParameter("cidade");
@@ -200,7 +199,6 @@ class Functions {
         let _this = this;
         if( window.hasLocationCookies ){
             let cidadeLocalizada = getcookie_cidade + ' - ' + getcookie_estado;
-            console.log( cidadeLocalizada );
             $('#city-mob').text( cidadeLocalizada );
             $('.ciudad').find('p').text(cidadeLocalizada);
             $('.mobile-ciudad').find('p').text(cidadeLocalizada);
@@ -209,23 +207,12 @@ class Functions {
             $(".label").removeClass("label--hidden");
             $("[id^='livechat']").show();
             $('#btnbackbuss').show();
-    
             _this.searchDataCity('cookie-success', getcookie_cidade);
-            let datalayer = new DataLayer();
-            // datalayer.sendDataBussola('show-compass', getcookie_estado, getcookie_cidade, getcookie_ddd);
-    
-            // $('.btn-confirmar').on('click', () => {
-            //         datalayer.sendDataLayerLocation('select-city-compass', getcookie_estado, getcookie_cidade, getcookie_ddd); 
-            // });
-    
+
             window.citySelected = true;
-            // window.enableMobileChat()
             var timeout = setInterval(function () {
-                // _this.getGA();
-    
                 if (window.GAParam) {
                     clearInterval(timeout);
-                    var reg = new Regionalization();
                     _this.getWindowSize();
                 }
             }, 500);
@@ -235,7 +222,6 @@ class Functions {
     }
 
     checkLocationByGeoIP(){
-        console.log( "checkLocationByGeoIP" );
         this.compassConfig.moveTo(".bussola_onpage");
         if( !this.compass ){
             this.compass = new Compass();
@@ -251,22 +237,16 @@ class Functions {
             this.banner = new BannerConversao( $('.container_banner') );
             this.banner.setupTemplate();
         }
-        // $(".banner-item__inner.left > .banner-first-block").remove();
         $('[data-target="franquia"]').remove();
     }
 
     geolocationCallback( value, location, checkCookies ){
-        console.log( "geolocationCallback" , value , location );
         if( checkCookies ){
             __this.checkLocationByCookies();
         }else{
-            let datalayer = new DataLayer();
             if(value){
                 let ciudad = location.ciudad.split("-")[0];
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
-                datalayer.sendDataBussola('show-compass', location.estado, ciudad, location.ddd);
-            }else{
-                datalayer.sendDataBussola('show-compass', undefined, undefined, undefined);
             }
         }
     }
@@ -301,19 +281,10 @@ class Functions {
 
     showCompass(event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
         $(this.bussolaMainSelector).fadeIn(100);
-        var datalayer = new DataLayer();
-        datalayer.sendDataBussola('show-compass', estado, cidade, ddd);
     }
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
-
-        let offset = $("#planos").offset().top - 45; //45 margin child
-        // if (origin == 'returnShop') {
-        //     offset = $("#planos").offset().top - 45; //45 margin child
-        //     // offset = $(this.bussolaMainSelector + " .plans-section").offset().top;
-        // } else {
-        //     offset = 0;
-        // }
+        let offset = $("#planos").offset().top - 45;
         this.helpers.controllScroll('unlock');
 
         if (!(this.getcookie_ddd == "" || this.getcookie_cidade == "" || this.getcookie_estado == "")) {
@@ -331,15 +302,9 @@ class Functions {
         $(".plans__title").show();
         $('.bussola_onpage').hide();
         $('#btnbackbuss').show();
-
         window.isSlickCardsInit = false;
-        
         this.animScrollTo(offset);
         this.compassConfig.initFooterOn(false);
-        
-        // var datalayer = new DataLayer();
-        // datalayer.sendDataLayerLocation(event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola);
-
     }
 
     checkMaxRecomendations() {
@@ -384,9 +349,7 @@ class Functions {
         this.awesomplete = new Awesomplete(_inputComplete, {
             minChars: 2,
             autoFirst: true,
-            // maxItems : _maxItems,
             item: (text, input) => {
-                // suggestions
                 if (!this.needToRefreshSuggestions) {
                     this.needToRefreshSuggestions = true;
                     this._bussolaRecomendations.html("");
@@ -395,14 +358,11 @@ class Functions {
                     let item = $(Awesomplete.ITEM(text, text.label.toLowerCase().match(_formatRegexp(input).toLowerCase())[0]));
                     item.addClass("bussola_recomendations-container--item");
                     item.on("click", (e) => {
-                        // this.cityChosedByRecomendation = true;
                         var id = $(e.target).text();
                         this.setCurrentCity(id);
-                        console.log("b");
                     });
                     this._bussolaRecomendations.append(item);
                 }
-                // end suggestions
                 return Awesomplete.ITEM(text, text.label.toLowerCase().match(_formatRegexp(input).toLowerCase())[0]); // highlighted item matched by [eéèêëEÉÈÊË] regex    
             },
             sort: (a, b) => {
@@ -460,9 +420,6 @@ class Functions {
 
             }
         });
-        // var _parent = $(this.bussolaMainSelector + " <div></div>");
-        // $(this.bussolaMainSelector + " .awesomplete").append(_parent);
-        // $(this.awesomplete.ul).appendTo(_parent);
 
         var bussolaModalMobile = () => {
             if (this.helpers.isMobile() || this.helpers.isTablet()) {
@@ -496,8 +453,7 @@ class Functions {
         $.each(this.cities.cidades, function (key, item) {
             listComplete.push(item.value);
         });
-        //this.awesomplete.list = listComplete.sort();
-        // listComplete = listComplete.sort();
+    
         this.awesomplete.list = listComplete;
 
         $(this.bussolaMainSelector + " .nova_bussola_regiao_modal-bg, .nova_bussola_regiao_modal > .hw-wrapper, .nova_bussola_regiao_modal-content-btn-ok").on("click", () => {
@@ -784,12 +740,12 @@ class Functions {
                         navigator.geolocation.getCurrentPosition((p) => {
                             _this.geolocationPosition(p)
                         }, function (error) {
-                            // _this.showCompass('abriuBussola', locatedByGeoIp, null, null, null, true, false, false)
+                            _this.showCompass('abriuBussola', locatedByGeoIp, null, null, null, true, false, false)
                         }, {
                             timeout: 2000
                         });
                     } else {
-                        // _this.showCompass('abriuBussola', false, null, null, null, true, false, false);
+                        _this.showCompass('abriuBussola', false, null, null, null, true, false, false);
                     }
                 }
             },
@@ -885,7 +841,6 @@ class Functions {
 
 
     initRegionalization(estado, cidade, ddd) {
-        console.log("initRegionalization", cidade)
         $('.container-planos .container-box').remove();
         $('.container_modal').remove();
         if (this.helpers.isMobile() || this.helpers.isTablet()) {
@@ -895,16 +850,8 @@ class Functions {
             $('#city-mob').text(cidade);
             $('.mobile-ciudad').find('p').text(cidade + '-' + estado);
             $('.mobile-ciudad').css('display', 'flex');
-            // $('.mobile-ciudad').on('click', () => { //DUPLICATED
-            //     $(window).trigger( "CHANGE_LOCATION" );
-            // });
         }
 
-        //se debe disparar al click en botón confirmar, no al seleccionar la ciudad
-        // var datalayer = new DataLayer()
-        // datalayer.sendDataLayerLocation('select-city-compass', estado, cidade, ddd);
-
-        // this.setLabelCity(cidade);
         $('#currentCity').text(cidade + " :S");
         $('.label__text').text(cidade).show();
         $('.plans-carousel-mob').empty();

@@ -9,16 +9,15 @@ class DataLayer {
      }
 
     sendDataLayerLocation(event, estado, cidade, ddd , origem) {
-        // event = evento;
         window.dataLayer.push({
             'event': event,
             'page': window.location.href,
             'title': document.title,
             'custom': {
                 'dimensions': {
-                    'user-state': ( estado? this.helpers.stringSanitize(estado) : undefined ), // obrigatório em todos os casos
-                    'user-city': ( cidade? this.helpers.stringSanitize(cidade) : undefined ), // obrigatório em todos os casos
-                    'ddd': ( ddd? ddd : undefined ), // obrigatório em todos os casos
+                    'user-state': ( estado? this.helpers.stringSanitize(estado) : undefined ), // * Required
+                    'user-city': ( cidade? this.helpers.stringSanitize(cidade) : undefined ), // * Required
+                    'ddd': ( ddd? ddd : undefined ), // * Required
                     'id-origem-vivo' : origem
                 }
             }
