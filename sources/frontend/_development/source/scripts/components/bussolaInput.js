@@ -84,7 +84,10 @@ class BussolaInput {
 
         if( estado && cidade && ddd ){
             cidade = cidade.substr(0, cidade.indexOf('-'));
-            this.datalayer.sendDataLayerLocation('alter-city-compass', estado, cidade, ddd);
+            String.prototype.rtrim = function () {
+                return this.replace(/((\s*\S+)*)\s*/, "$1");
+            }
+            this.datalayer.sendDataLayerLocation('alter-city-compass', estado, cidade.rtrim(), ddd);
             this.SharedFunctions.setCookie(estado, cidade, ddd); 
             let ciudad = cidade.split("-")[0];
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );

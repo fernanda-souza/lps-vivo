@@ -241,12 +241,14 @@ class Functions {
     }
 
     geolocationCallback( value, location, checkCookies ){
+        let datalayer = new DataLayer();
         if( checkCookies ){
             __this.checkLocationByCookies();
         }else{
             if(value){
                 let ciudad = location.ciudad.split("-")[0];
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
+                datalayer.sendDataBussola('show-compass', location.estado, ciudad, location.ddd);
             }
         }
     }
