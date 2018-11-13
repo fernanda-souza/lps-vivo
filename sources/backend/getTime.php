@@ -14,7 +14,7 @@ if( $day_of_week >= 1 && $day_of_week <= 5){  // Seg a Sex
     $close = "23:50";
 }else if ( $day_of_week === 6 ){ // Sabado
     $open = "8:00";
-    $close = "21:00";
+    $close = "21:50";
 }else{ // Domingo
     $open = "9:00";
     $close = "20:50";
