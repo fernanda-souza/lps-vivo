@@ -12,9 +12,11 @@ class ChatController {
         this.helpers = new Helpers();
         let date = new Date();
         let day = (date.getDate() < 10 ? `0${date.getDate()}` : date.getDate())
+        let month = (date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1)
+
         this.today = {
             day: day,
-            month: date.getMonth() + 1,
+            month: month,
             year: date.getFullYear()
         }
         this.token = 'bWF0ZXVzLm9saXZlaXJhLmV4dEB3dW5kZXJtYW4uY29tJmhhc2g9ODkxMzY2NTU';
