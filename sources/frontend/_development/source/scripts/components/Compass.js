@@ -621,6 +621,7 @@ class Compass {
             success: function(data) {
                 // data.City = "São Paulo";
                 // data.City = "";
+                _this.showCompass('abriuBussola', locatedByGeoIp, null, null, null, true, false, false)
                 _this.processGeolocationData( callback , data.City );
             },
             error: function(error) {

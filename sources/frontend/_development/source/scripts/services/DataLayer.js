@@ -9,7 +9,7 @@ class DataLayer {
      }
 
     sendDataLayerLocation(event, estado, cidade, ddd , origem) {
-        window.dataLayer.push({
+        const data = {
             'event': event,
             'page': window.location.href,
             'title': document.title,
@@ -18,10 +18,13 @@ class DataLayer {
                     'user-state': ( estado? this.helpers.stringSanitize(estado) : undefined ), // * Required
                     'user-city': ( cidade? this.helpers.stringSanitize(cidade) : undefined ), // * Required
                     'ddd': ( ddd? ddd : undefined ), // * Required
-                    'id-origem-vivo' : origem
                 }
             }
-        });
+        };
+        if(event === 'page-init'){
+            data.custom.dimensions['id-origem-vivo'] = origem;
+        }
+        window.dataLayer.push(data);
     }
 
     sendDataLayerInit(event, estado, cidade, ddd , origem) {
