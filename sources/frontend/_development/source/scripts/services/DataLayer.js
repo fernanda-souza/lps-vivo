@@ -9,20 +9,22 @@ class DataLayer {
      }
 
     sendDataLayerLocation(event, estado, cidade, ddd , origem) {
-        // event = evento;
-        window.dataLayer.push({
+        const data = {
             'event': event,
             'page': window.location.href,
             'title': document.title,
             'custom': {
                 'dimensions': {
-                    'user-state': ( estado? this.helpers.stringSanitize(estado) : undefined ), // obrigatório em todos os casos
-                    'user-city': ( cidade? this.helpers.stringSanitize(cidade) : undefined ), // obrigatório em todos os casos
-                    'ddd': ( ddd? ddd : undefined ), // obrigatório em todos os casos
-                    'id-origem-vivo' : origem
+                    'user-state': ( estado? this.helpers.stringSanitize(estado) : undefined ), // * Required
+                    'user-city': ( cidade? this.helpers.stringSanitize(cidade) : undefined ), // * Required
+                    'ddd': ( ddd? ddd : undefined ), // * Required
                 }
             }
-        });
+        };
+        if(event === 'page-init'){
+            data.custom.dimensions['id-origem-vivo'] = origem;
+        }
+        window.dataLayer.push(data);
     }
 
     sendDataLayerInit(event, estado, cidade, ddd , origem) {
