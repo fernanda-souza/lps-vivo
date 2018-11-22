@@ -156,6 +156,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '5GB',
+        critico: true,
         mainoffer: true,
         appname: "vivocontrolenba",
         SKU: ['VC00031', 'VIVOCTRLF29A'],
@@ -170,6 +171,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '4GB',
+        critico: true,
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ['VC00031', 'VIVOCTRLF28A'],
@@ -185,6 +187,7 @@ var plansControle = [
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '3GB',
         mainoffer: true,
+        critico: true,
         appname: "vivocontrolegoread",
         SKU: ['VC00029', 'VIVOCTRLF27A'],
         combo: "<br>GoRead - NBA - Sync",
@@ -198,6 +201,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '3GB',
+        critico: true,
         SKU: ['', 'VIVOCTRLF26A'],
         portal: false,
         price: {
