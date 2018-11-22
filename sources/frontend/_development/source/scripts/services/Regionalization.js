@@ -204,6 +204,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '6,5GB',
+        critico: true,
         TJinternet: '6GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolenba",
@@ -219,6 +220,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '6GB',
+        critico: true,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
@@ -234,6 +236,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '5GB',
+        critico: true,
         TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
@@ -249,6 +252,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '4GB',
+        critico: true,
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolegoread",
