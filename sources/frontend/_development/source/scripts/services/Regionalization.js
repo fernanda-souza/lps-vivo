@@ -665,7 +665,7 @@ class Regionalization {
                             </div>
                         </div>
                         <div class="info-plan">
-                            <p><strong>Ligações ilimitadas</strong> locais para todas as operadoras</p>
+                            <p><strong>Ligações ilimitadas</strong> para todas as operadoras</p>
                             <p><strong>Apps inclusos:</strong> ${appInclusos}</p>
                             <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>
                             <p class="hidden-details"><strong>SMS ilimitado</strong> para qualquer operadora do Brasil.</p>
