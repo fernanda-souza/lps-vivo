@@ -640,19 +640,17 @@ class Regionalization {
             var prices = `${plano.price.amount}`.split('.');
             var linkPlan = plano.SKU[1];
 
-            if (plano.internet === '3GB') {
+            if (index === 0) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            }else if(plano.internet ===  '4B'){
+            }else if(index === 1){
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
-            }else if( index  == 2 ) {
+            }else if( index  === 2 ) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
             } else {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
             }
 
             if (currentPlans.length - 1 !== index) {
-
-                console.log(plano)
 
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
