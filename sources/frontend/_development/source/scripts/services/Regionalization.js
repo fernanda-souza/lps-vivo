@@ -642,12 +642,12 @@ class Regionalization {
 
             if (index === 0) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            }else if(index === 1){
+            }else if(index === 1 && !plano.critico ){
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
             }else if( index  === 2 ) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
             } else {
-                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
+                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
             }
 
             if (currentPlans.length - 1 !== index) {
