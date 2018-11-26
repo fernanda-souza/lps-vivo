@@ -693,10 +693,10 @@ class Regionalization {
                     e.preventDefault();
                     if ($('.hidden-details').is(":visible")) {
                         $('.hidden-details').slideUp(200);
-                        $(".detalhes").text("+ beneficios");
+                        $(".detalhes").text("+ benefícios");
                     } else {
                         $('.hidden-details').slideDown(200);
-                        $(".detalhes").text("- beneficios");
+                        $(".detalhes").text("- benefícios");
                     }
                     e.stopImmediatePropagation();
                 });
