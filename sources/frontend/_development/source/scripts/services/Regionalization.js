@@ -642,7 +642,7 @@ class Regionalization {
 
             if (index === 0) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            }else if(index === 1 && !plano.critico ){
+            }else if(index === 1){
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
             }else if( index  === 2 ) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
