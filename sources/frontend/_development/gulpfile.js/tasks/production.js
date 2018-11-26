@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
+var fs = require('fs');
 
 var productionTask = function productionTask(cb) {
     global.PRODUCTION = true;
@@ -7,5 +8,9 @@ var productionTask = function productionTask(cb) {
         process.exit(0);
     });
 };
+
+fs.writeFile('source/config.json', JSON.stringify({
+    env: 'production'
+}));
 
 gulp.task('production', productionTask);

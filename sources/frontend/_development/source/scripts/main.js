@@ -17,6 +17,7 @@ import QueryStringHandler from './components/QueryStringHandler';
 
 import DataLayer from "./services/DataLayer";
 import BannerConversao from "./components/BannerConversao";
+import ChatController from "./components/ChatController";
 
 
 var helpers = new Helpers();
@@ -70,6 +71,7 @@ class Main {
         new Aplicativos();
         new Planos();
         new MenuMobile();
+        new ChatController();
         let querystring  = new QueryStringHandler();
         querystring.parseURLParam();
         this.insertBussola();

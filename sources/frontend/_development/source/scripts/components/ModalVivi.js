@@ -8,7 +8,7 @@ class ModalVivi {
 
     openModal() {
         let openModal = $(".btnnull, #triggerAssistant");
-        openModal.show();
+        // openModal.show();
         openModal.click(function(e) {
             e.preventDefault();
             $("#modalChatvivi").fadeIn();
