@@ -255,6 +255,7 @@ class Functions {
             __this.checkLocationByCookies();
         }else{
             $('#autocomplete').val(`${ciudad}- ${location.estado}`);
+            $('.mobile-ciudad').find('p').text(`${ciudad}- ${location.estado}`);
             let datalayer = new DataLayer();
             if(value){
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
