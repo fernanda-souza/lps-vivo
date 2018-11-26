@@ -156,8 +156,8 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
-        internet: '4,5GB',
-        TJinternet: '4GB + 500MB de bônus*',
+        internet: '5GB',
+        TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ['VC00030', 'VIVOCTRLF30N'],
@@ -171,8 +171,8 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
-        internet: '3,5GB',
-        TJinternet: '3GB + 500MB de bônus*',
+        internet: '4GB',
+        TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ['VC00030', 'VIVOCTRLF28N'],
@@ -186,8 +186,8 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
-        internet: '2,5GB',
-        TJinternet: '2GB + 500MB de bônus*',
+        internet: '3GB',
+        TJinternet: '2,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: ['VC00028', 'VIVOCTRLF27N'],
         combo: "GoRead - NBA - Sync",
@@ -204,6 +204,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '6,5GB',
+        critico: true,
         TJinternet: '6GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolenba",
@@ -218,8 +219,9 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
-        internet: '5,5GB',
-        TJinternet: '5GB + 500MB de bônus*',
+        internet: '6GB',
+        critico: true,
+        TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ['VC00031', 'VIVOCTRLF30A'],
@@ -233,8 +235,9 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
-        internet: '4,5GB',
-        TJinternet: '4GB + 500MB de bônus*',
+        internet: '5GB',
+        critico: true,
+        TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ['VC00031', 'VIVOCTRLF28A'],
@@ -248,8 +251,9 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
-        internet: '3,5GB',
-        TJinternet: '3GB + 500MB de bônus*',
+        internet: '4GB',
+        critico: true,
+        TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolegoread",
         SKU: ['VC00029', 'VIVOCTRLF27A'],
@@ -636,14 +640,14 @@ class Regionalization {
             var prices = `${plano.price.amount}`.split('.');
             var linkPlan = plano.SKU[1];
 
-            if (plano.internet === '2,5GB') {
+            if (index === 0) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            }else if(plano.internet ===  '3,5GB'){
-                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
-            }else if( index  == 2 ) {
+            }else if(index === 1 && !plano.critico ){
+                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
+            }else if( index  === 2 ) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
             } else {
-                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
+                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
             }
 
             if (currentPlans.length - 1 !== index) {
@@ -665,7 +669,7 @@ class Regionalization {
                             </div>
                         </div>
                         <div class="info-plan">
-                            <p><strong>Ligações ilimitadas</strong> locais para todas as operadoras</p>
+                            <p><strong>Ligações ilimitadas</strong> ${plano.critico ? `` : `locais`} para todas as operadoras</p>
                             <p><strong>Apps inclusos:</strong> ${appInclusos}</p>
                             <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>
                             <p class="hidden-details"><strong>SMS ilimitado</strong> para qualquer operadora do Brasil.</p>

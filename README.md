@@ -9,9 +9,12 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- PUB_VIVO_20181113_Controle_Parametros (13/11/2018)
+- PUB_VIVO_20181123_ControleAumentodefranquia_Controle (26/11/2018)
 
 ### Release notes
+- **PUB_VIVO_20181123_ControleAumentodefranquia_Controle**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3783
+
 - **PUB_VIVO_20181113_Controle_Parametros**
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-3674
 
