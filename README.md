@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- PUB_VIVO_20181126_ControleTimerdoChat_V01 (26/11/2018)
+- PUB_VIVO_20181127_ControleCookiePermanente_V01 (27/11/2018)
 
 ### Release notes
-- **PUB_VIVO_20181126_ControleTimerdoChat_V01**
+- **PUB_VIVO_20181127_ControleCookiePermanente_V01**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3808
+
+- PUB_VIVO_20181126_ControleTimerdoChat_V01
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-3799
 
 - PUB_VIVO_20181126_ControleAumentodefranquia_V02
