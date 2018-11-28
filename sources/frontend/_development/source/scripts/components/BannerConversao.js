@@ -1,10 +1,12 @@
 import Banner from "./Banner";
+import Helpers from "../services/Helpers";
 
 class BannerConversao extends Banner {
 
     constructor($holder) {
         super();
         this.holder = $holder;
+        this.helper = new Helpers();
     }
 
     setupTemplate() {
@@ -49,15 +51,26 @@ class BannerConversao extends Banner {
                         </div>
                         <p data-target="franquia">No plano controle <span class="internet-gb">2,5GB</span></p>
                     </div>
-
+                    
                     <div class="banner-third-block">
                         <a class="btn btn-banner-consideracao2" data-target="link-banner-assine-ja" target="_blank">
                             ASSINE JÁ
                         </a>
-                        <div class="banner-bottom-text">
-                            OU LIGUE 0800 10 1515
-                        </div>
-                    </div>
+                        `;
+                       if(this.helper.isMobile())
+                       {
+                        htmlCode+=`<div class="banner-bottom-text">
+                                        <a style="color:#fff;text-decoration:none;" href="tel:+0800101515">OU LIGUE 0800 10 1515</a>
+                                   </div>`;
+                       }
+                       else
+                       {
+                        htmlCode+=`<div class="banner-bottom-text">
+                                        OU LIGUE 0800 10 1515
+                                   </div>`;
+                       }
+                        
+                htmlCode+=`</div>
 
                 </div>
             </div>
