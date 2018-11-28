@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- PUB_VIVO_20181127_ControleCookiePermanente_V01 (27/11/2018)
+- Publicacao_20181128_Controle_BussolaCidade (28/11/2018)
 
 ### Release notes
-- **PUB_VIVO_20181127_ControleCookiePermanente_V01**
+- **Publicacao_20181128_Controle_BussolaCidade**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3850
+
+- PUB_VIVO_20181127_ControleCookiePermanente_V01
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-3808
 
 - PUB_VIVO_20181126_ControleTimerdoChat_V01
