@@ -2,6 +2,8 @@
 
 import Planos from '../components/Planos';
 import QueryStringHandler from '../components/QueryStringHandler';
+import ModalnformacoesAdicionais from "../components/ModalnformacoesAdicionais";
+
 
 var isArray = Function.isArray || function (o) {
     return typeof o === 'object' && Object.prototype.toString.call(o).slice(8, -1) === 'Array';
@@ -682,7 +684,7 @@ class Regionalization {
                         <div class="assine">
                             <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
                         </div>
-                        <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a>
+                        <a class="regulamiento" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a>
                     </div>
                 `);
 
@@ -699,6 +701,13 @@ class Regionalization {
                         $(".detalhes").text("- beneficios");
                     }
                     e.stopImmediatePropagation();
+                });
+
+                $(".regulamiento").click(function(e){
+                    e.preventDefault();
+                    this.ModalnformacoesAdicionais = new ModalnformacoesAdicionais();
+                    this.ModalnformacoesAdicionais.setContent(plano.critico);
+                    this.ModalnformacoesAdicionais.showModal();
                 });
             }
         });
