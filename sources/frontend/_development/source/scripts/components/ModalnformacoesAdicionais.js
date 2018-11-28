@@ -32,7 +32,7 @@ class ModalnformacoesAdicionais {
             </ul>`);
 
             $(".tab__content[data-main-content=3]").html(`<ul>
-            <li><a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento https://www.vivo.com.br/</a></li> 
+            <li><a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento www.vivo.com.br/</a></li> 
             </ul>`)
 
         } 
@@ -57,7 +57,7 @@ class ModalnformacoesAdicionais {
             </ul>`)
 
             $(".tab__content[data-main-content=3]").html(`<ul>
-            <li><a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento https://www.vivo.com.br/</a></li>
+            <li><a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento www.vivo.com.br/</a></li>
             </ul>`)
         }
     }
