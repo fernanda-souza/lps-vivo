@@ -17,7 +17,7 @@ class ModalnformacoesAdicionais {
         if (critico === true) {
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
-            <li>Para navegar com a velocidade 4G você precisa ter uma aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
+            <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
             <li>Velocidade máxima da internet disponível de até 5Mbps para download e 500Kbps para upload;</li>
             <li>A navegação nos apps de conteúdo inclusos nos planos é descontada da franquia de internet;</li>
             <li>Para receber ligações a cobrar é necessário ter saldo de recarga;</li>
@@ -31,16 +31,16 @@ class ModalnformacoesAdicionais {
             <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo, celular ou fixo de outras operadoras;</li>
             </ul>`);
 
-            $(".tab__content[data-main-content=3]").html(`<ul>
-            <li><a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento</a></li> 
-            </ul>`)
+            $(".tab__content[data-main-content=3]").html(`
+            <a target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento</a>
+            `)
 
         } 
         
         else {
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
-            <li>Para navegar com a velocidade 4G você precisa ter uma aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
+            <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
             <li>Velocidade máxima da internet disponível de até 5Mbps para download e 500Kbps para upload;</li>
             <li>A navegação nos apps de conteúdo inclusos nos planos é descontada da franquia de internet;</li>
             <li>Para receber ligações a cobrar é necessário ter saldo de recarga;</li>
@@ -56,9 +56,8 @@ class ModalnformacoesAdicionais {
             <li>As chamadas de longa distância com o <strong>código 15</strong> para celulares de outras operadoras têm o valor de R$0,50/minuto;</li>
             </ul>`)
 
-            $(".tab__content[data-main-content=3]").html(`<ul>
-            <li><a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento</a></li>
-            </ul>`)
+            $(".tab__content[data-main-content=3]").html(`
+            <a target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento</a>`)
         }
     }
 
