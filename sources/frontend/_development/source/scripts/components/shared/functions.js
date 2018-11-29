@@ -707,7 +707,7 @@ class Functions {
     setExpires(){
         var now = new Date();
         var time = now.getTime();
-        time += 3600 * 1000 * 24 * 30;
+        time += 3600 * 1000 * 24 * (365 * 20);
         now.setTime(time);
         return now.toGMTString();
     }

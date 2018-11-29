@@ -81,13 +81,14 @@ class Compass {
 
             var viviShowerLogic = { active: true, percent: 100 };
 
-            if ($(window).width() < 426) {
-                $('#triggerAssistant').show();
-                $(".btnnull").hide();
-            } else {
-                $('#triggerAssistant').hide();
-                $(".btnnull").show();
-            }
+            // if ($(window).width() < 426) {
+            //     $('#triggerAssistant').show();
+            //     $(".btnnull").hide();
+            // } else {
+            //     $('#triggerAssistant').hide();
+            //     $(".btnnull").show();
+            // }
+
         // } else {
             // $("#livechat-eye-catcher, #livechat-compact-container, #livechat-full").show();
             // $(".btnnull,#triggerAssistant").hide();
@@ -565,9 +566,10 @@ class Compass {
     }
 
     setExpires(){
+        alert();
         var now = new Date();
         var time = now.getTime();
-        time += 3600 * 1000 * 24 * 30;
+        time += 3600 * 1000 * 24 * (365 * 20);;
         now.setTime(time);
         return now.toGMTString();
     }
