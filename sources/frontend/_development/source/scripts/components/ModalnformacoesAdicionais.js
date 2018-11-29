@@ -17,7 +17,7 @@ class ModalnformacoesAdicionais {
         if (critico === true) {
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
-            <li>Para navegar com a velocidade 4G você precisa ter uma aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
+            <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
             <li>Velocidade máxima da internet disponível de até 5Mbps para download e 500Kbps para upload;</li>
             <li>A navegação nos apps de conteúdo inclusos nos planos é descontada da franquia de internet;</li>
             <li>Para receber ligações a cobrar é necessário ter saldo de recarga;</li>
@@ -40,7 +40,7 @@ class ModalnformacoesAdicionais {
         else {
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
-            <li>Para navegar com a velocidade 4G você precisa ter uma aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
+            <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
             <li>Velocidade máxima da internet disponível de até 5Mbps para download e 500Kbps para upload;</li>
             <li>A navegação nos apps de conteúdo inclusos nos planos é descontada da franquia de internet;</li>
             <li>Para receber ligações a cobrar é necessário ter saldo de recarga;</li>
