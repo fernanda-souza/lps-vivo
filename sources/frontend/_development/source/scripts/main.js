@@ -19,7 +19,6 @@ import DataLayer from "./services/DataLayer";
 import BannerConversao from "./components/BannerConversao";
 import ChatController from "./components/ChatController";
 
-
 var helpers = new Helpers();
 window.regionalizationFirstTime = true;
 require('./services/ddds');
