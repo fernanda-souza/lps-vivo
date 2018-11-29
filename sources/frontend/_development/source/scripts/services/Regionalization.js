@@ -684,7 +684,7 @@ class Regionalization {
                         <div class="assine">
                             <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
                         </div>
-                        <a class="regulamiento" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a>
+                        <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">Informações</a>
                     </div>
                 `);
 
@@ -703,7 +703,7 @@ class Regionalization {
                     e.stopImmediatePropagation();
                 });
 
-                $(".regulamiento").click(function(e){
+                $(".informacoes").click(function(e){
                     e.preventDefault();
                     this.ModalnformacoesAdicionais = new ModalnformacoesAdicionais();
                     this.ModalnformacoesAdicionais.setContent(plano.critico);
