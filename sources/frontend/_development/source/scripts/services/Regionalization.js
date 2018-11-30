@@ -552,6 +552,7 @@ class Regionalization {
         var userReg = this.getCookie('controle_estado');
         var parameters = window.location.search;
         var appname = this.getUrlParameter('banner');
+        var critico;
 
         $('.ciudad').find('p').text( regional + ' - ' + userReg );
         $('.mobile-ciudad').find('p').text( regional + ' - ' + userReg );
@@ -654,6 +655,8 @@ class Regionalization {
 
             if (currentPlans.length - 1 !== index) {
 
+                self.critico = plano.critico;
+
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
                         <div class="quantidade-plan">
@@ -687,28 +690,6 @@ class Regionalization {
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">Informações</a>
                     </div>
                 `);
-
-                $(".item-plan").css("opacity", "1").css("display", "block");
-                $(".blur-gb").css("display", "none");
-
-                $('.detalhes').on('click', function (e) {
-                    e.preventDefault();
-                    if ($('.hidden-details').is(":visible")) {
-                        $('.hidden-details').slideUp(200);
-                        $(".detalhes").text("+ beneficios");
-                    } else {
-                        $('.hidden-details').slideDown(200);
-                        $(".detalhes").text("- beneficios");
-                    }
-                    e.stopImmediatePropagation();
-                });
-
-                $(".informacoes").click(function(e){
-                    e.preventDefault();
-                    this.ModalnformacoesAdicionais = new ModalnformacoesAdicionais();
-                    this.ModalnformacoesAdicionais.setContent(plano.critico);
-                    this.ModalnformacoesAdicionais.showModal();
-                });
             }
         });
 
@@ -717,6 +698,35 @@ class Regionalization {
             // $( window ).trigger( "regionalized" );
             var planos = new Planos();
         }
+
+        $(".item-plan").css("opacity", "1").css("display", "block");
+        $(".blur-gb").css("display", "none");
+
+        $('.detalhes').on('click', function (e) {
+            e.preventDefault();
+            if ($('.hidden-details').is(":visible")) {
+                $('.hidden-details').slideUp(200);
+                $(".detalhes").text("+ benefícios");
+            } else {
+                $('.hidden-details').slideDown(200);
+                $(".detalhes").text("- benefícios");
+            }
+            e.stopImmediatePropagation();
+        });
+
+        $(".informacoes").on('click', function (e){
+            e.preventDefault();
+            this.ModalnformacoesAdicionais = new ModalnformacoesAdicionais();
+            this.ModalnformacoesAdicionais.setContent(self.critico);
+            this.ModalnformacoesAdicionais.showModal();
+        });
+
+        $(".informacoes2").on('click', function (e){
+            e.preventDefault();
+            this.ModalnformacoesAdicionais = new ModalnformacoesAdicionais();
+            this.ModalnformacoesAdicionais.setContent(self.critico);
+            this.ModalnformacoesAdicionais.showModal();
+        });
 
         $(".btn--sigin").on('click', function (e) {
             var link = $(this).data('link');
