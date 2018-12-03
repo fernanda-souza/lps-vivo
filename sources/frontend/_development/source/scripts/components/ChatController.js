@@ -2,9 +2,9 @@ import Helpers from "../services/Helpers"
 import config from '../../config.js'
 
 if(config.env === 'development'){
-    var url = '//vivoparasuacasa.clientes.ananke.com.br/server';
+    var url = '//sslplataformavivol.clientes.ananke.com.br/vivovaloriza/server/controle';
 }else{
-    var url = '//vivoparasuacasa.clientes.ananke.com.br/server';
+    var url = '//sslplataformavivol.clientes.ananke.com.br/vivovaloriza/server/controle';
 }
 
 class ChatController {
