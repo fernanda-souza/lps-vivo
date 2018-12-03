@@ -39,7 +39,7 @@ class ChatController {
             });
             console.log(dates)
             for (var index = 0; index < dates.length; index++) {
-                const element = array[index];
+                const element = dates[index];
                 if(element == date){
                     _this.verifyTime(true);
                 }else{
