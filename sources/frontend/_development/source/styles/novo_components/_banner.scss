@@ -2330,13 +2330,13 @@
                 background-position: -130px 0px;
             }
 
-            @include mobile {
+            @media (max-width: 768px) {
                 background-image: url("../img/novo/4g_v2_mobile.png") !important;
                 background-size: cover;
                 height: auto;
                 background-color: #7102b8;
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-position: center;
             }
 
             @media( max-width: 340px ){
@@ -2358,7 +2358,7 @@
                     padding-left: 130px;
                 }
 
-                @include mobile {
+                @media (max-width: 768px) {
                     width: 100%;
                     margin: 0px;
                     padding: 30px;
@@ -2437,7 +2437,7 @@
                     margin-top: 207px;
                     margin-left: -28px;
 
-                    @include mobile {
+                    @media (max-width: 768px) {
                         display: none;
                     }
                 }
@@ -2453,13 +2453,17 @@
                     padding-left: 130px;
                 }
 
-                @include mobile {
+                @media (max-width: 768px) {
                     width: 100%;
                     display: flex;
-                    padding-top: 50px;
+                    padding-top: 15px;
                     justify-content: center;
                     padding-right: 0;
                     margin: 0px;
+                }
+
+                @include tablet{
+                    padding-left: 86px;
                 }
 
                 @media( max-width: 766px) and (min-width: 452px){
@@ -2494,12 +2498,19 @@
                         padding-bottom: 0px;
                         justify-content: center;
                     }
+                    @include tablet{
+                        margin-left: -33px;
+                    }
 
                     .promo-plus{
                         margin-left: 30px;
 
                         @include mobile{
                             margin-left: 10px;
+                        }
+
+                        @include tablet{
+                            margin-left: 15px;
                         }
                     }
 
@@ -2520,6 +2531,12 @@
                                 width: 40px;
                                 height: 40px;
                                 margin-right: 15px;
+                            }
+
+                            @include tablet{
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 10px;
                             }
                         }
 
@@ -2546,7 +2563,7 @@
 
                         @include mobile {
                             margin-right: 0;
-                            font-family: 'ITCOfficinaSerifBold';
+                            font-family: 'VIVO';
                         }
 
                         span {
@@ -2557,12 +2574,19 @@
                                 font-size: 17px;
                                 line-height: 20px;
                             }
+                            @include tablet{
+                                line-height: 23px
+                            }
 
                             &:nth-child(1) {
                                 font-size: 28px;
 
                                 @include mobile {
                                     font-size: 17px;
+                                }
+
+                                @include tablet{
+                                    font-size: 26px;
                                 }
                             }
 
@@ -2574,6 +2598,10 @@
                                 @include mobile {
                                     font-size: 33.6px;
                                     margin-top: 0px;
+                                }
+
+                                @include tablet{
+                                    font-size: 53px;
                                 }
                             }
 
@@ -2603,10 +2631,23 @@
                         justify-content: center;
                     }
 
+                    @media (min-width: 601px) and (max-width: 768px){
+                        margin-left: 40px;
+                    }
+
                     .promo-gigas-exc{
                         color: white;
                         font-family: 'VIVO';
                         margin-bottom: 10px;
+
+                        @include mobile{
+                            margin-top: 6px;
+                            margin-left: 15px;
+                        }
+
+                        @include tablet{
+                            margin-top: 3px;
+                        }
 
                         span {
                             line-height: 25px;
@@ -2614,7 +2655,11 @@
 
                             @include mobile {
                                 font-size: 17px;
-                                line-height: 20px;
+                                line-height: 15px;
+                            }
+
+                            @include tablet{
+                                line-height: 23px;
                             }
 
                             &:nth-child(1) {
@@ -2622,6 +2667,10 @@
 
                                 @include mobile {
                                     font-size: 22px;
+                                }
+
+                                @include tablet{
+                                    font-size: 30px;
                                 }
                             }
 
@@ -2633,6 +2682,10 @@
                                 @include mobile {
                                     font-size: 16.5px;
                                     margin-top: 0px;
+                                }
+
+                                @include tablet{
+                                    font-size: 22px;
                                 }
                             }
 
@@ -2652,8 +2705,12 @@
                         margin-top: 8px;
 
                         @include mobile{
-                            margin-top: 2px;
+                            margin-top: 5px;
                             margin-left: 10px;
+                        }
+
+                        > img{
+                            width: 90%;
                         }
                     }
                 }
@@ -2669,6 +2726,7 @@
                         margin-top: -10px;
                         padding-bottom: 20px;
                         justify-content: center;
+                        padding-right: 21px;
                     }
 
                     @media all and (-ms-high-contrast: none) {
@@ -2681,7 +2739,11 @@
 
 
                         @include mobile {
-
+                            padding-top: 10px;
+                        }
+                        @include tablet {
+                            padding-top: 42px;
+                            margin-left: -21px;
                         }
 
                         .partir {
@@ -2696,7 +2758,14 @@
                                 margin-left: -23px;
 
                                 @include mobile {
-                                    margin-left: 25px;
+                                    margin-left: 5px;
+                                    margin-top: 10px;
+                                    font-size: 11px;
+                                    margin-bottom: -17px;
+                                }
+
+                                @include tablet {
+                                    margin-left: 5px;
                                     margin-top: 10px;
                                     font-size: 11px;
                                     margin-bottom: -17px;
@@ -2723,11 +2792,16 @@
                                 @include mobile {
                                     font-size: 22px;
                                     margin-top: 11px;
-                                    margin-left: 10px;
+                                    margin-left: 0px;
                                     margin-right: -16px;
                                 }
 
-
+                                @include tablet {
+                                    font-size: 22px;
+                                    margin-top: 11px;
+                                    margin-left: 0px;
+                                    margin-right: -16px;
+                                }
                             }
 
                             &:nth-child(2) {
@@ -2737,9 +2811,14 @@
                                 @include mobile {
                                     font-size: 68px;
                                     margin-top: 0px;
-                                    margin-left: 14px;
+                                    margin-left: 4px;
                                 }
 
+                                @include tablet {
+                                    font-size: 84px;
+                                    margin-top: 0px;
+                                    margin-left: 4px;
+                                }
 
                             }
 
@@ -2757,20 +2836,31 @@
                                     margin-left: 3px;
                                     margin-top: 11px;
                                 }
+                                @include tablet {
+                                    margin-top: -9px;
+                                    font-size: 40px !important;
+                                    margin-left: -8px;
+                                    margin-top: 11px;
+                                }
 
                             }
 
                             span:nth-child(4) {
-                                font-size: 28px !important;
-                                margin-top: 76px !important;
-                                margin-left: -66px !important;
+                                font-size: 28px ;
+                                margin-top: 76px ;
+                                margin-left: -66px ;
 
                                 @include mobile {
-                                    font-size: 16px !important;
+                                    font-size: 16px;
 
-                                    margin-top: 47px !important;
+                                    margin-top: 47px;
 
-                                    margin-left: -31px !important;
+                                    margin-left: -41px;
+                                }
+
+                                @include tablet {
+                                    margin-top: 69px;
+                                    margin-left: -33px;
                                 }
 
                             }
@@ -3170,6 +3260,12 @@
         .banner-awareness {
             background-image: url("../img/novo/bg-banner-awareness-mobile.png") !important;
             background-size: cover;
+        }
+    }
+
+    .container_banner_new{
+        @media (max-width: 768px){
+            height: auto !important;
         }
     }
 
