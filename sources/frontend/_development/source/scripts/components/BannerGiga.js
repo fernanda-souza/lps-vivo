@@ -57,7 +57,7 @@ class BannerGiga extends Banner {
                             <span class="subprice">99</span> 
                             <span> <span style="font-family:Arial;">/</span>mês </span>
                         </div>
-                        <p data-target="franquia"></p>
+                        <p data-target="franquia">No plano controle <span class="internet-gb">2,5GB</span></p>
                     </div>
 
                     <div class="banner-third-block">
