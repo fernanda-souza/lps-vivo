@@ -2436,9 +2436,10 @@
 
                 h2 {
                     width: 100%;
-                    font-family: 'VIVO';
-                    margin-top: 207px;
+                    font-family: 'ITCOfficinaSerifBold';
+                    margin-top: 190px;
                     margin-left: -28px;
+                    font-size: 22px;
 
                     @media (max-width: 768px) {
                         display: none;
@@ -2453,7 +2454,7 @@
                 font-family: 'ITCOfficinaSerifBookRegular';
 
                 @include desktop {
-                    padding-left: 130px;
+                    padding-left: 90px;
                 }
 
                 @media (max-width: 768px) {
