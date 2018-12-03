@@ -38,10 +38,13 @@ class ChatController {
                 }
             });
             console.log(dates)
-            if(dates.includes(date)){
-                _this.verifyTime(true);
-            }else{
-                _this.verifyTime(false);
+            for (var index = 0; index < dates.length; index++) {
+                const element = array[index];
+                if(element == date){
+                    _this.verifyTime(true);
+                }else{
+                    _this.verifyTime(false);
+                }
             }
         });
     }
