@@ -1,6 +1,15 @@
-<section class="section-banner">
-    <div class="container_banner container-box container_banner_new">
+import Banner from "./Banner";
 
+class BannerGiga extends Banner {
+
+    constructor($holder) {
+        super();
+        this.holder = $holder;
+    }
+
+    setupTemplate() {
+
+        var htmlCode = `
         <div class="banner-item banner-giga">
 
             <div class="banner-item__inner">
@@ -62,6 +71,12 @@
                 </div>
             </div>
         </div>
+        `;
+        // bg
+        this.templateHTML = $(htmlCode);
+        this.holder.html(this.templateHTML);
+    }
 
-    </div>
-</section>
+}
+
+export default BannerGiga;

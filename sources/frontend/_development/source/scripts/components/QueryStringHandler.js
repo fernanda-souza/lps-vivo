@@ -3,6 +3,7 @@ import BannerConsideracao2 from "./BannerConsideracao2";
 import BannerConsideracao from "./BannerConsideracao";
 import BannerAwareness from "./BannerAwareness";
 import BannerAwarenessLocalizado2 from "./BannerAwarenessLocalizado_2";
+import BannerGiga from "./BannerGiga";
 import Helpers from "../services/Helpers"
 
 class QueryStringHandler {
@@ -67,8 +68,8 @@ class QueryStringHandler {
                 break;
             }
         }else{
-            // this.banner = new BannerConsideracao( $('.container_banner') );
-            // this.banner.setupTemplate();
+            this.banner = new BannerGiga( $('.container_banner') );
+            this.banner.setupTemplate();
         }
     }
 

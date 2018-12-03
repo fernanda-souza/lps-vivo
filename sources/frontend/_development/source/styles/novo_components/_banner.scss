@@ -2321,7 +2321,7 @@
             }
         }
         
-        &.banner-conversao5 {
+        &.banner-giga {
             background-image: url("../img/novo/bg-banner-conversao.png") !important;
             display: flex;
             flex-wrap: wrap;
@@ -2522,10 +2522,19 @@
                             margin: 0px;
                         }
 
+                        @media (-ms-high-contrast: none){
+                            margin-left: -10px;
+                        }
+
                         img {
                             width: 55px;
                             height: 55px;
                             margin-right: 11px;
+
+                            @media (-ms-high-contrast: none){
+                                width: auto;
+                                height: 45px;
+                            }
 
                             @include mobile {
                                 width: 40px;
