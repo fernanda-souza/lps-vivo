@@ -1,10 +1,12 @@
 import Banner from "./Banner";
+import Helpers from "../services/Helpers";
 
 class BannerGiga extends Banner {
 
     constructor($holder) {
         super();
         this.holder = $holder;
+        this.helper = new Helpers();
     }
 
     setupTemplate() {
@@ -63,10 +65,21 @@ class BannerGiga extends Banner {
                           <img src="img/novo/icons/icon_flecha_btn_banner.png">
                           <p>ASSINE JÁ</p>
                         </a>
-                        <div class="banner-bottom-text">
-                            OU LIGUE 0800 10 1515
-                        </div>
-                    </div>
+                        `;
+                       if(this.helper.isMobile())
+                       {
+                        htmlCode+=`<div class="banner-bottom-text">
+                                        <a style="color:#fff;text-decoration:none;" href="tel:+0800101515">OU LIGUE 0800 10 1515</a>
+                                   </div>`;
+                       }
+                       else
+                       {
+                        htmlCode+=`<div class="banner-bottom-text">
+                                        OU LIGUE 0800 10 1515
+                                   </div>`;
+                       }
+                        
+                    htmlCode+=`</div>
 
                 </div>
             </div>
