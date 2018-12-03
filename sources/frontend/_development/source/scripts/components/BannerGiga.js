@@ -75,7 +75,7 @@ class BannerGiga extends Banner {
                        else
                        {
                         htmlCode+=`<div class="banner-bottom-text">
-                                        OU LIGUE 0800 10 1515
+                                <a href="tel:0800101515">OU LIGUE 0800 10 1515</a>
                                    </div>`;
                        }
                         
