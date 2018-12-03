@@ -9,10 +9,14 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20181130_Controle_CanonicalTagPrincipal  (30/11/2018)
+- Publicacao_20181203_Controle_ChatNãoAparece (03/12/2018)
 
 ### Release notes
-- **Publicacao_20181130_Controle_CanonicalTagPrincipal**
+
+- **Publicacao_20181203_Controle_ChatNãoAparece**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3894
+  
+- Publicacao_20181130_Controle_CanonicalTagPrincipal
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-3884
 
 - Publicacao_20181128_Controle_BussolaCidade
