@@ -1,6 +1,17 @@
-<section class="section-banner">
-    <div class="container_banner container-box container_banner_new">
+import Banner from "./Banner";
+import Helpers from "../services/Helpers";
 
+class BannerGiga extends Banner {
+
+    constructor($holder) {
+        super();
+        this.holder = $holder;
+        this.helper = new Helpers();
+    }
+
+    setupTemplate() {
+
+        var htmlCode = `
         <div class="banner-item banner-giga">
 
             <div class="banner-item__inner">
@@ -46,7 +57,7 @@
                             <span class="subprice">99</span> 
                             <span> <span style="font-family:Arial;">/</span>mês </span>
                         </div>
-                        <p data-target="franquia"></p>
+                        <p data-target="franquia">No plano controle <span class="internet-gb">2,5GB</span></p>
                     </div>
 
                     <div class="banner-third-block">
@@ -54,14 +65,31 @@
                           <img src="img/novo/icons/icon_flecha_btn_banner.png">
                           <p>ASSINE JÁ</p>
                         </a>
-                        <div class="banner-bottom-text">
-                            <a href="tel:0800101515">OU LIGUE 0800 10 1515</a>
-                        </div>
-                    </div>
+                        `;
+                       if(this.helper.isMobile())
+                       {
+                        htmlCode+=`<div class="banner-bottom-text">
+                                        <a style="color:#fff;text-decoration:none;" href="tel:+0800101515">OU LIGUE 0800 10 1515</a>
+                                   </div>`;
+                       }
+                       else
+                       {
+                        htmlCode+=`<div class="banner-bottom-text">
+                                <a href="tel:0800101515">OU LIGUE 0800 10 1515</a>
+                                   </div>`;
+                       }
+                        
+                    htmlCode+=`</div>
 
                 </div>
             </div>
         </div>
+        `;
+        // bg
+        this.templateHTML = $(htmlCode);
+        this.holder.html(this.templateHTML);
+    }
 
-    </div>
-</section>
+}
+
+export default BannerGiga;
