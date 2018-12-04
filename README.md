@@ -9,11 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20181203_Controle_ChatNãoAparece (03/12/2018)
+- Publicacao_20181204_Controle_EntradaNovoBenefícioAlteraçãoLogosSVAs (04/12/2018)
 
 ### Release notes
+- **Publicacao_20181204_Controle_EntradaNovoBenefícioAlteraçãoLogosSVAs**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3906
 
-- **Publicacao_20181203_Controle_ChatNãoAparece**
+- Publicacao_20181203_Controle_ChatNãoAparece
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-3894
   
 - Publicacao_20181130_Controle_CanonicalTagPrincipal
