@@ -2327,9 +2327,13 @@
             flex-wrap: wrap;
 
             @media ( min-width: 769px ) and  (max-width: 1024px ){
-                background-position: -130px 0px;
+                background-position: -87px 0px;
             }
 
+            @media (width: 768px) {
+                background-position: center -50px !important;
+            }
+            
             @media (max-width: 768px) {
                 background-image: url("../img/novo/4g_v2_mobile.png") !important;
                 background-size: cover;
@@ -2359,10 +2363,11 @@
                     padding-left: 130px;
                 }
 
-
+                @media (max-width: 768px){
+                    height: 240px;
+                }
 
                 @media (max-width: 768px) {
-                    width: 100%;
                     margin: 0px;
                     padding: 30px;
                     flex-direction: inherit;
@@ -2444,6 +2449,10 @@
                     @media (max-width: 768px) {
                         display: none;
                     }
+
+                    @media (width: 1024px){
+                       margin-left: -76px;
+                    }
                 }
 
             }
@@ -2466,16 +2475,21 @@
                     margin: 0px;
                 }
 
+                @media (width: 768px){
+                    height: 350px;
+                }
+
                 @include tablet{
                     padding-left: 86px;
                 }
 
-                @media( max-width: 766px) and (min-width: 452px){
-                    margin-top: 20%;
+                @include mobile{
+                    margin-top: -20%;
                 }
 
                 @media( max-width: 340px ){
-                    margin: 0 5px 0 5px;
+                    margin: 0px 5px 65px 5px;
+                    margin-top: -43px;
                 }
 
                 .banner-first-block {
@@ -2491,6 +2505,10 @@
                         margin-left: 0px;
                         width: 420px;
                         justify-content: center;
+                    }
+
+                    @media (-ms-high-contrast: none){
+                        margin-bottom: -60px;
                     }
 
                     @include mobile {
@@ -2644,6 +2662,10 @@
                         justify-content: center;
                     }
 
+                    @media (-ms-high-contrast: none){
+                        margin-top: 42px;
+                    }
+
                     @media (min-width: 601px) and (max-width: 768px){
                         margin-left: 40px;
                     }
@@ -2745,6 +2767,11 @@
                     @media all and (-ms-high-contrast: none) {
                         margin-top: -48px;
                     }
+
+                    @media (-ms-high-contrast: none){
+                        margin-bottom: 20px;
+                    }
+
 
                     .preco-container {
                         margin-top: -16px;
@@ -2872,24 +2899,26 @@
                                 }
 
                                 @include tablet {
-                                    margin-top: 69px;
-                                    margin-left: -33px;
+                                    margin-top: 58px;
+                                    margin-left: -30px;
                                 }
 
                             }
                         }
 
-                        p {
+                        > p {
                             color: white;
                             margin-left: -21px;
                             font-size: 18px;
                             margin-top: -12px;
-
-                            @include mobile {
-                                margin-left: 24px;
-                                font-size: 14px;
-                                margin-top: -11px;
-                                margin-right: -10px;
+                            @include mobile{
+                                font-size: 12px;
+                                margin-left: 4px;
+                                margin-top: -4px;
+                            }
+                            @media (min-width: 600px) and (max-width: 800px){
+                                margin-top: 5px !important;
+                                margin-left: 6px !important;
                             }
                         }
                     }
