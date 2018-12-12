@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20181211_Controle_AjustesdeTextoURLprincipal (11/12/2018)
+- - **Publicacao_20181211_Controle_AjustesdeTextoURLprincipal** (12/12/2018)
 
 ### Release notes
-- **Publicacao_20181211_Controle_AjustesdeTextoURLprincipal**
+- **https://jira.uhub.biz/browse/WUNBRAVIVOM-3986**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3986
+
+- Publicacao_20181211_Controle_AjustesdeTextoURLprincipal
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-3986
 
 - Publicacao_20181204_Controle_EntradaNovoBenefícioAlteraçãoLogosSVAs
