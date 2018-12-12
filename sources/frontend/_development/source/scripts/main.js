@@ -1,4 +1,5 @@
 import $ from "jquery";
+import "./components/lazyLoad";
 import MobileNav from "./components/MobileNavbar";
 import Header from "./components/Header";
 import Features from "./components/Features";
@@ -98,6 +99,7 @@ class Main {
 }
 
 $(window).on('load', function () {
+    $("img.lazyload").lazyload();
     if (helpers.isDesktop()) {
         $('#btnbackbuss').attr('id', 'btn_cidade');
     } else {
