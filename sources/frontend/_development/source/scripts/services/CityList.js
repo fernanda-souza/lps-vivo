@@ -26362,6 +26362,11 @@ module.exports = {
 			ddd: 77
 		},
 		{	
+			value: "Vitória da Conquista - BA",
+			data: "BA",
+			ddd: 77
+		},
+		{	
 			value: "Posse - GO",
 			data: "GO",
 			ddd: 62

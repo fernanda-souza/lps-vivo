@@ -17,7 +17,7 @@ import MenuMobile from './components/MenuMobile';
 import QueryStringHandler from './components/QueryStringHandler';
 
 import DataLayer from "./services/DataLayer";
-import BannerConversao from "./components/BannerConversao";
+//import BannerConsideracao from "./components/BannerConsideracao";
 import ChatController from "./components/ChatController";
 
 
@@ -73,6 +73,7 @@ class Main {
         new Planos();
         new MenuMobile();
         new ChatController();
+        
         let querystring  = new QueryStringHandler();
         querystring.parseURLParam();
         this.insertBussola();
