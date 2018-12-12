@@ -99,7 +99,7 @@ class Main {
 }
 
 $(window).on('load', function () {
-    $("img").lazyload();
+    $("img.lazyload").lazyload();
     if (helpers.isDesktop()) {
         $('#btnbackbuss').attr('id', 'btn_cidade');
     } else {
