@@ -9,10 +9,28 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- PUB_VIVO_20181126_ControleAumentodefranquia_V02 (26/11/2018)
+- Publicacao_20181204_Controle_EntradaNovoBenefícioAlteraçãoLogosSVAs (04/12/2018)
 
 ### Release notes
-- **PUB_VIVO_20181126_ControleAumentodefranquia_V02**
+- **Publicacao_20181204_Controle_EntradaNovoBenefícioAlteraçãoLogosSVAs**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3906
+
+- Publicacao_20181203_Controle_ChatNãoAparece
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3894
+  
+- Publicacao_20181130_Controle_CanonicalTagPrincipal
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3884
+
+- Publicacao_20181128_Controle_BussolaCidade
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3850
+
+- PUB_VIVO_20181127_ControleCookiePermanente_V01
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3808
+
+- PUB_VIVO_20181126_ControleTimerdoChat_V01
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-3799
+
+- PUB_VIVO_20181126_ControleAumentodefranquia_V02
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-3794
 
 - PUB_VIVO_20181123_ControleAumentodefranquia_Controle

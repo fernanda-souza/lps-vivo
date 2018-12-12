@@ -2,9 +2,9 @@ import Helpers from "../services/Helpers"
 import config from '../../config.js'
 
 if(config.env === 'development'){
-    var url = '//vivoparasuacasa.clientes.ananke.com.br/server';
+    var url = '//sslplataformavivol.clientes.ananke.com.br/vivovaloriza/server/controle';
 }else{
-    var url = '//vivoparasuacasa.clientes.ananke.com.br/server';
+    var url = '//sslplataformavivol.clientes.ananke.com.br/vivovaloriza/server/controle';
 }
 
 class ChatController {
@@ -37,12 +37,15 @@ class ChatController {
                     dates.push(holiday.date)
                 }
             });
-            console.log(dates)
-            if(dates.includes(date)){
-                _this.verifyTime(true);
-            }else{
-                _this.verifyTime(false);
+            var include = false;
+            for (var index = 0; index < dates.length; index++) {
+                const element = dates[index];
+                if(element == date){
+                    include = true;
+                }
             }
+
+            _this.verifyTime(include);
         });
     }
 

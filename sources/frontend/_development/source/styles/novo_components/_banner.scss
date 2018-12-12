@@ -1434,7 +1434,7 @@
         }
 
         &.banner-conversao3 {
-            background-image: url("../img/novo/bg-banner-conversao.png") !important;
+            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
             display: flex;
             flex-wrap: wrap;
 
@@ -1526,6 +1526,7 @@
                             font-size: 33px;
                         }
                     }
+                    
                 }
 
                 .banner-second-block {
@@ -1866,7 +1867,7 @@
         }
 
         &.banner-conversao4 {
-            background-image: url("../img/novo/bg-banner-conversao.png") !important;
+            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
             display: flex;
             flex-wrap: wrap;
 
@@ -2319,6 +2320,677 @@
                 }
             }
         }
+        
+        &.banner-giga {
+            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media ( min-width: 769px ) and  (max-width: 1024px ){
+                background-position: -87px 0px;
+            }
+
+            @media (width: 768px) {
+                background-position: center -50px !important;
+            }
+            
+            @media (max-width: 768px) {
+                background-image: url("../img/novo/4g_v2_mobile.png") !important;
+                background-size: cover;
+                height: auto;
+                background-color: #7102b8;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            @media( max-width: 340px ){
+                background-position: center center;
+            }
+
+
+            .banner-item__inner {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                align-items: flex-start;
+                padding-left: 241px;
+                height: auto;
+                margin-top: 38px;
+                padding-left: 160px;
+
+                @media ( min-width: 769px ) and  (max-width: 1024px ){
+                    padding-left: 130px;
+                }
+
+                @media (max-width: 768px){
+                    height: 240px;
+                }
+
+                @media (max-width: 768px) {
+                    margin: 0px;
+                    padding: 30px;
+                    flex-direction: inherit;
+                    align-items: flex-start;
+                    width: 375px;
+                    margin: auto;
+                }
+
+                .banner-first-block {
+                    color: #670099;
+                    width: 100%;
+                    font-family: "VIVO";
+
+                    @include desktop {
+                        margin-top: 0px;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                        margin-top: 60px;
+                        width: 100%;
+                        margin-left: 40px;
+                    }
+
+                    span {
+                        line-height: 28px;
+                        display: block;
+
+                        @include mobile {
+                            line-height: 25px;
+                        }
+
+                        &:nth-child(1) {
+                            font-size: 50.5px;
+
+                            @include mobile {
+                                font-size: 34px;
+                                margin-top: 1px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            font-size: 89.3px;
+                            margin-top: 10px;
+
+                            @include mobile {
+                                font-size: 56.5px;
+                                margin-top: 0px;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            font-size: 41px;
+                            margin-top: 13px;
+
+                            @include mobile {
+                                font-size: 25px;
+                                margin-top: 0px;
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            font-size: 33px;
+                        }
+                    }
+                }
+
+                img {
+                    max-height: 120px;
+                }
+
+                h2 {
+                    width: 100%;
+                    font-family: 'ITCOfficinaSerifBold';
+                    margin-top: 190px;
+                    margin-left: -28px;
+                    font-size: 22px;
+
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
+
+                    @media (width: 1024px){
+                       margin-left: -76px;
+                    }
+                }
+
+            }
+
+            .left {
+                width: 50%;
+                padding-left: 0px;
+                font-family: 'ITCOfficinaSerifBookRegular';
+
+                @include desktop {
+                    padding-left: 90px;
+                }
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    display: flex;
+                    padding-top: 15px;
+                    justify-content: center;
+                    padding-right: 0;
+                    margin: 0px;
+                }
+
+                @media (width: 768px){
+                    height: 350px;
+                }
+
+                @include tablet{
+                    padding-left: 86px;
+                }
+
+                @include mobile{
+                    margin-top: -20%;
+                }
+
+                @media( max-width: 340px ){
+                    margin: 0px 5px 65px 5px;
+                    margin-top: -43px;
+                }
+
+                .banner-first-block {
+                    width: auto;
+                    padding-left: 0px;
+                    margin-top: 58px;
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 10px;
+                    margin-left: -13px;
+
+                    @include desktop{
+                        margin-left: 0px;
+                        width: 420px;
+                        justify-content: center;
+                    }
+
+                    @media (-ms-high-contrast: none){
+                        margin-bottom: -60px;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                        margin: 0px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+                        padding-bottom: 0px;
+                        justify-content: center;
+                    }
+                    @include tablet{
+                        margin-left: -33px;
+                    }
+
+                    .promo-plus{
+                        margin-left: 30px;
+
+                        @include mobile{
+                            margin-left: 10px;
+                        }
+
+                        @include tablet{
+                            margin-left: 15px;
+                        }
+                    }
+
+                    .promo-icons-wrap {
+                        display: flex;
+                        justify-content: center;
+
+                        @include mobile {
+                            margin: 0px;
+                        }
+
+                        @media (-ms-high-contrast: none){
+                            margin-left: -10px;
+                        }
+
+                        img {
+                            width: 55px;
+                            height: 55px;
+                            margin-right: 11px;
+
+                            @media (-ms-high-contrast: none){
+                                width: auto;
+                                height: 45px;
+                            }
+
+                            @include mobile {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 15px;
+                            }
+
+                            @include tablet{
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        span {
+                            align-self: flex-end;
+                            font-size: 18px;
+                            line-height: 14px;
+                            align-self: center;
+
+                            @include mobile {
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+
+                    .promo-text-consideracao2 {
+                        color: white;
+                        font-family: 'VIVO';
+                        margin-bottom: 10px;
+
+                        @include desktop {
+                            margin-left: 7px;
+                        }
+
+                        @include mobile {
+                            margin-right: 0;
+                            font-family: 'VIVO';
+                        }
+
+                        span {
+                            line-height: 30px;
+                            display: block;
+
+                            @include mobile {
+                                font-size: 17px;
+                                line-height: 20px;
+                            }
+                            @include tablet{
+                                line-height: 23px
+                            }
+
+                            &:nth-child(1) {
+                                font-size: 28px;
+
+                                @include mobile {
+                                    font-size: 17px;
+                                }
+
+                                @include tablet{
+                                    font-size: 26px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 56.5px;
+                                margin-top: -2px;
+                                color: #FC9900;
+
+                                @include mobile {
+                                    font-size: 33.6px;
+                                    margin-top: 0px;
+                                }
+
+                                @include tablet{
+                                    font-size: 53px;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                font-size: 20px;
+                                line-height: 14px;
+
+                                @include mobile {
+                                    font-size: 31px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .banner-second-block{
+                    display: flex;
+                    margin-left: -21px;
+                    width: 470px;
+
+                    @include mobile {
+                        width: 100%;
+                        margin: 0px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+                        padding-bottom: 20px;
+                        justify-content: center;
+                    }
+
+                    @media (-ms-high-contrast: none){
+                        margin-top: 42px;
+                    }
+
+                    @media (min-width: 601px) and (max-width: 768px){
+                        margin-left: 40px;
+                    }
+
+                    .promo-gigas-exc{
+                        color: white;
+                        font-family: 'VIVO';
+                        margin-bottom: 10px;
+
+                        @include mobile{
+                            margin-top: 6px;
+                            margin-left: 15px;
+                        }
+
+                        @include tablet{
+                            margin-top: 3px;
+                        }
+
+                        span {
+                            line-height: 25px;
+                            display: block;
+
+                            @include mobile {
+                                font-size: 17px;
+                                line-height: 15px;
+                            }
+
+                            @include tablet{
+                                line-height: 23px;
+                            }
+
+                            &:nth-child(1) {
+                                font-size: 39px;
+
+                                @include mobile {
+                                    font-size: 22px;
+                                }
+
+                                @include tablet{
+                                    font-size: 30px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 29px;
+                                margin-top: -2px;
+                                color: #FC9900;
+
+                                @include mobile {
+                                    font-size: 16.5px;
+                                    margin-top: 0px;
+                                }
+
+                                @include tablet{
+                                    font-size: 22px;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                font-size: 20px;
+                                line-height: 14px;
+
+                                @include mobile {
+                                    font-size: 31px;
+                                }
+                            }
+                        }
+                    }
+
+                    .promo-gigas-apps{
+                        margin-left: 20px;
+                        margin-top: 8px;
+
+                        @include mobile{
+                            margin-top: 5px;
+                            margin-left: 10px;
+                        }
+
+                        > img{
+                            width: 90%;
+                        }
+                    }
+                }
+                .banner-three-block{
+                    display: flex;
+                    margin-top: -22px;
+
+                    @include mobile {
+                        width: 100%;
+                        margin: 0px;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        margin-top: -10px;
+                        padding-bottom: 20px;
+                        justify-content: center;
+                        padding-right: 21px;
+                    }
+
+                    @media all and (-ms-high-contrast: none) {
+                        margin-top: -48px;
+                    }
+
+                    @media (-ms-high-contrast: none){
+                        margin-bottom: 20px;
+                    }
+
+
+                    .preco-container {
+                        margin-top: -16px;
+                        align-self: flex-start;
+
+
+                        @include mobile {
+                            padding-top: 10px;
+                        }
+                        @include tablet {
+                            padding-top: 42px;
+                            margin-left: -21px;
+                        }
+
+                        .partir {
+                            display: block;
+
+                            &:nth-child(1) {
+                                font-size: 14px;
+                                font-family: 'VIVO';
+
+                                margin-top: 41px;
+                                margin-bottom: -24px;
+                                margin-left: -23px;
+
+                                @include mobile {
+                                    margin-left: 5px;
+                                    margin-top: 10px;
+                                    font-size: 11px;
+                                    margin-bottom: -17px;
+                                }
+
+                                @include tablet {
+                                    margin-left: 5px;
+                                    margin-top: 10px;
+                                    font-size: 11px;
+                                    margin-bottom: -17px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 27px;
+                                margin-top: -7px;
+                            }
+                        }
+
+                        .preco {
+                            display: flex;
+                            // margin-top: 36px;
+                            margin-top: 0px;
+                            font-family: "VIVO";
+
+                            &:nth-child(1) {
+                                font-size: 24px;
+                                margin-top: 23px;
+                                margin-left: -25px;
+
+                                @include mobile {
+                                    font-size: 22px;
+                                    margin-top: 11px;
+                                    margin-left: 0px;
+                                    margin-right: -16px;
+                                }
+
+                                @include tablet {
+                                    font-size: 22px;
+                                    margin-top: 11px;
+                                    margin-left: 0px;
+                                    margin-right: -16px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 121px;
+                                margin-top: -15px;
+
+                                @include mobile {
+                                    font-size: 68px;
+                                    margin-top: 0px;
+                                    margin-left: 4px;
+                                }
+
+                                @include tablet {
+                                    font-size: 84px;
+                                    margin-top: 0px;
+                                    margin-left: 4px;
+                                }
+
+                            }
+
+                            span:nth-child(3) {
+                                font-size: 70px;
+                                text-align: right;
+                                display: block;
+                                margin-top: 24px;
+                                margin-left: 0;
+                                line-height: 40px;
+
+                                @include mobile {
+                                    margin-top: -9px;
+                                    font-size: 40px !important;
+                                    margin-left: 3px;
+                                    margin-top: 11px;
+                                }
+                                @include tablet {
+                                    margin-top: -9px;
+                                    font-size: 40px !important;
+                                    margin-left: -8px;
+                                    margin-top: 11px;
+                                }
+
+                            }
+
+                            span:nth-child(4) {
+                                font-size: 28px ;
+                                margin-top: 76px ;
+                                margin-left: -66px ;
+
+                                @include mobile {
+                                    font-size: 16px;
+
+                                    margin-top: 47px;
+
+                                    margin-left: -41px;
+                                }
+
+                                @include tablet {
+                                    margin-top: 58px;
+                                    margin-left: -30px;
+                                }
+
+                            }
+                        }
+
+                        > p {
+                            color: white;
+                            margin-left: -21px;
+                            font-size: 18px;
+                            margin-top: -12px;
+                            @include mobile{
+                                font-size: 12px;
+                                margin-left: 4px;
+                                margin-top: -4px;
+                            }
+                            @media (min-width: 600px) and (max-width: 800px){
+                                margin-top: 5px !important;
+                                margin-left: 6px !important;
+                            }
+                        }
+                    }
+
+                    .banner-third-block {
+                        margin-left: 53px;
+                        margin-top: 50px;
+
+                        @include mobile {
+                            margin-left: 0px;
+                        }
+
+                        .btn-banner-consideracao2 {
+                            background-color: #ff9900;
+                            color: #fff;
+                            font-family: Roboto;
+                            padding: 14px 30px;
+                            display: flex;
+                            font-size: 14px;
+                            margin-top: 0px;
+                            width: 181px;
+                            font-weight: 700;
+                            border-radius: 8px;
+
+                            @include mobile {
+                                background-color: #ff9900;
+                                font-size: 12px;
+                                padding-left: 10px;
+                                padding-right: 5px;
+                                text-align: center;
+                                margin-right: 15px;
+                                width: 146px;
+                                margin-top: -46px;
+                                line-height: 9px;
+                            }
+                            > p{
+                                margin-left: 6px;
+                                padding-top: 3px;
+                                padding-left: 5px;
+                                color: #fff;
+
+                                @include mobile{
+                                    margin-top: 4px;
+                                    margin-left: 3px;
+                                }
+                            }
+                        }
+
+                        .banner-bottom-text {
+                            font-family: Roboto;
+                            font-weight: 700;
+                            font-size: 14px;
+                            color: #fff;
+                            line-height: 1;
+                            margin-top: 12px;
+                            margin-left: 15px;
+
+                            @include mobile {
+                                color: #fff;
+                                display: inline-block;
+                                margin-top: 0;
+                                vertical-align: middle;
+                                font-weight: 600;
+                                font-size: 11px;
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
 
         //fin nuevos banners
 
@@ -2580,7 +3252,7 @@
 
     .banner-conversao,
     .banner-consideracao,
-    .banner-awareness {
+    .banner-awareness{
         background-size: auto 100%;
         background-repeat: no-repeat;
         background-position: center;
@@ -2588,11 +3260,11 @@
 
     @include desktop {
         .banner-conversao {
-            background-image: url("../img/novo/bg-banner-conversao.png") !important;
+            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
         }
 
         .banner-consideracao {
-            background-image: url("../img/novo/bg-banner-consideracao.jpg") !important;
+            background-image: url("../img/novo/bg-banner-consideracao.png") !important;
         }
 
         .banner-awareness {
@@ -2602,11 +3274,11 @@
 
     @include tablet {
         .banner-conversao {
-            background-image: url("../img/novo/bg-banner-conversao.png") !important;
+            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
         }
 
         .banner-consideracao {
-            background-image: url("../img/novo/bg-banner-consideracao.jpg") !important;
+            background-image: url("../img/novo/bg-banner-consideracao.png") !important;
             background-position: -230px top;
         }
 
@@ -2630,6 +3302,12 @@
         .banner-awareness {
             background-image: url("../img/novo/bg-banner-awareness-mobile.png") !important;
             background-size: cover;
+        }
+    }
+
+    .container_banner_new{
+        @media (max-width: 768px){
+            height: auto !important;
         }
     }
 
