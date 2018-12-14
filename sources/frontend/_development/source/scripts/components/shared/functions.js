@@ -259,7 +259,7 @@ class Functions {
             let datalayer = new DataLayer();
             if(value){
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
-                datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', location.estado, ciudad, location.ddd);
+                datalayer.sendDataBussola('show-compass', 'exibiu-bussola', location.estado, ciudad, location.ddd);
             }
         }
     }
