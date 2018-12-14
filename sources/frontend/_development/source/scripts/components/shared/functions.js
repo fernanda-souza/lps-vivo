@@ -44,6 +44,8 @@ class Functions {
                     this.getcookie_ddd = getcookie_ddd = this.helpers.getCookie('controle_ddd');
                     this.getcookie_estado = getcookie_estado = this.helpers.getCookie('controle_estado');
                     this.datalayer.sendDataLayerLocation('select-city-compass', getcookie_estado, getcookie_cidade, getcookie_ddd); 
+                    // Iniciliza o LazyLoad
+                    $("img.lazyload").lazyload();
                 }
             });
         }
