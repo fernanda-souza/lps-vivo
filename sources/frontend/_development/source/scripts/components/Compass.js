@@ -29,6 +29,7 @@ class Compass {
         this.openModal();
         this.closeModal();
         this.openChat();
+        this.getGA();
         $('.container-planos .container-box');
 
         if( $cidade ) {
@@ -790,7 +791,7 @@ class Compass {
         if (paramGA) {
             ga('require', 'linker');
 
-            window.GAParam = "&" + ga.getAll()[0].get("linkerParam");
+            window.GAParam = "?" + ga.getAll()[0].get("linkerParam");
         }
     }
 }
