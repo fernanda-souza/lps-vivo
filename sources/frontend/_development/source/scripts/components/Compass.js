@@ -144,7 +144,7 @@ class Compass {
 
     showCompass(event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
         $(this.bussolaMainSelector).fadeIn(100);
-        this.datalayer.sendDataBussola('show-compass', estado, cidade, ddd);
+        this.datalayer.sendDataBussola('show-compass', 'exibiu-bussola', estado, cidade, ddd);
     }
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
