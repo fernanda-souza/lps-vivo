@@ -674,9 +674,9 @@ class Regionalization {
                             </div>
                         </div>
                         <div class="info-plan">
-                            <p><strong>Ligações ilimitadas</strong> ${plano.critico ? `` : `locais`} para todas as operadoras</p>
+                            <p><strong>Ligações ilimitadas</strong> ${plano.critico ? `para qualquer operadora do Brasil` : `locais para todas as operadoras`} </p>
                             <p><strong>Apps inclusos:</strong> ${appInclusos}</p>
-                            <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>
+                            ${plano.critico ? `` : ` <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>`}
                             <p class="hidden-details"><strong>SMS ilimitado</strong> para qualquer operadora do Brasil.</p>
                         </div>
                         <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
