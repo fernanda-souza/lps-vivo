@@ -9,11 +9,14 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20181221_Controle_TesteABChat (21/12/2018)
+- Publicacao_20181221_Controle_AlteraçãoConteúdoCards (21/12/2018)
 
 ### Release notes
-- **Publicacao_20181221_Controle_TesteABChat**
-  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4045
+- **Publicacao_20181221_Controle_AlteraçãoConteúdoCards**
+  - hhttps://jira.uhub.biz/browse/WUNBRAVIVOM-4095
+
+- Publicacao_20181221_Controle_TesteABChat
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4087
 
 - Publicacao_20181218_Controle_CorrecaoBussolaParam
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4045
