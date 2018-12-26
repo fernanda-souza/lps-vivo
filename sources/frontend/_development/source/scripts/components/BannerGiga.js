@@ -56,7 +56,7 @@ class BannerGiga extends Banner {
                        if(this.helper.isMobile())
                        {
                         htmlCode+=`<div class="banner-bottom-text">
-                                        <a style="color:#fff;text-decoration:none;" href="tel:+0800101515">OU LIGUE 0800 10 1515</a>
+                                        <a style="color:#fff;text-decoration:none;" href="tel:+0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
                        }
                        else
