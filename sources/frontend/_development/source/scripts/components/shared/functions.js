@@ -44,6 +44,8 @@ class Functions {
                     this.getcookie_ddd = getcookie_ddd = this.helpers.getCookie('controle_ddd');
                     this.getcookie_estado = getcookie_estado = this.helpers.getCookie('controle_estado');
                     this.datalayer.sendDataLayerLocation('select-city-compass', getcookie_estado, getcookie_cidade, getcookie_ddd); 
+                    // Iniciliza o LazyLoad
+                    $("img.lazyload").lazyload();
                 }
             });
         }
@@ -107,6 +109,7 @@ class Functions {
             this.datalayer.sendDataBussola('show-compass', 'exibiu-bussola', undefined, undefined, undefined);
             this.compass = new Compass( function(result){ console.log(result) } , urlParamCidade, true );
             this.compassConfig.initFooterOn("#plans_cards", ".comp_0010_footer", this.sectionsOffset);
+            $(".container_modal .modal_bussola .modal_content > form .btn-confirmar").click();
         } //CHECK COOKIE:
         else if (getcookie_ddd == "" || getcookie_cidade == "" || getcookie_estado == "") {
             this.checkLocationByGeoIP();
