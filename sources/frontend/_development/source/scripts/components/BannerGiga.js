@@ -12,7 +12,7 @@ class BannerGiga extends Banner {
     setupTemplate() {
 
         var htmlCode = `
-        <div class="banner-item banner-giga">
+        <div class="banner-item banner-conversao4">
 
             <div class="banner-item__inner">
                 
@@ -36,7 +36,7 @@ class BannerGiga extends Banner {
                         <span>ILIMITADAS</span>
                     </div>
                 </div>
-                <div class="banner-three-block">
+                <div class="banner-second-block">
                     <div class="preco-container">
                         <span class="partir">A PARTIR DE</span>
                         <div class="preco">
@@ -50,8 +50,7 @@ class BannerGiga extends Banner {
 
                     <div class="banner-third-block">
                         <a class="btn btn-banner-consideracao2" data-target="link-banner-assine-ja" target="_blank">
-                          <img src="img/novo/icons/icon_flecha_btn_banner.png">
-                          <p>ASSINE JÁ</p>
+                          ASSINE JÁ
                         </a>
                         `;
                        if(this.helper.isMobile())
