@@ -46,10 +46,11 @@ class DataLayer {
     }
 
 
-    sendDataBussola(event, estado, cidade, ddd , origem){
+    sendDataBussola(event, action, estado, cidade, ddd , origem){
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event': event,
+            'event-action': action,
             'page': window.location.href,
             'title': document.title,
             'custom': {

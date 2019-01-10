@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190107_Controle_BlocosdeApps (07/01/2018)
+- Publicacao_20190110_Controle_AlteraçãoDatalayer (10/01/2019)
 
 ### Release notes
-- **Publicacao_20190107_Controle_BlocosdeApps**
+- **Publicacao_20190110_Controle_AlteraçãoDatalayer**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4203
+
+- Publicacao_20190107_Controle_BlocosdeApps
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4131
 
 - Publicacao_20190107_CONTROLE_alteracaoTLEFAQ
