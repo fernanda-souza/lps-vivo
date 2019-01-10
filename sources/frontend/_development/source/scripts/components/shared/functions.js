@@ -106,7 +106,7 @@ class Functions {
             }, 200, 'linear');
             
             this.compassConfig.moveTo(".bussola_onpage");
-            this.datalayer.sendDataBussola('show-compass', undefined, undefined, undefined);
+            this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd);
             this.compass = new Compass( function(result){ console.log(result) } , urlParamCidade, true );
             this.compassConfig.initFooterOn("#plans_cards", ".comp_0010_footer", this.sectionsOffset);
             $(".container_modal .modal_bussola .modal_content > form .btn-confirmar").click();
@@ -115,6 +115,7 @@ class Functions {
             this.checkLocationByGeoIP();
         } else {
             this.checkLocationByCookies();
+            this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd);
         }
 
         //add listener click on location button in mobile menu
@@ -262,7 +263,7 @@ class Functions {
             let datalayer = new DataLayer();
             if(value){
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
-                datalayer.sendDataBussola('show-compass', location.estado, ciudad, location.ddd);
+                datalayer.sendDataBussola('show-compass', 'exibiu-bussola', location.estado, ciudad, location.ddd);
             }
         }
     }
