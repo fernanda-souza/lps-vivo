@@ -9,10 +9,19 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20181221_Controle_AlteraçãoConteúdoCards (21/12/2018)
+- Publicacao_20190110_Controle_AlteraçãoDatalayer (10/01/2019)
 
 ### Release notes
-- **Publicacao_20181221_Controle_AlteraçãoConteúdoCards**
+- **Publicacao_20190110_Controle_AlteraçãoDatalayer**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4203
+
+- Publicacao_20190107_Controle_BlocosdeApps
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4131
+
+- Publicacao_20190107_CONTROLE_alteracaoTLEFAQ
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4148
+
+- Publicacao_20181221_Controle_AlteraçãoConteúdoCards
   - hhttps://jira.uhub.biz/browse/WUNBRAVIVOM-4095
 
 - Publicacao_20181221_Controle_TesteABChat
