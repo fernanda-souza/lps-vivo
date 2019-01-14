@@ -6,6 +6,7 @@ import Regionalization from "../../services/Regionalization";
 import QueryStringHandler from '../../components/QueryStringHandler';
 import BannerConversao from "../../components/BannerConversao";
 import Compass from "../../components/Compass";
+import Criteria from "../../services/Criteria";
 
 
 let locatedByGeoIp = false;
@@ -20,6 +21,7 @@ class Functions {
     constructor() {
         __this = this;
         this.helpers = new Helpers();
+        this.criteria = Criteria;
         this.cities = require('../../services/CityList.js');
         this.bussolaMainSelector = '#vvpcnvgbuss';
         this.compassConfig = new CompassConfig(this.bussolaMainSelector);
@@ -99,7 +101,8 @@ class Functions {
         // CHECK CIDADE URL PARAM
         let urlParamCidade = this.helpers.getUrlParameter("cidade");
         let urlParamFluxo = this.helpers.getUrlParameter("fluxo"); 
-        if( urlParamCidade || urlParamFluxo ){
+        let urlParamCriteria = this.helpers.getUrlParameter("criteria");
+        if( urlParamCidade || urlParamFluxo || urlParamCriteria){
 
             $('html, body').animate({
                 scrollTop: $("#planos").offset().top - $("#header").height()
@@ -107,10 +110,18 @@ class Functions {
             
             this.compassConfig.moveTo(".bussola_onpage");
             this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd);
-            this.compass = new Compass( function(result){ console.log(result) } , urlParamCidade, true );
+            if(urlParamCidade || urlParamFluxo) {
+                this.compass = new Compass( function(result){ console.log(result) } , urlParamCidade, true );
+            } else if(urlParamCriteria) {
+                for(var i = 0; i < this.criteria.length; i++) {
+                    if(this.criteria[i].criteriaId == urlParamCriteria) {
+                        this.compass = new Compass( function(result){ console.log(result) } , this.criteria[i].name, true, true );
+                    }
+                }
+            }
             this.compassConfig.initFooterOn("#plans_cards", ".comp_0010_footer", this.sectionsOffset);
             $(".container_modal .modal_bussola .modal_content > form .btn-confirmar").click();
-        } //CHECK COOKIE:
+        }
         else if (getcookie_ddd == "" || getcookie_cidade == "" || getcookie_estado == "") {
             this.checkLocationByGeoIP();
         } else {

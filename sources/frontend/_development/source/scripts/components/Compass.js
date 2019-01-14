@@ -13,7 +13,7 @@ let positonLabel = true;
 let cityChosedByRecomendation = false;
 
 class Compass {
-    constructor( $callback , $cidade, $queryString = false ) {
+    constructor( $callback , $cidade, $queryString = false, $ignoreAcc = false ) {
         this.bussolaSelector = '.container_modal';
         this.bussolaMainSelector = '.modal_content';
         this.queryString = $queryString;
@@ -33,7 +33,7 @@ class Compass {
         $('.container-planos .container-box');
 
         if( $cidade ) {
-            this.processGeolocationData( $callback, $cidade );
+            this.processGeolocationData( $callback, $cidade, $ignoreAcc );
         }
     }
 
@@ -601,10 +601,10 @@ class Compass {
         });
     }
 
-    processGeolocationData( callback , data ){
+    processGeolocationData( callback , data, ignoreAcc ){
         if (data != '') {
             locatedByGeoIp = true;
-            this.searchDataCity((this.queryString? 'querystring' : 'geoip-success' ), data, callback);
+            this.searchDataCity((this.queryString? 'querystring' : 'geoip-success' ), data, callback, ignoreAcc);
             $(this.bussolaMainSelector + ' .bussola_autocomplete-icon').addClass('bussola_autocomplete-icon--close');
         } else {
             callback(false);
@@ -686,7 +686,17 @@ class Compass {
         })
     }
 
-    searchDataCity(origin, city, callback) {
+    removeAccentuation(text) {                                                     
+        text = text.replace(new RegExp('[ÁÀÂÃ]','gi'), 'a');
+        text = text.replace(new RegExp('[ÉÈÊ]','gi'), 'e');
+        text = text.replace(new RegExp('[ÍÌÎ]','gi'), 'i');
+        text = text.replace(new RegExp('[ÓÒÔÕ]','gi'), 'o');
+        text = text.replace(new RegExp('[ÚÙÛ]','gi'), 'u');
+        text = text.replace(new RegExp('[Ç]','gi'), 'c');
+        return text;
+    }
+
+    searchDataCity(origin, city, callback, ignoreAcc = false) {
         var _this = this;
         var cities = require('../services/CityList.js').cidades;
         let hasCity = false;
@@ -698,6 +708,9 @@ class Compass {
             if(origin === 'querystring'){
                 autoCompleteCity = autoCompleteCity.toLocaleLowerCase();
                 autoCompleteCity = autoCompleteCity.replace(/ /g, '');
+                if(ignoreAcc) {
+                    autoCompleteCity = _this.removeAccentuation(autoCompleteCity);
+                }
                 city =  city.toLocaleLowerCase();
                 city = city.replace(/ /g, '');
                 conditional = autoCompleteCity.indexOf(city) != -1;
