@@ -115,7 +115,7 @@ class Functions {
             } else if(urlParamCriteria) {
                 for(var i = 0; i < this.criteria.length; i++) {
                     if(this.criteria[i].criteriaId == urlParamCriteria) {
-                        this.compass = new Compass( function(result){ console.log(result) } , this.criteria[i].name, true, true );
+                        this.compass = new Compass( function(result){ console.log(result) } , this.criteria[i].name + '-' + this.criteria[i].canonicalName, true, true );
                     }
                 }
             }
