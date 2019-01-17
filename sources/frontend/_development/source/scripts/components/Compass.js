@@ -696,6 +696,11 @@ class Compass {
         return text;
     }
 
+    matchExact(r, str) {
+        var match = str.match(r);
+        return match != null && str == match[0];
+     }
+
     searchDataCity(origin, city, callback, ignoreAcc = false) {
         var _this = this;
         var cities = require('../services/CityList.js').cidades;
@@ -713,7 +718,7 @@ class Compass {
                 }
                 city =  city.toLocaleLowerCase();
                 city = city.replace(/ /g, '');
-                conditional = autoCompleteCity.indexOf(city) != -1;
+                conditional = _this.matchExact(autoCompleteCity, city);
             }
     
             if (conditional) {
@@ -721,8 +726,6 @@ class Compass {
                 var uf = cities[i].data;
                 var ddd = cities[i].ddd;
                 var cidade = cities[i].value;
-
-                console.log(cidade)
 
                 $('#autocomplete').val(cidade);
 
