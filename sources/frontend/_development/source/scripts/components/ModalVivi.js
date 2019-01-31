@@ -36,9 +36,8 @@ class ModalVivi {
         let openChat = $("#box-btn_left");
         openChat.click(function(e) {
             e.preventDefault();
-            console.log("teste");
             var srcIframe = $("#modalChatdireto iframe").attr("src");
-            $("#modalChatdireto iframe").attr("src", srcIframe+window.GAParam);
+            $("#modalChatdireto iframe").attr("src", srcIframe + window.GAParam);
             $("#modalChatvivi").fadeOut("slow");
             $("#modalChatdireto").fadeIn("slow");
         });

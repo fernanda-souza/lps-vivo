@@ -2,16 +2,19 @@
 <html lang="pt-br">
     <head>
         {% set _basePath = "" %}
+        {% include "./base/gtm-head.html" %}
      
-        <title>Vivo Controle</title>
+        <title>VIVO Controle Site Oficial: Planos Giga com 4G e Minutos Ilimitados</title>
         <meta charset="UTF-8">
-        <meta name="description" content="{{seo.description}}">
-        <meta name="keywords" content="{{seo.keywords}}">
+        <meta name="description" content="Com o VIVO Controle você tem internet 4G, SMS ilimitado, ligações ilimitadas para VIVO e minutos para outras operadoras por um valor fixo mensal. Contrate!">
+        <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="robots" content="index, follow">
+        <link href="https://celular.vivo.com.br/planos/controle" rel="canonical">
         <link rel="shortcut icon" href="img/icon/favicon.ico">
         {% include "./base/common-styles.html" %}
+        <script src="//assets.adobedtm.com/launch-ENdcf98895191a431f8665c1842c1b5df3.min.js"></script>
     </head>
     <body>
         {% include "./base/gtm-body.html" %}
@@ -31,7 +34,7 @@
             {% include "./novo_components/modal_informacoes_adicionais.html" %}
         </section>
 
-        <script src="scripts/vendors.js"></script>
+        <script src="scripts/vendors.js?v=1.0"></script>
         <script src="scripts/main.js?v=1.2"></script>
     </body>
 </html>

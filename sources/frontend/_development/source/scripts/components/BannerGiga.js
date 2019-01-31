@@ -12,7 +12,7 @@ class BannerGiga extends Banner {
     setupTemplate() {
 
         var htmlCode = `
-        <div class="banner-item banner-giga">
+        <div class="banner-item banner-conversao4">
 
             <div class="banner-item__inner">
                 
@@ -35,20 +35,8 @@ class BannerGiga extends Banner {
                         <span>WHATSAPP E LIGAÇÕES</span>
                         <span>ILIMITADAS</span>
                     </div>
-                    <div class="promo-plus">
-                        <img src="img/novo/icon-plus-secondary.png">
-                    </div>
                 </div>
                 <div class="banner-second-block">
-                    <div class="promo-gigas-exc">
-                        <span>GIGAS EXCLUSIVOS</span>
-                        <span>PARA USAR COM OS APPS</span>
-                    </div>
-                    <div class="promo-gigas-apps">
-                        <img src="img/novo/icons/icon_gigas_apps.png">
-                    </div>
-                </div>
-                <div class="banner-three-block">
                     <div class="preco-container">
                         <span class="partir">A PARTIR DE</span>
                         <div class="preco">
@@ -62,14 +50,13 @@ class BannerGiga extends Banner {
 
                     <div class="banner-third-block">
                         <a class="btn btn-banner-consideracao2" data-target="link-banner-assine-ja" target="_blank">
-                          <img src="img/novo/icons/icon_flecha_btn_banner.png">
-                          <p>ASSINE JÁ</p>
+                          ASSINE JÁ
                         </a>
                         `;
                        if(this.helper.isMobile())
                        {
                         htmlCode+=`<div class="banner-bottom-text">
-                                        <a style="color:#fff;text-decoration:none;" href="tel:+0800101515">OU LIGUE 0800 10 1515</a>
+                                        <a style="color:#fff;text-decoration:none;" href="tel:+0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
                        }
                        else
