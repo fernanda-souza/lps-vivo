@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190130_CONTROLE_canonical (30/01/2019)
+- Publicacao_20190131_controle_titleedescription (31/01/2019)
 
 ### Release notes
-- **Publicacao_20190130_CONTROLE_canonical**
+- **Publicacao_20190131_controle_titleedescription**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4428
+
+- Publicacao_20190130_CONTROLE_canonical
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4409
 
 - Publicacao_20190129_CONTROLE_DIAGRAMACAOCHAT
