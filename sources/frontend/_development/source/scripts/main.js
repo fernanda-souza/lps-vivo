@@ -62,6 +62,7 @@ class Main {
     }
 
     constructor() {
+
         new MobileNav();
         new Header();
         new Features();
@@ -73,9 +74,11 @@ class Main {
         new Planos();
         new MenuMobile();
         new ChatController();
-        
+
         let querystring  = new QueryStringHandler();
         querystring.parseURLParam();
+        
+
         this.insertBussola();
 
         //dataLayer page-init
