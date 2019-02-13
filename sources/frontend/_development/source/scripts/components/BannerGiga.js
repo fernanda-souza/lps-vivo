@@ -10,7 +10,6 @@ class BannerGiga extends Banner {
     }
 
     setupTemplate() {
-
         var htmlCode = `
         <div class="banner-item banner-conversao4">
 
@@ -55,13 +54,13 @@ class BannerGiga extends Banner {
                         `;
                        if(this.helper.isMobile())
                        {
-                        htmlCode+=`<div class="banner-bottom-text">
+                        htmlCode+=`<div class="banner-bottom-text hide--mobile">
                                         <a style="color:#fff;text-decoration:none;" href="tel:+0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
                        }
                        else
                        {
-                        htmlCode+=`<div class="banner-bottom-text">
+                        htmlCode+=`<div class="banner-bottom-text hide--desk">
                                 <a href="tel:0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
                        }

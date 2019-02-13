@@ -5,6 +5,18 @@
         }
     }
 }
+.hide--desk{
+    display: block;
+    @include mobile {
+        display: none;
+    }   
+}
+.hide--mobile{
+    display: none;
+    @include mobile {
+        display: inline-block;
+    }   
+}
 
 .section-banner {
     position: relative;
@@ -362,7 +374,7 @@
                     margin-top: 20px;
 
                     @include mobile {
-                        display: inline-block;
+                        // display: inline-block;
                         text-align: left;
                     }
                 }
@@ -657,7 +669,7 @@
 
                         @include mobile {
                             color: #ff9900;
-                            display: inline-block;
+                            // display: inline-block;
                             margin-top: 0;
                             vertical-align: middle;
                             font-weight: 300;
@@ -796,7 +808,7 @@
 
                         @include mobile {
                             color: #fff;
-                            display: inline-block;
+                            // display: inline-block;
                             margin-top: 0;
                             vertical-align: middle;
                             font-weight: 600;
@@ -934,7 +946,7 @@
 
                         @include mobile {
                             color: #fff;
-                            display: inline-block;
+                            // display: inline-block;
                             margin-top: 0;
                             vertical-align: middle;
                             font-weight: 600;
@@ -1193,7 +1205,7 @@
 
                         @include mobile {
                             color: #ffffff;
-                            display: inline-block;
+                            // display: inline-block;
                             margin-top: 0;
                             vertical-align: middle;
                             font-weight: 600;
@@ -1420,7 +1432,7 @@
 
                         @include mobile {
                             color: #fff;
-                            display: inline-block;
+                            // display: inline-block;
                             margin-top: 0;
                             vertical-align: middle;
                             font-weight: 600;
@@ -1854,7 +1866,7 @@
 
                         @include mobile {
                             color: #fff;
-                            display: inline-block;
+                            // display: inline-block;
                             margin-top: 0;
                             vertical-align: middle;
                             font-weight: 600;
@@ -2308,7 +2320,7 @@
 
                             @include mobile {
                                 color: #fff;
-                                display: inline-block;
+                                // display: inline-block;
                                 margin-top: 0;
                                 vertical-align: middle;
                                 font-weight: 600;
@@ -2978,7 +2990,7 @@
 
                             @include mobile {
                                 color: #fff;
-                                display: inline-block;
+                                // display: inline-block;
                                 margin-top: 0;
                                 vertical-align: middle;
                                 font-weight: 600;
@@ -3102,7 +3114,7 @@
 
                 @include mobile {
                     color: #ff9900;
-                    display: inline-block;
+                    // display: inline-block;
                     margin-top: 0;
                     vertical-align: middle;
                 }
@@ -3231,7 +3243,7 @@
                 margin-top: 20px;
 
                 @include mobile {
-                    display: inline-block;
+                    // display: inline-block;
                     color: #8604bf;
                     margin-top: 0;
                     vertical-align: middle;
@@ -3442,3 +3454,5 @@
         }
     }
 }
+
+

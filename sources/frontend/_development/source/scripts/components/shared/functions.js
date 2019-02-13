@@ -259,7 +259,7 @@ class Functions {
             this.banner = new BannerConversao( $('.container_banner') );
             this.banner.setupTemplate();
         }
-        $('[data-target="franquia"]').remove();
+       
     }
 
     geolocationCallback( value, location, checkCookies ){
@@ -642,8 +642,7 @@ class Functions {
                 this._bussolaRecomendations.append(item);
                 item.addClass("bussola_recomendations-container--item");
                 item.on("click", (e) => {
-                    // this.cityChosedByRecomendation = true;
-                    console.log("c");
+                    // this.cityChosedByRecomendation = true;\
                     this.setCurrentCity($(e.target).text());
                 });
             }

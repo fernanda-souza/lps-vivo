@@ -628,7 +628,11 @@ class Regionalization {
 
         // $('span.preco').text(`${prices[0]},`);
         // $('.subprice').text(prices[1]);
-        $('.internet-gb').text(currentPlans[0].internet);
+        if(currentPlans[0].internet == ""){
+            $('[data-target="franquia"]').remove();
+        }else{
+            $('.internet-gb').text(currentPlans[0].internet);
+        }
 
         let btnAssineJa = $('[data-target="link-banner-assine-ja"]');
         btnAssineJa.attr("href", `https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${currentPlans[0].SKU[1]}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga`);
