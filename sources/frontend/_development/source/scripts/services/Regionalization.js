@@ -629,6 +629,7 @@ class Regionalization {
             $('[data-target="franquia"]').remove();
         }else{
             $('.internet-gb').text(currentPlans[0].internet);
+            $('[data-target="franquia"]').addClass('regionalized');
         }
 
         let btnAssineJa = $('[data-target="link-banner-assine-ja"]');

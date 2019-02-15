@@ -2256,6 +2256,14 @@
                             }
                         }
 
+                        p[data-target="franquia"]{
+                            display: none;
+    
+                            &.regionalized{
+                                display: block;
+                            }
+                        }
+
                         p {
                             color: white;
                             margin-left: -21px;
