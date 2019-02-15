@@ -16302,6 +16302,16 @@ module.exports = {
 			ddd: 73
 		},
 		{	
+			value: "Caetité - BA",
+			data: "BA",
+			ddd: 73
+		},
+		{	
+			value: "Itapetinga - BA",
+			data: "BA",
+			ddd: 73
+		},
+		{	
 			value: "São José do Jacuípe - BA",
 			data: "BA",
 			ddd: 74
@@ -26363,6 +26373,11 @@ module.exports = {
 		},
 		{	
 			value: "Vitória da Conquista - BA",
+			data: "BA",
+			ddd: 77
+		},
+		{	
+			value: "Guanambi - BA",
 			data: "BA",
 			ddd: 77
 		},
