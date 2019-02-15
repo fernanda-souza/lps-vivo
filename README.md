@@ -9,10 +9,16 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
--Publicacao_20190211_Controle_LPClienteEspecial (11/02/2019)
+-Publicacao_20190214_Controle_AtualizacaoRegulamentos  (14/02/2019)
 
 ### Release notes
-- **Publicacao_20190211_Controle_LPClienteEspecial**
+- **Publicacao_20190214_Controle_AtualizacaoRegulamentos**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4604
+
+- Publicacao_20190214_ControleClienteEspecial_BannerPiscandoeAlterandoAlteraçãoBlocoSVAs
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4599
+
+- Publicacao_20190211_Controle_LPClienteEspecial
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4554
 
 - Publicacao_20190208_CONTROLE_FAQ
