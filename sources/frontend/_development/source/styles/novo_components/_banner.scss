@@ -1446,12 +1446,13 @@
         }
 
         &.banner-conversao3 {
-            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
+            background-repeat: no-repeat;
             display: flex;
             flex-wrap: wrap;
 
             @include mobile {
-                background-image: url("../img/novo/bg-banner-conversao-mobile-crop.png") !important;
+                background-image: url("../img/novo/bg-banner-conversao-mobile-crop-v2.png") !important;
                 background-size: cover;
                 height: auto;
                 background-color: #7102b8;
@@ -1879,7 +1880,8 @@
         }
 
         &.banner-conversao4 {
-            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") ;
+            background-repeat: no-repeat;
             display: flex;
             flex-wrap: wrap;
 
@@ -1888,16 +1890,17 @@
             }
 
             @include mobile {
-                background-image: url("../img/novo/bg-banner-conversao-mobile-crop.png") !important;
-                background-size: cover;
-                height: auto;
-                background-color: #7102b8;
+                background-image: url(../img/novo/bg-banner-conversao-mobile-crop-v2.png), linear-gradient(62deg, #7a1b85, #652488);
+                height: 410px;
                 background-repeat: no-repeat;
-                background-size: cover;
             }
 
             @media( max-width: 340px ){
-                background-position: center center;
+                background-position: center top;
+            }
+
+            @media( max-width: 425px ) and (min-width: 414px){
+                background-position: center top, center bottom;
             }
 
 
@@ -1997,9 +2000,14 @@
 
                     @include mobile {
                         font-size: 15px;
-                        margin-left: 27px;
-                        margin-top: 65px;
+                        margin-left: 0;
+                        margin-top: 129px;
                         margin-bottom: 0;
+                        padding-right: 10px;
+                    }
+
+                    @media(min-width: 359px){
+                        margin-left: 28px;
                     }
                 }
 
@@ -2022,9 +2030,13 @@
                     padding-right: 0;
                     margin: 0 30px;
                 }
+                
+                @media(min-width: 360px) and (max-width: 767px){
+                    margin: -19px 30px 0 30px
+                }
 
                 @media( max-width: 340px ){
-                    margin: 0 5px 0 5px;
+                    margin: -24px 5px 0 5px;
                 }
 
                 .banner-first-block {
@@ -2034,7 +2046,7 @@
                     display: flex;
                     align-items: center;
                     padding-bottom: 30px;
-                    border-bottom: 1px solid rgba(255,255,255,0.8);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
                     margin-left: -13px;
 
                     @include desktop{
@@ -2049,7 +2061,7 @@
                         display: flex;
                         flex-wrap: wrap;
                         margin-top: 10px;
-                        padding-bottom: 20px;
+                        padding-bottom: 10px;
                         justify-content: center;
                     }
 
@@ -2096,7 +2108,7 @@
 
                         @include mobile {
                             margin-right: 0;
-                            font-family: 'ITCOfficinaSerifBold';
+                            font-family: 'Vivo';
                         }
 
                         span {
@@ -2112,7 +2124,7 @@
                                 font-size: 28px;
 
                                 @include mobile {
-                                    font-size: 17px;
+                                    font-size: 20px;
                                 }
                             }
 
@@ -2122,7 +2134,7 @@
                                 color: #FC9900;
 
                                 @include mobile {
-                                    font-size: 33.6px;
+                                    font-size: 40px;
                                     margin-top: 0px;
                                 }
                             }
@@ -2236,6 +2248,7 @@
                                     font-size: 40px !important;
                                     margin-left: 3px;
                                     margin-top: 11px;
+                                    letter-spacing: -2px;
                                 }
 
                             }
@@ -2342,7 +2355,8 @@
         }
         
         &.banner-giga {
-            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
+            background-repeat: no-repeat;
             display: flex;
             flex-wrap: wrap;
 
@@ -3280,7 +3294,8 @@
 
     @include desktop {
         .banner-conversao {
-            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
+            background-repeat: no-repeat;
         }
 
         .banner-consideracao {
@@ -3294,7 +3309,8 @@
 
     @include tablet {
         .banner-conversao {
-            background-image: url("../img/novo/bg-banner-conversao.jpg") !important;
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
+            background-repeat: no-repeat;
         }
 
         .banner-consideracao {
@@ -3309,7 +3325,7 @@
 
     @include mobile {
         .banner-conversao {
-            background-image: url("../img/novo/bg-banner-conversao-mobile-crop.png") !important;
+            background-image: url("../img/novo/bg-banner-conversao-mobile-crop-v2.png") !important;
             // background-size: auto 100%;
             background-size: cover;
         }

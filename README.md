@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
--Publicacao_20190214_Controle_AtualizacaoRegulamentos  (14/02/2019)
+-Publicacao_20190215_ControleParametroGoogle_GoLive  (15/02/2019)
 
 ### Release notes
-- **Publicacao_20190214_Controle_AtualizacaoRegulamentos**
+- **Publicacao_20190215_ControleParametroGoogle_GoLive**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4621
+
+- Publicacao_20190214_Controle_AtualizacaoRegulamento*
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4604
 
 - Publicacao_20190214_ControleClienteEspecial_BannerPiscandoeAlterandoAlteraçãoBlocoSVAs
