@@ -5,17 +5,17 @@
         }
     }
 }
-.hide--desk{
+.hide--desk {
     display: block;
     @include mobile {
         display: none;
-    }   
+    }
 }
-.hide--mobile{
+.hide--mobile {
     display: none;
     @include mobile {
         display: inline-block;
-    }   
+    }
 }
 
 .section-banner {
@@ -25,7 +25,6 @@
     @include mobile {
         margin-top: 65px;
     }
-
 
     .container-box {
         max-width: 1366px;
@@ -249,7 +248,7 @@
                         width: 38%;
                         display: inline-block;
 
-                        >div {
+                        > div {
                             font-size: 20px;
                         }
                     }
@@ -382,7 +381,6 @@
         }
 
         &.banner-conversao {
-
             //add custom styles for banners convertion
             .banner-content-left {
                 .promo-wrap {
@@ -408,7 +406,7 @@
                     .banner-preco-title {
                         padding-bottom: 10px;
 
-                        >div {
+                        > div {
                             line-height: 1px;
                             display: inline-table;
                         }
@@ -694,7 +692,6 @@
                 background-size: cover;
             }
 
-
             .banner-item__inner {
                 width: 600px;
                 margin-left: 211px;
@@ -716,7 +713,7 @@
                 .banner-first-block {
                     color: white;
                     margin-bottom: 44px;
-                    font-family: 'ITCOfficinaSerifBold';
+                    font-family: "ITCOfficinaSerifBold";
                     text-transform: uppercase;
                     margin-left: -12px;
 
@@ -819,7 +816,7 @@
             }
         }
 
-        &.banner-awareness-localizado2  {
+        &.banner-awareness-localizado2 {
             background-image: url("../img/novo/bg-banner-awareness-localizado.png") !important;
 
             @include mobile {
@@ -830,7 +827,6 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-
 
             .banner-item__inner {
                 width: 600px;
@@ -850,11 +846,10 @@
                     height: auto;
                 }
 
-
                 .banner-first-block {
                     color: white;
                     margin-bottom: 44px;
-                    font-family: 'ITCOfficinaSerifBold';
+                    font-family: "ITCOfficinaSerifBold";
                     text-transform: uppercase;
                     margin-left: -12px;
 
@@ -992,7 +987,7 @@
                     width: 100%;
                     margin-top: 48px;
                     margin-left: 10px;
-                    font-family: 'ITCOfficinaSerifBold';
+                    font-family: "ITCOfficinaSerifBold";
                     letter-spacing: -1px;
 
                     @include mobile {
@@ -1045,7 +1040,6 @@
                     }
 
                     img {
-
                         @include desktop {
                             width: 53px;
                             height: 53px;
@@ -1065,7 +1059,7 @@
 
                 .banner-second-block {
                     padding-left: 21px;
-                    font-family: 'ITCOfficinaSerifBookRegular';
+                    font-family: "ITCOfficinaSerifBookRegular";
 
                     @include mobile {
                         width: 100%;
@@ -1139,7 +1133,7 @@
 
                                 @include mobile {
                                     font-size: 30.6px;
-                                    margin-top: 10px
+                                    margin-top: 10px;
                                 }
                             }
 
@@ -1460,7 +1454,6 @@
                 background-size: cover;
             }
 
-
             .banner-item__inner {
                 width: 65%;
                 display: flex;
@@ -1539,7 +1532,6 @@
                             font-size: 33px;
                         }
                     }
-                    
                 }
 
                 .banner-second-block {
@@ -1591,7 +1583,7 @@
 
                     .promo-text-consideracao2 {
                         color: white;
-                        font-family: 'ITCOfficinaSerifBookRegular';
+                        font-family: "ITCOfficinaSerifBookRegular";
 
                         @include desktop {
                             margin-left: 7px;
@@ -1599,7 +1591,7 @@
 
                         @include mobile {
                             margin-right: -26px;
-                            font-family: 'ITCOfficinaSerifBold';
+                            font-family: "ITCOfficinaSerifBold";
                         }
 
                         span {
@@ -1640,13 +1632,12 @@
                         }
                     }
                 }
-
             }
 
             .left {
                 width: 35%;
                 padding-left: 0px;
-                font-family: 'ITCOfficinaSerifBookRegular';
+                font-family: "ITCOfficinaSerifBookRegular";
 
                 @include desktop {
                     padding-left: 33px;
@@ -1880,29 +1871,29 @@
         }
 
         &.banner-conversao4 {
-            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") ;
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg");
             background-repeat: no-repeat;
             display: flex;
             flex-wrap: wrap;
 
-            @media ( min-width: 769px ) and  (max-width: 1024px ){
+            @media (min-width: 769px) and (max-width: 1024px) {
                 background-position: -130px 0px;
             }
 
             @include mobile {
                 background-image: url(../img/novo/bg-banner-conversao-mobile-crop-v2.png), linear-gradient(62deg, #7a1b85, #652488);
                 height: 410px;
+                background-size: cover;
                 background-repeat: no-repeat;
             }
 
-            @media( max-width: 340px ){
+            @media (max-width: 340px) {
                 background-position: center top;
             }
 
-            @media( max-width: 425px ) and (min-width: 414px){
+            @media (max-width: 425px) and (min-width: 414px) {
                 background-position: center top, center bottom;
             }
-
 
             .banner-item__inner {
                 width: 50%;
@@ -1914,7 +1905,7 @@
                 height: auto;
                 margin-top: 38px;
 
-                @media ( min-width: 769px ) and  (max-width: 1024px ){
+                @media (min-width: 769px) and (max-width: 1024px) {
                     padding-left: 130px;
                 }
 
@@ -1994,7 +1985,7 @@
 
                 h2 {
                     width: 100%;
-                    font-family: 'ITCOfficinaSerifBold';
+                    font-family: "ITCOfficinaSerifBold";
                     margin-top: 207px;
                     margin-left: -28px;
 
@@ -2006,17 +1997,16 @@
                         padding-right: 10px;
                     }
 
-                    @media(min-width: 359px){
+                    @media (min-width: 359px) {
                         margin-left: 28px;
                     }
                 }
-
             }
 
             .left {
                 width: 50%;
                 padding-left: 0px;
-                font-family: 'ITCOfficinaSerifBookRegular';
+                font-family: "ITCOfficinaSerifBookRegular";
 
                 @include desktop {
                     padding-left: 87px;
@@ -2030,12 +2020,12 @@
                     padding-right: 0;
                     margin: 0 30px;
                 }
-                
-                @media(min-width: 360px) and (max-width: 767px){
-                    margin: -19px 30px 0 30px
+
+                @media (min-width: 360px) and (max-width: 767px) {
+                    margin: -19px 30px 0 30px;
                 }
 
-                @media( max-width: 340px ){
+                @media (max-width: 340px) {
                     margin: -24px 5px 0 5px;
                 }
 
@@ -2049,7 +2039,7 @@
                     border-bottom: 1px solid rgba(255, 255, 255, 0.8);
                     margin-left: -13px;
 
-                    @include desktop{
+                    @include desktop {
                         margin-left: -25px;
                         width: 420px;
                         justify-content: center;
@@ -2099,7 +2089,7 @@
 
                     .promo-text-consideracao2 {
                         color: white;
-                        font-family: 'VIVO';
+                        font-family: "VIVO";
                         margin-bottom: 10px;
 
                         @include desktop {
@@ -2108,7 +2098,7 @@
 
                         @include mobile {
                             margin-right: 0;
-                            font-family: 'Vivo';
+                            font-family: "Vivo";
                         }
 
                         span {
@@ -2131,7 +2121,7 @@
                             &:nth-child(2) {
                                 font-size: 56.5px;
                                 margin-top: -2px;
-                                color: #FC9900;
+                                color: #fc9900;
 
                                 @include mobile {
                                     font-size: 40px;
@@ -2170,7 +2160,6 @@
                         width: 100%;
                         margin-top: -16px;
                         align-self: flex-start;
-
 
                         @include mobile {
                             width: 100%;
@@ -2218,8 +2207,6 @@
                                     margin-left: 10px;
                                     margin-right: -16px;
                                 }
-
-
                             }
 
                             &:nth-child(2) {
@@ -2231,8 +2218,6 @@
                                     margin-top: 0px;
                                     margin-left: 14px;
                                 }
-
-
                             }
 
                             span:nth-child(3) {
@@ -2250,7 +2235,6 @@
                                     margin-top: 11px;
                                     letter-spacing: -2px;
                                 }
-
                             }
 
                             span:nth-child(4) {
@@ -2265,7 +2249,6 @@
 
                                     margin-left: -31px !important;
                                 }
-
                             }
                         }
 
@@ -2353,21 +2336,21 @@
                 }
             }
         }
-        
+
         &.banner-giga {
             background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
             background-repeat: no-repeat;
             display: flex;
             flex-wrap: wrap;
 
-            @media ( min-width: 769px ) and  (max-width: 1024px ){
+            @media (min-width: 769px) and (max-width: 1024px) {
                 background-position: -87px 0px;
             }
 
             @media (width: 768px) {
                 background-position: center -50px !important;
             }
-            
+
             @media (max-width: 768px) {
                 background-image: url("../img/novo/4g_v2_mobile.png") !important;
                 background-size: cover;
@@ -2377,10 +2360,9 @@
                 background-position: center;
             }
 
-            @media( max-width: 340px ){
+            @media (max-width: 340px) {
                 background-position: center center;
             }
-
 
             .banner-item__inner {
                 width: 50%;
@@ -2393,11 +2375,11 @@
                 margin-top: 38px;
                 padding-left: 160px;
 
-                @media ( min-width: 769px ) and  (max-width: 1024px ){
+                @media (min-width: 769px) and (max-width: 1024px) {
                     padding-left: 130px;
                 }
 
-                @media (max-width: 768px){
+                @media (max-width: 768px) {
                     height: 240px;
                 }
 
@@ -2475,7 +2457,7 @@
 
                 h2 {
                     width: 100%;
-                    font-family: 'ITCOfficinaSerifBold';
+                    font-family: "ITCOfficinaSerifBold";
                     margin-top: 190px;
                     margin-left: -28px;
                     font-size: 22px;
@@ -2484,17 +2466,16 @@
                         display: none;
                     }
 
-                    @media (width: 1024px){
-                       margin-left: -76px;
+                    @media (width: 1024px) {
+                        margin-left: -76px;
                     }
                 }
-
             }
 
             .left {
                 width: 50%;
                 padding-left: 0px;
-                font-family: 'ITCOfficinaSerifBookRegular';
+                font-family: "ITCOfficinaSerifBookRegular";
 
                 @include desktop {
                     padding-left: 90px;
@@ -2509,19 +2490,19 @@
                     margin: 0px;
                 }
 
-                @media (width: 768px){
+                @media (width: 768px) {
                     height: 350px;
                 }
 
-                @include tablet{
+                @include tablet {
                     padding-left: 86px;
                 }
 
-                @include mobile{
+                @include mobile {
                     margin-top: -20%;
                 }
 
-                @media( max-width: 340px ){
+                @media (max-width: 340px) {
                     margin: 0px 5px 65px 5px;
                     margin-top: -43px;
                 }
@@ -2541,7 +2522,7 @@
                         justify-content: center;
                     }
 
-                    @media (-ms-high-contrast: none){
+                    @media (-ms-high-contrast: none) {
                         margin-bottom: -60px;
                     }
 
@@ -2554,18 +2535,18 @@
                         padding-bottom: 0px;
                         justify-content: center;
                     }
-                    @include tablet{
+                    @include tablet {
                         margin-left: -33px;
                     }
 
-                    .promo-plus{
+                    .promo-plus {
                         margin-left: 30px;
 
-                        @include mobile{
+                        @include mobile {
                             margin-left: 10px;
                         }
 
-                        @include tablet{
+                        @include tablet {
                             margin-left: 15px;
                         }
                     }
@@ -2578,7 +2559,7 @@
                             margin: 0px;
                         }
 
-                        @media (-ms-high-contrast: none){
+                        @media (-ms-high-contrast: none) {
                             margin-left: -10px;
                         }
 
@@ -2587,7 +2568,7 @@
                             height: 55px;
                             margin-right: 11px;
 
-                            @media (-ms-high-contrast: none){
+                            @media (-ms-high-contrast: none) {
                                 width: auto;
                                 height: 45px;
                             }
@@ -2598,7 +2579,7 @@
                                 margin-right: 15px;
                             }
 
-                            @include tablet{
+                            @include tablet {
                                 width: 40px;
                                 height: 40px;
                                 margin-right: 10px;
@@ -2619,7 +2600,7 @@
 
                     .promo-text-consideracao2 {
                         color: white;
-                        font-family: 'VIVO';
+                        font-family: "VIVO";
                         margin-bottom: 10px;
 
                         @include desktop {
@@ -2628,7 +2609,7 @@
 
                         @include mobile {
                             margin-right: 0;
-                            font-family: 'VIVO';
+                            font-family: "VIVO";
                         }
 
                         span {
@@ -2639,8 +2620,8 @@
                                 font-size: 17px;
                                 line-height: 20px;
                             }
-                            @include tablet{
-                                line-height: 23px
+                            @include tablet {
+                                line-height: 23px;
                             }
 
                             &:nth-child(1) {
@@ -2650,7 +2631,7 @@
                                     font-size: 17px;
                                 }
 
-                                @include tablet{
+                                @include tablet {
                                     font-size: 26px;
                                 }
                             }
@@ -2658,14 +2639,14 @@
                             &:nth-child(2) {
                                 font-size: 56.5px;
                                 margin-top: -2px;
-                                color: #FC9900;
+                                color: #fc9900;
 
                                 @include mobile {
                                     font-size: 33.6px;
                                     margin-top: 0px;
                                 }
 
-                                @include tablet{
+                                @include tablet {
                                     font-size: 53px;
                                 }
                             }
@@ -2681,7 +2662,7 @@
                         }
                     }
                 }
-                .banner-second-block{
+                .banner-second-block {
                     display: flex;
                     margin-left: -21px;
                     width: 470px;
@@ -2696,25 +2677,25 @@
                         justify-content: center;
                     }
 
-                    @media (-ms-high-contrast: none){
+                    @media (-ms-high-contrast: none) {
                         margin-top: 42px;
                     }
 
-                    @media (min-width: 601px) and (max-width: 768px){
+                    @media (min-width: 601px) and (max-width: 768px) {
                         margin-left: 40px;
                     }
 
-                    .promo-gigas-exc{
+                    .promo-gigas-exc {
                         color: white;
-                        font-family: 'VIVO';
+                        font-family: "VIVO";
                         margin-bottom: 10px;
 
-                        @include mobile{
+                        @include mobile {
                             margin-top: 6px;
                             margin-left: 15px;
                         }
 
-                        @include tablet{
+                        @include tablet {
                             margin-top: 3px;
                         }
 
@@ -2727,7 +2708,7 @@
                                 line-height: 15px;
                             }
 
-                            @include tablet{
+                            @include tablet {
                                 line-height: 23px;
                             }
 
@@ -2738,7 +2719,7 @@
                                     font-size: 22px;
                                 }
 
-                                @include tablet{
+                                @include tablet {
                                     font-size: 30px;
                                 }
                             }
@@ -2746,14 +2727,14 @@
                             &:nth-child(2) {
                                 font-size: 29px;
                                 margin-top: -2px;
-                                color: #FC9900;
+                                color: #fc9900;
 
                                 @include mobile {
                                     font-size: 16.5px;
                                     margin-top: 0px;
                                 }
 
-                                @include tablet{
+                                @include tablet {
                                     font-size: 22px;
                                 }
                             }
@@ -2769,21 +2750,21 @@
                         }
                     }
 
-                    .promo-gigas-apps{
+                    .promo-gigas-apps {
                         margin-left: 20px;
                         margin-top: 8px;
 
-                        @include mobile{
+                        @include mobile {
                             margin-top: 5px;
                             margin-left: 10px;
                         }
 
-                        > img{
+                        > img {
                             width: 90%;
                         }
                     }
                 }
-                .banner-three-block{
+                .banner-three-block {
                     display: flex;
                     margin-top: -22px;
 
@@ -2802,15 +2783,13 @@
                         margin-top: -48px;
                     }
 
-                    @media (-ms-high-contrast: none){
+                    @media (-ms-high-contrast: none) {
                         margin-bottom: 20px;
                     }
-
 
                     .preco-container {
                         margin-top: -16px;
                         align-self: flex-start;
-
 
                         @include mobile {
                             padding-top: 10px;
@@ -2825,7 +2804,7 @@
 
                             &:nth-child(1) {
                                 font-size: 14px;
-                                font-family: 'VIVO';
+                                font-family: "VIVO";
 
                                 margin-top: 41px;
                                 margin-bottom: -24px;
@@ -2893,7 +2872,6 @@
                                     margin-top: 0px;
                                     margin-left: 4px;
                                 }
-
                             }
 
                             span:nth-child(3) {
@@ -2916,13 +2894,12 @@
                                     margin-left: -8px;
                                     margin-top: 11px;
                                 }
-
                             }
 
                             span:nth-child(4) {
-                                font-size: 28px ;
-                                margin-top: 76px ;
-                                margin-left: -66px ;
+                                font-size: 28px;
+                                margin-top: 76px;
+                                margin-left: -66px;
 
                                 @include mobile {
                                     font-size: 16px;
@@ -2936,7 +2913,6 @@
                                     margin-top: 58px;
                                     margin-left: -30px;
                                 }
-
                             }
                         }
 
@@ -2945,12 +2921,12 @@
                             margin-left: -21px;
                             font-size: 18px;
                             margin-top: -12px;
-                            @include mobile{
+                            @include mobile {
                                 font-size: 12px;
                                 margin-left: 4px;
                                 margin-top: -4px;
                             }
-                            @media (min-width: 600px) and (max-width: 800px){
+                            @media (min-width: 600px) and (max-width: 800px) {
                                 margin-top: 5px !important;
                                 margin-left: 6px !important;
                             }
@@ -2988,13 +2964,13 @@
                                 margin-top: -46px;
                                 line-height: 9px;
                             }
-                            > p{
+                            > p {
                                 margin-left: 6px;
                                 padding-top: 3px;
                                 padding-left: 5px;
                                 color: #fff;
 
-                                @include mobile{
+                                @include mobile {
                                     margin-top: 4px;
                                     margin-left: 3px;
                                 }
@@ -3024,7 +3000,6 @@
                 }
             }
         }
-        
 
         //fin nuevos banners
 
@@ -3209,7 +3184,6 @@
         }
 
         &.banner-awareness {
-
             .banner-content-left,
             .banner-content-right {
                 @include mobile {
@@ -3286,7 +3260,7 @@
 
     .banner-conversao,
     .banner-consideracao,
-    .banner-awareness{
+    .banner-awareness {
         background-size: auto 100%;
         background-repeat: no-repeat;
         background-position: center;
@@ -3341,8 +3315,8 @@
         }
     }
 
-    .container_banner_new{
-        @media (max-width: 768px){
+    .container_banner_new {
+        @media (max-width: 768px) {
             height: auto !important;
         }
     }
@@ -3478,5 +3452,3 @@
         }
     }
 }
-
-
