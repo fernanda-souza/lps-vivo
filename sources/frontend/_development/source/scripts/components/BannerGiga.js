@@ -2,7 +2,6 @@ import Banner from "./Banner";
 import Helpers from "../services/Helpers";
 
 class BannerGiga extends Banner {
-
     constructor($holder) {
         super();
         this.holder = $holder;
@@ -37,7 +36,7 @@ class BannerGiga extends Banner {
                 </div>
                 <div class="banner-second-block">
                     <div class="preco-container">
-                        <span class="partir">A PARTIR DE</span>
+                        <span class="partir">A partir de</span>
                         <div class="preco">
                             <span class="preco">R$</span>
                             <span class="preco">49,</span>
@@ -52,20 +51,17 @@ class BannerGiga extends Banner {
                           ASSINE JÁ
                         </a>
                         `;
-                       if(this.helper.isMobile())
-                       {
-                        htmlCode+=`<div class="banner-bottom-text hide--mobile">
+        if (this.helper.isMobile()) {
+            htmlCode += `<div class="banner-bottom-text hide--mobile">
                                         <a style="color:#fff;text-decoration:none;" href="tel:+0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
-                       }
-                       else
-                       {
-                        htmlCode+=`<div class="banner-bottom-text hide--desk">
+        } else {
+            htmlCode += `<div class="banner-bottom-text hide--desk">
                                 <a href="tel:0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
-                       }
-                        
-                    htmlCode+=`</div>
+        }
+
+        htmlCode += `</div>
 
                 </div>
             </div>
@@ -75,7 +71,6 @@ class BannerGiga extends Banner {
         this.templateHTML = $(htmlCode);
         this.holder.html(this.templateHTML);
     }
-
 }
 
 export default BannerGiga;
