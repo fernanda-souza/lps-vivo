@@ -1,0 +1,281 @@
+.informacoes, .informacoes2 {
+    cursor: pointer;
+}
+
+.modal {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        height: 100%;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+        margin: 0;
+        width: auto;
+
+        @include mobile() {
+            width: 90%;
+        }
+
+        strong{
+            font-family: "ITCOfficinaSerifBold";
+            font-weight: normal !important;
+        }
+
+        .modal-content {
+            border-radius: 5px;
+            background-color: #333;
+
+            .modal-header {
+                text-align: center;
+                border: 0;
+                color: #660099;
+
+                h1 {
+                    @include mobile() {
+                        font-size: 30px;
+                    }
+                }
+
+                .icon-header {
+                    background-color: #660099;
+                    width: 56px;
+                    height: 56px;
+                    @include border-radius(50%);
+                    margin: -43px auto 0 auto;
+                }
+
+
+                .close {
+                    margin-top: 3px;
+                    background: url(../img/vivo-turbo-botao-fechar.png?v=1.0.0);
+                    background-size: 100% 100%;
+                    width: 23px;
+                    height: 23px;
+                    transition: opacity 0.6;
+                    border: none;
+                    float: right;
+                    margin: 10px;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    @include mobile() {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+
+                .modal-title {
+                    text-align: center;
+                    font-family: "ITCOfficinaSerifBold";
+                    color: #660099;
+                    font-size: 20px;
+                    padding-top: 12px;
+
+                    @include mobile() {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .modal-body {
+                padding: 0 25px 25px 25px;
+
+                .txt {
+                    font-family: "ITCOfficinaSerifBookRegular";
+                }
+            }
+        }
+    }
+}
+
+#modalInformacoesAdicionais {
+    display: none;
+
+    .modal-dialog {
+        width: 90%;
+
+        .modal-content {
+            background-color: white;
+
+            @include sm() {
+                height: 610px;
+            }
+
+            .modal-header {
+                padding: 10px 15px;
+                position: relative;
+
+                .modal-close-button {
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    right: 20px;
+                    top: 20px;
+                    margin-top: 0;
+                    display: block;
+                    cursor: pointer;
+                    -webkit-transition: -webkit-transform .5s ease-in-out;
+                    transition: transform .5s ease-in-out;
+
+                    &:after,
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 16px;
+                        height: 2px;
+                        background-color: #660099;
+                    }
+
+                    &:before {
+                        top: 6px;
+                        @include transform(rotate(45deg));
+                    }
+
+                    &:after {
+                        top: 6px;
+                        @include transform(rotate(-45deg));
+                    }
+
+                    &:hover {
+                        -webkit-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .modal-title {
+                    font-family: "ITCOfficinaSerifBold";
+                    color: black;
+                    font-size: 32px;
+                    line-height: 1;
+                }
+
+                .modal-icon {
+                    position: absolute;
+                    top: -33px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .modal-body {
+
+                .modal-content {
+                    width: 100%;
+
+                    @include sm() {
+                        height: 400px;
+                    }
+                }
+
+                .tab__header {
+                    list-style: none;
+                    padding: 0;
+                    margin-bottom: 0;
+
+                    .tab__item {
+                        float: left;
+                        width: 33.33%;
+                        text-align: center;
+                        font-size: 16px;
+                        vertical-align: top;
+                        border: 1px solid #333;
+                        border-bottom: 5px solid #333;
+                        padding: 1.33%;
+                        cursor: pointer;
+                        font-family: "ITCOfficinaSerifBookRegular";
+                        color: #333;
+
+                        &.active {
+                            border-bottom: 5px solid #660099;
+                        }
+                    }
+                }
+
+                .tab__content {
+                    padding: 15px;
+                    font-size: 16px;
+                    display: block;
+                    border: 1px solid #ededed;
+                    border-top: 0;
+                    height: 320px;
+                    font-family: "ITCOfficinaSerifBookRegular";
+                    color: #333;
+                    line-height: 20px;
+                    overflow-y: auto;
+
+                    li {
+                        margin: 15px 0px;
+                        font-family: "ITCOfficinaSerifBookRegular";
+                    }
+
+                    a {
+                        text-decoration: underline;
+                        color: #660099;
+                        font-weight: bold;
+                    }
+
+                    .click__regulamentos {
+                        text-decoration: underline;
+                        color: #660099;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile() {
+    #modalInformacoesAdicionais {
+        height: 100%;
+        padding-right: 0;
+
+        .modal-dialog {
+            width: 90%;
+            height: 100%;
+
+            .modal-content {
+                height: auto;
+                border-radius: 0;
+
+                .modal-header {
+                    .modal-icon {
+                        display: none;
+                    }
+                }
+
+                .modal-body {
+                    .tab__header {
+                        .tab__item {
+                            display: block;
+                            width: 100%;
+                            margin-top: 2%;
+                        }
+                    }
+
+                    .tab__content {
+                        max-height: 270px;
+                        overflow: auto;
+                    }
+                }
+            }
+        }
+    }
+}
