@@ -28,11 +28,22 @@ class ModalnformacoesAdicionais {
             $(".tab__content[data-main-content=2]").html(`<ul>
             <li>A franquia de internet é válida pelo período de um mês;</li>
             <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
-            <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo, celular ou fixo de outras operadoras;</li>
+            <li>As ligações locais para celulares de outras operadoras são ilimitadas;</li>
+            <li>As chamadas de longa distância com o <strong>código 15</strong> para celulares de outras operadoras têm o valor de R$0,50/minuto;</li>
             </ul>`);
 
-            $(".tab__content[data-main-content=3]").html(`
-            <a target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento</a>
+            $(".tab__content[data-main-content=3]").html(`<ul>
+            <li>Vivo Controle Digital</li>
+            <li>Pacote Internet 150MB e 400MB</li>
+            <li>Pacote 100min Outras Operadoras</li>
+            <li>Pacote Vivo Internet Noite</li>
+            <li>Pacote Vivo Internet Fim de Semana</li>
+            <li>Pacote Vivo Internet Redes Sociais 1GB</li>
+            <li>Vivo Controle (sem serviços digitais)</li>
+            </ul>`)
+
+            $(".tab__content[data-main-content=4]").html(`
+            <p>Para mais informações sobre o Plano de Serviço ofertado, regulamento vigente, preços e critérios de reajuste, contrato de prestação de serviço, dentre outras informações, <a href="https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&_nfpb=true&_pageLabel=P115000498271489154631147&WT.ac=portal.movel.planosdeservicoemvigormovel.planoscontrole.listagemdeplanoscontrole#" target="_blank">clique aqui</a></p>
             `)
 
         } 
@@ -51,13 +62,22 @@ class ModalnformacoesAdicionais {
             $(".tab__content[data-main-content=2]").html(`<ul>
             <li>A franquia de internet é válida pelo período de um mês;</li>
             <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
-            <li>As ligações são ilimitadas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo ou fixo;</li>
-            <li>As ligações locais para celulares de outras operadoras são ilimitadas;</li>
-            <li>As chamadas de longa distância com o <strong>código 15</strong> para celulares de outras operadoras têm o valor de R$0,50/minuto;</li>
+            <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o código 15 para qualquer Vivo, celular ou fixo de outras operadoras;</li>
             </ul>`)
 
-            $(".tab__content[data-main-content=3]").html(`
-            <a target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.191488042.1447250500.1543240775-316014106.1543240775">Regulamento</a>`)
+            $(".tab__content[data-main-content=3]").html(`<ul>
+            <li>Vivo Controle Digital</li>
+            <li>Pacote Internet 150MB e 400MB</li>
+            <li>Pacote 100min Outras Operadoras</li>
+            <li>Pacote Vivo Internet Noite</li>
+            <li>Pacote Vivo Internet Fim de Semana</li>
+            <li>Pacote Vivo Internet Redes Sociais 1GB</li>
+            <li>Vivo Controle (sem serviços digitais)</li>
+            </ul>`)
+
+            $(".tab__content[data-main-content=4]").html(`
+            <p>Para mais informações sobre o Plano de Serviço ofertado, regulamento vigente, preços e critérios de reajuste, contrato de prestação de serviço, dentre outras informações, <a href="https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&_nfpb=true&_pageLabel=P115000498271489154631147&WT.ac=portal.movel.planosdeservicoemvigormovel.planoscontrole.listagemdeplanoscontrole#" target="_blank">clique aqui</a></p>
+            `)
         }
     }
 
