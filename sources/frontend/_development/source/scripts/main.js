@@ -7,6 +7,7 @@ import FAQ from "./components/FAQ";
 import Compass from "./components/Compass";
 import ServicesCards from "./components/ServicesCards";
 import ModalVivi from "./components/ModalVivi";
+import ModalInformacoesAdicionais from "./components/ModalInformacoesAdicionais";
 // import ControlParameter from "./components/ControlParameter";
 import Helpers from './services/Helpers';
 import BussolaInput from './components/bussolaInput';
@@ -69,6 +70,7 @@ class Main {
         new FAQ();
         new ServicesCards();
         new ModalVivi();
+        new ModalInformacoesAdicionais();
         new Gigas();
         new Aplicativos();
         new Planos();
