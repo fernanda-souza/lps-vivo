@@ -532,6 +532,7 @@ documentosPromo = new RegionItems(documentosPromo);
 
 import Helpers from "../services/Helpers";
 import DataLayer from "../services/DataLayer";
+import ModalInformacoesAdicionais from "../components/ModalInformacoesAdicionais";
 
 class Regionalization {
     constructor() {
@@ -550,6 +551,7 @@ class Regionalization {
         var userReg = this.getCookie('controle_estado');
         var parameters = window.location.search;
         var appname = this.getUrlParameter('banner');
+        var critico;
 
         $('.ciudad').find('p').text( regional + ' - ' + userReg );
         $('.mobile-ciudad').find('p').text( regional + ' - ' + userReg );
@@ -656,6 +658,8 @@ class Regionalization {
 
             if (currentPlans.length - 1 !== index) {
 
+                self.critico = plano.critico;
+
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
                         <div class="quantidade-plan">
@@ -712,6 +716,20 @@ class Regionalization {
             // $( window ).trigger( "regionalized" );
             var planos = new Planos();
         }
+
+        $(".informacoes").on('click', function (e){
+            e.preventDefault();
+            let modalInfo = new ModalInformacoesAdicionais();
+            modalInfo.setContent(self.critico);
+            modalInfo.showModal();
+        });
+
+        $(".informacoes2").on('click', function (e){
+            e.preventDefault();
+            let modalInfo = new ModalInformacoesAdicionais();
+            modalInfo.setContent(self.critico);
+            modalInfo.showModal();
+        });
 
         $(".btn--sigin").on('click', function (e) {
             var link = $(this).data('link');

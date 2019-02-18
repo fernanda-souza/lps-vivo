@@ -71,15 +71,15 @@ class ModalnformacoesAdicionais {
     showModal() {
         $("#modalInformacoesAdicionais").show();
         $("html, body").css("overflow", "hidden");
-        TweenMax.fromTo($("#modalInformacoesAdicionais .modal-dialog"), 0.6, {
-            x: "100%"
-        }, {
-            x: "0%",
-            ease: SlowMo.easeInOut
-        });
+        setTimeout(() => {
+            $("#modalInformacoesAdicionais .modal-content").addClass('active');
+        }, 100);
     }
 
     hideModal() {
+        setTimeout(() => {
+            $("#modalInformacoesAdicionais .modal-content").removeClass('active');
+        }, 600);
         $("#modalInformacoesAdicionais").hide();
         $("html, body").css("overflow", "auto");
     }

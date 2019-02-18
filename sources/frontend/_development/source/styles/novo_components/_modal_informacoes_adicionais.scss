@@ -37,6 +37,12 @@
         .modal-content {
             border-radius: 5px;
             background-color: #333;
+            transition: all .4s ease-in-out;
+            transform: translateX(200%);
+
+            &.active{
+                transform: translateX(0%);
+            }
 
             .modal-header {
                 text-align: center;
