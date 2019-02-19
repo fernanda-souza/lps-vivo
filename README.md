@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
--Publicacao_20190219_Controle_PrecosAntigosBussola  (19/02/2019)
+-Publicacao_20190219_CONTROLE_NOVOLOGO  (19/02/2019)
 
 ### Release notes
-- **Publicacao_20190219_Controle_PrecosAntigosBussola**
+- **Publicacao_20190219_CONTROLE_NOVOLOGO**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4666
+
+- Publicacao_20190219_Controle_PrecosAntigosBussola
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4664
 
 - Publicacao_20190215_ControleParametroGoogle_GoLive
