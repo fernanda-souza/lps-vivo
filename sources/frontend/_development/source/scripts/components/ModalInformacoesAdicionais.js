@@ -14,7 +14,7 @@ class ModalnformacoesAdicionais {
     }
 
     setContent(critico) {
-        if (critico === true) {
+        if (critico !== true) {
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
             <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
@@ -62,7 +62,7 @@ class ModalnformacoesAdicionais {
             $(".tab__content[data-main-content=2]").html(`<ul>
             <li>A franquia de internet é válida pelo período de um mês;</li>
             <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
-            <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o código 15 para qualquer Vivo, celular ou fixo de outras operadoras;</li>
+            <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo, celular ou fixo de outras operadoras;</li>
             </ul>`)
 
             $(".tab__content[data-main-content=3]").html(`<ul>
