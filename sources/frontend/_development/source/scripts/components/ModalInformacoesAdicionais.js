@@ -33,6 +33,11 @@ class ModalnformacoesAdicionais {
             </ul>`);
 
             $(".tab__content[data-main-content=3]").html(`<ul>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" target="_blank">
+                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
+                </a>
+            </li>
             <li>Vivo Controle Digital</li>
             <li>Pacote Internet 150MB e 400MB</li>
             <li>Pacote 100min Outras Operadoras</li>
@@ -66,6 +71,11 @@ class ModalnformacoesAdicionais {
             </ul>`)
 
             $(".tab__content[data-main-content=3]").html(`<ul>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB">
+                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
+                </a>
+            </li>
             <li>Vivo Controle Digital</li>
             <li>Pacote Internet 150MB e 400MB</li>
             <li>Pacote 100min Outras Operadoras</li>
