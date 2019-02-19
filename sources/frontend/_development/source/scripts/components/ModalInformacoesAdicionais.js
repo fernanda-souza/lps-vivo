@@ -34,7 +34,7 @@ class ModalnformacoesAdicionais {
 
             $(".tab__content[data-main-content=3]").html(`<ul>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" target="_blank">
+                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" target="_blank">
                     PROMOÇÃO VIVO CONTROLE DIGITAL VII
                 </a>
             </li>
@@ -72,7 +72,7 @@ class ModalnformacoesAdicionais {
 
             $(".tab__content[data-main-content=3]").html(`<ul>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB">
+                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB">
                     PROMOÇÃO VIVO CONTROLE DIGITAL VII
                 </a>
             </li>
@@ -112,6 +112,11 @@ class ModalnformacoesAdicionais {
         }, 600);
         $("#modalInformacoesAdicionais").hide();
         $("html, body").css("overflow", "auto");
+    }
+
+    addUrlRegulamento(name, url) {
+        $('.tab__content[data-main-content=3] a.regulamento').attr('href', url);
+        $('.tab__content[data-main-content=3] a.regulamento').html(name);
     }
 }
 

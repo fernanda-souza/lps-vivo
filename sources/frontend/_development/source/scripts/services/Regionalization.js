@@ -721,6 +721,7 @@ class Regionalization {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
             modalInfo.setContent(self.critico);
+            if($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
 
