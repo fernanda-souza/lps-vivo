@@ -103,11 +103,6 @@ class Functions {
         let urlParamFluxo = this.helpers.getUrlParameter("fluxo"); 
         let urlParamCriteria = this.helpers.getUrlParameter("criteria");
         if( urlParamCidade || urlParamFluxo || urlParamCriteria){
-
-            $('html, body').animate({
-                scrollTop: $("#planos").offset().top - $("#header").height()
-            }, 200, 'linear');
-            
             this.compassConfig.moveTo(".bussola_onpage");
             this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd);
             if(urlParamCidade || urlParamFluxo) {
@@ -331,7 +326,7 @@ class Functions {
         $('.bussola_onpage').hide();
         $('#btnbackbuss').show();
         window.isSlickCardsInit = false;
-        this.animScrollTo(offset);
+        //this.animScrollTo(offset);
         this.compassConfig.initFooterOn(false);
     }
 
