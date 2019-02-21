@@ -39,13 +39,36 @@ class ModalnformacoesAdicionais {
                     PROMOÇÃO VIVO CONTROLE DIGITAL VII
                 </a>
             </li>
-            <li>Vivo Controle Digital</li>
-            <li>Pacote Internet 150MB e 400MB</li>
-            <li>Pacote 100min Outras Operadoras</li>
-            <li>Pacote Vivo Internet Noite</li>
-            <li>Pacote Vivo Internet Fim de Semana</li>
-            <li>Pacote Vivo Internet Redes Sociais 1GB</li>
-            <li>Vivo Controle (sem serviços digitais)</li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238923" target="_blank">
+                    Pacote Internet 150MB e 400MB
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238924" target="_blank">
+                    Pacote 100min Outras Operadoras
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238925" target="_blank">
+                    Pacote Vivo Internet Noite
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238926" target="_blank">
+                    Pacote Vivo Internet Fim de Semana
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
+                    Pacote Vivo Internet Redes Sociais 1GB
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
+                    Vivo Controle (sem serviços digitais)
+                </a>
+            </li>
             </ul>`)
 
             $(".tab__content[data-main-content=4]").html(`
@@ -77,13 +100,36 @@ class ModalnformacoesAdicionais {
                     PROMOÇÃO VIVO CONTROLE DIGITAL VII
                 </a>
             </li>
-            <li>Vivo Controle Digital</li>
-            <li>Pacote Internet 150MB e 400MB</li>
-            <li>Pacote 100min Outras Operadoras</li>
-            <li>Pacote Vivo Internet Noite</li>
-            <li>Pacote Vivo Internet Fim de Semana</li>
-            <li>Pacote Vivo Internet Redes Sociais 1GB</li>
-            <li>Vivo Controle (sem serviços digitais)</li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238923" target="_blank">
+                    Pacote Internet 150MB e 400MB
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238924" target="_blank">
+                    Pacote 100min Outras Operadoras
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238925" target="_blank">
+                    Pacote Vivo Internet Noite
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238926" target="_blank">
+                    Pacote Vivo Internet Fim de Semana
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
+                    Pacote Vivo Internet Redes Sociais 1GB
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
+                    Vivo Controle (sem serviços digitais)
+                </a>
+            </li>
             </ul>`)
 
             $(".tab__content[data-main-content=4]").html(`
