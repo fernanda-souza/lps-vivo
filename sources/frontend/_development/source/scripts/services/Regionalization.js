@@ -532,6 +532,7 @@ documentosPromo = new RegionItems(documentosPromo);
 
 import Helpers from "../services/Helpers";
 import DataLayer from "../services/DataLayer";
+import ModalInformacoesAdicionais from "../components/ModalInformacoesAdicionais";
 
 class Regionalization {
     constructor() {
@@ -550,6 +551,7 @@ class Regionalization {
         var userReg = this.getCookie('controle_estado');
         var parameters = window.location.search;
         var appname = this.getUrlParameter('banner');
+        var critico;
 
         $('.ciudad').find('p').text( regional + ' - ' + userReg );
         $('.mobile-ciudad').find('p').text( regional + ' - ' + userReg );
@@ -656,6 +658,8 @@ class Regionalization {
 
             if (currentPlans.length - 1 !== index) {
 
+                self.critico = plano.critico;
+
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
                         <div class="quantidade-plan">
@@ -686,10 +690,10 @@ class Regionalization {
                         <div class="assine">
                             <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
                         </div>
-                        <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
+                        <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                     </div>
                 `);
-
+                // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
                 $(".item-plan").css("opacity", "1").css("display", "block");
                 $(".blur-gb").css("display", "none");
 
@@ -712,6 +716,22 @@ class Regionalization {
             // $( window ).trigger( "regionalized" );
             var planos = new Planos();
         }
+
+        $(".informacoes").on('click', function (e){
+            e.preventDefault();
+            let modalInfo = new ModalInformacoesAdicionais();
+            modalInfo.setContent(self.critico);
+            if($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            modalInfo.showModal();
+        });
+
+        $(".informacoes2").on('click', function (e){
+            e.preventDefault();
+            let modalInfo = new ModalInformacoesAdicionais();
+            modalInfo.setContent(self.critico);
+            if($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            modalInfo.showModal();
+        });
 
         $(".btn--sigin").on('click', function (e) {
             var link = $(this).data('link');
