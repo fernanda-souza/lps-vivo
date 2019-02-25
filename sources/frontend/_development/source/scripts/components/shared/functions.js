@@ -16,6 +16,7 @@ let statusGeoIP;
 let positonLabel = true;
 let cityChosedByRecomendation = false;
 let __this;
+let type_compass = undefined;
 
 class Functions {
     constructor() {
@@ -107,9 +108,10 @@ class Functions {
             $('html, body').animate({
                 scrollTop: $("#planos").offset().top - $("#header").height()
             }, 200, 'linear');
-            
+            type_compass = 'bypass'
             this.compassConfig.moveTo(".bussola_onpage");
-            this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd);
+            // console.log('Bussola - URL PARAM ' + urlParamCidade)
+            this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd, '', type_compass);
             if(urlParamCidade || urlParamFluxo) {
                 this.compass = new Compass( function(result){ console.log(result) } , urlParamCidade, true );
             } else if(urlParamCriteria) {
@@ -123,10 +125,13 @@ class Functions {
             $(".container_modal .modal_bussola .modal_content > form .btn-confirmar").click();
         }
         else if (getcookie_ddd == "" || getcookie_cidade == "" || getcookie_estado == "") {
+            //by geoip
             this.checkLocationByGeoIP();
         } else {
             this.checkLocationByCookies();
-            this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd);
+            //bycookies
+            // console.log("Bussola - By Cookies")
+            this.datalayer.sendDataBussola('show-compass', 'nao-exibiu-bussola', getcookie_estado, getcookie_cidade, getcookie_ddd, type_compass);
         }
 
         //add listener click on location button in mobile menu
@@ -265,6 +270,7 @@ class Functions {
     geolocationCallback( value, location, checkCookies ){
         console.log( "geolocationCallback" , value , location );
         var ciudad = location.ciudad.split("-")[0];
+        type_compass = 'geolocalização'
 
         if( checkCookies ){
             __this.checkLocationByCookies();
@@ -274,7 +280,8 @@ class Functions {
             let datalayer = new DataLayer();
             if(value){
                 ciudad = ciudad.substr( 0 , ciudad.length-1 );
-                datalayer.sendDataBussola('show-compass', 'exibiu-bussola', location.estado, ciudad, location.ddd);
+                // console.log("Bussola - by geolocalizacao")
+                datalayer.sendDataBussola('show-compass', 'exibiu-bussola', location.estado, ciudad, location.ddd, '', type_compass);
             }
         }
     }
