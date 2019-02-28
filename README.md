@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190225_Controle_ModalRegulamentosAnatel (25/02/2019)
+- Publicacao_20190228_Controle_BannerPiscandoeAlterando (28/02/2019)
 
 ### Release notes
-- **Publicacao_20190225_Controle_ModalRegulamentosAnatel**
+- **Publicacao_20190228_Controle_BannerPiscandoeAlterando**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4734
+
+- Publicacao_20190225_Controle_ModalRegulamentosAnatel
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4734
 
 - Publicacao_20190220_Aura_BypassBussolacomErro
