@@ -130,7 +130,11 @@ openModal.click(function (e) {
 let closeModal = $(".btn-fechar");
 closeModal.click(function (e) {
     e.preventDefault();
-    $("#modalChatvivi, #modalChatdireto").fadeOut();
+    $("#modalChatvivi, #modalChatdireto").fadeOut( function(){
+        setTimeout(function(){ 
+            $("#modalChatdireto .box iframe").remove() 
+        }, 500);
+    });
 });
 
 let openChat = $("#box-btn_right");
@@ -150,7 +154,14 @@ function closeModal() {
 let openChatLeft = $("#box-btn_left");
 openChatLeft.click(function (e) {
     e.preventDefault();
-    console.log("teste");
+    var linkerParam;
+    ga(function() {
+        var trackers = ga.getAll();
+        if (trackers.length) {
+            linkerParam = trackers[0].get("linkerParam");
+        }
+    });
+    $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
     $("#modalChatvivi").fadeOut("slow");
     $("#modalChatdireto").fadeIn("slow");
 });

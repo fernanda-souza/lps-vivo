@@ -9,10 +9,19 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190220_Aura_BypassBussolacomErro (20/02/2019)
+- Publicacao_20190308_Controle_TesteABChatCorrecaoFAQ (08/03/2019)
 
 ### Release notes
-- **Publicacao_20190220_Aura_BypassBussolacomErro**
+- **Publicacao_20190308_Controle_TesteABChatCorrecaoFAQ**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4814
+
+- Publicacao_20190228_Controle_BannerPiscandoeAlterando
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4768
+
+- Publicacao_20190225_Controle_ModalRegulamentosAnatel
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4734
+
+- Publicacao_20190220_Aura_BypassBussolacomErro
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4684
 
 - Publicacao_20190219_CONTROLE_NOVOLOGO
