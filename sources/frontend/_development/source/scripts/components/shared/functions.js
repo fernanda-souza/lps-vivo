@@ -292,22 +292,21 @@ class Functions {
     }
 
     geolocationCallback(value, location, checkCookies) {
-        console.log("geolocationCallback", value, location);
-        var ciudad = location.ciudad.split("-")[0];
         type_compass = "geolocalização";
-
         if (checkCookies) {
             __this.checkLocationByCookies();
+        } else if (value == false) {
+            type_compass = "nao-localizado";
+            __this.datalayer.sendDataBussola("show-compass", "exibiu-bussola", "", "", "", "", type_compass);
         } else {
+            var ciudad = location.ciudad.split("-")[0];
             $("#autocomplete").val(`${ciudad}- ${location.estado}`);
             $(".mobile-ciudad")
                 .find("p")
                 .text(`${ciudad}- ${location.estado}`);
-            let datalayer = new DataLayer();
             if (value) {
                 ciudad = ciudad.substr(0, ciudad.length - 1);
-                // console.log("Bussola - by geolocalizacao")
-                datalayer.sendDataBussola("show-compass", "exibiu-bussola", location.estado, ciudad, location.ddd, "", type_compass);
+                __this.datalayer.sendDataBussola("show-compass", "exibiu-bussola", location.estado, ciudad, location.ddd, "", type_compass);
             }
         }
     }
