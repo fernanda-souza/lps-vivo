@@ -9,10 +9,16 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190308_Controle_TesteABChatCorrecaoFAQ (08/03/2019)
+- Publicacao_20190318_Controle_Alteracao4.5G (18/03/2019)
 
 ### Release notes
-- **Publicacao_20190308_Controle_TesteABChatCorrecaoFAQ**
+- **Publicacao_20190318_Controle_Alteracao4.5G**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4896
+
+- Publicacao_20190314_Controle_BugChat
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4866
+
+- Publicacao_20190308_Controle_TesteABChatCorrecaoFAQ
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4814
 
 - Publicacao_20190228_Controle_BannerPiscandoeAlterando
