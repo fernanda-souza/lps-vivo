@@ -9,10 +9,34 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
--Publicacao_20190215_ControleParametroGoogle_GoLive  (15/02/2019)
+- Publicacao_20190318_Controle_Alteracao4.5G (18/03/2019)
 
 ### Release notes
-- **Publicacao_20190215_ControleParametroGoogle_GoLive**
+- **Publicacao_20190318_Controle_Alteracao4.5G**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4896
+
+- Publicacao_20190314_Controle_BugChat
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4866
+
+- Publicacao_20190308_Controle_TesteABChatCorrecaoFAQ
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4814
+
+- Publicacao_20190228_Controle_BannerPiscandoeAlterando
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4768
+
+- Publicacao_20190225_Controle_ModalRegulamentosAnatel
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4734
+
+- Publicacao_20190220_Aura_BypassBussolacomErro
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4684
+
+- Publicacao_20190219_CONTROLE_NOVOLOGO
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4666
+
+- Publicacao_20190219_Controle_PrecosAntigosBussola
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-4664
+
+- Publicacao_20190215_ControleParametroGoogle_GoLive
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-4621
 
 - Publicacao_20190214_Controle_AtualizacaoRegulamento*

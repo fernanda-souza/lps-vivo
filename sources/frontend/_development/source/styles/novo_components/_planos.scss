@@ -128,10 +128,10 @@
                 right: 0;
                 top: 0px;
                 bottom: 0;
-                background-image: url(../img/novo/planos_blur_bg.png);
+                background-image: url(../img/novo/planos_blur_bg_v3.png);
                 background-size: 1024px;
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: bottom -35px center;
             }
 
             &:nth-child(3)>.item-plan {
@@ -359,6 +359,22 @@
                 display: inline-block;
                 width: auto;
                 margin-bottom: 0;
+            }
+
+            .informacoes, .informacoes2  {
+                color: #888888;
+                width: max-content;
+                text-align: center;
+                display: block;
+                border-bottom: 1px solid #888;
+                margin: 12px auto 12px auto;
+                padding-bottom: 5px;
+                font-size: 12px;
+                line-height: 13px;
+
+                @media all and (-ms-high-contrast: none) {
+                    width: 50%;
+                }
             }
 
             .regulamiento {

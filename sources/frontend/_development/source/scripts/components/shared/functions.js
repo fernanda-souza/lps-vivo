@@ -363,7 +363,7 @@ class Functions {
         $(".bussola_onpage").hide();
         $("#btnbackbuss").show();
         window.isSlickCardsInit = false;
-        this.animScrollTo(offset);
+        //this.animScrollTo(offset);
         this.compassConfig.initFooterOn(false);
     }
 

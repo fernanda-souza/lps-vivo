@@ -152,7 +152,7 @@ class Compass {
 
         var offset;
         if (origin == 'returnShop') {
-            offset = $(this.bussolaMainSelector + " .plans-section").offset().top;
+            offset = 0;
         } else {
             offset = 0;
         }
