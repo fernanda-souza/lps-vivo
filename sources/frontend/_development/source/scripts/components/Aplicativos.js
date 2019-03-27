@@ -57,14 +57,14 @@ class Aplicativos {
 
         $('.item-aplicativos').on('click', function(){
             let index = $(this).attr('data-slick-index');
-            console.log( "change slick index" , index );
+            //console.log( "change slick index" , index );
             // if( index != _this.currentIndex){
 
             //     if( _this.currentSlide ){
             //         _this.currentSlide.removeClass('large-icon');
             //     }
             //     let newPosition = 64 * index + ( 26 * ( index-1 ) );
-            //     console.log( newPosition );
+            //     //console.log( newPosition );
             //     $(element).find(".slick-track").css("transform" , "translate3d(-" + newPosition + "px , 0 , 0)");
             //     this.currentIndex = index;
             //     $(this).addClass('large-icon');
