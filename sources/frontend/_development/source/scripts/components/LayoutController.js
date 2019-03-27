@@ -4,7 +4,7 @@ class LayoutController {
     }
 
     setTemplate(bussola, city) {
-        console.log(bussola)
+        //console.log(bussola)
         switch(bussola) {
             case 'mainbussola': 
                 const { cidade, uf, ddd } = city;

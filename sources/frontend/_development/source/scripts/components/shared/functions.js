@@ -116,12 +116,11 @@ class Functions {
             );
             type_compass = "bypass";
             this.compassConfig.moveTo(".bussola_onpage");
-            // console.log('Bussola - URL PARAM ' + urlParamCidade)
-            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, "", type_compass);
+            //console.log('Bussola - URL PARAM ' + urlParamCidade)
             if (urlParamCidade || urlParamFluxo) {
                 this.compass = new Compass(
                     function(result) {
-                        console.log(result);
+                        //console.log(result);
                     },
                     urlParamCidade,
                     true
@@ -131,7 +130,7 @@ class Functions {
                     if (this.criteria[i].criteriaId == urlParamCriteria) {
                         this.compass = new Compass(
                             function(result) {
-                                console.log(result);
+                                //console.log(result);
                             },
                             this.criteria[i].name + "-" + this.criteria[i].canonicalName,
                             true,
@@ -140,6 +139,7 @@ class Functions {
                     }
                 }
             }
+            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, "", type_compass);
             this.compassConfig.initFooterOn("#plans_cards", ".comp_0010_footer", this.sectionsOffset);
             $(".container_modal .modal_bussola .modal_content > form .btn-confirmar").click();
         } else if (getcookie_ddd == "" || getcookie_cidade == "" || getcookie_estado == "") {
@@ -148,7 +148,7 @@ class Functions {
         } else {
             this.checkLocationByCookies();
             //bycookies
-            // console.log("Bussola - By Cookies")
+            console.log("Bussola - By Cookies")
             this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, type_compass);
         }
 
@@ -234,7 +234,7 @@ class Functions {
             var estado = $(e.currentTarget).attr("data-estado");
             var cidade = $(e.currentTarget).attr("data-cidade");
             var ddd = $(e.currentTarget).attr("data-ddd");
-            // console.log("setCookie 180 functions.js");
+            //console.log("setCookie 180 functions.js");
             this.setCookie(estado, cidade, ddd);
             _this.sendDataCityToDB(cidade);
             window.citySelected = true;
@@ -788,7 +788,7 @@ class Functions {
             type: "post",
             dataType: "text",
             success: function(data) {
-                console.log("Dados enviados");
+                //console.log("Dados enviados");
             },
             error: function(error) {
                 console.error("Error occurred. Error code: " + error.code);
@@ -930,7 +930,7 @@ class Functions {
     }
 
     initRegionalization(estado, cidade, ddd) {
-        console.log("initRegionalization", cidade);
+        //console.log("initRegionalization", cidade);
         $(".legal-planos").show();
         $(".container-planos .container-box").remove();
         $(".container_modal").remove();

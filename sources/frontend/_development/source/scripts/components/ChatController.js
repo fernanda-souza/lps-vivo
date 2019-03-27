@@ -21,7 +21,7 @@ class ChatController {
         }
         this.token = 'bWF0ZXVzLm9saXZlaXJhLmV4dEB3dW5kZXJtYW4uY29tJmhhc2g9ODkxMzY2NTU';
         this.limit = 0;
-        console.log(this.today)
+        //console.log(this.today)
         this.checkHoliday();
     }
 
