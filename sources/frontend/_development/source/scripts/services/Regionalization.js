@@ -265,6 +265,68 @@ var plansControle = [
             perLine: 0
         },
         linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
+    }),
+    
+    // santa catarina
+    new Plan({
+        region: regions.sc,
+        internet: '6GB',
+        TJinternet: '5,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: [''],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 76.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.sc,
+        internet: '6GB',
+        TJinternet: '5,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: [''],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 76.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.sc,
+        internet: '5GB',
+        TJinternet: '4,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: [''],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 61.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.sc,
+        internet: '4GB',
+        TJinternet: '3,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: [''],
+        combo: "",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 46.99,
+            discount: 0,
+            perLine: 0
+        }
     })
 ]
 
@@ -293,6 +355,12 @@ var documentosPromo = [
     // DDD 21
     new Documento({
         region: regions.ddd21,
+        nome: 'Regulamento Promoção Vivo Controle Digital',
+        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
+    }),
+    //SANTA CATARINA
+    new Documento({
+        region: regions.sc,
         nome: 'Regulamento Promoção Vivo Controle Digital',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     })
@@ -523,6 +591,13 @@ var documentosModal = [
         nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
         lightBox: false
+    }),
+    //SANTA CATARINA
+    new Documento({
+        region: regions.sc,
+        nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
+        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
+        lightBox: false
     })
 
 ];
@@ -614,7 +689,6 @@ class Regionalization {
         $('.item-plan').remove();
 
 
-
         currentPlans.sort(function (a, b) {
             return a.price.amount - b.price.amount
         })
@@ -694,6 +768,7 @@ class Regionalization {
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                     </div>
                 `);
+                
                 // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
                 $(".item-plan").css("opacity", "1").css("display", "block");
                 $(".blur-gb").css("display", "none");
