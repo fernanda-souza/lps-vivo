@@ -46,13 +46,14 @@ class DataLayer {
     }
 
 
-    sendDataBussola(event, action, estado, cidade, ddd , origem){
+    sendDataBussola(event, action, estado, cidade, ddd , origem, type_compass){
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event': event,
             'event-action': action,
             'page': window.location.href,
             'title': document.title,
+            'type_compass': type_compass,
             'custom': {
                 'dimensions': {
                 'user-state': ( estado? this.helpers.stringSanitize(estado) : undefined ), // obrigatório em todos os casos

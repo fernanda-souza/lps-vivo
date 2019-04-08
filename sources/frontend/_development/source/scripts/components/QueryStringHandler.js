@@ -25,7 +25,7 @@ class QueryStringHandler {
 
                 case 'middle': 
                     $("#planos").insertAfter("#vantagens");
-                    console.log("mslsd")
+                    //console.log("mslsd")
                 break;
             }
         }else{
@@ -48,7 +48,7 @@ class QueryStringHandler {
                     // this.getcookie_ddd = getcookie_ddd = helpers.getCookie('controle_ddd');
                     this.banner = new BannerConsideracao2( $('.container_banner') );
                     this.banner.setupTemplate();
-                    console.log('middle')
+                    //console.log('middle')
                 break;
 
                 case 'middle_2': 
