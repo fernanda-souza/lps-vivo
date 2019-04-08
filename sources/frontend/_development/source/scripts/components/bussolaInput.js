@@ -260,7 +260,7 @@ class BussolaInput {
                         item.on("click", (e) => {
                             // this.cityChosedByRecomendation = true;
                             var id = $(e.target).text();
-                            console.log("***id" , id);
+                            //console.log("***id" , id);
                             this.hideBussolaList();
                             this.setCurrentCity(id); //comento para que no dispare la localización, sólo debe dispararse con el botón confirmar
                         });
@@ -337,7 +337,7 @@ class BussolaInput {
                             $(this.awesomplete.ul).removeAttr("hidden");
                             $(this.awesomplete.ul).append($(Awesomplete.ITEM(this.citiesPriorityUnreversed[city], "")).on("click", (e) => {
                                 // this.cityChosedByRecomendation = true;
-                                console.log("$(e.target).text()" , $(e.target).text());
+                                //console.log("$(e.target).text()" , $(e.target).text());
                                 this.setCurrentCity($(e.target).text());
                             }));
                             this.awesomplete.suggestions.push({

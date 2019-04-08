@@ -144,7 +144,8 @@ class Compass {
 
     showCompass(event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
         $(this.bussolaMainSelector).fadeIn(100);
-        this.datalayer.sendDataBussola('show-compass', 'exibiu-bussola', estado, cidade, ddd);
+        let type_compass = locatedByGeoIp? 'geolocalização' : undefined 
+        //this.datalayer.sendDataBussola('show-compass', 'exibiu-bussola', estado, cidade, ddd);
     }
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
@@ -234,7 +235,7 @@ class Compass {
                                 // this.cityChosedByRecomendation = true;
                                 var id = $(e.target).text();
                                 this.setCurrentCity(id);
-                                console.log("2");
+                                //console.log("2");
                             });
                             this._bussolaRecomendations.append( item );
                     }
@@ -498,7 +499,7 @@ class Compass {
                 item.addClass("bussola_recomendations-container--item");
                 item.on("click", (e) => {
                     // this.cityChosedByRecomendation = true;
-                    console.log("3");
+                    //console.log("3");
                     this.setCurrentCity($(e.target).text());
                 });
             }
@@ -516,7 +517,7 @@ class Compass {
                 $(this.awesomplete.ul).append($(Awesomplete.ITEM(this.citiesPriorityUnreversed[city],"")).on("click", (e) => {
                     // this.cityChosedByRecomendation = true;
                     // this.setCurrentCity($(e.target).text());
-                    console.log("1");
+                    //console.log("1");
                     this.hideBussolaList();
                 }));
                 this.awesomplete.suggestions.push({label:this.citiesPriorityUnreversed[city], value:this.citiesPriorityUnreversed[city]});
@@ -593,7 +594,7 @@ class Compass {
             type: "post",
             dataType: "text",
             success: function(data) {
-                console.log('Dados enviados');
+                //console.log('Dados enviados');
             },
             error: function(error) {
                 console.error('Error occurred. Error code: ' + error.code);
