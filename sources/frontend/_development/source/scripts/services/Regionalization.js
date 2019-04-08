@@ -723,7 +723,6 @@ class Regionalization {
 
             if (index === 0) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-                console.log('foooi 0');
             }else if(index === 1){
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
             }else if( index  === 2 ) {
@@ -769,13 +768,6 @@ class Regionalization {
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                     </div>
                 `);
-
-                if(currentDDD == 42 || 47 || 48 || 49 ){
-                    // alert('foi');
-                    $('.info-plan').each(function(){
-                        $(this).children(':first').css('display','none');
-                    })
-                }
                 
                 // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
                 $(".item-plan").css("opacity", "1").css("display", "block");
@@ -792,6 +784,35 @@ class Regionalization {
                     }
                     e.stopImmediatePropagation();
                 });
+            }
+            //Alterações específicas para regionalização de SC
+            else if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+                $('.info-plan').each(function(){
+                    $(this).children('p:eq( 1 )').css('display','none');
+                });
+                var planosSemApp = $('.legal-planos a')[1];
+                $('.legal-planos').find(planosSemApp).css('display','none');
+                
+                var cta = $('.item-plan').children('.assine').find('a');
+                cta.slice(1).text('Encontre uma loja Vivo');
+                
+                $('.item-plan').slice(1).addClass('cta-chat');
+                $('.cta-chat a')[0].click(function(e){
+                    console.log('fooi')
+                    e.preventDefault;
+
+                })
+
+                
+                // $('.assine').empty();
+                // $('.assine').append(`
+                // <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga"
+                // data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas"
+                // data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
+                // <button>Encontre uma loja Vivo</button>
+                // `);
+
+                
             }
         });
 
@@ -915,7 +936,7 @@ class Regionalization {
         var regional = decodeURI(decodeCidade);
         var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
 
-        console.log(plansControle.get(currentDDD))
+        // console.log(plansControle.get(currentDDD))
         $('.plans .content').addClass('isSwiper');
         $('.plans .swiper-container').addClass('cards-swiper');
         $(".plans .swiper-wrapper").css({
