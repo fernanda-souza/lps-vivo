@@ -271,6 +271,7 @@ var plansControle = [
     new Plan({
         region: regions.sc,
         internet: '6GB',
+        r4: true,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -286,6 +287,7 @@ var plansControle = [
     new Plan({
         region: regions.sc,
         internet: '6GB',
+        r4: true,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -301,6 +303,7 @@ var plansControle = [
     new Plan({
         region: regions.sc,
         internet: '5GB',
+        r4: true,
         TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -316,6 +319,7 @@ var plansControle = [
     new Plan({
         region: regions.sc,
         internet: '4GB',
+        r4: true,
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -664,7 +668,7 @@ class Regionalization {
         var linkPlan;
 
         //MONTAGEM DOS CARDS
-        // console.log(currentDDD)
+
         var currentPlans = plansControle.get(appname) || plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
         // var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional"); //@TODO NEW
 
@@ -717,7 +721,7 @@ class Regionalization {
         btnAssineJa.attr("data-analytics-label", "assine-ja");
 
         currentPlans.map(function (plano, index) {
-
+            console.log(i)
             var prices = `${plano.price.amount}`.split('.');
             var linkPlan = plano.SKU[1];
 
@@ -732,8 +736,9 @@ class Regionalization {
             }
 
             if (currentPlans.length - 1 !== index) {
-                // alert('é aquiiiii')
+    
                 self.critico = plano.critico;
+                self.r4 = plano.r4;
 
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
@@ -762,14 +767,15 @@ class Regionalization {
                             <h1>R$ ${prices[0]}</h1>
                             <p>,${prices[1]} <span>/mês</span></p>
                         </div>
-                        <div class="assine">
-                            <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
-                        </div>
+                        ${index > 0 && plano.r4 ? `<div class="assine cta-chat">
+                            <button class="cta-chat__btn">Encontre uma loja Vivo</button>
+                        </div>`: `<div class="assine"><a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
+                            </div>`}
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
-                    </div>
                 `);
-                
+        
                 // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
+
                 $(".item-plan").css("opacity", "1").css("display", "block");
                 $(".blur-gb").css("display", "none");
 
@@ -787,40 +793,44 @@ class Regionalization {
             }
 
             //Alterações específicas para regionalização de SC
+            // cta.slice(1).text('Encontre uma loja Vivo');
+
             if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
 
                 var planosSemApp = $('.legal-planos a')[1];
                 var cta = $('.item-plan').children('.assine').find('a');
 
-                $('.info-plan').each(function(){
-                    $(this).children('p:eq( 1 )').css('display','none');
-                });
+                //Alterações no Banner 
+                $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
+                $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
 
-                $('.legal-planos').find(planosSemApp).css('display','none');
-                // cta.slice(1).text('Encontre uma loja Vivo');
+               
+                // for(let i=0; i<prices.length; i++){
+                //     console.log(i+' = '+ prices[i]);
+                // }
                 
-                $('.assine').slice(1).addClass('cta-chat');
-                // $('.cta-chat a')[0].click(function(e){
-                //     console.log('fooi')
-                    // e.preventDefault;
-                // })
-
-                $('.cta-chat').empty();
-                $('.cta-chat').append(`
-                <button class="cta-chat__btn">Encontre uma loja Vivo</button>
-                `);
-
-                $('.cta-chat__btn').click(function(e){
-                    e.preventDefault;
-                    $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
-                    $("#modalChatdireto").fadeIn("slow");
-                })
+                //Alterações gerais
+                $('.info-plan').each(function(){
+                    $(this).children('p:eq( 1 )').css('visibility','hidden');
+                });
+                
+                $('.legal-planos').find(planosSemApp).css('display','none');
+                
+                // $('.assine').slice(1).addClass('cta-chat');
+                // $('.cta-chat').empty();
+                // $('.cta-chat').append(`
+                // <button class="cta-chat__btn">Encontre uma loja Vivo</button>
+                // `);
                 
             }
         });
 
-        
-
+        //Alterações em CTA redirecionando para Chat
+        $('.cta-chat__btn').click(function(e){
+            // e.preventDefault;
+            $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
+            $("#modalChatdireto").fadeIn("slow");
+        });
 
         if (helpers.isMobile() || helpers.isTablet()) {
             // $( window ).trigger( "regionalized" );
@@ -977,7 +987,6 @@ class Regionalization {
             paginationItems.remove();
         }
         // End loading / show plans ...
-
 
     }
 
