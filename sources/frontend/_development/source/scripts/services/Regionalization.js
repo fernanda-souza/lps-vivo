@@ -322,7 +322,7 @@ var plansControle = [
         r4: true,
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
-        SKU: [''],
+        SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
         combo: "",
         portal: false,
         appname: "vivocontrolegoread",
@@ -719,6 +719,8 @@ class Regionalization {
         btnAssineJa.attr("data-analytics-position", "destaque");
         btnAssineJa.attr("data-analytics-sku", `${currentPlans[0].SKU[1]}`);
         btnAssineJa.attr("data-analytics-label", "assine-ja");
+        console.log('é esse plano '+ currentPlans[0].SKU[1]);
+        console.log('é esse o reg ' + userReg)
 
         currentPlans.map(function (plano, index) {
             console.log(i)
@@ -738,7 +740,7 @@ class Regionalization {
             if (currentPlans.length - 1 !== index) {
     
                 self.critico = plano.critico;
-                self.r4 = plano.r4;
+                self.r4 = plano.r4; // regionalização de SC
 
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
@@ -793,7 +795,6 @@ class Regionalization {
             }
 
             //Alterações específicas para regionalização de SC
-            // cta.slice(1).text('Encontre uma loja Vivo');
 
             if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
 
@@ -803,31 +804,25 @@ class Regionalization {
                 //Alterações no Banner 
                 $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
                 $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
-
+                console.log('esses são os precosssss' + prices[0]);
                
-                // for(let i=0; i<prices.length; i++){
-                //     console.log(i+' = '+ prices[i]);
-                // }
+                for(let i=0; i<prices.length; i++){
+                    console.log('index '+ i +' = '+ prices[i]);
+                }
                 
-                //Alterações gerais
+                //Alterações gerais SC
                 $('.info-plan').each(function(){
                     $(this).children('p:eq( 1 )').css('visibility','hidden');
                 });
                 
                 $('.legal-planos').find(planosSemApp).css('display','none');
-                
-                // $('.assine').slice(1).addClass('cta-chat');
-                // $('.cta-chat').empty();
-                // $('.cta-chat').append(`
-                // <button class="cta-chat__btn">Encontre uma loja Vivo</button>
-                // `);
-                
+            
             }
         });
 
         //Alterações em CTA redirecionando para Chat
         $('.cta-chat__btn').click(function(e){
-            // e.preventDefault;
+            e.preventDefault;
             $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
             $("#modalChatdireto").fadeIn("slow");
         });
