@@ -785,36 +785,41 @@ class Regionalization {
                     e.stopImmediatePropagation();
                 });
             }
+
             //Alterações específicas para regionalização de SC
-            else if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+            if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+
+                var planosSemApp = $('.legal-planos a')[1];
+                var cta = $('.item-plan').children('.assine').find('a');
+
                 $('.info-plan').each(function(){
                     $(this).children('p:eq( 1 )').css('display','none');
                 });
-                var planosSemApp = $('.legal-planos a')[1];
+
                 $('.legal-planos').find(planosSemApp).css('display','none');
+                // cta.slice(1).text('Encontre uma loja Vivo');
                 
-                var cta = $('.item-plan').children('.assine').find('a');
-                cta.slice(1).text('Encontre uma loja Vivo');
-                
-                $('.item-plan').slice(1).addClass('cta-chat');
-                $('.cta-chat a')[0].click(function(e){
-                    console.log('fooi')
+                $('.assine').slice(1).addClass('cta-chat');
+                // $('.cta-chat a')[0].click(function(e){
+                //     console.log('fooi')
+                    // e.preventDefault;
+                // })
+
+                $('.cta-chat').empty();
+                $('.cta-chat').append(`
+                <button class="cta-chat__btn">Encontre uma loja Vivo</button>
+                `);
+
+                $('.cta-chat__btn').click(function(e){
                     e.preventDefault;
-
+                    $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
+                    $("#modalChatdireto").fadeIn("slow");
                 })
-
-                
-                // $('.assine').empty();
-                // $('.assine').append(`
-                // <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga"
-                // data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas"
-                // data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
-                // <button>Encontre uma loja Vivo</button>
-                // `);
-
                 
             }
         });
+
+        
 
 
         if (helpers.isMobile() || helpers.isTablet()) {
