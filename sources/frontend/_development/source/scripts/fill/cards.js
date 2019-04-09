@@ -109,8 +109,53 @@ var plansControle = [
             perLine: 0
         },
         linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
-    })
+    }),
 
+    // santa catarina
+    // new Plan({
+    //     region: regions.sc,
+    //     internet:'6GB',
+    //     mainoffer: true,
+    //     appname: "", //------------------ VERIFICAR SE É PARA DEIXAR APP  ------------------
+    //     SKU: [],
+    //     combo: "", //------------------ VERIFICAR SE É PARA DEIXAR ESSE COMBO ------------------
+    //     portal: false,
+    //     price: {
+    //         amount: 76.99,
+    //         discount: 0,
+    //         perline: 0,
+    //     }
+    // }),
+
+    // new Plan({
+    //     region: regions.sc,
+    //     internet:'5GB',
+    //     mainoffer: true,
+    //     appname: "", //------------------ VERIFICAR SE É PARA DEIXAR APP  ------------------
+    //     SKU: [],
+    //     combo: "", //------------------ VERIFICAR SE É PARA DEIXAR ESSE COMBO ------------------
+    //     portal: false,
+    //     price: {
+    //         amount: 61.99,
+    //         discount: 0,
+    //         perline: 0,
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.sc,
+    //     internet:'6GB',
+    //     mainoffer: true,
+    //     appname: "", //------------------ VERIFICAR SE É PARA DEIXAR APP  ------------------
+    //     SKU: [],
+    //     combo: "", //------------------ VERIFICAR SE É PARA DEIXAR ESSE COMBO ------------------
+    //     portal: false,
+    //     price: {
+    //         amount: 76.99,
+    //         discount: 0,
+    //         perline: 0,
+    //     }
+    // }),
+    
 ];
 
 plansControle = new RegionItems(plansControle);

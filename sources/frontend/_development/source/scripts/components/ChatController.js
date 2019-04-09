@@ -37,7 +37,7 @@ class ChatController {
                     dates.push(holiday.date)
                 }
             });
-            console.log(dates)
+            // console.log(dates)
             if(dates.includes(date)){
                 _this.verifyTime(true);
             }else{
