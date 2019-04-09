@@ -23,6 +23,12 @@ var documentosPromo = [
         region: regions.ddd21,
         nome: 'Regulamento Promoção Vivo Controle Digital',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
+    }),
+    // SC
+    new Documento({
+        region: regions.sc,
+        nome:'Regulamento Promoção Vivo Controle Digital',
+        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     })
 ];
 
@@ -233,7 +239,13 @@ var documentosModal = [
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146521',
         lightBox: false
     })
-
+//SANTA CATARINA
+    // new Documento({
+    //     region: regions.sc,
+    //     nome: 'Regulamento Bônus Portabilidade Controle',
+    //     link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146521',
+    //     lightBox: false
+    // })
 ];
 
 

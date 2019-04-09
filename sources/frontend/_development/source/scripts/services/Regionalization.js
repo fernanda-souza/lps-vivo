@@ -2,8 +2,6 @@
 
 import Planos from '../components/Planos';
 import QueryStringHandler from '../components/QueryStringHandler';
-import ModalnformacoesAdicionais from "../components/ModalnformacoesAdicionais";
-
 
 var isArray = Function.isArray || function (o) {
     return typeof o === 'object' && Object.prototype.toString.call(o).slice(8, -1) === 'Array';
@@ -267,6 +265,72 @@ var plansControle = [
             perLine: 0
         },
         linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
+    }),
+    
+    // santa catarina
+    new Plan({
+        region: regions.sc,
+        internet: '6GB',
+        r4: true,
+        TJinternet: '5,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: [''],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 76.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.sc,
+        internet: '6GB',
+        r4: true,
+        TJinternet: '5,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: [''],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 76.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.sc,
+        internet: '5GB',
+        r4: true,
+        TJinternet: '4,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: [''],
+        combo: "GoRead - NBA - Sync",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 61.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.sc,
+        internet: '4GB',
+        r4: true,
+        TJinternet: '3,5GB + 500MB de bônus*',
+        mainoffer: true,
+        SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
+        combo: "",
+        portal: false,
+        appname: "vivocontrolegoread",
+        price: {
+            amount: 46.99,
+            discount: 0,
+            perLine: 0
+        }
     })
 ]
 
@@ -295,6 +359,12 @@ var documentosPromo = [
     // DDD 21
     new Documento({
         region: regions.ddd21,
+        nome: 'Regulamento Promoção Vivo Controle Digital',
+        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
+    }),
+    //SANTA CATARINA
+    new Documento({
+        region: regions.sc,
         nome: 'Regulamento Promoção Vivo Controle Digital',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     })
@@ -525,6 +595,13 @@ var documentosModal = [
         nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
         lightBox: false
+    }),
+    //SANTA CATARINA
+    new Documento({
+        region: regions.sc,
+        nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
+        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
+        lightBox: false
     })
 
 ];
@@ -591,7 +668,7 @@ class Regionalization {
         var linkPlan;
 
         //MONTAGEM DOS CARDS
-        // console.log(currentDDD)
+
         var currentPlans = plansControle.get(appname) || plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
         // var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional"); //@TODO NEW
 
@@ -614,7 +691,6 @@ class Regionalization {
             $(".inner-planos-mobile").slick("unslick");
         }
         $('.item-plan').remove();
-
 
 
         currentPlans.sort(function (a, b) {
@@ -643,9 +719,11 @@ class Regionalization {
         btnAssineJa.attr("data-analytics-position", "destaque");
         btnAssineJa.attr("data-analytics-sku", `${currentPlans[0].SKU[1]}`);
         btnAssineJa.attr("data-analytics-label", "assine-ja");
+        console.log('é esse plano '+ currentPlans[0].SKU[1]);
+        console.log('é esse o reg ' + userReg)
 
         currentPlans.map(function (plano, index) {
-
+            console.log(i)
             var prices = `${plano.price.amount}`.split('.');
             var linkPlan = plano.SKU[1];
 
@@ -660,8 +738,9 @@ class Regionalization {
             }
 
             if (currentPlans.length - 1 !== index) {
-
+    
                 self.critico = plano.critico;
+                self.r4 = plano.r4; // regionalização de SC
 
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
@@ -690,13 +769,15 @@ class Regionalization {
                             <h1>R$ ${prices[0]}</h1>
                             <p>,${prices[1]} <span>/mês</span></p>
                         </div>
-                        <div class="assine">
-                            <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
-                        </div>
+                        ${index > 0 && plano.r4 ? `<div class="assine cta-chat">
+                            <button class="cta-chat__btn">Encontre uma loja Vivo</button>
+                        </div>`: `<div class="assine"><a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
+                            </div>`}
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
-                    </div>
                 `);
+        
                 // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
+
                 $(".item-plan").css("opacity", "1").css("display", "block");
                 $(".blur-gb").css("display", "none");
 
@@ -712,8 +793,39 @@ class Regionalization {
                     e.stopImmediatePropagation();
                 });
             }
+
+            //Alterações específicas para regionalização de SC
+
+            if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+
+                var planosSemApp = $('.legal-planos a')[1];
+                var cta = $('.item-plan').children('.assine').find('a');
+
+                //Alterações no Banner 
+                $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
+                $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
+                console.log('esses são os precosssss' + prices[0]);
+               
+                for(let i=0; i<prices.length; i++){
+                    console.log('index '+ i +' = '+ prices[i]);
+                }
+                
+                //Alterações gerais SC
+                $('.info-plan').each(function(){
+                    $(this).children('p:eq( 1 )').css('visibility','hidden');
+                });
+                
+                $('.legal-planos').find(planosSemApp).css('display','none');
+            
+            }
         });
 
+        //Alterações em CTA redirecionando para Chat
+        $('.cta-chat__btn').click(function(e){
+            e.preventDefault;
+            $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
+            $("#modalChatdireto").fadeIn("slow");
+        });
 
         if (helpers.isMobile() || helpers.isTablet()) {
             // $( window ).trigger( "regionalized" );
@@ -834,6 +946,7 @@ class Regionalization {
         var regional = decodeURI(decodeCidade);
         var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
 
+        // console.log(plansControle.get(currentDDD))
         $('.plans .content').addClass('isSwiper');
         $('.plans .swiper-container').addClass('cards-swiper');
         $(".plans .swiper-wrapper").css({
@@ -869,7 +982,6 @@ class Regionalization {
             paginationItems.remove();
         }
         // End loading / show plans ...
-
 
     }
 
