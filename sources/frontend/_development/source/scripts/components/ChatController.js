@@ -37,12 +37,15 @@ class ChatController {
                     dates.push(holiday.date)
                 }
             });
-            //console.log(dates)
-            if(dates.includes(date)){
-                _this.verifyTime(true);
-            }else{
-                _this.verifyTime(false);
+            var include = false;
+            for (var index = 0; index < dates.length; index++) {
+                const element = dates[index];
+                if(element == date){
+                    include = true;
+                }
             }
+
+            _this.verifyTime(include);
         });
     }
 
