@@ -267,11 +267,12 @@ var plansControle = [
         linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
     }),
     
-    // santa catarina
+    // r4 - santa catarina
     new Plan({
         region: regions.sc,
         internet: '6GB',
         r4: true,
+        critico: false,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -288,6 +289,7 @@ var plansControle = [
         region: regions.sc,
         internet: '6GB',
         r4: true,
+        critico: false,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -304,6 +306,7 @@ var plansControle = [
         region: regions.sc,
         internet: '5GB',
         r4: true,
+        critico: false,
         TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -320,6 +323,7 @@ var plansControle = [
         region: regions.sc,
         internet: '4GB',
         r4: true,
+        critico: false,
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
@@ -362,7 +366,7 @@ var documentosPromo = [
         nome: 'Regulamento Promoção Vivo Controle Digital',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     }),
-    //SANTA CATARINA
+    // r4 - santa catarina
     new Documento({
         region: regions.sc,
         nome: 'Regulamento Promoção Vivo Controle Digital',
@@ -596,14 +600,13 @@ var documentosModal = [
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
         lightBox: false
     }),
-    //SANTA CATARINA
+    // r4 - santa catarina
     new Documento({
         region: regions.sc,
         nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
         lightBox: false
     })
-
 ];
 
 documentosModal = new RegionItems(documentosModal);
@@ -799,11 +802,7 @@ class Regionalization {
 
                 //Alterações no Banner 
                 $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
-                // $('.preco-conteiner').each(function(){
-                    $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
-                    // console.log(prices[0]);
-                    // console.log(prices);
-                // })
+                $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
                 $('.legal-planos').find(planosSemApp).css('display','none');
             }
         });
