@@ -553,8 +553,8 @@ class Regionalization {
         var appname = this.getUrlParameter('banner');
         var critico;
 
-        $('.ciudad').find('p').text( regional + ' - ' + userReg );
-        $('.mobile-ciudad').find('p').text( regional + ' - ' + userReg );
+        $('.ciudad').find('p').text(regional + ' - ' + userReg);
+        $('.mobile-ciudad').find('p').text(regional + ' - ' + userReg);
 
         if (helpers.isMobile() || helpers.isTablet()) $('body').addClass("regionalized");
 
@@ -627,9 +627,9 @@ class Regionalization {
 
         // $('span.preco').text(`${prices[0]},`);
         // $('.subprice').text(prices[1]);
-        if(currentPlans[0].internet == ""){
+        if (currentPlans[0].internet == "") {
             $('[data-target="franquia"]').remove();
-        }else{
+        } else {
             $('.internet-gb').text(currentPlans[0].internet);
             $('[data-target="franquia"]').addClass('regionalized');
         }
@@ -649,9 +649,9 @@ class Regionalization {
 
             if (index === 0) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            }else if(index === 1){
+            } else if (index === 1) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
-            }else if( index  === 2 ) {
+            } else if (index === 2) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
             } else {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
@@ -718,21 +718,34 @@ class Regionalization {
             var planos = new Planos();
         }
 
-        $(".informacoes").on('click', function (e){
+        $(".informacoes").on('click', function (e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
             modalInfo.setContent(self.critico);
-            if($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
 
-        $(".informacoes2").on('click', function (e){
+        $(".informacoes2").on('click', function (e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
             modalInfo.setContent(self.critico);
-            if($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
+
+        if (currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49) {
+            document.getElementById("servicosdigitais1-sc").innerHTML = " "
+            document.getElementById("servicosdigitais1-sc").className = "delete "
+            document.getElementById("servicosdigitais2-sc").innerHTML = " "
+            document.getElementById("servicosdigitais2-sc").className = "delete "
+
+
+            document.getElementById("info-faq-sc").innerHTML = "<p>Cada plano promocional Controle possui uma formatação diferente de serviços adicionais, podendo contemplar somente um ou mais aplicativos em conjunto.Maior cobertura de internet móvel do Brasil de acordo com dados da Anatel. Oferta sujeita à análise de crédito. Para conhecer as condições para navegar em 4G+, acesse <a href='http://vivo4g.com.br/' target='__blank'>vivo4g.com.br.</a></p>"
+
+
+            document.getElementById("pergunta1-sc").innerHTML = "<p> Nos planos Vivo Controle você recebe uma fatura com valor fixo todo mês. Ou seja, se você contratou o plano de R$ 49,99 e não possui nenhum serviço adicional, o valor total da sua fatura será de R$49,99 todo mês. Assim, você consegue ter o controle total dos seus gastos. Você também não precisa efetuar uma recarga para continuar falando ilimitado de Vivo para Vivo e fixos de qualquer operadora e ainda navega na internet 4G com qualidade Vivo.Os benefícios do plano são mensais, não cumulativos para o mês seguinte, e renovados a cada ciclo de faturamento. Para conhecer todos os detalhes dos planos Controle, <a href='https://www.vivo.com.br/controle' target='_blank' style='color: #888888;'>clique aqui</a>.</p>"
+        };
 
         $(".btn--sigin").on('click', function (e) {
             var link = $(this).data('link');
