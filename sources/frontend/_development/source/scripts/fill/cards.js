@@ -109,8 +109,74 @@ var plansControle = [
             perLine: 0
         },
         linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
-    })
+    }),
 
+  // santa catarina
+  new Plan({
+    region: regions.sc,
+    internet: '6GB',
+    r4: true,
+    TJinternet: '5,5GB + 500MB de bônus*',
+    mainoffer: true,
+    SKU: [''],
+    combo: "GoRead - NBA - Sync",
+    portal: false,
+    appname: "vivocontrolenba",
+    price: {
+        amount: 76.99,
+        discount: 0,
+        perLine: 0
+    }
+}),
+new Plan({
+    region: regions.sc,
+    internet: '6GB',
+    r4: true,
+    TJinternet: '5,5GB + 500MB de bônus*',
+    mainoffer: true,
+    SKU: [''],
+    combo: "GoRead - NBA - Sync",
+    portal: false,
+    appname: "vivocontrolekantoo",
+    price: {
+        amount: 76.99,
+        discount: 0,
+        perLine: 0
+    }
+}),
+new Plan({
+    region: regions.sc,
+    internet: '5GB',
+    r4: true,
+    TJinternet: '4,5GB + 500MB de bônus*',
+    mainoffer: true,
+    SKU: [''],
+    combo: "GoRead - NBA - Sync",
+    portal: false,
+    appname: "vivocontrolekantoo",
+    price: {
+        amount: 61.99,
+        discount: 0,
+        perLine: 0
+    }
+}),
+new Plan({
+    region: regions.sc,
+    internet: '4GB',
+    r4: true,
+    TJinternet: '3,5GB + 500MB de bônus*',
+    mainoffer: true,
+    SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
+    combo: "",
+    portal: false,
+    appname: "vivocontrolegoread",
+    price: {
+        amount: 46.99,
+        discount: 0,
+        perLine: 0
+    },
+})
+    
 ];
 
 plansControle = new RegionItems(plansControle);

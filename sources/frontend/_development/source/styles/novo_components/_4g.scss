@@ -1,6 +1,4 @@
 .lp_controle_4g {
-    margin-top: 80px;
-
     @include mobile {
         margin-top: 102px;
     }
@@ -43,11 +41,10 @@
 
                 p {
                     font-size: 14px;
-                    
+
                     @include mobile {
                         line-height: 40px;
                         margin-left: 20px;
-                        
                     }
                 }
 
