@@ -277,7 +277,7 @@ var plansControle = [
         SKU: [''],
         combo: "GoRead - NBA - Sync",
         portal: false,
-        appname: "vivocontrolegoread",
+        appname: "vivocontrolenba",
         price: {
             amount: 76.99,
             discount: 0,
@@ -293,7 +293,7 @@ var plansControle = [
         SKU: [''],
         combo: "GoRead - NBA - Sync",
         portal: false,
-        appname: "vivocontrolegoread",
+        appname: "vivocontrolekantoo",
         price: {
             amount: 76.99,
             discount: 0,
@@ -309,7 +309,7 @@ var plansControle = [
         SKU: [''],
         combo: "GoRead - NBA - Sync",
         portal: false,
-        appname: "vivocontrolegoread",
+        appname: "vivocontrolekantoo",
         price: {
             amount: 61.99,
             discount: 0,
@@ -330,7 +330,7 @@ var plansControle = [
             amount: 46.99,
             discount: 0,
             perLine: 0
-        }
+        },
     })
 ]
 
@@ -719,11 +719,8 @@ class Regionalization {
         btnAssineJa.attr("data-analytics-position", "destaque");
         btnAssineJa.attr("data-analytics-sku", `${currentPlans[0].SKU[1]}`);
         btnAssineJa.attr("data-analytics-label", "assine-ja");
-        console.log('é esse plano '+ currentPlans[0].SKU[1]);
-        console.log('é esse o reg ' + userReg)
 
         currentPlans.map(function (plano, index) {
-            console.log(i)
             var prices = `${plano.price.amount}`.split('.');
             var linkPlan = plano.SKU[1];
 
@@ -759,10 +756,10 @@ class Regionalization {
                             </div>
                         </div>
                         <div class="info-plan">
-                            <p><strong>Ligações ilimitadas</strong> ${plano.critico ? `para qualquer operadora do Brasil` : `locais para todas as operadoras`} </p>
-                            <p><strong>Apps inclusos:</strong> ${appInclusos}</p>
-                            ${plano.critico ? `` : ` <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>`}
-                            <p class="hidden-details"><strong>SMS ilimitado</strong> para qualquer operadora do Brasil.</p>
+                            <p><strong>Ligações ilimitadas</strong> ${plano.critico || plano.r4 ? `para qualquer operadora do Brasil` : `locais para todas as operadoras`} </p>
+                            ${plano.r4?``:`<p><strong>Apps inclusos:</strong> ${appInclusos}</p>`}
+                            ${plano.critico || plano.r4 ? `` : ` <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>`}
+                            <p class="hidden-details"><strong>SMS ilimitado</strong> para qualquer operadora do Brasil</p>
                         </div>
                         <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
                         <div class="precio-plan">
@@ -799,24 +796,15 @@ class Regionalization {
             if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
 
                 var planosSemApp = $('.legal-planos a')[1];
-                var cta = $('.item-plan').children('.assine').find('a');
 
                 //Alterações no Banner 
                 $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
-                $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
-                console.log('esses são os precosssss' + prices[0]);
-               
-                for(let i=0; i<prices.length; i++){
-                    console.log('index '+ i +' = '+ prices[i]);
-                }
-                
-                //Alterações gerais SC
-                $('.info-plan').each(function(){
-                    $(this).children('p:eq( 1 )').css('visibility','hidden');
-                });
-                
+                // $('.preco-conteiner').each(function(){
+                    $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
+                    // console.log(prices[0]);
+                    // console.log(prices);
+                // })
                 $('.legal-planos').find(planosSemApp).css('display','none');
-            
             }
         });
 
