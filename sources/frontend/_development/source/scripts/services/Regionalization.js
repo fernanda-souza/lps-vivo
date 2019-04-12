@@ -770,7 +770,7 @@ class Regionalization {
                             <p>,${prices[1]} <span>/mês</span></p>
                         </div>
                         ${index > 0 && plano.r4 ? `<div class="assine cta-chat">
-                            <button class="cta-chat__btn">Encontre uma loja Vivo</button>
+                            <button class ="cta-chat__btn">Assine já</button>
                         </div>`: `<div class="assine"><a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
                             </div>`}
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
@@ -799,6 +799,9 @@ class Regionalization {
             if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
 
                 var planosSemApp = $('.legal-planos a')[1];
+                //Ocultar bloco de SVA
+                $('.container-aplicativos').css('display','none');
+                $('.lp_controle_4g').css('margin-top', '35px');
 
                 //Alterações no Banner 
                 $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
