@@ -267,11 +267,12 @@ var plansControle = [
         linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
     }),
     
-    // santa catarina
+    // r4 - santa catarina
     new Plan({
         region: regions.sc,
         internet: '6GB',
         r4: true,
+        critico: true,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -288,6 +289,7 @@ var plansControle = [
         region: regions.sc,
         internet: '6GB',
         r4: true,
+        critico: true,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -304,6 +306,7 @@ var plansControle = [
         region: regions.sc,
         internet: '5GB',
         r4: true,
+        critico: true,
         TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: [''],
@@ -320,6 +323,7 @@ var plansControle = [
         region: regions.sc,
         internet: '4GB',
         r4: true,
+        critico: true,
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
@@ -362,7 +366,7 @@ var documentosPromo = [
         nome: 'Regulamento Promoção Vivo Controle Digital',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     }),
-    //SANTA CATARINA
+    // r4 - santa catarina
     new Documento({
         region: regions.sc,
         nome: 'Regulamento Promoção Vivo Controle Digital',
@@ -596,14 +600,13 @@ var documentosModal = [
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
         lightBox: false
     }),
-    //SANTA CATARINA
+    // r4 - santa catarina
     new Documento({
         region: regions.sc,
         nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
         lightBox: false
     })
-
 ];
 
 documentosModal = new RegionItems(documentosModal);
@@ -767,7 +770,7 @@ class Regionalization {
                             <p>,${prices[1]} <span>/mês</span></p>
                         </div>
                         ${index > 0 && plano.r4 ? `<div class="assine cta-chat">
-                            <button class="cta-chat__btn">Encontre uma loja Vivo</button>
+                            <button class ="cta-chat__btn">Assine já</button>
                         </div>`: `<div class="assine"><a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
                             </div>`}
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
@@ -796,14 +799,13 @@ class Regionalization {
             if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
 
                 var planosSemApp = $('.legal-planos a')[1];
+                //Ocultar bloco de SVA
+                $('.container-aplicativos').css('display','none');
+                $('.lp_controle_4g').css('margin-top', '35px');
 
                 //Alterações no Banner 
                 $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
-                // $('.preco-conteiner').each(function(){
-                    $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
-                    // console.log(prices[0]);
-                    // console.log(prices);
-                // })
+                $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
                 $('.legal-planos').find(planosSemApp).css('display','none');
             }
         });
