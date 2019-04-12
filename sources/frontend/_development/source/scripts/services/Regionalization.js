@@ -635,8 +635,8 @@ class Regionalization {
         var appname = this.getUrlParameter('banner');
         var critico;
 
-        $('.ciudad').find('p').text( regional + ' - ' + userReg );
-        $('.mobile-ciudad').find('p').text( regional + ' - ' + userReg );
+        $('.ciudad').find('p').text(regional + ' - ' + userReg);
+        $('.mobile-ciudad').find('p').text(regional + ' - ' + userReg);
 
         if (helpers.isMobile() || helpers.isTablet()) $('body').addClass("regionalized");
 
@@ -708,9 +708,9 @@ class Regionalization {
 
         // $('span.preco').text(`${prices[0]},`);
         // $('.subprice').text(prices[1]);
-        if(currentPlans[0].internet == ""){
+        if (currentPlans[0].internet == "") {
             $('[data-target="franquia"]').remove();
-        }else{
+        } else {
             $('.internet-gb').text(currentPlans[0].internet);
             $('[data-target="franquia"]').addClass('regionalized');
         }
@@ -729,9 +729,9 @@ class Regionalization {
 
             if (index === 0) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
-            }else if(index === 1){
+            } else if (index === 1) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
-            }else if( index  === 2 ) {
+            } else if (index === 2) {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
             } else {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
@@ -822,21 +822,28 @@ class Regionalization {
             var planos = new Planos();
         }
 
-        $(".informacoes").on('click', function (e){
+        $(".informacoes").on('click', function (e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
             modalInfo.setContent(self.critico);
-            if($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
 
-        $(".informacoes2").on('click', function (e){
+        $(".informacoes2").on('click', function (e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
             modalInfo.setContent(self.critico);
-            if($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
+
+        if (currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49) {
+            $("[data-remove='sc']").hide();
+        }else{
+            $("[data-remove='sc']").show();
+        }
+        
 
         $(".btn--sigin").on('click', function (e) {
             var link = $(this).data('link');
