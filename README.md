@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190327_Controle_SubstituirRegulamentos (27/03/2019)
+- Publicacao_20190408_Controle_DatalayerBussola (08/04/2019)
 
 ### Release notes
-- **Publicacao_20190327_Controle_SubstituirRegulamentos**
+- **Publicacao_20190408_Controle_DatalayerBussola**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-5240
+
+- Publicacao_20190327_Controle_SubstituirRegulamentos
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5069
 
 - Publicacao_20190318_Controle_Alteracao4.5G
