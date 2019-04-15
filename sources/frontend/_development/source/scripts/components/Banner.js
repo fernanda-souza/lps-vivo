@@ -7,13 +7,13 @@ class Banner{
     }
 
     setupTemplate(){
-        //console.log("override this method");
+        console.log("override this method");
     }
 
     addListeners(){
-        //console.log( "addListeners" );
+        console.log( "addListeners" );
         $('[data-action="anchor"]').on('click', function (e) {
-            //console.log( "click anchor" );
+            console.log( "click anchor" );
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: $("#" + $(this).attr('data-target')).offset().top - $("#header").height()
