@@ -690,7 +690,7 @@ class Functions {
     }
 
     setCookie(estado, cidade, ddd) {
-        cookie_estado = "controle_estado=" + estado + ";expires=" + this.setExpires() + ";path=/";
+        cookie_estado = "controle_estado=" + estado + ";expires=" + this.setExpires() + ";path=/" + ";domain=.vivo.com.br";
         if( cidade.indexOf("-") > -1 ){
             cookie_cidade = "controle_cidade=" + encodeURI(cidade.split(' - ')[0]) + ";expires=" + this.setExpires() + ";path=/";
         }else{
