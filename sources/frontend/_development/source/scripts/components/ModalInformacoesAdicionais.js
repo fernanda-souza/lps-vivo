@@ -64,11 +64,6 @@ class ModalnformacoesAdicionais {
                     Pacote Vivo Internet Redes Sociais 1GB
                 </a>
             </li>
-            <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
-                    Vivo Controle (sem serviços digitais)
-                </a>
-            </li>
             </ul>`)
 
             $(".tab__content[data-main-content=4]").html(`
@@ -96,8 +91,8 @@ class ModalnformacoesAdicionais {
 
             $(".tab__content[data-main-content=3]").html(`<ul>
             <li>
-                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
+                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
+                    PROMOÇÃO VIVO CONTROLE GIGA XII
                 </a>
             </li>
             <li>
@@ -123,11 +118,6 @@ class ModalnformacoesAdicionais {
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
                     Pacote Vivo Internet Redes Sociais 1GB
-                </a>
-            </li>
-            <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
-                    Vivo Controle (sem serviços digitais)
                 </a>
             </li>
             </ul>`)
