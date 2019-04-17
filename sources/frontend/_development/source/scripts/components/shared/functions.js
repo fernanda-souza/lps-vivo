@@ -307,7 +307,7 @@ class Functions {
     }
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
-        let offset = $("#planos").offset().top - 45;
+        let offset = $(".section-banner").offset().top - 45;
         this.helpers.controllScroll('unlock');
 
         if (!(this.getcookie_ddd == "" || this.getcookie_cidade == "" || this.getcookie_estado == "")) {
@@ -326,7 +326,7 @@ class Functions {
         $('.bussola_onpage').hide();
         $('#btnbackbuss').show();
         window.isSlickCardsInit = false;
-        //this.animScrollTo(offset);
+        this.animScrollTo(offset);
         this.compassConfig.initFooterOn(false);
     }
 
