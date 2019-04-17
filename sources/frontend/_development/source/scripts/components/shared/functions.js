@@ -113,7 +113,7 @@ class Functions {
             );
             type_compass = "bypass";
             this.compassConfig.moveTo(".bussola_onpage");
-            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, type_compass);
+            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, "", type_compass);
             if (urlParamCidade || urlParamFluxo) {
                 this.compass = new Compass(
                     function(result) {
