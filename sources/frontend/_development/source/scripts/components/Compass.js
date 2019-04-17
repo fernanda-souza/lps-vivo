@@ -553,10 +553,10 @@ class Compass {
     }
 
     setCookie(estado, cidade, ddd , preventHideBussola) {
-        cookie_estado = "controle_estado=" + estado + ";expires=" + this.setExpires() + ";path=/";
-        cookie_cidade = "controle_cidade=" + encodeURI(cidade.split(' - ')[0]) + ";expires=" + this.setExpires() + ";path=/";
-        cookie_ddd = "controle_ddd=" + ddd + ";expires=" + this.setExpires() + ";path=/";
-        cookie_recomendation = "controle_recomendation=" + ((this.cityChosedByRecomendation) ? "1" : "0") + ";expires=" + this.setExpires() + ";path=/";
+        cookie_estado = "controle_estado=" + estado + ";expires=" + this.setExpires() + ";path=/" + ";domain=.vivo.com.br";
+        cookie_cidade = "controle_cidade=" + encodeURI(cidade.split(' - ')[0]) + ";expires=" + this.setExpires() + ";path=/" + ";domain=.vivo.com.br";
+        cookie_ddd = "controle_ddd=" + ddd + ";expires=" + this.setExpires() + ";path=/" + ";domain=.vivo.com.br";
+        cookie_recomendation = "controle_recomendation=" + ((this.cityChosedByRecomendation) ? "1" : "0") + ";expires=" + this.setExpires() + ";path=/" + ";domain=.vivo.com.br";
     
         document.cookie = cookie_estado;
         document.cookie = cookie_cidade;
