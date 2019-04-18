@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190412_Controle_PortfolioSC (12/04/2019)
+- Publicacao_20190417_Controle_BypassBussola (17/04/2019)
 
 ### Release notes
-- **Publicacao_20190412_Controle_PortfolioSC**
+- **Publicacao_20190417_Controle_BypassBussola**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-5380
+
+- Publicacao_20190412_Controle_PortfolioSC
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5328
 
 - Publicacao_20190327_Controle_SubstituirRegulamentos
