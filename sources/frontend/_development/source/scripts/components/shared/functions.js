@@ -113,7 +113,7 @@ class Functions {
             );
             type_compass = "bypass";
             this.compassConfig.moveTo(".bussola_onpage");
-            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, "", type_compass);
+            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, "", "");
             if (urlParamCidade || urlParamFluxo) {
                 this.compass = new Compass(
                     function(result) {
@@ -142,7 +142,7 @@ class Functions {
             this.checkLocationByGeoIP();
         } else {
             this.checkLocationByCookies();
-            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, type_compass);
+            this.datalayer.sendDataBussola("show-compass", "nao-exibiu-bussola", getcookie_estado, getcookie_cidade, getcookie_ddd, "", type_compass);
         }
 
         $(".mobile-ciudad").on("click", () => {
@@ -280,15 +280,15 @@ class Functions {
     }
 
     geolocationCallback(value, location, checkCookies) {
-        var ciudad = location.ciudad.split("-")[0];
         type_compass = "geolocalização";
 
         if (checkCookies) {
             __this.checkLocationByCookies();
         } else if (value == false) {
-            type_compass = "nao-localizado";
-            __this.datalayer.sendDataBussola("show-compass", "exibiu-bussola", "", "", "", "", type_compass);
+            console.log("bateu aqui uma vez");
+            __this.datalayer.sendDataBussola("show-compass", "exibiu-bussola", "", "", "", "", "nao-localizado");
         } else {
+            var ciudad = location.ciudad.split("-")[0];
             $("#autocomplete").val(`${ciudad}- ${location.estado}`);
             $(".mobile-ciudad")
                 .find("p")
@@ -742,63 +742,6 @@ class Functions {
             },
             error: function(error) {
                 console.error("Error occurred. Error code: " + error.code);
-            }
-        });
-    }
-
-    regionalizaGeoIP() {
-        // var urlGeoip = "https://sslplataformavivow.clientes.ananke.com.br/vgeolocal/api/geolocation";
-
-        $("#ciudad")
-            .find("p")
-            .text("Localizando...");
-
-        var _this = this;
-
-        $.ajax({
-            url: urlGeoip,
-            type: "post",
-            dataType: "json",
-            timeout: 4000,
-            success: function(data) {
-                if (data.City != "") {
-                    locatedByGeoIp = true;
-                    _this.searchDataCity("geoip-success", data.City);
-                    $(_this.bussolaMainSelector + " .bussola_autocomplete-icon").addClass("bussola_autocomplete-icon--close");
-                } else {
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(
-                            p => {
-                                _this.geolocationPosition(p);
-                            },
-                            function(error) {
-                                _this.showCompass("abriuBussola", locatedByGeoIp, null, null, null, true, false, false);
-                            },
-                            {
-                                timeout: 2000
-                            }
-                        );
-                    } else {
-                        _this.showCompass("abriuBussola", false, null, null, null, true, false, false);
-                    }
-                }
-            },
-            error: function(error) {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(
-                        p => {
-                            _this.geolocationPosition(p);
-                        },
-                        function(error) {
-                            _this.showCompass("abriuBussola", locatedByGeoIp, null, null, null, true, false, false);
-                        },
-                        {
-                            timeout: 2000
-                        }
-                    );
-                } else {
-                    _this.showCompass();
-                }
             }
         });
     }
