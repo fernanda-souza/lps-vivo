@@ -747,7 +747,7 @@ class Functions {
     }
 
     regionalizaGeoIP() {
-        var urlGeoip = "https://sslplataformavivow.clientes.ananke.com.br/vgeolocal/api/geolocation";
+        // var urlGeoip = "https://sslplataformavivow.clientes.ananke.com.br/vgeolocal/api/geolocation";
 
         $("#ciudad")
             .find("p")
