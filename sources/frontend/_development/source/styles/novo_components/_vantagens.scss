@@ -8,7 +8,15 @@
             padding-top: 36px;
         }
 
-        h1 {}
+        .vantagens__title {
+            font-size: 32px;
+            
+            @media screen and (min-width: 768px) {
+                font-size: 36px;
+            }
+
+            font-weight: 300;
+        }
 
         .grid_vantagens {
             display: flex;
@@ -37,9 +45,11 @@
                 .item_vantagens_info {
                     width: 52%;
 
-                    h2 {
+                    h3 {
                         margin-top: 48px;
                         line-height: 25px;
+                        font-size: 23px;
+                        font-weight: 300;
 
                         @include mobile {
                             margin-top: 6px;
