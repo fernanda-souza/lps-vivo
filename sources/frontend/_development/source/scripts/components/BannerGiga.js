@@ -47,7 +47,7 @@ class BannerGiga extends Banner {
                     </div>
 
                     <div class="banner-third-block">
-                        <a class="btn btn-banner-consideracao2" data-target="link-banner-assine-ja" target="_blank">
+                        <a class="btn btn-banner-consideracao2" data-target="link-banner-assine-ja">
                           ASSINE JÁ
                         </a>
                         `;
