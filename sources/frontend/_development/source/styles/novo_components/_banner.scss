@@ -30,6 +30,22 @@
         max-width: 1366px;
         padding-left: 0;
         padding-right: 0;
+
+        h1 {
+            padding: 20px 140px 0;
+            max-width: 1224px;
+            margin: auto;
+
+            @include mobile {
+                width: 100%;
+                padding: 20px 30px 0;
+            }
+
+            @media screen and (max-width: 1344px) and (min-width: 1024px){
+                width: 100%;
+                padding: 20px 60px 0;
+            }
+        }
     }
 
     .top {
