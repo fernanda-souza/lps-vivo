@@ -68,7 +68,7 @@
                 height: 385px;
             }
 
-            @media screen and (min-width: 414px){
+            @media screen and (max-width: 767px){
                 &:first-child {
                     padding: 30px 30px 15px !important;
                 }
