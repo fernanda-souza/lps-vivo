@@ -68,6 +68,16 @@
                 height: 385px;
             }
 
+            @media screen and (min-width: 414px){
+                &:first-child {
+                    padding: 30px 30px 15px !important;
+                }
+
+                h2 {
+                    margin-top: 148px !important;
+                }
+            }
+
             .banner-content-left {
                 @include mobile {
                     margin-top: 25px;
