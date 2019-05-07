@@ -204,7 +204,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '6,5GB',
-        critico: true,
+        critico: false,
         TJinternet: '6GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolenba",
@@ -220,7 +220,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '6GB',
-        critico: true,
+        critico: false,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
@@ -236,7 +236,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '5GB',
-        critico: true,
+        critico: false,
         TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
@@ -252,7 +252,7 @@ var plansControle = [
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
         internet: '4GB',
-        critico: true,
+        critico: false,
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolegoread",
@@ -369,6 +369,12 @@ var documentosPromo = [
     // r4 - santa catarina
     new Documento({
         region: regions.sc,
+        nome: 'Regulamento Promoção Vivo Controle Digital',
+        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
+    }),
+    // rs
+    new Documento({
+        region: regions.rs,
         nome: 'Regulamento Promoção Vivo Controle Digital',
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     })
