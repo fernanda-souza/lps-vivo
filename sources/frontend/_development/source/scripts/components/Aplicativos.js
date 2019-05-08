@@ -129,6 +129,11 @@ class Aplicativos {
     getTextByPosition(slide) {
         const fill = [
             {
+                title: 'Kantoo Inglês',
+                description: 'Já pensou em ter um curso de inglês<br/> na palma da mão? Estude quando e onde<br/> estiver com o app no seu smatphone.',
+                url: 'http://appstorevivo.clientes.ananke.com.br/desktop/vivo/educacao/kantoo-ingles/controle.html?_ga=2.253044937.1980575863.1538515923-298680962.1534272275&_gac=1.128448638.1538604520.Cj0KCQjw0dHdBRDEARIsAHjZYYC26CsznfSlumLnbPryGoKccX_cj4jWKBXYuZyMJHXE6N1NBNFZMrQaAhF7EALw_wcB'
+            },
+            {
                 title: 'GoRead',
                 description: 'Banca virtual com mais de 200 revistas <br/> digitais. Leia as principais publicações<br/> do Brasil no seu smartphone.',
                 url: 'http://appstorevivo.clientes.ananke.com.br/entretenimento/vivo-go-read/controle.html?_ga=2.182437863.1980575863.1538515923-298680962.1534272275&_gac=1.155185610.1538604520.Cj0KCQjw0dHdBRDEARIsAHjZYYC26CsznfSlumLnbPryGoKccX_cj4jWKBXYuZyMJHXE6N1NBNFZMrQaAhF7EALw_wcB'
@@ -137,11 +142,6 @@ class Aplicativos {
                 title: 'Vivo Cloud Sync',
                 description: 'Proteja e sincronize suas fotos, músicas,<br/> vídeos e contatos do seu smartphone,<br/> tablet e computador na nuvem de 32GB.',
                 url: 'http://appstorevivo.clientes.ananke.com.br/desktop/vivo/seguranca-assintencia/vivo-sync/controle.html?_ga=2.182437863.1980575863.1538515923-298680962.1534272275&_gac=1.155185610.1538604520.Cj0KCQjw0dHdBRDEARIsAHjZYYC26CsznfSlumLnbPryGoKccX_cj4jWKBXYuZyMJHXE6N1NBNFZMrQaAhF7EALw_wcB'
-            },
-            {
-                title: 'Kantoo Inglês',
-                description: 'Já pensou em ter um curso de inglês<br/> na palma da mão? Estude quando e onde<br/> estiver com o app no seu smatphone.',
-                url: 'http://appstorevivo.clientes.ananke.com.br/desktop/vivo/educacao/kantoo-ingles/controle.html?_ga=2.253044937.1980575863.1538515923-298680962.1534272275&_gac=1.128448638.1538604520.Cj0KCQjw0dHdBRDEARIsAHjZYYC26CsznfSlumLnbPryGoKccX_cj4jWKBXYuZyMJHXE6N1NBNFZMrQaAhF7EALw_wcB'
             },
             {
                 title: 'NBA',
