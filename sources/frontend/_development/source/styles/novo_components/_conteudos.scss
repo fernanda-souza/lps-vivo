@@ -1,12 +1,19 @@
 .lp_controle_conteudos {
     .conteudos {
         h2 {
-            padding-bottom: 46px;
             padding-top: 5px;
 
+            @include tablet {
+                padding-bottom: 10px;
+            }
+
             @include desktop {
-                padding-top: 28px;
-                font-size: 36px;
+                padding-top: 10px;
+                font-size: 35px;
+            }
+
+            @media screen and (min-width: 1030px) and (max-width: 1199px) {
+                font-size: 30px;
             }
 
             @include mobile {
@@ -458,7 +465,7 @@
             }
 
             .info-aplicativos {
-                width: 40%;
+                width: 46%;
 
                 h2 {
                     @include desktop {
@@ -484,13 +491,17 @@
                 }
 
                 @include desktop {
-                    width: 60%;
+                    width: 54%;
                     max-width: 550px;
                     padding-top: 9px;
                     padding-left: 23px;
-                    padding-right: 40px;
+                    padding-right: 0px;
                     height: 152px;
                     margin-bottom: 20px;
+
+                    @media screen and (max-width: 1439px) {
+                        padding-right: 40px;
+                    }
                 }
 
                 @include tablet {
@@ -588,6 +599,10 @@
                     bottom: -191px;
                     z-index: 2;
 
+                    @include tablet {
+                        bottom: -25px;
+                    }
+
                     @include mobile {
                         bottom: -168px;
                     }
@@ -603,7 +618,8 @@
 
                 .item-aplicativos.slick-slide.slick-current {
                     @include tablet {
-                        transform: none;
+                        transform: translateX(20px);
+                        -webkit-transform: translateX(20px);
                     }
 
                     @include mobile {
@@ -618,6 +634,7 @@
                         width: 142px;
                         height: 142px;
                         margin-top: 0;
+                        transform: translateX(-170px);
                         // margin: 0px -26px;
                         // margin-right: 9px;
                     }
@@ -684,7 +701,7 @@
             }
 
             .aplicativo-info {
-                width: 58%;
+                width: 53%;
                 margin-top: 0px;
                 margin-left: auto;
                 margin-bottom: 60px;
