@@ -751,7 +751,7 @@ class Regionalization {
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
                         <div class="quantidade-plan">
-                            <h1>${plano.internet}</h1>
+                            <p class="quantidade-plan--big-text">${plano.internet}</p>
                             <p>${plano.TJinternet}</p>
                         </div>
                         <div class="whatsapp-plan">
@@ -772,7 +772,7 @@ class Regionalization {
                         </div>
                         <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
                         <div class="precio-plan">
-                            <h1>R$ ${prices[0]}</h1>
+                            <p class="precio-plan--big-text">R$ ${prices[0]}</p>
                             <p>,${prices[1]} <span>/mês</span></p>
                         </div>
                         ${index > 0 && plano.r4 ? `<div class="assine cta-chat">
