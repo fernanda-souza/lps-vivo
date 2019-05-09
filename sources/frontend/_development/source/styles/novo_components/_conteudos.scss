@@ -12,8 +12,12 @@
                 font-size: 35px;
             }
 
-            @media screen and (min-width: 1030px) and (max-width: 1199px) {
+            @media screen and (min-width: 1025px) and (max-width: 1199px) {
                 font-size: 30px;
+            }
+
+            @media screen and (min-width: 1340px) and (max-width: 1439px) {
+                font-size: 32px;
             }
 
             @include mobile {
@@ -467,6 +471,14 @@
             .info-aplicativos {
                 width: 46%;
 
+                @media screen and (min-width: 1025px) and (max-width: 1170px){
+                    width: 42% !important;
+                }
+
+                @media screen and (min-width: 1340px) and (max-width: 1439px){
+                    width: 42% !important;
+                }
+
                 h2 {
                     @include desktop {
                         margin-top: 4px;
@@ -488,6 +500,16 @@
                 .slick-track {
                     transition: transform ease-out 0.5s;
                     height: 142px;
+                }
+
+                @media screen and (min-width: 1025px) and (max-width: 1170px){
+                    width: 58% !important;
+                    padding-right: 25px !important; 
+                }
+
+                @media screen and (min-width: 1340px) and (max-width: 1439px){
+                    width: 58% !important;
+                    padding-right: 25px !important; 
                 }
 
                 @include desktop {
@@ -675,6 +697,11 @@
 
                         // width: 64px;
                         // height: 64px;
+                        @media screen and (min-width: 1025px) and (max-width: 1170px){
+                            width: 125px !important;
+                            height: 125px !important;
+                        }
+
                         @include desktop {
                             width: 142px;
                             height: 142px;
