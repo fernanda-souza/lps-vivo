@@ -9,10 +9,16 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190425_Controle_DatalayerBussola (25/04/2019)
+- Publicacao_20190508_Controle_AlteracosesFAQ (08/05/2019)
 
 ### Release notes
-- **Publicacao_20190425_Controle_DatalayerBussola**
+- **Publicacao_20190508_Controle_AlteracosesFAQ**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5642
+
+- Publicacao_20190508_Controle_MelhoriasSEO
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-5695
+
+- Publicacao_20190425_Controle_DatalayerBussola
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5502
 
 - Publicacao_20190417_Controle_BypassBussola
