@@ -141,6 +141,8 @@ var plansControle = [
     // nacional
     new Plan({
         region: regions.nacional,
+        r4: false,
+        critico: false,
         internet: '5,5GB',
         TJinternet: '5GB + 500MB de bônus*',
         mainoffer: true,
@@ -156,6 +158,8 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
+        r4: false,
+        critico: false,
         internet: '5GB',
         TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
@@ -171,6 +175,8 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
+        r4: false,
+        critico: false,
         internet: '4GB',
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
@@ -186,6 +192,8 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
+        r4: false,
+        critico: false,
         internet: '3GB',
         TJinternet: '2,5GB + 500MB de bônus*',
         mainoffer: true,
@@ -203,8 +211,9 @@ var plansControle = [
     // criticos, NE e 21
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
+        r4: false,
         internet: '6,5GB',
-        critico: false,
+        critico: true,
         TJinternet: '6GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolenba",
@@ -219,8 +228,9 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
+        r4: false,
         internet: '6GB',
-        critico: false,
+        critico: true,
         TJinternet: '5,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
@@ -235,8 +245,9 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
+        r4: false,
         internet: '5GB',
-        critico: false,
+        critico: true,
         TJinternet: '4,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolekantoo",
@@ -251,8 +262,9 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
+        r4: false,
         internet: '4GB',
-        critico: false,
+        critico: true,
         TJinternet: '3,5GB + 500MB de bônus*',
         mainoffer: true,
         appname: "vivocontrolegoread",
@@ -831,7 +843,7 @@ class Regionalization {
         $(".informacoes").on('click', function (e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
-            modalInfo.setContent(self.critico);
+            modalInfo.setContent(self.critico, self.r4);
             if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
@@ -839,7 +851,7 @@ class Regionalization {
         $(".informacoes2").on('click', function (e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
-            modalInfo.setContent(self.critico);
+            modalInfo.setContent(self.critico, self.r4);
             if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
