@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190508_Controle_AlteracosesFAQ (08/05/2019)
+- Publicacao_20190516_ControleGiga_AjusteChamadasIlimitadas (08/05/2019)
 
 ### Release notes
-- **Publicacao_20190508_Controle_AlteracosesFAQ**
+- **Publicacao_20190516_ControleGiga_AjusteChamadasIlimitadas**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5843
+
+- Publicacao_20190508_Controle_AlteracosesFAQ
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-5642
 
 - Publicacao_20190508_Controle_MelhoriasSEO
