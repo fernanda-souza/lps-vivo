@@ -30,9 +30,7 @@ class ModalnformacoesAdicionais {
             `<ul>
             <li>A franquia de internet é válida pelo período de um mês;</li>
             <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
-            <li>As ligações são ilimitadas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo ou fixo;</li>
-            <li>As ligações locais para celulares de outras operadoras são ilimitadas;</li>
-            <li>As chamadas de longa distância com o <strong>código 15</strong> para celulares de outras operadoras têm o valor de R$0,50/minuto;</li>
+            <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo, celular ou fixo de outras operadoras;</li>
             </ul>`;
 
         } else {
@@ -42,6 +40,15 @@ class ModalnformacoesAdicionais {
                     PROMOÇÃO VIVO CONTROLE DIGITAL VII
                 </a>
             </li>`;
+
+            // franquia +=
+            // `<ul>
+            // <li>A franquia de internet é válida pelo período de um mês;</li>
+            // <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
+            // <li>As ligações são ilimitadas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo ou fixo;</li>
+            // <li>As ligações locais para celulares de outras operadoras são ilimitadas;</li>
+            // <li>As chamadas de longa distância com o <strong>código 15</strong> para celulares de outras operadoras têm o valor de R$0,50/minuto;</li>
+            // </ul>`;
 
             franquia +=
             `<ul>
