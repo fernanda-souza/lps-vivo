@@ -13,7 +13,44 @@ class ModalnformacoesAdicionais {
         });
     }
 
-    setContent(critico) {
+    setContent(critico, isR4) {
+        let regulamento = "";
+        let franquia = "";
+        
+        // a Regional de SC + DDD 42 (PR) é status critico = true porém contém informações diferentes na aba de franquia e no primeiro link da aba de regulamento
+        if(isR4) {
+            regulamento += 
+            `<li>
+                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
+                    PROMOÇÃO VIVO CONTROLE GIGA XII
+                </a>
+            </li>`;
+
+            franquia +=
+            `<ul>
+            <li>A franquia de internet é válida pelo período de um mês;</li>
+            <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
+            <li>As ligações são ilimitadas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo ou fixo;</li>
+            <li>As ligações locais para celulares de outras operadoras são ilimitadas;</li>
+            <li>As chamadas de longa distância com o <strong>código 15</strong> para celulares de outras operadoras têm o valor de R$0,50/minuto;</li>
+            </ul>`;
+
+        } else {
+            regulamento += 
+            `<li>
+                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
+                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
+                </a>
+            </li>`;
+
+            franquia +=
+            `<ul>
+            <li>A franquia de internet é válida pelo período de um mês;</li>
+            <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
+            <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo, celular ou fixo de outras operadoras;</li>
+            </ul>`;
+        }
+
         if (critico !== true) {
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
@@ -31,11 +68,11 @@ class ModalnformacoesAdicionais {
             <li>As ligações são ilimitadas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo ou fixo;</li>
             <li>As ligações locais para celulares de outras operadoras são ilimitadas;</li>
             <li>As chamadas de longa distância com o <strong>código 15</strong> para celulares de outras operadoras têm o valor de R$0,50/minuto;</li>
-            </ul>`);
+            </ul>`)
 
             $(".tab__content[data-main-content=3]").html(`<ul>
             <li>
-                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" target="_blank">
+                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
                     PROMOÇÃO VIVO CONTROLE DIGITAL VII
                 </a>
             </li>
@@ -70,8 +107,7 @@ class ModalnformacoesAdicionais {
             <p>Para mais informações sobre o Plano de Serviço ofertado, regulamento vigente, preços e critérios de reajuste, contrato de prestação de serviço, dentre outras informações, <a href="https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&_nfpb=true&_pageLabel=P115000498271489154631147&WT.ac=portal.movel.planosdeservicoemvigormovel.planoscontrole.listagemdeplanoscontrole#" target="_blank">clique aqui</a></p>
             `)
 
-        } 
-        
+        }
         else {
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
@@ -83,18 +119,10 @@ class ModalnformacoesAdicionais {
             <li>O valor desta oferta é promocional e válida por prazo fixo e determinado. Ao término do prazo de sua vigência, a Vivo poderá encerrar a promoção, prorrogar sua vigência ou estabelecer novo valor promocional.</li>
             </ul>`)
 
-            $(".tab__content[data-main-content=2]").html(`<ul>
-            <li>A franquia de internet é válida pelo período de um mês;</li>
-            <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
-            <li>As ligações ilimitadas são válidas para chamadas locais e longa distância usando o <strong>código 15</strong> para qualquer Vivo, celular ou fixo de outras operadoras;</li>
-            </ul>`)
+            $(".tab__content[data-main-content=2]").html(franquia);
 
             $(".tab__content[data-main-content=3]").html(`<ul>
-            <li>
-                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE GIGA XII
-                </a>
-            </li>
+            ${regulamento}
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238923" target="_blank">
                     Pacote Internet 150MB e 400MB
