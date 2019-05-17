@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190516_Controle_SlidersAplicativo (16/05/2019)
+- Publicacao_20190517_Controle_CorrecaoBussola (17/05/2019)
 
 ### Release notes
-- **Publicacao_20190516_ControleGiga_AjusteChamadasIlimitadas**
+- **Publicacao_20190517_Controle_CorrecaoBussola**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5870
+
+- Publicacao_20190516_ControleGiga_AjusteChamadasIlimitadas
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-5846
 
 - Publicacao_20190516_ControleGiga_AjusteChamadasIlimitadas
