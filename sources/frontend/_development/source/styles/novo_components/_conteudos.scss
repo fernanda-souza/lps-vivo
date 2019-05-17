@@ -1,12 +1,23 @@
 .lp_controle_conteudos {
     .conteudos {
         h2 {
-            padding-bottom: 46px;
             padding-top: 5px;
 
+            @include tablet {
+                padding-bottom: 10px;
+            }
+
             @include desktop {
-                padding-top: 28px;
-                font-size: 36px;
+                padding-top: 10px;
+                font-size: 35px;
+            }
+
+            @media screen and (min-width: 1025px) and (max-width: 1199px) {
+                font-size: 30px;
+            }
+
+            @media screen and (min-width: 1340px) and (max-width: 1439px) {
+                font-size: 32px;
             }
 
             @include mobile {
@@ -102,7 +113,7 @@
                             display: flex;
                             align-items: center;
                             margin-bottom: 26px;
-                            width: 100%;
+                            width: 50%;
 
                             @include mobile {
                                 width: auto;
@@ -267,7 +278,7 @@
                     // margin: 30px -30px 0px 30px;
                     margin-left: -15px;
                     margin-right: -31px;
-                    @include desktop{
+                    @include desktop {
                         display: none;
                     }
                     .image-gigas {
@@ -458,7 +469,15 @@
             }
 
             .info-aplicativos {
-                width: 40%;
+                width: 46%;
+
+                @media screen and (min-width: 1025px) and (max-width: 1170px) {
+                    width: 42% !important;
+                }
+
+                @media screen and (min-width: 1340px) and (max-width: 1439px) {
+                    width: 42% !important;
+                }
 
                 h2 {
                     @include desktop {
@@ -477,20 +496,33 @@
             }
 
             .slider-aplicativos {
-
                 .slick-track {
                     transition: transform ease-out 0.5s;
                     height: 142px;
                 }
 
+                @media screen and (min-width: 1025px) and (max-width: 1170px) {
+                    width: 58% !important;
+                    padding-right: 25px !important;
+                }
+
+                @media screen and (min-width: 1340px) and (max-width: 1439px) {
+                    width: 58% !important;
+                    padding-right: 25px !important;
+                }
+
                 @include desktop {
-                    width: 60%;
+                    width: 54%;
                     max-width: 550px;
                     padding-top: 9px;
                     padding-left: 23px;
-                    padding-right: 40px;
+                    padding-right: 0px;
                     height: 152px;
                     margin-bottom: 20px;
+
+                    @media screen and (max-width: 1439px) {
+                        padding-right: 40px;
+                    }
                 }
 
                 @include tablet {
@@ -511,7 +543,6 @@
                     transition: ease-in-out 0.3s;
                     padding: 0px;
                     cursor: pointer;
-
 
                     @include desktop {
                         margin-right: -28px;
@@ -571,7 +602,6 @@
                         transition: ease-in-out 0.3s;
                         // transform: translateX( -64px );
 
-
                         @include desktop {
                             width: 100%;
                             height: 100%;
@@ -588,12 +618,12 @@
                     bottom: -191px;
                     z-index: 2;
 
-                    @include mobile {
-                        bottom: -168px;
+                    @include tablet {
+                        bottom: -25px;
                     }
 
-                    @include min-mobile {
-                        bottom: -205px;
+                    @include mobile {
+                        bottom: -235px;
                     }
 
                     @include desktop {
@@ -603,7 +633,8 @@
 
                 .item-aplicativos.slick-slide.slick-current {
                     @include tablet {
-                        transform: none;
+                        transform: translateX(20px);
+                        -webkit-transform: translateX(20px);
                     }
 
                     @include mobile {
@@ -618,6 +649,7 @@
                         width: 142px;
                         height: 142px;
                         margin-top: 0;
+                        transform: translateX(-170px);
                         // margin: 0px -26px;
                         // margin-right: 9px;
                     }
@@ -658,6 +690,11 @@
 
                         // width: 64px;
                         // height: 64px;
+                        @media screen and (min-width: 1025px) and (max-width: 1170px) {
+                            width: 125px !important;
+                            height: 125px !important;
+                        }
+
                         @include desktop {
                             width: 142px;
                             height: 142px;
@@ -684,7 +721,7 @@
             }
 
             .aplicativo-info {
-                width: 58%;
+                width: 53%;
                 margin-top: 0px;
                 margin-left: auto;
                 margin-bottom: 60px;
