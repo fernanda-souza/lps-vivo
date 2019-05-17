@@ -140,10 +140,10 @@
                                 }
                             }
 
-                            &:nth-child(3) {
+                            &:nth-child(2) {
                                 img {
-                                    width: 22px;
-                                    margin-left: 10px;
+                                    width: 28px;
+                                    margin-left: 4px;
                                     margin-top: -4px;
 
                                     @include mobile {
@@ -163,7 +163,7 @@
 
                             &:nth-child(4) {
                                 img {
-                                    width: 41.11px;
+                                    width: 34px;
                                     margin-top: -7px;
                                     margin-left: -1px;
                                 }
