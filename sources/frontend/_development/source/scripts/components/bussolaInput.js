@@ -261,7 +261,13 @@ class BussolaInput {
                         this._bussolaRecomendations.append(item);
                     }
                     // end suggestions
-                    return Awesomplete.ITEM(text, text.label.toLowerCase().match(_formatRegexp(input).toLowerCase())[0]); // highlighted item matched by [eéèêëEÉÈÊË] regex
+                    
+                    var liAwesomplete = Awesomplete.ITEM(text, text.label.toLowerCase().match(_formatRegexp(input).toLowerCase())[0]),
+                        liAwesompleteHtml = $(liAwesomplete).html(),
+                        newLi = $('<li aria-selected="false"><span>'+liAwesompleteHtml+'</span></li>'); 
+
+                    return $(newLi)[0];
+                    // return Awesomplete.ITEM(text, text.label.toLowerCase().match(_formatRegexp(input).toLowerCase())[0]); // highlighted item matched by [eéèêëEÉÈÊË] regex
                 },
                 sort: (a, b) => {
                     var a_priority = -1,
