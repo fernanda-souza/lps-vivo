@@ -761,8 +761,20 @@ class Regionalization {
     
                 self.critico = plano.critico;
                 self.r4 = plano.r4; // regionalização de SC
+                let whatsappText = "";
 
-                
+                if(!self.r4) {
+                    whatsappText += 
+                    `<div class="whatsapp-plan">
+                        <div class="brand-whatsapp">
+                            <img class="feature-item-gigas" alt="WhatsApp" title="WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
+                            <div>
+                                <h4>WhatsApp Ilimitado</h4>
+                                <p>Para mensagens, vídeos e fotos.</p>
+                            </div>
+                        </div>
+                    </div>`
+                }
 
                 $('.inner-planos, .inner-planos-mobile').append(`
                     <div class="item-plan">
@@ -770,16 +782,7 @@ class Regionalization {
                             <p class="quantidade-plan--big-text">${plano.internet}</p>
                             <p>${plano.TJinternet}</p>
                         </div>
-                        <div class="whatsapp-plan">
-                            
-                            <div class="brand-whatsapp">
-                                <img class="feature-item-gigas" alt="WhatsApp" title="WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
-                                <div>
-                                    <h4>WhatsApp Ilimitado</h4>
-                                    <p>Para mensagens, vídeos, fotos e chamadas de voz.</p>
-                                </div>
-                            </div>
-                        </div>
+                        ${whatsappText}
                         <div class="info-plan">
                             <p><strong>Ligações ilimitadas</strong> ${plano.critico || plano.r4 ? `para qualquer operadora do Brasil` : `locais para todas as operadoras`} </p>
                             ${plano.r4?``:`<p><strong>Apps inclusos:</strong> ${appInclusos}</p>`}
@@ -834,6 +837,10 @@ class Regionalization {
                 $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
                 $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
                 $('.legal-planos').find(planosSemApp).css('display','none');
+                $("[data-remove='sc']").hide();
+
+            } else {
+                $("[data-remove='sc']").show();
             }
         });
 
@@ -864,13 +871,6 @@ class Regionalization {
             if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
             modalInfo.showModal();
         });
-
-        if (currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49) {
-            $("[data-remove='sc']").hide();
-        }else{
-            $("[data-remove='sc']").show();
-        }
-        
 
         $(".btn--sigin").on('click', function (e) {
             var link = $(this).data('link');
