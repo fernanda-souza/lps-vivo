@@ -9,6 +9,32 @@ class BannerGiga extends Banner {
     }
 
     setupTemplate() {
+        let currentDDD = this.helper.getCookie('controle_ddd');
+        let ligacoes = ""
+        let dddsSC = [42,47,48,49];
+        console.log(dddsSC.indexOf(parseInt(currentDDD)));
+
+        if(dddsSC.indexOf(parseInt(currentDDD)) != -1){
+            ligacoes +=
+            `<div class="promo-icons-wrap">
+                <img src="img/novo/icons/icon-ligacoes-big.png">
+            </div>
+            <div class="promo-text-consideracao2">
+                <span>LIGAÇÕES</span>
+                <span>ILIMITADAS</span>
+            </div>`
+        } else {
+            ligacoes +=
+            `<div class="promo-icons-wrap">
+                <img src="img/novo/icons/logo_whatsapp_2.png">
+                <img src="img/novo/icons/icon-ligacoes-big.png">
+            </div>
+            <div class="promo-text-consideracao2">
+                <span>WHATSAPP E LIGAÇÕES</span>
+                <span>ILIMITADAS</span>
+            </div>`
+        }
+
         var htmlCode = `
         <div class="banner-item banner-conversao4">
 
@@ -25,14 +51,7 @@ class BannerGiga extends Banner {
             <div class="banner-item__inner left">
 
                 <div class="banner-first-block">
-                    <div class="promo-icons-wrap">
-                        <img src="img/novo/icons/logo_whatsapp_2.png">
-                        <img src="img/novo/icons/icon-ligacoes-big.png">
-                    </div>
-                    <div class="promo-text-consideracao2">
-                        <span>WHATSAPP E LIGAÇÕES</span>
-                        <span>ILIMITADAS</span>
-                    </div>
+                    ${ligacoes}
                 </div>
                 <div class="banner-second-block">
                     <div class="preco-container">
