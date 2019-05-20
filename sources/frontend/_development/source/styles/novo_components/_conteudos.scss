@@ -81,7 +81,7 @@
 
                     h2 {
                         color: white;
-                        font-weight: 600;
+                        font-weight: 400;
 
                         @include desktop {
                             font-size: 33px;
@@ -96,6 +96,10 @@
                     p {
                         color: #075e54;
                         line-height: 22px;
+
+                        @include mobile{
+                            margin-top: -32px;
+                        }
                     }
 
                     .features-whatsapp {
@@ -104,9 +108,7 @@
                         margin-top: 34px;
                         flex-wrap: wrap;
 
-                        @include mobile {
-                          
-                        }
+                      
 
                         .feature-item-whatsapp {
                             display: flex;
@@ -141,13 +143,13 @@
                                     margin-top: -4px;
 
                                     @include mobile {
-                                        margin-right: 0px;
+                                        margin-right: 10px;
                                         margin-bottom: 10px;
                                     }
                                 }
 
                                 p {
-                                    margin-left: 10px;
+                                
 
                                     @include mobile{
                                         margin-top: -10px;
@@ -226,7 +228,7 @@
                             margin: 0 auto;
                             position: relative;
                             margin-bottom: -144px;
-                            margin-top: 40px;
+                            margin-top: 81px;
                         }
                     }
                 }
