@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190517_VivoControle_Alteração+Informações  (17/05/2019)
+- Publicacao_20190521_Controle_CorrecaoBussolaQuebraLayout  (21/05/2019)
 
 ### Release notes
-- **Publicacao_20190517_VivoControle_Alteração+Informações**
+- **Publicacao_20190521_Controle_CorrecaoBussolaQuebraLayout**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5913
+
+- Publicacao_20190517_VivoControle_Alteração+Informações
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-5873
 
 - Publicacao_20190517_Controle_CorrecaoBussola
