@@ -770,7 +770,7 @@ class Regionalization {
                             <img class="feature-item-gigas" alt="WhatsApp" title="WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
                             <div>
                                 <h4>WhatsApp Ilimitado</h4>
-                                <p>Para mensagens, vídeos e fotos.</p>
+                                <p>Para mensagens, vídeos, fotos e chamadas de voz.</p>
                             </div>
                         </div>
                     </div>`
