@@ -29,8 +29,9 @@
     .awesomplete > ul {
         overflow: hidden;
         border-radius: 0 0 6px 6px;
-        display: block;
+        display: flex;
         margin-left: 0px;
+        flex-direction: column;
     }
     
     .awesomplete > ul > li {
@@ -40,7 +41,10 @@
         font-size: 14px;
         border-radius: 0;
         width: 100%;
-        padding: 8px 15px;
+        padding: 0 12px;
+        min-height: 50px;
+        line-height: 18px;
+        margin: 0;
 
         &:hover{
             background: #E5E5E5;
