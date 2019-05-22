@@ -335,7 +335,7 @@ class Functions {
 
     hideCompass(origin, event, locatedByGeoIp, estado, cidade, ddd, exibiuBussola, selecionouCidade, escapouBussola) {
         let offset = $(".section-banner").offset().top - 45;
-        this.helpers.controllScroll('unlock');
+        this.helpers.controllScroll("unlock");
 
         if (!(this.getcookie_ddd == "" || this.getcookie_cidade == "" || this.getcookie_estado == "")) {
             $(this.bussolaMainSelector).hide();
