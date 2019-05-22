@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190521_Controle_RetirarComunicaçãoWhats - (21/05/2019)
+- Publicacao_20190522_Controle_WhatsappIlimitado - (22/05/2019)
 
 ### Release notes
-- **Publicacao_20190521_Controle_RetirarComunicaçãoWhats**
+- **Publicacao_20190522_Controle_WhatsappIlimitado**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-5942
+
+- Publicacao_20190521_Controle_RetirarComunicaçãoWhats
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-5917
 
 - Publicacao_20190521_Controle_CorrecaoBussolaQuebraLayout
