@@ -116,12 +116,6 @@
                             margin-bottom: 26px;
                             width: 50%;
 
-                            
-
-                            @include min-mobile {
-                                max-width: 25%;
-                            }
-
                             img {
                                 margin: 0px;
                                 margin-right: 23px;
@@ -228,7 +222,7 @@
                             margin: 0 auto;
                             position: relative;
                             margin-bottom: -144px;
-                            margin-top: 81px;
+                            margin-top: 69px;
                         }
                     }
                 }
