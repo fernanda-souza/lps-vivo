@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190527_Controle_AtivacaoChatAura - (27/05/2019)
+- Publicacao_20190527_Controle_ScriptAura - (27/05/2019)
 
 ### Release notes
-- **Publicacao_20190527_Controle_AtivacaoChatAura**
+- **Publicacao_20190527_Controle_ScriptAura**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6031
+
+- Publicacao_20190527_Controle_AtivacaoChatAura
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6023
 
 - Publicacao_20190527_LPControle_RedirecionamentoFAQ
