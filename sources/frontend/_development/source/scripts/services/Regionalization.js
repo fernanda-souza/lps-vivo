@@ -279,6 +279,7 @@ var plansControle = [
         linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
     }),
     
+    
     // r4 - santa catarina
     // new Plan({
     //     region: regions.sc,
