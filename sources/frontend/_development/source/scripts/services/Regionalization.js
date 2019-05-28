@@ -826,22 +826,22 @@ class Regionalization {
 
             //Alterações específicas para regionalização de SC
 
-            if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+            // if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
 
-                var planosSemApp = $('.legal-planos a')[1];
-                //Ocultar bloco de SVA
-                $('.container-aplicativos').css('display','none');
-                $('.lp_controle_4g').css('margin-top', '35px');
+            //     var planosSemApp = $('.legal-planos a')[1];
+            //     //Ocultar bloco de SVA
+            //     $('.container-aplicativos').css('display','none');
+            //     $('.lp_controle_4g').css('margin-top', '35px');
 
-                //Alterações no Banner 
-                $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
-                $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
-                $('.legal-planos').find(planosSemApp).css('display','none');
-                $("[data-remove='sc']").hide();
+            //     //Alterações no Banner 
+            //     $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
+            //     $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
+            //     $('.legal-planos').find(planosSemApp).css('display','none');
+            //     $("[data-remove='sc']").hide();
 
-            } else {
-                $("[data-remove='sc']").show();
-            }
+            // } else {
+            //     $("[data-remove='sc']").show();
+            // }
         });
 
         //Alterações em CTA redirecionando para Chat
