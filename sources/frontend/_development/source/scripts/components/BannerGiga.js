@@ -9,6 +9,32 @@ class BannerGiga extends Banner {
     }
 
     setupTemplate() {
+        let currentDDD = this.helper.getCookie('controle_ddd');
+        let ligacoes = ""
+        let dddsSC = [42,47,48,49];
+        console.log(dddsSC.indexOf(parseInt(currentDDD)));
+
+        if(dddsSC.indexOf(parseInt(currentDDD)) != -1){
+            ligacoes +=
+            `<div class="promo-icons-wrap">
+                <img src="img/novo/icons/icon-ligacoes-big.png">
+            </div>
+            <div class="promo-text-consideracao2">
+                <span>LIGAÇÕES</span>
+                <span>ILIMITADAS</span>
+            </div>`
+        } else {
+            ligacoes +=
+            `<div class="promo-icons-wrap">
+                <img src="img/novo/icons/logo_whatsapp_2.png">
+                <img src="img/novo/icons/icon-ligacoes-big.png">
+            </div>
+            <div class="promo-text-consideracao2">
+                <span>WHATSAPP E LIGAÇÕES</span>
+                <span>ILIMITADAS</span>
+            </div>`
+        }
+
         var htmlCode = `
         <div class="banner-item banner-conversao4">
 
@@ -25,14 +51,7 @@ class BannerGiga extends Banner {
             <div class="banner-item__inner left">
 
                 <div class="banner-first-block">
-                    <div class="promo-icons-wrap">
-                        <img src="img/novo/icons/logo_whatsapp_2.png">
-                        <img src="img/novo/icons/icon-ligacoes-big.png">
-                    </div>
-                    <div class="promo-text-consideracao2">
-                        <span>WHATSAPP E LIGAÇÕES</span>
-                        <span>ILIMITADAS</span>
-                    </div>
+                    ${ligacoes}
                 </div>
                 <div class="banner-second-block">
                     <div class="preco-container">
@@ -43,7 +62,7 @@ class BannerGiga extends Banner {
                             <span class="subprice">99</span> 
                             <span> <span style="font-family:Arial;">/</span>mês </span>
                         </div>
-                        <p data-target="franquia">No Plano Controle <span class="internet-gb">2,5GB</span></p>
+                        <p data-target="franquia">No Plano Controle <span class="internet-gb"></span></p>
                     </div>
 
                     <div class="banner-third-block">
@@ -52,12 +71,12 @@ class BannerGiga extends Banner {
                         </a>
                         `;
         if (this.helper.isMobile()) {
-            htmlCode += `<div class="banner-bottom-text">
+            htmlCode += `<div class="banner-bottom-text hide--mobile">
                                         <a style="color:#fff;text-decoration:none;" href="tel:+0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
         } else {
-            htmlCode += `<div class="banner-bottom-text">
-                                    <a href="tel:0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
+            htmlCode += `<div class="banner-bottom-text hide--desk">
+                                <a href="tel:0800101515" data-analytics-id="click-cta" data-analytics-label="c2c">OU LIGUE 0800 10 1515</a>
                                    </div>`;
         }
 

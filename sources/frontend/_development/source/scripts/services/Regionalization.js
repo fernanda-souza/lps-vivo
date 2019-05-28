@@ -141,7 +141,7 @@ var plansControle = [
     // nacional
     new Plan({
         region: regions.nacional,
-        r4: false,
+        //r4: false,
         critico: false,
         internet: '5,5GB',
         TJinternet: '5GB + 500MB de bônus*',
@@ -158,7 +158,7 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
-        r4: false,
+        //r4: false,
         critico: false,
         internet: '5GB',
         TJinternet: '4,5GB + 500MB de bônus*',
@@ -175,7 +175,7 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.nacional],
-        r4: false,
+        //r4: false,
         critico: false,
         internet: '4GB',
         TJinternet: '3,5GB + 500MB de bônus*',
@@ -192,7 +192,7 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
-        r4: false,
+        //r4: false,
         critico: false,
         internet: '3GB',
         TJinternet: '2,5GB + 500MB de bônus*',
@@ -211,7 +211,7 @@ var plansControle = [
     // criticos, NE e 21
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
-        r4: false,
+        //r4: false,
         internet: '6,5GB',
         critico: true,
         TJinternet: '6GB + 500MB de bônus*',
@@ -228,7 +228,7 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
-        r4: false,
+        //r4: false,
         internet: '6GB',
         critico: true,
         TJinternet: '5,5GB + 500MB de bônus*',
@@ -245,7 +245,7 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
-        r4: false,
+        //r4: false,
         internet: '5GB',
         critico: true,
         TJinternet: '4,5GB + 500MB de bônus*',
@@ -262,7 +262,7 @@ var plansControle = [
     }),
     new Plan({
         region: [regions.criticos, regions.ddd21, regions.ne],
-        r4: false,
+        //r4: false,
         internet: '4GB',
         critico: true,
         TJinternet: '3,5GB + 500MB de bônus*',
@@ -280,74 +280,74 @@ var plansControle = [
     }),
     
     // r4 - santa catarina
-    new Plan({
-        region: regions.sc,
-        internet: '6GB',
-        r4: true,
-        critico: true,
-        TJinternet: '5,5GB + 500MB de bônus*',
-        mainoffer: true,
-        SKU: [''],
-        combo: "GoRead - NBA - Sync",
-        portal: false,
-        appname: "vivocontrolenba",
-        price: {
-            amount: 76.99,
-            discount: 0,
-            perLine: 0
-        }
-    }),
-    new Plan({
-        region: regions.sc,
-        internet: '6GB',
-        r4: true,
-        critico: true,
-        TJinternet: '5,5GB + 500MB de bônus*',
-        mainoffer: true,
-        SKU: [''],
-        combo: "GoRead - NBA - Sync",
-        portal: false,
-        appname: "vivocontrolekantoo",
-        price: {
-            amount: 76.99,
-            discount: 0,
-            perLine: 0
-        }
-    }),
-    new Plan({
-        region: regions.sc,
-        internet: '5GB',
-        r4: true,
-        critico: true,
-        TJinternet: '4,5GB + 500MB de bônus*',
-        mainoffer: true,
-        SKU: [''],
-        combo: "GoRead - NBA - Sync",
-        portal: false,
-        appname: "vivocontrolekantoo",
-        price: {
-            amount: 61.99,
-            discount: 0,
-            perLine: 0
-        }
-    }),
-    new Plan({
-        region: regions.sc,
-        internet: '4GB',
-        r4: true,
-        critico: true,
-        TJinternet: '3,5GB + 500MB de bônus*',
-        mainoffer: true,
-        SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
-        combo: "",
-        portal: false,
-        appname: "vivocontrolegoread",
-        price: {
-            amount: 46.99,
-            discount: 0,
-            perLine: 0
-        },
-    })
+    // new Plan({
+    //     region: regions.sc,
+    //     internet: '6GB',
+    //     //r4: false,
+    //     critico: true,
+    //     TJinternet: '5,5GB + 500MB de bônus*',
+    //     mainoffer: true,
+    //     SKU: [''],
+    //     combo: "GoRead - NBA - Sync",
+    //     portal: false,
+    //     appname: "vivocontrolenba",
+    //     price: {
+    //         amount: 76.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.sc,
+    //     internet: '6GB',
+    //     //r4: false,
+    //     critico: true,
+    //     TJinternet: '5,5GB + 500MB de bônus*',
+    //     mainoffer: true,
+    //     SKU: [''],
+    //     combo: "GoRead - NBA - Sync",
+    //     portal: false,
+    //     appname: "vivocontrolekantoo",
+    //     price: {
+    //         amount: 76.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.sc,
+    //     internet: '5GB',
+    //     //r4: false,
+    //     critico: true,
+    //     TJinternet: '4,5GB + 500MB de bônus*',
+    //     mainoffer: true,
+    //     SKU: [''],
+    //     combo: "GoRead - NBA - Sync",
+    //     portal: false,
+    //     appname: "vivocontrolekantoo",
+    //     price: {
+    //         amount: 61.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.sc,
+    //     internet: '4GB',
+    //     //r4: false,
+    //     critico: true,
+    //     TJinternet: '3,5GB + 500MB de bônus*',
+    //     mainoffer: true,
+    //     SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
+    //     combo: "",
+    //     portal: false,
+    //     appname: "vivocontrolegoread",
+    //     price: {
+    //         amount: 46.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     },
+    // })
 ]
 
 plansControle = new RegionItems(plansControle);
@@ -379,11 +379,11 @@ var documentosPromo = [
         link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     }),
     // r4 - santa catarina
-    new Documento({
-        region: regions.sc,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
-    }),
+    // new Documento({
+    //     region: regions.sc,
+    //     nome: 'Regulamento Promoção Vivo Controle Digital',
+    //     link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
+    // }),
     // rs
     new Documento({
         region: regions.rs,
@@ -619,12 +619,12 @@ var documentosModal = [
         lightBox: false
     }),
     // r4 - santa catarina
-    new Documento({
-        region: regions.sc,
-        nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
-        lightBox: false
-    })
+    // new Documento({
+    //     region: regions.sc,
+    //     nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
+    //     link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
+    //     lightBox: false
+    // })
 ];
 
 documentosModal = new RegionItems(documentosModal);
@@ -755,8 +755,6 @@ class Regionalization {
                 var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
             }
 
-            console.log(plano)
-
             if (currentPlans.length - 1 !== index) {
     
                 self.critico = plano.critico;
@@ -844,12 +842,12 @@ class Regionalization {
             // }
         });
 
-        //Alterações em CTA redirecionando para Chat
-        $('.cta-chat__btn').click(function(e){
-            e.preventDefault;
-            $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
-            $("#modalChatdireto").fadeIn("slow");
-        });
+        //Alterações em CTA redirecionando para Chat em SC
+        // $('.cta-chat__btn').click(function(e){
+        //     e.preventDefault;
+        //     $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
+        //     $("#modalChatdireto").fadeIn("slow");
+        // });
 
         if (helpers.isMobile() || helpers.isTablet()) {
             // $( window ).trigger( "regionalized" );
@@ -970,7 +968,6 @@ class Regionalization {
         var regional = decodeURI(decodeCidade);
         var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
 
-        // console.log(plansControle.get(currentDDD))
         $('.plans .content').addClass('isSwiper');
         $('.plans .swiper-container').addClass('cards-swiper');
         $(".plans .swiper-wrapper").css({
