@@ -80,7 +80,7 @@ class ModalnformacoesAdicionais {
             $(".tab__content[data-main-content=3]").html(`<ul>
             <li>
                 <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
+                    PROMOÇÃO VIVO CONTROLE DIGITAL VIII
                 </a>
             </li>
             <li>
@@ -106,6 +106,11 @@ class ModalnformacoesAdicionais {
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
                     Pacote Vivo Internet Redes Sociais 1GB
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265081" target="_blank">
+                Regulamento Pacote Recorrente Controle
                 </a>
             </li>
             </ul>`)
@@ -153,6 +158,16 @@ class ModalnformacoesAdicionais {
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
                     Pacote Vivo Internet Redes Sociais 1GB
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265082" target="_blank">
+                    Vivo Controle Digital VIII
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265083" target="_blank">
+                    Regulamento Pacote Recorrente Controle
                 </a>
             </li>
             </ul>`)
