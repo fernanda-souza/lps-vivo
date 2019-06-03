@@ -22,7 +22,7 @@ class ModalnformacoesAdicionais {
             regulamento += 
             `<li>
                 <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE GIGA XII
+                    PROMOÇÃO VIVO CONTROLE GIGA XII 
                 </a>
             </li>`;
 
