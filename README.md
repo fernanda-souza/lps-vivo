@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190527_Controle_ScriptAura - (27/05/2019)
+- Publicacao_20190604_Controle_VoltadeSVASC - (04/06/2019)
 
 ### Release notes
-- **Publicacao_20190527_Controle_ScriptAura**
+- **Publicacao_20190604_Controle_VoltadeSVASC**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6124
+
+- Publicacao_20190527_Controle_ScriptAura
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6031
 
 - Publicacao_20190527_Controle_AtivacaoChatAura
