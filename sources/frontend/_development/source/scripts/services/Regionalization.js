@@ -827,6 +827,7 @@ class Regionalization {
             //Alterações específicas para regionalização de SC
 
             if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+               
                 var planosSemApp = $('.legal-planos a')[1];
                 //Ocultar bloco de SVA
                 $('.container-aplicativos').css('display','none');
