@@ -34,12 +34,25 @@ class ModalnformacoesAdicionais {
             </ul>`;
 
         } else {
+            let currentDDD = this.getCookie('controle_ddd');
+
+            if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+                regulamento += 
             regulamento += 
-            `<li>
-                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
-                </a>
-            </li>`;
+                regulamento += 
+                `<li>
+                    <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
+                        PROMOÇÃO VIVO CONTROLE GIGA XII 
+                    </a>
+                </li>`;
+            } else {
+                regulamento += 
+                `<li>
+                    <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
+                        PROMOÇÃO VIVO CONTROLE DIGITAL VIII
+                    </a>
+                </li>`;
+            }
 
             // franquia +=
             // `<ul>
@@ -204,6 +217,21 @@ class ModalnformacoesAdicionais {
     addUrlRegulamento(name, url) {
         $('.tab__content[data-main-content=3] a.regulamento').attr('href', url);
         $('.tab__content[data-main-content=3] a.regulamento').html(name);
+    }
+
+    getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
     }
 }
 
