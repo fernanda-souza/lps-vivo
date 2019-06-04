@@ -174,11 +174,6 @@ class ModalnformacoesAdicionais {
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265082" target="_blank">
-                    Vivo Controle Digital VIII
-                </a>
-            </li>
-            <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265083" target="_blank">
                     Regulamento Pacote Recorrente Controle
                 </a>
