@@ -23,7 +23,7 @@ class ModalnformacoesAdicionais {
             regulamento += 
             `<li>
                 <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE GIGA XII 
+                    PROMOÇÃO VIVO CONTROLE GIGA XIII
                 </a>
             </li>`;
 
@@ -40,7 +40,7 @@ class ModalnformacoesAdicionais {
                 regulamento += 
                 `<li>
                     <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
-                        PROMOÇÃO VIVO CONTROLE GIGA XII 
+                        PROMOÇÃO VIVO CONTROLE GIGA XIII
                     </a>
                 </li>`;
             } else {
@@ -116,7 +116,7 @@ class ModalnformacoesAdicionais {
             </li>
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
-                    Pacote Vivo Internet Redes Sociais 1GB
+                    Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
             <li>
@@ -168,7 +168,7 @@ class ModalnformacoesAdicionais {
             </li>
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
-                    Pacote Vivo Internet Redes Sociais 1GB
+                    Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
             <li>
@@ -223,7 +223,7 @@ class ModalnformacoesAdicionais {
             </li>
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
-                    Pacote Vivo Internet Redes Sociais 1GB
+                    Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
             <li>
