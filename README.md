@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190604_Controle_VoltadeSVASC - (04/06/2019)
+- Publicacao_20190605_Controle_AtualizarRegulamentos - (06/06/2019)
 
 ### Release notes
-- **Publicacao_20190604_Controle_VoltadeSVASC**
+- **Publicacao_20190605_Controle_AtualizarRegulamentos**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6160
+
+- Publicacao_20190604_Controle_VoltadeSVASC
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6124
 
 - Publicacao_20190527_Controle_ScriptAura

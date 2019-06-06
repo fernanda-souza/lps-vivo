@@ -16,13 +16,14 @@ class ModalnformacoesAdicionais {
     setContent(critico, isR4) {
         let regulamento = "";
         let franquia = "";
-        
+        let currentDDD = this.getCookie('controle_ddd');
+
         // a Regional de SC + DDD 42 (PR) é status critico = true porém contém informações diferentes na aba de franquia e no primeiro link da aba de regulamento
         if(isR4) {
             regulamento += 
             `<li>
                 <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE GIGA XII
+                    PROMOÇÃO VIVO CONTROLE GIGA XIII
                 </a>
             </li>`;
 
@@ -34,12 +35,22 @@ class ModalnformacoesAdicionais {
             </ul>`;
 
         } else {
-            regulamento += 
-            `<li>
-                <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
-                </a>
-            </li>`;
+
+            if(currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
+                regulamento += 
+                `<li>
+                    <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_236545" target="_blank">
+                        PROMOÇÃO VIVO CONTROLE GIGA XIII
+                    </a>
+                </li>`;
+            } else {
+                regulamento += 
+                `<li>
+                    <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
+                        PROMOÇÃO VIVO CONTROLE DIGITAL VIII
+                    </a>
+                </li>`;
+            }
 
             // franquia +=
             // `<ul>
@@ -80,7 +91,7 @@ class ModalnformacoesAdicionais {
             $(".tab__content[data-main-content=3]").html(`<ul>
             <li>
                 <a class="regulamento" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766" target="_blank">
-                    PROMOÇÃO VIVO CONTROLE DIGITAL VII
+                    PROMOÇÃO VIVO CONTROLE DIGITAL VIII
                 </a>
             </li>
             <li>
@@ -105,7 +116,12 @@ class ModalnformacoesAdicionais {
             </li>
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
-                    Pacote Vivo Internet Redes Sociais 1GB
+                    Pacote Vivo Gigas para Redes Sociais
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265081" target="_blank">
+                Regulamento Pacote Recorrente Controle
                 </a>
             </li>
             </ul>`)
@@ -115,7 +131,7 @@ class ModalnformacoesAdicionais {
             `)
 
         }
-        else {
+        else if (currentDDD == 42 || currentDDD == 47 || currentDDD == 48 || currentDDD == 49){
             $(".tab__content[data-main-content=1]").html(`<ul>
             <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
             <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
@@ -152,7 +168,67 @@ class ModalnformacoesAdicionais {
             </li>
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
-                    Pacote Vivo Internet Redes Sociais 1GB
+                    Pacote Vivo Gigas para Redes Sociais
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265082" target="_blank">
+                    Vivo Controle Digital VIII
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265083" target="_blank">
+                    Regulamento Pacote Recorrente Controle
+                </a>
+            </li>
+            </ul>`)
+
+            $(".tab__content[data-main-content=4]").html(`
+            <p>Para mais informações sobre o Plano de Serviço ofertado, regulamento vigente, preços e critérios de reajuste, contrato de prestação de serviço, dentre outras informações, <a href="https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&_nfpb=true&_pageLabel=P115000498271489154631147&WT.ac=portal.movel.planosdeservicoemvigormovel.planoscontrole.listagemdeplanoscontrole#" target="_blank">clique aqui</a></p>
+            `)
+        } else if (critico == true) {
+            $(".tab__content[data-main-content=1]").html(`<ul>
+            <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
+            <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
+            <li>Velocidade máxima da internet disponível de até 5Mbps para download e 500Kbps para upload;</li>
+            <li>A navegação nos apps de conteúdo inclusos nos planos é descontada da franquia de internet;</li>
+            <li>Para receber ligações a cobrar é necessário ter saldo de recarga;</li>
+            <li>Plano sem prazo de permanência mínima, exceto em compra de aparelho móvel com desconto;</li>
+            <li>O valor desta oferta é promocional e válida por prazo fixo e determinado. Ao término do prazo de sua vigência, a Vivo poderá encerrar a promoção, prorrogar sua vigência ou estabelecer novo valor promocional.</li>
+            </ul>`)
+
+            $(".tab__content[data-main-content=2]").html(franquia);
+
+            $(".tab__content[data-main-content=3]").html(`<ul>
+            ${regulamento}
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238923" target="_blank">
+                    Pacote Internet 150MB e 400MB
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238924" target="_blank">
+                    Pacote 100min Outras Operadoras
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238925" target="_blank">
+                    Pacote Vivo Internet Noite
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238926" target="_blank">
+                    Pacote Vivo Internet Fim de Semana
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
+                    Pacote Vivo Gigas para Redes Sociais
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_265083" target="_blank">
+                    Regulamento Pacote Recorrente Controle
                 </a>
             </li>
             </ul>`)
@@ -189,6 +265,21 @@ class ModalnformacoesAdicionais {
     addUrlRegulamento(name, url) {
         $('.tab__content[data-main-content=3] a.regulamento').attr('href', url);
         $('.tab__content[data-main-content=3] a.regulamento').html(name);
+    }
+
+    getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
     }
 }
 
