@@ -9,13 +9,10 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190607_Controle_IgualarModais - (07/06/2019)
+- Publicacao_20190605_Controle_AtualizarRegulamentos - (06/06/2019)
 
 ### Release notes
-- **Publicacao_20190607_Controle_IgualarModais**
-   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6190
-
-- Publicacao_20190605_Controle_AtualizarRegulamentos
+- **Publicacao_20190605_Controle_AtualizarRegulamentos**
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6160
 
 - Publicacao_20190604_Controle_VoltadeSVASC
