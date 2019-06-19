@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- Publicacao_20190607_Controle_IgualarModais - (07/06/2019)
+- Publicacao_20190619_Controle_SEOTittleDescription - (19/06/2019)
 
 ### Release notes
-- **Publicacao_20190607_Controle_IgualarModais**
+- **Publicacao_20190619_Controle_SEOTittleDescription**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6324
+
+- Publicacao_20190607_Controle_IgualarModais
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6190
 
 - Publicacao_20190605_Controle_AtualizarRegulamentos
