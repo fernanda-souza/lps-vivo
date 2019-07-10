@@ -1,13 +1,15 @@
-'use strict';
+"use strict";
 
-import Planos from '../components/Planos';
-import QueryStringHandler from '../components/QueryStringHandler';
+import Planos from "../components/Planos";
+import QueryStringHandler from "../components/QueryStringHandler";
 
-var isArray = Function.isArray || function (o) {
-    return typeof o === 'object' && Object.prototype.toString.call(o).slice(8, -1) === 'Array';
-};
+var isArray =
+    Function.isArray ||
+    function(o) {
+        return typeof o === "object" && Object.prototype.toString.call(o).slice(8, -1) === "Array";
+    };
 
-var Plan = (function () {
+var Plan = (function() {
     Plan = function Plan(data) {
         for (var key in data) {
             if (!data.hasOwnProperty(key)) continue;
@@ -16,7 +18,7 @@ var Plan = (function () {
         }
     };
 
-    Plan.prototype.toJSON = function () {
+    Plan.prototype.toJSON = function() {
         var o = {};
 
         for (key in this) {
@@ -27,21 +29,21 @@ var Plan = (function () {
         return o;
     };
 
-    Plan.prototype.getPriceFull = function () {
+    Plan.prototype.getPriceFull = function() {
         return this.price.amount;
     };
 
-    Plan.prototype.getPrice = function () {
+    Plan.prototype.getPrice = function() {
         var calcPrice = Math.round((this.price.amount - this.price.discount) * 100) / 100;
         return calcPrice.toFixed(2);
     };
 
     return Plan;
-}());
+})();
 
-var Documento = (function () {
+var Documento = (function() {
     Documento = function Documento(data) {
-        var keys = ['region', 'nome', 'link'];
+        var keys = ["region", "nome", "link"];
 
         for (var i = 0, len = keys.length; i < len; i++) {
             var key = keys[i];
@@ -52,12 +54,11 @@ var Documento = (function () {
     };
 
     return Documento;
-}());
+})();
 
-
-var Banner = (function () {
+var Banner = (function() {
     Banner = function Banner(data) {
-        var keys = ['region', 'franquia', 'minutos', 'valor'];
+        var keys = ["region", "franquia", "minutos", "valor"];
 
         for (var i = 0, len = keys.length; i < len; i++) {
             var key = keys[i];
@@ -68,14 +69,11 @@ var Banner = (function () {
     };
 
     return Banner;
-}());
+})();
 
-
-
-var RegionItems = (function () {
-    var _addItem = function (region, item, items) {
-
-        if ((!isArray(region)) && typeof region !== "string" && typeof region !== "number") {
+var RegionItems = (function() {
+    var _addItem = function(region, item, items) {
+        if (!isArray(region) && typeof region !== "string" && typeof region !== "number") {
             throw new TypeError("region must be a string, number or array");
         } else if (isArray(region)) {
             for (var j = 0, len = region.length; j < len; j++) {
@@ -94,7 +92,6 @@ var RegionItems = (function () {
         this._region_items = {};
 
         for (var i = 0, len = items.length; i < len; i++) {
-
             var item = items[i];
 
             if (!item.hasOwnProperty("region")) throw new TypeError("missing error property");
@@ -109,7 +106,7 @@ var RegionItems = (function () {
         for (var key in this._region_items) {
             if (!this._region_items.hasOwnProperty(key)) continue;
             if (!isArray(this._region_items[key])) continue;
-            this._region_items[key].sort(function (a, b) {
+            this._region_items[key].sort(function(a, b) {
                 if (!("internet" in a || "internet" in b)) return 0;
                 var quantiaA = a.internet.match(regexInt);
                 var quantiaB = b.internet.match(regexInt);
@@ -124,18 +121,18 @@ var RegionItems = (function () {
         }
     };
 
-    RegionItems.prototype.get = function (key) {
+    RegionItems.prototype.get = function(key) {
         return this._region_items[key];
     };
 
-    RegionItems.prototype.toJSON = function () {
+    RegionItems.prototype.toJSON = function() {
         return this._region_items;
     };
 
     return RegionItems;
-}());
+})();
 
-var regions = require('../fill/regions.js').regions;
+var regions = require("../fill/regions.js").regions;
 
 var plansControle = [
     // nacional
@@ -143,11 +140,11 @@ var plansControle = [
         region: regions.nacional,
         //r4: false,
         critico: false,
-        internet: '5,5GB',
-        TJinternet: '5GB + 500MB de bônus*',
+        internet: "5,5GB",
+        TJinternet: "5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
-        SKU: ['VC00031', 'VIVOCTRLF29N'],
+        SKU: ["VC00031", "VIVOCTRLF29N"],
         combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
         portal: false,
         price: {
@@ -160,11 +157,11 @@ var plansControle = [
         region: regions.nacional,
         //r4: false,
         critico: false,
-        internet: '5GB',
-        TJinternet: '4,5GB + 500MB de bônus*',
+        internet: "5GB",
+        TJinternet: "4,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ['VC00030', 'VIVOCTRLF30N'],
+        SKU: ["VC00030", "VIVOCTRLF30N"],
         combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
         price: {
@@ -174,14 +171,14 @@ var plansControle = [
         }
     }),
     new Plan({
-        region: [regions.nacional],
+        region: regions.nacional,
         //r4: false,
         critico: false,
-        internet: '4GB',
-        TJinternet: '3,5GB + 500MB de bônus*',
+        internet: "4GB",
+        TJinternet: "3,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ['VC00030', 'VIVOCTRLF28N'],
+        SKU: ["VC00030", "VIVOCTRLF28N"],
         combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
         price: {
@@ -194,10 +191,10 @@ var plansControle = [
         region: regions.nacional,
         //r4: false,
         critico: false,
-        internet: '3GB',
-        TJinternet: '2,5GB + 500MB de bônus*',
+        internet: "3GB",
+        TJinternet: "2,5GB + 500MB de bônus*",
         mainoffer: true,
-        SKU: ['VC00028', 'VIVOCTRLF27N'],
+        SKU: ["VC00028", "VIVOCTRLF27N"],
         combo: "GoRead - NBA - Sync",
         portal: false,
         appname: "vivocontrolegoread",
@@ -210,14 +207,14 @@ var plansControle = [
 
     // criticos, NE e 21
     new Plan({
-        region: [regions.criticos, regions.ddd21, regions.ne],
+        region: regions.especiais,
         //r4: false,
-        internet: '6,5GB',
+        internet: "6,5GB",
         critico: true,
-        TJinternet: '6GB + 500MB de bônus*',
+        TJinternet: "6GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
-        SKU: ['VC00031', 'VIVOCTRLF29A'],
+        SKU: ["VC00031", "VIVOCTRLF29A"],
         combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
         portal: false,
         price: {
@@ -227,14 +224,14 @@ var plansControle = [
         }
     }),
     new Plan({
-        region: [regions.criticos, regions.ddd21, regions.ne],
+        region: regions.especiais,
         //r4: false,
-        internet: '6GB',
+        internet: "6GB",
         critico: true,
-        TJinternet: '5,5GB + 500MB de bônus*',
+        TJinternet: "5,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ['VC00031', 'VIVOCTRLF30A'],
+        SKU: ["VC00031", "VIVOCTRLF30A"],
         combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
         price: {
@@ -244,14 +241,14 @@ var plansControle = [
         }
     }),
     new Plan({
-        region: [regions.criticos, regions.ddd21, regions.ne],
+        region: regions.especiais,
         //r4: false,
-        internet: '5GB',
+        internet: "5GB",
         critico: true,
-        TJinternet: '4,5GB + 500MB de bônus*',
+        TJinternet: "4,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ['VC00031', 'VIVOCTRLF28A'],
+        SKU: ["VC00031", "VIVOCTRLF28A"],
         combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
         price: {
@@ -261,14 +258,14 @@ var plansControle = [
         }
     }),
     new Plan({
-        region: [regions.criticos, regions.ddd21, regions.ne],
+        region: regions.especiais,
         //r4: false,
-        internet: '4GB',
+        internet: "4GB",
         critico: true,
-        TJinternet: '3,5GB + 500MB de bônus*',
+        TJinternet: "3,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolegoread",
-        SKU: ['VC00029', 'VIVOCTRLF27A'],
+        SKU: ["VC00029", "VIVOCTRLF27A"],
         combo: "GoRead - NBA - Sync",
         portal: false,
         price: {
@@ -276,10 +273,9 @@ var plansControle = [
             discount: 0,
             perLine: 0
         },
-        linkCTA: ['Contratar', 'https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE']
-    }),
-    
-    
+        linkCTA: ["Contratar", "https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE"]
+    })
+
     // r4 - santa catarina
     // new Plan({
     //     region: regions.sc,
@@ -349,7 +345,7 @@ var plansControle = [
     //         perLine: 0
     //     },
     // })
-]
+];
 
 plansControle = new RegionItems(plansControle);
 
@@ -358,27 +354,27 @@ var documentosPromo = [
     // nacional
     new Documento({
         region: regions.nacional,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
+        nome: "Regulamento Promoção Vivo Controle Digital",
+        link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
     }),
     // ne
     new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
-    }),
-    // criticos
-    new Documento({
-        region: regions.criticos,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
-    }),
-    // DDD 21
-    new Documento({
-        region: regions.ddd21,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
-    }),
+        region: regions.especiais,
+        nome: "Regulamento Promoção Vivo Controle Digital",
+        link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
+    })
+    // // criticos
+    // new Documento({
+    //     region: regions.criticos,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
+    // }),
+    // // DDD 21
+    // new Documento({
+    //     region: regions.ddd21,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
+    // }),
     // r4 - santa catarina
     // new Documento({
     //     region: regions.sc,
@@ -386,239 +382,238 @@ var documentosPromo = [
     //     link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
     // }),
     // rs
-    new Documento({
-        region: regions.rs,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766'
-    })
+    // new Documento({
+    //     region: regions.rs,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
+    // })
 ];
-
 
 //documentos modal
 var documentosModal = [
     // críticos e DDD21
     new Documento({
-        region: [regions.criticos, regions.ddd21],
-        nome: 'Regulamento Promoção Vivo Controle Giga',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_100158',
+        region: regions.nacional,
+        nome: "Regulamento Promoção Vivo Controle Giga",
+        link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_100158",
         lightBox: false
     }),
     new Documento({
-        region: regions.criticos,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138767',
+        region: regions.especiais,
+        nome: "Regulamento Promoção Vivo Controle Digital",
+        link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138767",
         lightBox: false
-    }),
-    new Documento({
-        region: regions.ddd21,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146475',
-        lightBox: false
-    }),
-    new Documento({
-        region: [regions.criticos, regions.ddd21],
-        nome: 'Regulamento Promoção Vivo Controle Pass',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146482',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.criticos,
-        nome: 'Regulamento Promoção Vivo Controle Pass Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146478',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ddd21,
-        nome: 'Regulamento Promoção Vivo Controle Pass Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146479',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.criticos,
-        nome: 'Regulamento Promoção Vivo Controle Giga com Cartão',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_110894',
-        lightBox: false
-    }),
+    })
+    // new Documento({
+    //     region: regions.ddd21,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146475",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: [regions.criticos, regions.ddd21],
+    //     nome: "Regulamento Promoção Vivo Controle Pass",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146482",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.criticos,
+    //     nome: "Regulamento Promoção Vivo Controle Pass Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146478",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ddd21,
+    //     nome: "Regulamento Promoção Vivo Controle Pass Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146479",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.criticos,
+    //     nome: "Regulamento Promoção Vivo Controle Giga com Cartão",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_110894",
+    //     lightBox: false
+    // }),
     // nordeste
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Promoção Vivo Controle Giga',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_100158',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138768',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Promoção Vivo Controle Pass',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146481',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Promoção Vivo Controle Pass Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146477',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Promoção Vivo Controle Giga com Cartão',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_110896',
-        lightBox: false
-    }),
-    // nacional
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Promoção Vivo Controle Giga',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_100158',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Promoção Vivo Controle Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Promoção Vivo Controle Pass',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146480',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Promoção Vivo Controle Pass Digital',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146476',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Promoção Vivo Controle Giga com Cartão',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_110895',
-        lightBox: false
-    }),
-    // Nacional
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Vivo Internet Adicional 150MB+400MB',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_160520',
-        lightBox: false
-    }),
-    new Documento({
-        region: [regions.criticos, regions.ddd21],
-        nome: 'Regulamento Vivo Internet Adicional 150MB+400MB',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_160520',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Vivo Internet Adicional 150MB+400MB',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_160520',
-        lightBox: false
-    }),
-    // Nacional
-    /*new Documento({
-        region: regions.nacional,
-        nome: 'Consulte o Regulamento SmartVivo Controle Cartão',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_175887',
-        lightBox: false
-    }),*/
-    // Nacional
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regra de liberação dos seus créditos e benefícios',
-        link: 'https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&amp;_nfpb=true&amp;_pageLabel=P83400182821390338153573',
-        lightBox: false
-    }),
-    new Documento({
-        region: [regions.criticos, regions.ddd21],
-        nome: 'Regra de liberação dos seus créditos e benefícios',
-        link: 'https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&amp;_nfpb=true&amp;_pageLabel=P83400182821390338153573',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regra de liberação dos seus créditos e benefícios',
-        link: 'https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&amp;_nfpb=true&amp;_pageLabel=P83400182821390338153573',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.controleVivoMovelFixoExcetoDdds,
-        nome: 'Regulamento Desconto Controle Vivo Móvel + Vivo Fixo',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_117731',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.controleVivoMovelFixoDdds,
-        nome: 'Regulamento Desconto Controle Vivo Móvel + Vivo Fixo',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_117732',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Desconto Controle Vivo Móvel + Vivo Fixo',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_117733',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Bônus Portabilidade Controle',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146522',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.nacionalRs,
-        nome: 'Contrato de prestação de serviço móvel pessoal pós-pago',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_184195',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.nacionalRs,
-        nome: 'Contrato de adesão ao serviço Vivo Internet Móvel',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_184194',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.rs,
-        nome: 'Contrato de prestação de serviço móvel pessoal pós-pago',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_186410',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.rs,
-        nome: 'Contrato de adesão ao serviço Vivo Internet Móvel',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_186409',
-        lightBox: false
-    }),
-    new Documento({
-        region: [regions.criticos, regions.ne, regions.ddd21],
-        nome: 'Regulamento Bônus Portabilidade Controle',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146521',
-        lightBox: false
-    }),
-    // Nacional
-    new Documento({
-        region: regions.nacional,
-        nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
-        lightBox: false
-    }),
-    new Documento({
-        region: [regions.criticos, regions.ddd21],
-        nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
-        lightBox: false
-    }),
-    new Documento({
-        region: regions.ne,
-        nome: 'Regulamento Pacotes Adicionais Recorrentes Controle',
-        link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003',
-        lightBox: false
-    }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Promoção Vivo Controle Giga",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_100158",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138768",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Promoção Vivo Controle Pass",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146481",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Promoção Vivo Controle Pass Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146477",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Promoção Vivo Controle Giga com Cartão",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_110896",
+    //     lightBox: false
+    // }),
+    // // nacional
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Promoção Vivo Controle Giga",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_100158",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Promoção Vivo Controle Pass",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146480",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Promoção Vivo Controle Pass Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146476",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Promoção Vivo Controle Giga com Cartão",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_110895",
+    //     lightBox: false
+    // }),
+    // // Nacional
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Vivo Internet Adicional 150MB+400MB",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_160520",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: [regions.criticos, regions.ddd21],
+    //     nome: "Regulamento Vivo Internet Adicional 150MB+400MB",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_160520",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Vivo Internet Adicional 150MB+400MB",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_160520",
+    //     lightBox: false
+    // }),
+    // // Nacional
+    // /*new Documento({
+    //     region: regions.nacional,
+    //     nome: 'Consulte o Regulamento SmartVivo Controle Cartão',
+    //     link: 'https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_175887',
+    //     lightBox: false
+    // }),*/
+    // // Nacional
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regra de liberação dos seus créditos e benefícios",
+    //     link: "https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&amp;_nfpb=true&amp;_pageLabel=P83400182821390338153573",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: [regions.criticos, regions.ddd21],
+    //     nome: "Regra de liberação dos seus créditos e benefícios",
+    //     link: "https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&amp;_nfpb=true&amp;_pageLabel=P83400182821390338153573",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regra de liberação dos seus créditos e benefícios",
+    //     link: "https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&amp;_nfpb=true&amp;_pageLabel=P83400182821390338153573",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.controleVivoMovelFixoExcetoDdds,
+    //     nome: "Regulamento Desconto Controle Vivo Móvel + Vivo Fixo",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_117731",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.controleVivoMovelFixoDdds,
+    //     nome: "Regulamento Desconto Controle Vivo Móvel + Vivo Fixo",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_117732",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Desconto Controle Vivo Móvel + Vivo Fixo",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_117733",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Bônus Portabilidade Controle",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146522",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.nacionalRs,
+    //     nome: "Contrato de prestação de serviço móvel pessoal pós-pago",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_184195",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.nacionalRs,
+    //     nome: "Contrato de adesão ao serviço Vivo Internet Móvel",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_184194",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.rs,
+    //     nome: "Contrato de prestação de serviço móvel pessoal pós-pago",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_186410",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.rs,
+    //     nome: "Contrato de adesão ao serviço Vivo Internet Móvel",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_186409",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: [regions.criticos, regions.ne, regions.ddd21],
+    //     nome: "Regulamento Bônus Portabilidade Controle",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_146521",
+    //     lightBox: false
+    // }),
+    // // Nacional
+    // new Documento({
+    //     region: regions.nacional,
+    //     nome: "Regulamento Pacotes Adicionais Recorrentes Controle",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: [regions.criticos, regions.ddd21],
+    //     nome: "Regulamento Pacotes Adicionais Recorrentes Controle",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003",
+    //     lightBox: false
+    // }),
+    // new Documento({
+    //     region: regions.ne,
+    //     nome: "Regulamento Pacotes Adicionais Recorrentes Controle",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_197003",
+    //     lightBox: false
+    // })
     // r4 - santa catarina
     // new Documento({
     //     region: regions.sc,
@@ -646,18 +641,22 @@ class Regionalization {
         var helpers = new Helpers();
         var datalayer = new DataLayer();
 
-        var currentDDD = this.getCookie('controle_ddd');
-        var decodeCidade = this.getCookie('controle_cidade');
+        var currentDDD = this.getCookie("controle_ddd");
+        var decodeCidade = this.getCookie("controle_cidade");
         var regional = decodeURI(decodeCidade);
-        var userReg = this.getCookie('controle_estado');
+        var userReg = this.getCookie("controle_estado");
         var parameters = window.location.search;
-        var appname = this.getUrlParameter('banner');
+        var appname = this.getUrlParameter("banner");
         var critico;
 
-        $('.ciudad').find('p').text(regional + ' - ' + userReg);
-        $('.mobile-ciudad').find('p').text(regional + ' - ' + userReg);
+        $(".ciudad")
+            .find("p")
+            .text(regional + " - " + userReg);
+        $(".mobile-ciudad")
+            .find("p")
+            .text(regional + " - " + userReg);
 
-        if (helpers.isMobile() || helpers.isTablet()) $('body').addClass("regionalized");
+        if (helpers.isMobile() || helpers.isTablet()) $("body").addClass("regionalized");
 
         parameters = window.location.search;
 
@@ -671,21 +670,20 @@ class Regionalization {
 
         window.regionalizaStarts = true;
 
-        var splitCidade = regional.split(' - ')[0];
+        var splitCidade = regional.split(" - ")[0];
         if (splitCidade.substring(splitCidade.length - 3, splitCidade.length) == "%20") {
             splitCidade = splitCidade.substring(0, splitCidade.length - 3);
         }
         var getCidade = splitCidade;
         var locationSearch = window.location.search,
-            splitSearch = locationSearch.replace('?', '').split('&');
+            splitSearch = locationSearch.replace("?", "").split("&");
 
-        var _banner = $('.banner__content'),
-            _logoBanner = $('.banner__content .banner__logo'),
-            _subtitle = $('.banner__subtitle'),
-            _subtitleIcon = $('.subtitle__icon'),
-            _priceBanner = $('.banner__content .banner__info__price .price__block'),
+        var _banner = $(".banner__content"),
+            _logoBanner = $(".banner__content .banner__logo"),
+            _subtitle = $(".banner__subtitle"),
+            _subtitleIcon = $(".subtitle__icon"),
+            _priceBanner = $(".banner__content .banner__info__price .price__block"),
             _paramBanner = "vivocontrolegoread";
-
 
         var linkPlan;
 
@@ -695,31 +693,30 @@ class Regionalization {
         // var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional"); //@TODO NEW
 
         // banner com card dinamico
-        var container__plans = $(".plans .content").find('.swiper-wrapper');
+        var container__plans = $(".plans .content").find(".swiper-wrapper");
         var container__plansMob = $(".plans .plans-carousel-mob");
         var container__StaticPlanos = $(".plans .static-plan-cards");
         container__plans.empty();
         container__plansMob.empty();
         container__StaticPlanos.empty();
 
-        var planosAnanke = currentPlans.filter(function (e) {
+        var planosAnanke = currentPlans.filter(function(e) {
             return !e.portal;
         }).length;
 
         var mainoffer_active = false;
         var self = this;
 
-        if ($('.inner-planos-mobile').hasClass('slick-initialized')) {
+        if ($(".inner-planos-mobile").hasClass("slick-initialized")) {
             $(".inner-planos-mobile").slick("unslick");
         }
-        $('.item-plan').remove();
+        $(".item-plan").remove();
 
+        currentPlans.sort(function(a, b) {
+            return a.price.amount - b.price.amount;
+        });
 
-        currentPlans.sort(function (a, b) {
-            return a.price.amount - b.price.amount
-        })
-
-        var prices = `${currentPlans[0].price.amount}`.split('.');
+        var prices = `${currentPlans[0].price.amount}`.split(".");
 
         //Re-init default banner with prices
         this.queryStringHandler = new QueryStringHandler();
@@ -730,8 +727,8 @@ class Regionalization {
         if (currentPlans[0].internet == "") {
             $('[data-target="franquia"]').remove();
         } else {
-            $('.internet-gb').text(currentPlans[0].internet);
-            $('[data-target="franquia"]').addClass('regionalized');
+            $(".internet-gb").text(currentPlans[0].internet);
+            $('[data-target="franquia"]').addClass("regionalized");
         }
 
         let btnAssineJa = $('[data-target="link-banner-assine-ja"]');
@@ -742,27 +739,25 @@ class Regionalization {
         btnAssineJa.attr("data-analytics-sku", `${currentPlans[0].SKU[1]}`);
         btnAssineJa.attr("data-analytics-label", "assine-ja");
 
-        currentPlans.map(function (plano, index) {
-            var prices = `${plano.price.amount}`.split('.');
+        currentPlans.map(function(plano, index) {
+            var prices = `${plano.price.amount}`.split(".");
             var linkPlan = plano.SKU[1];
 
             if (index === 0) {
-                var appInclusos = 'GoRead, Vivo Cloud Sync e NBA';
+                var appInclusos = "GoRead, Vivo Cloud Sync e NBA";
             } else if (index === 1) {
-                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês';
+                var appInclusos = "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês";
             } else if (index === 2) {
-                var appInclusos = 'GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês';
+                var appInclusos = "GoRead, Vivo Cloud Sync, Vivo Guru, NBA e Kantoo Inglês";
             } else {
-                var appInclusos = 'GoRead, Vivo Cloud Sync, NBA';
+                var appInclusos = "GoRead, Vivo Cloud Sync, NBA";
             }
 
             if (currentPlans.length - 1 !== index) {
-    
                 self.critico = plano.critico;
                 let whatsappText = "";
 
-                whatsappText += 
-                `<div class="whatsapp-plan">
+                whatsappText += `<div class="whatsapp-plan">
                     <div class="brand-whatsapp">
                         <img class="feature-item-gigas" alt="WhatsApp" title="WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
                         <div>
@@ -770,9 +765,9 @@ class Regionalization {
                             <p>Para mensagens, vídeos, fotos e chamadas de voz.</p>
                         </div>
                     </div>
-                </div>`
+                </div>`;
 
-                $('.inner-planos, .inner-planos-mobile').append(`
+                $(".inner-planos, .inner-planos-mobile").append(`
                     <div class="item-plan">
                         <div class="quantidade-plan">
                             <p class="quantidade-plan--big-text">${plano.internet}</p>
@@ -781,7 +776,7 @@ class Regionalization {
                         ${whatsappText}
                         <div class="info-plan">
                             <p><strong>Ligações ilimitadas</strong> ${plano.critico ? `para qualquer operadora do Brasil` : `locais para todas as operadoras`} </p>
-                            ${plano.r4?``:`<p><strong>Apps inclusos:</strong> ${appInclusos}</p>`}
+                            ${plano.r4 ? `` : `<p><strong>Apps inclusos:</strong> ${appInclusos}</p>`}
 
                             
                             ${plano.critico ? `` : ` <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>`}
@@ -797,19 +792,21 @@ class Regionalization {
                         </div>
                         <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                 `);
-        
-                // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
 
-                $(".item-plan").css("opacity", "1").css("display", "block");
+                // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a>
+
+                $(".item-plan")
+                    .css("opacity", "1")
+                    .css("display", "block");
                 $(".blur-gb").css("display", "none");
 
-                $('.detalhes').on('click', function (e) {
+                $(".detalhes").on("click", function(e) {
                     e.preventDefault();
-                    if ($('.hidden-details').is(":visible")) {
-                        $('.hidden-details').slideUp(200);
+                    if ($(".hidden-details").is(":visible")) {
+                        $(".hidden-details").slideUp(200);
                         $(".detalhes").text("+ benefícios");
                     } else {
-                        $('.hidden-details').slideDown(200);
+                        $(".hidden-details").slideDown(200);
                         $(".detalhes").text("- benefícios");
                     }
                     e.stopImmediatePropagation();
@@ -818,13 +815,13 @@ class Regionalization {
 
             // CÓDIGO ANTIGO CONTENDO ALTERAÇÕES DOS CARDS DE SC
             // if (currentPlans.length - 1 !== index) {
-    
+
             //     self.critico = plano.critico;
             //     // self.r4 = plano.r4; // regionalização de SC
             //     let whatsappText = "";
 
             //     if(!self.r4) {
-            //         whatsappText += 
+            //         whatsappText +=
             //         `<div class="whatsapp-plan">
             //             <div class="brand-whatsapp">
             //                 <img class="feature-item-gigas" alt="WhatsApp" title="WhatsApp" src="img/novo/icons/logo_whatsapp_2.png" />
@@ -847,7 +844,6 @@ class Regionalization {
             //                 <p><strong>Ligações ilimitadas</strong> ${plano.critico || plano.r4 ? `para qualquer operadora do Brasil` : `locais para todas as operadoras`} </p>
             //                 ${plano.r4?``:`<p><strong>Apps inclusos:</strong> ${appInclusos}</p>`}
 
-                            
             //                 ${plano.critico || plano.r4 ? `` : ` <p class="hidden-details"><strong>Ligações ilimitadas</strong> pra fixos nacional e qualquer Vivo do Brasil com o código 15.</p>`}
             //                 <p class="hidden-details"><strong>SMS ilimitado</strong> para qualquer operadora do Brasil</p>
 
@@ -863,8 +859,8 @@ class Regionalization {
             //                 </div>`}
             //             <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
             //     `);
-        
-            //     // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a> 
+
+            //     // <a class="regulamiento" target="_blank" href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766&_ga=2.260582477.1980575863.1538515923-298680962.1534272275&_gac=1.157856200.1537808383.Cj0KCQjwlqLdBRCKARIsAPxTGaVFbGTNLt_3EMjFNxUE9aqYZYjfwUwGYoq-DJFVFiNQgtWNvexXe7IaAibAEALw_wcB" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="regulamento">Regulamento</a>
 
             //     $(".item-plan").css("opacity", "1").css("display", "block");
             //     $(".blur-gb").css("display", "none");
@@ -891,7 +887,7 @@ class Regionalization {
             //     $('.container-aplicativos').css('display','none');
             //     $('.lp_controle_4g').css('margin-top', '35px');
 
-            //     //Alterações no Banner 
+            //     //Alterações no Banner
             //     $('.preco-container').children(':nth-child(1), :nth-child(3)').css('visibility','hidden');
             //     $('.preco-container').children('.preco').children(':nth-child(2)').text('46,');
             //     $('.legal-planos').find(planosSemApp).css('display','none');
@@ -914,54 +910,53 @@ class Regionalization {
             var planos = new Planos();
         }
 
-        $(".informacoes").on('click', function (e) {
+        $(".informacoes").on("click", function(e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
             modalInfo.setContent(self.critico, self.r4);
-            if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            if ($(this).data("regulamento") !== undefined) modalInfo.addUrlRegulamento($(this).data("nmregulamento"), $(this).data("regulamento"));
             modalInfo.showModal();
         });
 
-        $(".informacoes2").on('click', function (e) {
+        $(".informacoes2").on("click", function(e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
             modalInfo.setContent(self.critico, self.r4);
-            if ($(this).data('regulamento') !== undefined) modalInfo.addUrlRegulamento($(this).data('nmregulamento'), $(this).data('regulamento'));
+            if ($(this).data("regulamento") !== undefined) modalInfo.addUrlRegulamento($(this).data("nmregulamento"), $(this).data("regulamento"));
             modalInfo.showModal();
         });
 
-        $(".btn--sigin").on('click', function (e) {
-            var link = $(this).data('link');
-            var sku = $(this).data('sku');
+        $(".btn--sigin").on("click", function(e) {
+            var link = $(this).data("link");
+            var sku = $(this).data("sku");
             var evento;
-            if ($(this).hasClass('btn__sigin')) {
-                evento = 'gauge.destaque-contrate-ja'
+            if ($(this).hasClass("btn__sigin")) {
+                evento = "gauge.destaque-contrate-ja";
             } else {
-                evento = 'gauge.card-assine-ja'
+                evento = "gauge.card-assine-ja";
             }
-            datalayer.sendDataLayerProducts(evento, userReg, regional, currentDDD, sku)
-        })
+            datalayer.sendDataLayerProducts(evento, userReg, regional, currentDDD, sku);
+        });
 
-        $(".toggle-card-body, .click_modal").on('click', function (e) {
+        $(".toggle-card-body, .click_modal").on("click", function(e) {
             var evento;
-            var sku = $(this).data('sku');
-            if ($(this).hasClass('toggle-card-body')) {
-                evento = "gauge.card-mais-detalhes"
+            var sku = $(this).data("sku");
+            if ($(this).hasClass("toggle-card-body")) {
+                evento = "gauge.card-mais-detalhes";
             } else {
-                evento = "gauge.card-mais-informacoes"
+                evento = "gauge.card-mais-informacoes";
             }
-            datalayer.sendDataLayerProducts(evento, userReg, regional, currentDDD, sku)
-        })
+            datalayer.sendDataLayerProducts(evento, userReg, regional, currentDDD, sku);
+        });
 
-
-        var cards = $('.plans__card');
+        var cards = $(".plans__card");
         var apps;
         var padding = 10;
         var currentCardContent;
         var nextCardContent;
         var windowWidth = $(window).width();
 
-        $('.plans__card.only-portal').remove();
+        $(".plans__card.only-portal").remove();
 
         if ($(window).width() >= 768) {
             this.setCardWidth();
@@ -969,33 +964,32 @@ class Regionalization {
 
         // documentos NBA
         var currentDocumento = documentosPromo.get(currentDDD) || documentosPromo.get(regional) || documentosPromo.get("nacional");
-        var listaRegulamentos = $('.combo-regulamento p');
+        var listaRegulamentos = $(".combo-regulamento p");
         listaRegulamentos.empty();
         for (var i = 0, len = currentDocumento.length; i < len; i++) {
             var documento = currentDocumento[i];
-            var link = "A navegação nos serviços digitais é descontada da franquia de internet (consumo médio GoRead: 80MB por revista; Kantoo Inglês: 23MB por lição; NBA: 320MB streaming de 15 min; Vivo Cloud Sync 32GB: 2MB por foto armazenada).<br>" +
-                "<a href=" + documento.link + " class='regulamento-link' target='_blank' title='Regulamento Promoção Vivo Controle Digital'> Confira o regulamento.</a>"
+            var link = "A navegação nos serviços digitais é descontada da franquia de internet (consumo médio GoRead: 80MB por revista; Kantoo Inglês: 23MB por lição; NBA: 320MB streaming de 15 min; Vivo Cloud Sync 32GB: 2MB por foto armazenada).<br>" + "<a href=" + documento.link + " class='regulamento-link' target='_blank' title='Regulamento Promoção Vivo Controle Digital'> Confira o regulamento.</a>";
             listaRegulamentos.append(link);
         }
 
         //documentos modal
         var currentDocumentoModal = documentosModal.get(currentDDD) || documentosModal.get(regional) || documentosModal.get("nacional");
-        var listaRegulamentosModal = $('.regulamentos__list');
+        var listaRegulamentosModal = $(".regulamentos__list");
         listaRegulamentosModal.empty();
         for (var i = 0, len = currentDocumentoModal.length; i < len; i++) {
             var documentoModal = currentDocumentoModal[i];
-            var linkModal = "<li class='list__item'><a href=" + documentoModal.link + " target='_blank' title='" + documentoModal.nome + "'>" + documentoModal.nome + "</a></li>"
+            var linkModal = "<li class='list__item'><a href=" + documentoModal.link + " target='_blank' title='" + documentoModal.nome + "'>" + documentoModal.nome + "</a></li>";
             listaRegulamentosModal.append(linkModal);
         }
 
         if (helpers.isDesktop()) {
             for (var j = cards.length; j > 0; j--) {
-                currentCardContent = $('#card_' + j).find('.card__cont');
-                nextCardContent = $('#card_' + (j - 1)).find('.card__cont');
-                var calcPadding = (50 - (j * 10));
-                var finalPadding = calcPadding + 'px 0';
+                currentCardContent = $("#card_" + j).find(".card__cont");
+                nextCardContent = $("#card_" + (j - 1)).find(".card__cont");
+                var calcPadding = 50 - j * 10;
+                var finalPadding = calcPadding + "px 0";
                 //console.log("finalPadding ", finalPadding);
-                currentCardContent.css('padding', finalPadding);
+                currentCardContent.css("padding", finalPadding);
                 // $(".swiper-wrapper .plans__card").last().find('.card__cont').css("padding", "30px 0"); //@TODO NEW
             }
         }
@@ -1009,41 +1003,43 @@ class Regionalization {
     }
 
     toggleCardBody() {
-        $('.toggle-card-body').bind('click', function (e) {
-            var _boxTarget = $(e.currentTarget).parent().parent().parent();
-            _boxTarget.find('.card__advantages').slideToggle();
+        $(".toggle-card-body").bind("click", function(e) {
+            var _boxTarget = $(e.currentTarget)
+                .parent()
+                .parent()
+                .parent();
+            _boxTarget.find(".card__advantages").slideToggle();
 
-
-            if ($(this).text() == '- Detalhes') {
-                _boxTarget.find('.toggle-card-body').text('+ Detalhes');
+            if ($(this).text() == "- Detalhes") {
+                _boxTarget.find(".toggle-card-body").text("+ Detalhes");
             } else {
-                _boxTarget.find('.toggle-card-body').text('- Detalhes');
+                _boxTarget.find(".toggle-card-body").text("- Detalhes");
             }
         });
     }
 
     initCarousel() {
-        var currentDDD = this.getCookie('controle_ddd');
-        var decodeCidade = this.getCookie('controle_cidade');
+        var currentDDD = this.getCookie("controle_ddd");
+        var decodeCidade = this.getCookie("controle_cidade");
         var regional = decodeURI(decodeCidade);
         var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
 
-        $('.plans .content').addClass('isSwiper');
-        $('.plans .swiper-container').addClass('cards-swiper');
+        $(".plans .content").addClass("isSwiper");
+        $(".plans .swiper-container").addClass("cards-swiper");
         $(".plans .swiper-wrapper").css({
             width: $(".plans").width() - (30 * currentPlans.length - 1)
         });
 
         var isCentered = true;
-        $('.plans .content').addClass('hide');
+        $(".plans .content").addClass("hide");
         isCentered = false;
 
         var cardsPerPage = currentPlans.length;
 
-        new Swiper('.plans .cards-swiper', {
+        new Swiper(".plans .cards-swiper", {
             navigation: {
-                nextEl: '.plans .swiper-button-next',
-                prevEl: '.plans .swiper-button-prev',
+                nextEl: ".plans .swiper-button-next",
+                prevEl: ".plans .swiper-button-prev"
             },
 
             simulateTouch: false,
@@ -1051,32 +1047,31 @@ class Regionalization {
             spaceBetween: 30
         });
 
-        if ($('.swiper-pagination-bullet').length == 3) {
-            $('.swiper-buttons#bottom .swiper-button-prev').addClass('buttons-left');
-            $('.swiper-buttons#bottom .swiper-button-next').addClass('buttons-right');
+        if ($(".swiper-pagination-bullet").length == 3) {
+            $(".swiper-buttons#bottom .swiper-button-prev").addClass("buttons-left");
+            $(".swiper-buttons#bottom .swiper-button-next").addClass("buttons-right");
         }
-        var paginationItems = $('.swiper-pagination span'),
-            paginationContainer = $('.swiper-buttons#bottom');
+        var paginationItems = $(".swiper-pagination span"),
+            paginationContainer = $(".swiper-buttons#bottom");
         // check if there is pagination with less than two items
         if (paginationItems.length <= 1) {
             paginationContainer.remove();
             paginationItems.remove();
         }
         // End loading / show plans ...
-
     }
 
     setCardWidth() {
-        var currentDDD = this.getCookie('controle_ddd');
-        var decodeCidade = this.getCookie('controle_cidade');
+        var currentDDD = this.getCookie("controle_ddd");
+        var decodeCidade = this.getCookie("controle_cidade");
         var regional = decodeURI(decodeCidade);
         var currentPlans = plansControle.get(currentDDD) || plansControle.get(regional) || plansControle.get("nacional");
-        var planosAnanke = currentPlans.filter(function (e) {
+        var planosAnanke = currentPlans.filter(function(e) {
             return !e.portal;
         }).length;
 
-        var _w = 100 / (planosAnanke);
-        $(".plans__card").css('width', (_w) + '%');
+        var _w = 100 / planosAnanke;
+        $(".plans__card").css("width", _w + "%");
     }
 
     // getGA() {
@@ -1091,10 +1086,10 @@ class Regionalization {
 
     getCookie(cname) {
         var name = cname + "=";
-        var ca = document.cookie.split(';');
+        var ca = document.cookie.split(";");
         for (var i = 0; i < ca.length; i++) {
             var c = ca[i];
-            while (c.charAt(0) == ' ') {
+            while (c.charAt(0) == " ") {
                 c = c.substring(1);
             }
             if (c.indexOf(name) == 0) {
@@ -1109,23 +1104,20 @@ class Regionalization {
 
         $(".box-modal .boxModalContent .icon-box").addClass(tipo_icon);
 
-
         if (tipo_icon == "icon-reg") {
             // $(".box-modal .boxModalContent .boxModalContent__box").addClass(" boxModalContent__box--reg");
             $(".box-modal .boxModalContent .boxModalContent__box").attr("id", "Default");
         }
 
-
-        $(".click_modal").bind('click', function () {
-            $(".box-overlay, .boxModalContent").fadeIn()
+        $(".click_modal").bind("click", function() {
+            $(".box-overlay, .boxModalContent").fadeIn();
             $(".box-modal").addClass("modal-on");
             $(".box-modal").removeClass("modal-off");
             $(".modal-informacoes-adicionais").css("display", "block");
-            $(".boxModalContent__box-text div[data-main-content=\"1\"]").focus();
+            $('.boxModalContent__box-text div[data-main-content="1"]').focus();
 
-            var gt_data = $(this).data('plan');
+            var gt_data = $(this).data("plan");
             $(".item #link_regulamento").attr("href", gt_data);
-
         });
 
         // $(".icon-close, .box-overlay").bind('click', function() {
@@ -1135,21 +1127,19 @@ class Regionalization {
         //     $(".box-modal").removeClass("modal-on");
         // });
 
-        $(document).keyup(function (e) {
+        $(document).keyup(function(e) {
             if (e.keyCode == 27) {
                 $(".modal-informacoes-adicionais").css("display", "none");
                 $(".box-overlay, .boxModalContent").fadeOut();
             }
         });
-
     }
 
     abasLista() {
-        $(".boxModalContent__box-seletor li").bind('click', 'li', function () {
-
+        $(".boxModalContent__box-seletor li").bind("click", "li", function() {
             $(".boxModalContent__box-seletor li").removeClass("active");
 
-            var thumb_select = $(this).data('choose');
+            var thumb_select = $(this).data("choose");
 
             $(".boxModalContent__box-text div[data-main-content]").hide();
             $(".boxModalContent__box-text div[data-main-content=" + thumb_select + "]").fadeIn("slow");
@@ -1159,34 +1149,35 @@ class Regionalization {
         });
     }
 
-
     vaiRegulamento() {
-        $("#goto_regu").bind('click', function () {
-
+        $("#goto_regu").bind("click", function() {
             $(".boxModalContent__box-seletor li").removeClass("active");
-            $(".boxModalContent__box-seletor").find("[data-choose='3']").addClass("active");
+            $(".boxModalContent__box-seletor")
+                .find("[data-choose='3']")
+                .addClass("active");
 
             $(".boxModalContent__box-text div").css("display", "none");
-            $(".boxModalContent__box-text").find("[data-main-content='3']").css("display", "block");
+            $(".boxModalContent__box-text")
+                .find("[data-main-content='3']")
+                .css("display", "block");
             $(".regulamentos__list").fadeIn();
         });
     }
 
     disableRightClickReg() {
-        $('#goto_regu').bind("contextmenu", function (e) {
+        $("#goto_regu").bind("contextmenu", function(e) {
             e.preventDefault();
         });
     }
 
     abreBoxDdd() {
-        document.getElementById('overlayDdd').style.display = 'block';
-        document.getElementById('box-select').style.display = 'block';
-        fadeIn('overlayDdd', 1.5);
+        document.getElementById("overlayDdd").style.display = "block";
+        document.getElementById("box-select").style.display = "block";
+        fadeIn("overlayDdd", 1.5);
     }
 
     slickInit() {
-
-        $('.plans-carousel-mob').slick({
+        $(".plans-carousel-mob").slick({
             arrows: false,
             dots: true,
             centerMode: true,
@@ -1199,12 +1190,12 @@ class Regionalization {
 
     getUrlParameter(sParam) {
         var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-            sURLVariables = sPageURL.split('&'),
+            sURLVariables = sPageURL.split("&"),
             sParameterName,
             i;
 
         for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
+            sParameterName = sURLVariables[i].split("=");
 
             if (sParameterName[0] === sParam) {
                 return sParameterName[1] === undefined ? true : sParameterName[1];
@@ -1214,83 +1205,82 @@ class Regionalization {
 
     UrlParameter() {
         // ALTERA O BANNER CASO A URL VENHA PARAMETRIZADA
-        var getEstadoBan = this.getCookie('controle_estado');
-        var getDDDBan = this.getCookie('controle_ddd');
-        var decodeCidade = this.getCookie('controle_cidade');
+        var getEstadoBan = this.getCookie("controle_estado");
+        var getDDDBan = this.getCookie("controle_ddd");
+        var decodeCidade = this.getCookie("controle_cidade");
         var regional = decodeURI(decodeCidade);
-        var splitCidade = regional.split(' - ')[0];
+        var splitCidade = regional.split(" - ")[0];
         if (splitCidade.substring(splitCidade.length - 3, splitCidade.length) == "%20") {
             splitCidade = splitCidade.substring(0, splitCidade.length - 3);
         }
         var getCidade = splitCidade;
 
-        var _nameBtn = 'Contrate já',
-            _banner = $('.banner'),
-            _bannerContentOne = $('.banner__content--01'),
-            _bannerContentExclusive = $('.banner__content--01 .content__exclusive .exclusive__block'),
-            _bannerContentImg = $('.banner__content--01 .content__img'),
-            _logoBanner = $('.banner__content--02 .content__logo'),
-            _subtitle = $('.content__subtitle'),
-            _subtitleIcon = $('.subtitle__icon'),
-            _internetSizeBanner = $('.banner__content--02 .content__call .call__block .block__text'),
-            _priceBanner = $('.banner__content--02 .content__price .price__block'),
-            _paramBanner = this.getUrlParameter('banner');
+        var _nameBtn = "Contrate já",
+            _banner = $(".banner"),
+            _bannerContentOne = $(".banner__content--01"),
+            _bannerContentExclusive = $(".banner__content--01 .content__exclusive .exclusive__block"),
+            _bannerContentImg = $(".banner__content--01 .content__img"),
+            _logoBanner = $(".banner__content--02 .content__logo"),
+            _subtitle = $(".content__subtitle"),
+            _subtitleIcon = $(".subtitle__icon"),
+            _internetSizeBanner = $(".banner__content--02 .content__call .call__block .block__text"),
+            _priceBanner = $(".banner__content--02 .content__price .price__block"),
+            _paramBanner = this.getUrlParameter("banner");
 
-        if (_paramBanner == 'vivocontrolenba') {
-            _banner.addClass('banner--green');
-            _bannerContentOne.removeClass('banner__content--all');
-            $('.banner__content--01 .content__exclusive .exclusive__block:nth-child(1)').addClass('display');
-            _bannerContentExclusive.find('.logo__details').addClass('logo__details--white');
-            _bannerContentImg.removeClass('content__img--all');
-            _bannerContentImg.find('.img__cel').addClass('img__cel--nba');
-            _priceBanner.find('.cents__monthly--with').addClass('hide');
-        } else if (_paramBanner == 'vivocontrolekantoo') {
-            _banner.addClass('banner--kantoo');
-            _bannerContentOne.removeClass('banner__content--all');
-            $('.banner__content--01 .content__exclusive .exclusive__block:nth-child(2)').addClass('display');
-            _bannerContentImg.removeClass('content__img--all');
-            _bannerContentImg.find('.img__cel').addClass('img__cel--kantoo');
-            _priceBanner.find('.cents__monthly--with').addClass('hide');
-        } else if (_paramBanner == 'vivocontrolekantoo') {
-            _banner.addClass('banner--kantoo');
-            _bannerContentOne.removeClass('banner__content--all');
-            $('.banner__content--01 .content__exclusive .exclusive__block:nth-child(2)').addClass('display');
-            _bannerContentImg.removeClass('content__img--all');
-            _bannerContentImg.find('.img__cel').addClass('img__cel--kantoo');
-            _priceBanner.find('.cents__monthly--with').addClass('hide');
-        } else if (_paramBanner == 'vivocontrolegoread') {
-            $('#banner_goread').show();
-            $('#banner_normal').hide();
-            $('.giga').addClass('TXT_LARANJA');
-            $('.txt_GB_1,.txt_GB_2,.txt_final_mobile').addClass('TXT_LARANJA');
+        if (_paramBanner == "vivocontrolenba") {
+            _banner.addClass("banner--green");
+            _bannerContentOne.removeClass("banner__content--all");
+            $(".banner__content--01 .content__exclusive .exclusive__block:nth-child(1)").addClass("display");
+            _bannerContentExclusive.find(".logo__details").addClass("logo__details--white");
+            _bannerContentImg.removeClass("content__img--all");
+            _bannerContentImg.find(".img__cel").addClass("img__cel--nba");
+            _priceBanner.find(".cents__monthly--with").addClass("hide");
+        } else if (_paramBanner == "vivocontrolekantoo") {
+            _banner.addClass("banner--kantoo");
+            _bannerContentOne.removeClass("banner__content--all");
+            $(".banner__content--01 .content__exclusive .exclusive__block:nth-child(2)").addClass("display");
+            _bannerContentImg.removeClass("content__img--all");
+            _bannerContentImg.find(".img__cel").addClass("img__cel--kantoo");
+            _priceBanner.find(".cents__monthly--with").addClass("hide");
+        } else if (_paramBanner == "vivocontrolekantoo") {
+            _banner.addClass("banner--kantoo");
+            _bannerContentOne.removeClass("banner__content--all");
+            $(".banner__content--01 .content__exclusive .exclusive__block:nth-child(2)").addClass("display");
+            _bannerContentImg.removeClass("content__img--all");
+            _bannerContentImg.find(".img__cel").addClass("img__cel--kantoo");
+            _priceBanner.find(".cents__monthly--with").addClass("hide");
+        } else if (_paramBanner == "vivocontrolegoread") {
+            $("#banner_goread").show();
+            $("#banner_normal").hide();
+            $(".giga").addClass("TXT_LARANJA");
+            $(".txt_GB_1,.txt_GB_2,.txt_final_mobile").addClass("TXT_LARANJA");
 
-            $('.banner').addClass('bannerGoread');
-            $('.txt_conteudo_exclusivo').addClass('TXT_LARANJA');
-            $('.content__logo').addClass('mobile_goread');
-            $('.bg_teste').addClass('bn_goread');
+            $(".banner").addClass("bannerGoread");
+            $(".txt_conteudo_exclusivo").addClass("TXT_LARANJA");
+            $(".content__logo").addClass("mobile_goread");
+            $(".bg_teste").addClass("bn_goread");
 
-            $('.banner__content--02').addClass('espaco_goread');
+            $(".banner__content--02").addClass("espaco_goread");
 
+            var containerBannerGoread = $(".container_nv_lvf_uniao");
+            $(containerBannerGoread).addClass("Novo__banner__goread");
 
-            var containerBannerGoread = $('.container_nv_lvf_uniao');
-            $(containerBannerGoread).addClass('Novo__banner__goread')
+            _nameBtn = "Saiba mais";
+            _bannerContentOne.removeClass("banner__content--all");
 
-            _nameBtn = 'Saiba mais';
-            _bannerContentOne.removeClass('banner__content--all');
+            $(".banner__content--01 .content__exclusive .exclusive__block:nth-child(3)").addClass("display");
 
-            $('.banner__content--01 .content__exclusive .exclusive__block:nth-child(3)').addClass('display');
+            _bannerContentExclusive.find(".logo__details").addClass("logo__details--white logo__details--size");
 
-            _bannerContentExclusive.find('.logo__details').addClass('logo__details--white logo__details--size');
-
-            _bannerContentImg.removeClass('content__img--all');
-            _bannerContentImg.find('.img__cel').addClass('img__cel--goread');
-            _banner.addClass('banner--purple');
-            _logoBanner.addClass('content__logo--orange');
-            _subtitle.addClass('orange');
-            _subtitleIcon.attr('src', 'img/icon/PW_IMG_LOGO4GMAIS_LARANJA.png');
-            _internetSizeBanner.addClass('block__text--orange');
-            _priceBanner.addClass('price__block--orange');
-            _priceBanner.find('.cents__monthly--with').addClass('hide');
+            _bannerContentImg.removeClass("content__img--all");
+            _bannerContentImg.find(".img__cel").addClass("img__cel--goread");
+            _banner.addClass("banner--purple");
+            _logoBanner.addClass("content__logo--orange");
+            _subtitle.addClass("orange");
+            _subtitleIcon.attr("src", "img/icon/PW_IMG_LOGO4GMAIS_LARANJA.png");
+            _internetSizeBanner.addClass("block__text--orange");
+            _priceBanner.addClass("price__block--orange");
+            _priceBanner.find(".cents__monthly--with").addClass("hide");
 
             // if( !window.isSlickCardsInit ){
             //     $('.plans-carousel-mob').slick({
@@ -1313,7 +1303,6 @@ class Regionalization {
         // setTimeout(function() {
         //     _banner.fadeIn();
         // }, 1000);
-
     }
 }
 
