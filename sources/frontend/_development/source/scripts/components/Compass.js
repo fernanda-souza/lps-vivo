@@ -14,23 +14,18 @@ let cityChosedByRecomendation = false;
 
 class Compass {
     constructor($callback, $cidade, $queryString = false, $ignoreAcc = false) {
-        this.bussolaSelector = ".container_modal";
         this.bussolaMainSelector = ".modal_content";
         this.queryString = $queryString;
         this.compassConfig = new CompassConfig(this.bussolaMainSelector);
         this.helpers = new Helpers();
         this.SharedFunctions = new SharedFunctions();
         this.datalayer = new DataLayer();
-        this.configAutocomplete();
         this.sectionsOffset = this.helpers.isMobile() ? 120 : 60;
-        $(".bussola_loading").hide();
-        $(".bussola_hideonloading").removeClass("bussola_hideonloading");
         this.verificaRegionalChat();
         this.openModal();
         this.closeModal();
         this.openChat();
         this.getGA();
-        $(".container-planos .container-box");
 
         if ($cidade) {
             this.processGeolocationData($callback, $cidade, $ignoreAcc);
@@ -782,44 +777,19 @@ class Compass {
 
     initRegionalization(estado, cidade, ddd, preventHideBussola) {
         $(".container-planos .container-box").remove();
-        if (!preventHideBussola) {
-            $(".container_modal").remove();
-            // $(this.bussolaSelector).hide();
-        }
         var helpers = new Helpers();
         this.setLabelCity(cidade);
-        $(".plans").show();
         $("#currentCity").text(cidade + " :S");
         $(".label__text")
             .text(cidade)
             .show();
-        $(".plans-carousel-mob").empty();
-        $(".plans-carousel-mob").removeClass("slick-initialized");
         $("#autocomplete_input").attr("placeholder", cidade);
-        $(".bussola_onmodal_input").hide();
-        $(".wrapper").show();
         $(".label").css("height", "30px");
+        $(".bussola_onmodal_input").hide();
         $(".bussola_onmodal_input", ".bussola_link").hide();
-        $("#btn_cidade").show();
         $(".label").on("click", this.SharedFunctions.MobileOpenModal);
         $('[data-target="legal-planos"]').show();
         $(".actual-location.only-tablet").css("display", "flex");
-
-        /*if ($(this.bussolaMainSelector + ' .plans-carousel-mob').hasClass('slick-initialized')) {
-            $(this.bussolaMainSelector + ' .plans-carousel-mob').slick('unslick');
-        }*/
-
-        // window.enableMobileChat();
-        // remover o item do guru caso esteja nas regionais do ne
-        var svaGuru = $(".swiper-wrapper .card:nth-child(2)");
-
-        var regions = require("../fill/regions.js").regions;
-
-        if (jQuery.inArray(parseInt(helpers.getCookie("controle_ddd")), regions.ne) != -1) {
-            svaGuru.css("display", "none");
-        } else {
-            svaGuru.css("display", "block");
-        }
     }
 
     getGA() {

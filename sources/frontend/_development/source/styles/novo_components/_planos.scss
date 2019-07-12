@@ -1,5 +1,4 @@
 .regionalized {
-
     .lp_controle_planos {
         .container_planos {
             @include mobile {
@@ -15,10 +14,6 @@
     @include mobile {
         padding: 40px 0px;
         min-height: 360px;
-    }
-
-    .hidden-details {
-        display: none;
     }
 
     .container_planos {
@@ -37,6 +32,30 @@
             text-align: center;
         }
 
+        .tabs__header {
+            font-size: 16px;
+            display: flex;
+        }
+
+        .tabs__option {
+            padding: 12px 30px;
+            border-bottom: 2px solid #ababab;
+            height: 46px;
+            &.-active {
+                border-bottom: 4px solid #660099;
+                color: #660099;
+            }
+        }
+        .tab__content {
+            display: none;
+            &.-show {
+                display: flex;
+            }
+            .inner-planos {
+                width: 100%;
+            }
+        }
+
         .inner-planos-mobile {
             display: block;
             margin: 60px -30px;
@@ -50,48 +69,48 @@
             // cores
             .item-plan:nth-child(1) {
                 .quantidade-plan {
-                    background-image: linear-gradient(to right, #831A77, #8E2077);
+                    background-image: linear-gradient(to right, #831a77, #8e2077);
                 }
 
                 .exclusivos-plan,
                 .whatsapp-plan {
-                    background-image: linear-gradient(to right, #A42195, #B22895);
-                    border-top: 1px solid #8E2077;
+                    background-image: linear-gradient(to right, #a42195, #b22895);
+                    border-top: 1px solid #8e2077;
                 }
             }
 
             .item-plan:nth-child(2) {
                 .quantidade-plan {
-                    background-image: linear-gradient(to right, #731277, #7F1877);
+                    background-image: linear-gradient(to right, #731277, #7f1877);
                 }
 
                 .exclusivos-plan,
                 .whatsapp-plan {
-                    background-image: linear-gradient(to right, #901795, #9F1F95);
-                    border-top: 1px solid #7F1877;
+                    background-image: linear-gradient(to right, #901795, #9f1f95);
+                    border-top: 1px solid #7f1877;
                 }
             }
 
             .item-plan:nth-child(3) {
                 .quantidade-plan {
-                    background-image: linear-gradient(to right, #640B76, #6F1076);
+                    background-image: linear-gradient(to right, #640b76, #6f1076);
                 }
 
                 .exclusivos-plan,
                 .whatsapp-plan {
-                    background-image: linear-gradient(to right, #7E0E94, #8B1594);
-                    border-top: 1px solid #6F1076;
+                    background-image: linear-gradient(to right, #7e0e94, #8b1594);
+                    border-top: 1px solid #6f1076;
                 }
             }
 
-            .item-plan:nth-child(4)>.quantidade-plan {
-                background-image: linear-gradient(to right, #640B76, #6F1076);
+            .item-plan:nth-child(4) > .quantidade-plan {
+                background-image: linear-gradient(to right, #640b76, #6f1076);
             }
 
             // end cores
 
             .item-plan.slick-slide {
-                transform: scale(.9);
+                transform: scale(0.9);
                 transition: ease-in-out 0.3s;
                 margin: 0px;
                 margin-bottom: 10px;
@@ -102,14 +121,13 @@
             }
 
             .item-plan.slick-slide.slick-current {
-                transform: scale(1)
+                transform: scale(1);
             }
 
             .slick-dots {
                 bottom: -45px;
             }
         }
-
 
         .inner-planos {
             display: flex;
@@ -119,76 +137,27 @@
 
             @include mobile {
                 display: block;
-
             }
 
-            .blur-gb {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0px;
-                bottom: 0;
-                background-image: url(../img/novo/planos_blur_bg_v3.png);
-                background-size: 1024px;
-                background-repeat: no-repeat;
-                background-position: bottom -35px center;
-            }
-
-            &:nth-child(3)>.item-plan {
-                height: auto;
+            .item-plan:nth-child(1) {
+                .quantidade-plan {
+                    background-image: linear-gradient(to right, #831a77, #8e2077);
+                    height: 88px;
+                }
             }
 
             .item-plan:nth-child(2) {
                 .quantidade-plan {
-                    height: 88px;
-                    background-image: linear-gradient(to right, #831A77, #8E2077);
-
-                    p:nth-child(2) {
-                        padding-top: 0px;
-                    }
-                }
-
-                .exclusivos-plan,
-                .whatsapp-plan {
-                    background-image: linear-gradient(to right, #A42195, #B22895);
-                    border-top: 1px solid #8E2077;
+                    background-image: linear-gradient(to right, #a42195, #b22895);
+                    height: 96px;
                 }
             }
 
             .item-plan:nth-child(3) {
                 .quantidade-plan {
-                    height: 96px;
-                    background-image: linear-gradient(to right, #731277, #7F1877);
-                }
-
-                .exclusivos-plan,
-                .whatsapp-plan {
-                    background-image: linear-gradient(to right, #901795, #9F1F95);
-                    border-top: 1px solid #7F1877;
-                }
-            }
-
-            .item-plan:nth-child(4) {
-                .quantidade-plan {
+                    background-image: linear-gradient(to right, #640b76, #6f1076);
                     height: 112px;
-                    background-image: linear-gradient(to right, #640B76, #6F1076);
                 }
-
-                .exclusivos-plan,
-                .whatsapp-plan {
-                    background-image: linear-gradient(to right, #7E0E94, #8B1594);
-                    border-top: 1px solid #6F1076;
-                }
-            }
-
-            .item-plan:nth-child(5)>.quantidade-plan {
-                height: 144px;
-                background-image: linear-gradient(to right, #640B76, #6F1076);
-                margin-right: 0px;
-            }
-
-            .item-plan:nth-child(5) {
-                margin-right: 0px;
             }
         }
 
@@ -197,11 +166,7 @@
             margin: 0 12px;
             background-color: white;
             box-shadow: 0px 0px 16px 0 rgba(0, 0, 0, 0.1);
-            opacity: 0;
-
-            &.fake {
-                height: 700px;
-            }
+            padding-bottom: 17px;
 
             @include mobile {
                 width: 224px;
@@ -212,7 +177,7 @@
 
             .quantidade-plan {
                 color: white;
-                padding: 17px 20px 6px 20px;
+                padding: 18px 17px 6px 20px;
                 display: flex;
                 flex-wrap: wrap;
                 align-content: flex-end;
@@ -229,82 +194,6 @@
 
                 p {
                     color: white;
-                    font-weight: 300;
-                }
-
-            }
-
-            .exclusivos-plan {
-                padding: 17px 20px 6px 20px;
-                background: #af2695;
-
-                p {
-                    color: white;
-                    font-weight: 300;
-                    margin-right: -13px;
-                    font-size: 14.5px;
-
-                    strong {
-                        font-weight: 600;
-                        font-size: 15px;
-                    }
-                }
-
-                .exclusivos-container {
-                    display: flex;
-                    margin: 10px 0;
-
-                    .exclusivos-item {
-                        width: 30px;
-                        height: 30px;
-                        margin-right: 10px;
-                    }
-                }
-            }
-
-            .whatsapp-plan {
-                background: #af2695;
-                padding: 14px;
-                color: white;
-                border-top: 1px solid #7F1877;
-
-                @include mobile {}
-
-                .brand-whatsapp {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: row;
-
-                    @include mobile {
-                        justify-content: inherit;
-                    }
-
-                    img {
-                        width: 32px;
-                        min-width: 32px;
-                        height: 32px;
-                        margin-right: 5px;
-                        margin-right: 5px;
-                        margin-top: 0;
-                    }
-
-                    h4 {
-                        line-height: 18px;
-                        width: 100%;
-                        margin: 0 auto;
-                        font-weight: 600;
-                    }
-
-                    p {
-                        font-size: 11.2px;
-                    }
-
-
-                }
-
-                p {
-                    color: white;
-                    font-size: 13px;
                     font-weight: 300;
                 }
             }
@@ -326,24 +215,29 @@
 
                     strong {
                         font-weight: 500;
-
                     }
 
                     &:nth-child(1) {
                         strong {
                             display: inline;
-
                         }
                     }
 
                     &:nth-child(2) {
-                        // padding-top: 10px;
-                        // height: 45px;
                         box-sizing: content-box;
                         margin-bottom: 0;
                     }
-
                 }
+            }
+
+            .apps-ilimitados {
+                margin-top: 7px;
+            }
+
+            .disclaimer {
+                font-size: 14px;
+                margin-left: 17px;
+                margin-bottom: 17px;
             }
 
             .detalhes {
@@ -361,7 +255,8 @@
                 margin-bottom: 0;
             }
 
-            .informacoes, .informacoes2  {
+            .informacoes,
+            .informacoes2 {
                 color: #888888;
                 width: max-content;
                 text-align: center;
@@ -397,6 +292,7 @@
                 display: flex;
                 padding: 17px;
                 padding-top: 0px;
+                padding-bottom: 7px;
 
                 &--big-text {
                     font-weight: 300;
@@ -415,33 +311,30 @@
                         margin-top: 0;
                     }
                 }
-
-
             }
 
             .assine {
                 padding: 0px 17px;
 
-                a ,  .cta-chat__btn {
+                a,
+                .cta-chat__btn {
                     display: block;
                     width: 100%;
                     height: 48px;
                     border: none;
-                    background-color: #FF9900;
+                    background-color: #ff9900;
                     font-weight: 600;
                     color: white;
                     text-align: center;
                     line-height: 48px;
                 }
             }
-
         }
 
         .legal-planos {
             margin: 32px auto;
             display: block;
             text-align: center;
-            display: none;
 
             a {
                 color: #888888;
@@ -460,7 +353,6 @@
                 line-height: 27px;
             }
         }
-
     }
 
     .container-ciudade {
@@ -475,15 +367,15 @@
             img {
                 width: 20px;
                 margin-right: 10px;
-
             }
 
-            h2 {}
+            h2 {
+            }
         }
 
         input {
             padding: 20px;
-            border: 1px solid #DDD;
+            border: 1px solid #ddd;
         }
 
         button {
@@ -493,6 +385,5 @@
             font-weight: 600;
             margin: 0 20px;
         }
-        
     }
 }

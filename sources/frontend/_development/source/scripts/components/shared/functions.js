@@ -98,7 +98,6 @@ class Functions {
         }
 
         this.queryStringHandler = new QueryStringHandler();
-        this.queryStringHandler.relocateContent();
 
         let urlParamCidade = this.helpers.getUrlParameter("cidade");
         let urlParamFluxo = this.helpers.getUrlParameter("fluxo");
