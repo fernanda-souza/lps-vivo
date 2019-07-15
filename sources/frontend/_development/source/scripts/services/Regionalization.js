@@ -145,9 +145,10 @@ var plansControle = [
         mainoffer: true,
         appname: "vivocontrolenba",
         SKU: ["VC00031", "VIVOCTRLF29N"],
-        combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
         portal: false,
+        hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync e NBA",
+        appsTextnaofiel: "GoRead, Vivo Cloud Sync",
         appsimg: "group-apps",
         fidelizado: true,
         price: {
@@ -165,9 +166,10 @@ var plansControle = [
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
+        hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
+        appsTextnaofiel: "GoRead, Vivo Cloud Sync, NBA",
         appsimg: "group-apps",
         fidelizado: true,
         price: {
@@ -185,8 +187,8 @@ var plansControle = [
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
+        hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps",
         fidelizado: false,
@@ -206,8 +208,8 @@ var plansControle = [
         mainoffer: true,
         appname: "vivocontrolenba",
         SKU: ["VC00031", "VIVOCTRLF29N"],
-        combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
         portal: false,
+        hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync e NBA",
         appsimg: "group-apps-semwhats",
         fidelizado: true,
@@ -226,8 +228,8 @@ var plansControle = [
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
+        hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps-semwhats",
         fidelizado: true,
@@ -246,8 +248,8 @@ var plansControle = [
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        combo: "GoRead - NBA - Sync - Kantoo",
         portal: false,
+        hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps-semwhats",
         fidelizado: false,
@@ -267,7 +269,7 @@ var plansControle = [
     //     mainoffer: true,
     //     appname: "vivocontrolenba",
     //     SKU: ["VC00031", "VIVOCTRLF29A"],
-    //     combo: "GoRead - NBA - Sync - Kantoo - Vivo Guru",
+    //
     //     portal: false,
     //     price: {
     //         amount: 89.99,
@@ -284,7 +286,7 @@ var plansControle = [
     //     mainoffer: true,
     //     appname: "vivocontrolekantoo",
     //     SKU: ["VC00031", "VIVOCTRLF30A"],
-    //     combo: "GoRead - NBA - Sync - Kantoo",
+    //
     //     portal: false,
     //     price: {
     //         amount: 79.99,
@@ -301,7 +303,7 @@ var plansControle = [
     //     mainoffer: true,
     //     appname: "vivocontrolekantoo",
     //     SKU: ["VC00031", "VIVOCTRLF28A"],
-    //     combo: "GoRead - NBA - Sync - Kantoo",
+    //
     //     portal: false,
     //     price: {
     //         amount: 64.99,
@@ -318,7 +320,7 @@ var plansControle = [
     //     mainoffer: true,
     //     appname: "vivocontrolegoread",
     //     SKU: ["VC00029", "VIVOCTRLF27A"],
-    //     combo: "GoRead - NBA - Sync",
+    //
     //     portal: false,
     //     price: {
     //         amount: 49.99,
@@ -337,7 +339,7 @@ var plansControle = [
     //     TJinternet: '5,5GB + 500MB de bônus*',
     //     mainoffer: true,
     //     SKU: [''],
-    //     combo: "GoRead - NBA - Sync",
+    //
     //     portal: false,
     //     appname: "vivocontrolenba",
     //     price: {
@@ -354,7 +356,7 @@ var plansControle = [
     //     TJinternet: '5,5GB + 500MB de bônus*',
     //     mainoffer: true,
     //     SKU: [''],
-    //     combo: "GoRead - NBA - Sync",
+    //
     //     portal: false,
     //     appname: "vivocontrolekantoo",
     //     price: {
@@ -371,7 +373,7 @@ var plansControle = [
     //     TJinternet: '4,5GB + 500MB de bônus*',
     //     mainoffer: true,
     //     SKU: [''],
-    //     combo: "GoRead - NBA - Sync",
+    //
     //     portal: false,
     //     appname: "vivocontrolekantoo",
     //     price: {
@@ -388,7 +390,7 @@ var plansControle = [
     //     TJinternet: '3,5GB + 500MB de bônus*',
     //     mainoffer: true,
     //     SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
-    //     combo: "",
+    //
     //     portal: false,
     //     appname: "vivocontrolegoread",
     //     price: {
@@ -785,7 +787,7 @@ class Regionalization {
                             <p><strong>Apps ilimitados</strong><br/>
                                 <img class="apps-ilimitados" src="img/icon/icon-${plano.appsimg}.png" />
                             </p>
-                            <p><strong>Apps inclusos:</strong> ${appInclusos}</p>
+                            ${plano.hideapps ? `` : `<p><strong>Apps inclusos:</strong> ${plano.appsText}</p>`}
                         </div>
                         <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
                         <div class="precio-plan">
@@ -810,7 +812,7 @@ class Regionalization {
                         <p><strong>Apps ilimitados</strong><br/>
                             <img class="apps-ilimitados" src="img/icon/icon-${plano.appsimg}.png" />
                         </p>
-                        <p><strong>Apps inclusos:</strong> ${appInclusos}</p>
+                        ${plano.hideapps ? `` : `<p><strong>Apps inclusos:</strong> ${plano.appsTextnaofiel}</p>`}
                     </div>
                     <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
                     <div class="precio-plan">
@@ -824,6 +826,10 @@ class Regionalization {
                     <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                 </div>
             `);
+
+            if (currentDDD == 62 || currentDDD == 81 || currentDDD == 87) {
+                $(".linkappsinclusos").remove();
+            }
 
             $(".item-plan")
                 .css("opacity", "1")
