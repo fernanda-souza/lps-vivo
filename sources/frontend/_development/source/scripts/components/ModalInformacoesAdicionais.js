@@ -146,6 +146,7 @@ class ModalnformacoesAdicionais {
 
             $(".tab__content[data-main-content=3]").html(`<ul>
             ${regulamento}
+            
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238923" target="_blank">
                     Pacote Internet 150MB e 400MB
