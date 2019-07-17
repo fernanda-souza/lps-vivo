@@ -139,13 +139,10 @@ var plansControle = [
     new Plan({
         region: regions.nacional,
         internet: "4,5GB",
-        internetnaofiel: "4GB",
         TJinternet: "4GB + 500MB de bônus*",
-        TJinternetnaofiel: "3,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
         SKU: ["VC00031", "VIVOCTRLF29N"],
-        portal: false,
         hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync e NBA",
         appsTextnaofiel: "GoRead, Vivo Cloud Sync",
@@ -160,13 +157,10 @@ var plansControle = [
     new Plan({
         region: regions.nacional,
         internet: "5,5GB",
-        internetnaofiel: "4,5GB",
         TJinternet: "5GB + 500MB de bônus*",
-        TJinternetnaofiel: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        portal: false,
         hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsTextnaofiel: "GoRead, Vivo Cloud Sync, NBA",
@@ -180,14 +174,47 @@ var plansControle = [
     }),
     new Plan({
         region: regions.nacional,
-        internet: "5,5GB",
-        internetnaofiel: "5,5GB",
-        TJinternet: "5GB + 500MB de bônus*",
-        TJinternetnaofiel: "5GB + 500MB de bônus*",
+        internet: "4GB",
+        TJinternet: "3,5GB + 500MB de bônus*",
+        mainoffer: true,
+        appname: "vivocontrolenba",
+        SKU: ["VC00031", "VIVOCTRLF29N"],
+        hideapps: false,
+        appsText: "GoRead, Vivo Cloud Sync e NBA",
+        appsTextnaofiel: "GoRead, Vivo Cloud Sync",
+        appsimg: "group-apps",
+        fidelizado: false,
+        price: {
+            amount: 54.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.nacional,
+        internet: "4,5GB",
+        TJinternet: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        portal: false,
+        hideapps: false,
+        appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
+        appsTextnaofiel: "GoRead, Vivo Cloud Sync, NBA",
+        appsimg: "group-apps",
+        fidelizado: false,
+        price: {
+            amount: 69.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.nacional,
+        internet: "5,5GB",
+        TJinternet: "5GB + 500MB de bônus*",
+        mainoffer: true,
+        appname: "vivocontrolekantoo",
+        SKU: ["VC00030", "VIVOCTRLF30N"],
         hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps",
@@ -202,13 +229,10 @@ var plansControle = [
     new Plan({
         region: regions.especiais,
         internet: "4,5GB",
-        internetnaofiel: "4GB",
         TJinternet: "4GB + 500MB de bônus*",
-        TJinternetnaofiel: "3,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
         SKU: ["VC00031", "VIVOCTRLF29N"],
-        portal: false,
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync e NBA",
         appsimg: "group-apps-semwhats",
@@ -222,13 +246,10 @@ var plansControle = [
     new Plan({
         region: regions.especiais,
         internet: "5,5GB",
-        internetnaofiel: "4,5GB",
         TJinternet: "5GB + 500MB de bônus*",
-        TJinternetnaofiel: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        portal: false,
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps-semwhats",
@@ -241,14 +262,45 @@ var plansControle = [
     }),
     new Plan({
         region: regions.especiais,
-        internet: "5,5GB",
-        internetnaofiel: "5,5GB",
-        TJinternet: "5GB + 500MB de bônus*",
-        TJinternetnaofiel: "5GB + 500MB de bônus*",
+        internet: "4GB",
+        TJinternet: "3,5GB + 500MB de bônus*",
+        mainoffer: true,
+        appname: "vivocontrolenba",
+        SKU: ["VC00031", "VIVOCTRLF29N"],
+        hideapps: true,
+        appsText: "GoRead, Vivo Cloud Sync e NBA",
+        appsimg: "group-apps-semwhats",
+        fidelizado: false,
+        price: {
+            amount: 52.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.especiais,
+        internet: "4,5GB",
+        TJinternet: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
         SKU: ["VC00030", "VIVOCTRLF30N"],
-        portal: false,
+        hideapps: true,
+        appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
+        appsimg: "group-apps-semwhats",
+        fidelizado: false,
+        price: {
+            amount: 67.99,
+            discount: 0,
+            perLine: 0
+        }
+    }),
+    new Plan({
+        region: regions.especiais,
+        internet: "5,5GB",
+        TJinternet: "5GB + 500MB de bônus*",
+        mainoffer: true,
+        appname: "vivocontrolekantoo",
+        SKU: ["VC00030", "VIVOCTRLF30N"],
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps-semwhats",
@@ -259,146 +311,6 @@ var plansControle = [
             perLine: 0
         }
     })
-
-    // new Plan({
-    //     region: regions.especiais,
-    //     //r4: false,
-    //     internet: "6,5GB",
-    //     critico: true,
-    //     TJinternet: "6GB + 500MB de bônus*",
-    //     mainoffer: true,
-    //     appname: "vivocontrolenba",
-    //     SKU: ["VC00031", "VIVOCTRLF29A"],
-    //
-    //     portal: false,
-    //     price: {
-    //         amount: 89.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     }
-    // }),
-    // new Plan({
-    //     region: regions.especiais,
-    //     //r4: false,
-    //     internet: "6GB",
-    //     critico: true,
-    //     TJinternet: "5,5GB + 500MB de bônus*",
-    //     mainoffer: true,
-    //     appname: "vivocontrolekantoo",
-    //     SKU: ["VC00031", "VIVOCTRLF30A"],
-    //
-    //     portal: false,
-    //     price: {
-    //         amount: 79.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     }
-    // }),
-    // new Plan({
-    //     region: regions.especiais,
-    //     //r4: false,
-    //     internet: "5GB",
-    //     critico: true,
-    //     TJinternet: "4,5GB + 500MB de bônus*",
-    //     mainoffer: true,
-    //     appname: "vivocontrolekantoo",
-    //     SKU: ["VC00031", "VIVOCTRLF28A"],
-    //
-    //     portal: false,
-    //     price: {
-    //         amount: 64.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     }
-    // }),
-    // new Plan({
-    //     region: regions.especiais,
-    //     //r4: false,
-    //     internet: "4GB",
-    //     critico: true,
-    //     TJinternet: "3,5GB + 500MB de bônus*",
-    //     mainoffer: true,
-    //     appname: "vivocontrolegoread",
-    //     SKU: ["VC00029", "VIVOCTRLF27A"],
-    //
-    //     portal: false,
-    //     price: {
-    //         amount: 49.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     },
-    //     linkCTA: ["Contratar", "https://lojaonline.vivo.com.br/vivostorefront/bundle/view-plans/1?userActionPlanOption=newPlanAcquisition&platform=CONTROLE"]
-    // })
-
-    // r4 - santa catarina
-    // new Plan({
-    //     region: regions.sc,
-    //     internet: '6GB',
-    //     //r4: false,
-    //     critico: true,
-    //     TJinternet: '5,5GB + 500MB de bônus*',
-    //     mainoffer: true,
-    //     SKU: [''],
-    //
-    //     portal: false,
-    //     appname: "vivocontrolenba",
-    //     price: {
-    //         amount: 76.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     }
-    // }),
-    // new Plan({
-    //     region: regions.sc,
-    //     internet: '6GB',
-    //     //r4: false,
-    //     critico: true,
-    //     TJinternet: '5,5GB + 500MB de bônus*',
-    //     mainoffer: true,
-    //     SKU: [''],
-    //
-    //     portal: false,
-    //     appname: "vivocontrolekantoo",
-    //     price: {
-    //         amount: 76.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     }
-    // }),
-    // new Plan({
-    //     region: regions.sc,
-    //     internet: '5GB',
-    //     //r4: false,
-    //     critico: true,
-    //     TJinternet: '4,5GB + 500MB de bônus*',
-    //     mainoffer: true,
-    //     SKU: [''],
-    //
-    //     portal: false,
-    //     appname: "vivocontrolekantoo",
-    //     price: {
-    //         amount: 61.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     }
-    // }),
-    // new Plan({
-    //     region: regions.sc,
-    //     internet: '4GB',
-    //     //r4: false,
-    //     critico: true,
-    //     TJinternet: '3,5GB + 500MB de bônus*',
-    //     mainoffer: true,
-    //     SKU: ['VIVOCTRLF26N','VIVOCTRLF26A'],
-    //
-    //     portal: false,
-    //     appname: "vivocontrolegoread",
-    //     price: {
-    //         amount: 46.99,
-    //         discount: 0,
-    //         perLine: 0
-    //     },
-    // })
 ];
 
 plansControle = new RegionItems(plansControle);
@@ -769,6 +681,14 @@ class Regionalization {
 
         $(".item-plan").remove();
 
+        if (currentDDD == 62 || currentDDD == 81 || currentDDD == 87) {
+            $(".nacional").hide();
+            $(".nao-nacional").show();
+        } else {
+            $(".nacional").show();
+            $(".nao-nacional").hide();
+        }
+
         currentPlans.map(function(plano, index) {
             var prices = `${plano.price.amount}`.split(".");
             var linkPlan = plano.SKU[1];
@@ -787,6 +707,7 @@ class Regionalization {
                             <p><strong>Apps ilimitados</strong><br/>
                                 <img class="apps-ilimitados" src="img/icon/icon-${plano.appsimg}.png" />
                             </p>
+                            <p><strong>Ligações ilimitadas</strong> para qualquer operadora do Brasil</p>
                             ${plano.hideapps ? `` : `<p><strong>Apps inclusos:</strong> ${plano.appsText}</p>`}
                         </div>
                         <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
@@ -802,17 +723,19 @@ class Regionalization {
                     </div>
                 `);
             }
-            $(".inner-planos.nao-fidelizado, .inner-planos-mobile.nao-fidelizado").append(`
+            if (!plano.fidelizado) {
+                $(".inner-planos.nao-fidelizado, .inner-planos-mobile.nao-fidelizado").append(`
                 <div class="item-plan">
                     <div class="quantidade-plan">
-                        <p class="quantidade-plan--big-text">${plano.internetnaofiel}</p>
-                        <p>${plano.TJinternetnaofiel}</p>
+                        <p class="quantidade-plan--big-text">${plano.internet}</p>
+                        <p>${plano.TJinternet}</p>
                     </div>
                     <div class="info-plan">
                         <p><strong>Apps ilimitados</strong><br/>
                             <img class="apps-ilimitados" src="img/icon/icon-${plano.appsimg}.png" />
                         </p>
-                        ${plano.hideapps ? `` : `<p><strong>Apps inclusos:</strong> ${plano.appsTextnaofiel}</p>`}
+                        <p><strong>Ligações ilimitadas</strong> para qualquer operadora do Brasil</p>
+                        ${plano.hideapps ? `` : `<p><strong>Apps inclusos:</strong> ${plano.appsText}</p>`}
                     </div>
                     <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
                     <div class="precio-plan">
@@ -826,6 +749,7 @@ class Regionalization {
                     <a class="informacoes" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                 </div>
             `);
+            }
 
             if (currentDDD == 62 || currentDDD == 81 || currentDDD == 87) {
                 $(".linkappsinclusos").remove();

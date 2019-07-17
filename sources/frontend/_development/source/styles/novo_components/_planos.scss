@@ -32,6 +32,13 @@
             text-align: center;
         }
 
+        h2 {
+            display: none;
+            &.-show {
+                display: inline-block;
+            }
+        }
+
         .tabs__header {
             font-size: 16px;
             display: flex;

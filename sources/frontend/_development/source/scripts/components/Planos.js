@@ -32,7 +32,9 @@ class Planos {
             $(".tabs__option").removeClass("-active");
             $(this).addClass("-active");
 
+            $(".container_planos h2").removeClass("-show");
             $(".tab__content").removeClass("-show");
+            $(".container_planos h2[data-aba='" + target + "']").addClass("-show");
             $(".tab__content[data-aba='" + target + "']").addClass("-show");
         });
     }
