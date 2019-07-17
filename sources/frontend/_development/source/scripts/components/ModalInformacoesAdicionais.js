@@ -115,7 +115,7 @@ class ModalnformacoesAdicionais {
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/consumo/groups/public/documents/documentopw/contrib_255754.pdf" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
                     Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
@@ -168,7 +168,7 @@ class ModalnformacoesAdicionais {
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/consumo/groups/public/documents/documentopw/contrib_255754.pdf" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
                     Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
@@ -223,7 +223,7 @@ class ModalnformacoesAdicionais {
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/consumo/groups/public/documents/documentopw/contrib_255754.pdf" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
                     Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
