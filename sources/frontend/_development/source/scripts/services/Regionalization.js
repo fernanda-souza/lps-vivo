@@ -142,7 +142,7 @@ var plansControle = [
         TJinternet: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
-        SKU: ["VC00031", "VIVOCTRLF29N"],
+        SKU: ["VC00031", "VIVOCTRLF45N"],
         hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync e NBA",
         appsTextnaofiel: "GoRead, Vivo Cloud Sync",
@@ -160,7 +160,7 @@ var plansControle = [
         TJinternet: "5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF30N"],
+        SKU: ["VC00030", "VIVOCTRLF46N"],
         hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsTextnaofiel: "GoRead, Vivo Cloud Sync, NBA",
@@ -178,9 +178,9 @@ var plansControle = [
         TJinternet: "3,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
-        SKU: ["VC00031", "VIVOCTRLF29N"],
+        SKU: ["VC00031", "VIVOCTRLF49N"],
         hideapps: false,
-        appsText: "GoRead, Vivo Cloud Sync e NBA",
+        appsText: "GoRead, Vivo Cloud Sync",
         appsTextnaofiel: "GoRead, Vivo Cloud Sync",
         appsimg: "group-apps",
         fidelizado: false,
@@ -196,9 +196,9 @@ var plansControle = [
         TJinternet: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF30N"],
+        SKU: ["VC00030", "VIVOCTRLF50N"],
         hideapps: false,
-        appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
+        appsText: "GoRead, Vivo Cloud Sync, NBA",
         appsTextnaofiel: "GoRead, Vivo Cloud Sync, NBA",
         appsimg: "group-apps",
         fidelizado: false,
@@ -214,7 +214,7 @@ var plansControle = [
         TJinternet: "5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF30N"],
+        SKU: ["VC00030", "VIVOCTRLF51N"],
         hideapps: false,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps",
@@ -232,13 +232,13 @@ var plansControle = [
         TJinternet: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
-        SKU: ["VC00031", "VIVOCTRLF29N"],
+        SKU: ["VC00031", "VIVOCTRLF53N"],
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync e NBA",
         appsimg: "group-apps-semwhats",
         fidelizado: true,
         price: {
-            amount: 52.99,
+            amount: 54.99,
             discount: 0,
             perLine: 0
         }
@@ -249,13 +249,13 @@ var plansControle = [
         TJinternet: "5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF30N"],
+        SKU: ["VC00030", "VIVOCTRLF54N"],
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps-semwhats",
         fidelizado: true,
         price: {
-            amount: 67.99,
+            amount: 69.99,
             discount: 0,
             perLine: 0
         }
@@ -266,13 +266,13 @@ var plansControle = [
         TJinternet: "3,5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolenba",
-        SKU: ["VC00031", "VIVOCTRLF29N"],
+        SKU: ["VC00031", "VIVOCTRLF57N"],
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync e NBA",
         appsimg: "group-apps-semwhats",
         fidelizado: false,
         price: {
-            amount: 52.99,
+            amount: 54.99,
             discount: 0,
             perLine: 0
         }
@@ -283,13 +283,13 @@ var plansControle = [
         TJinternet: "4GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF30N"],
+        SKU: ["VC00030", "VIVOCTRLF58N"],
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps-semwhats",
         fidelizado: false,
         price: {
-            amount: 67.99,
+            amount: 54.99,
             discount: 0,
             perLine: 0
         }
@@ -300,13 +300,13 @@ var plansControle = [
         TJinternet: "5GB + 500MB de bônus*",
         mainoffer: true,
         appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF30N"],
+        SKU: ["VC00030", "VIVOCTRLF59N"],
         hideapps: true,
         appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
         appsimg: "group-apps-semwhats",
         fidelizado: false,
         price: {
-            amount: 82.99,
+            amount: 69.99,
             discount: 0,
             perLine: 0
         }
@@ -681,12 +681,15 @@ class Regionalization {
 
         $(".item-plan").remove();
 
-        if (currentDDD == 62 || currentDDD == 81 || currentDDD == 87) {
+        if (currentDDD == 81 || currentDDD == 87) {
+            $(".lp_controle_planos").removeAttr("style")
             $(".nacional").hide();
             $(".nao-nacional").show();
+            $(".promo-icons-wrap").find("img").attr("src", "img/groups-icons_apps_pernambuco.png")
         } else {
             $(".nacional").show();
             $(".nao-nacional").hide();
+            $(".lp_controle_planos").removeAttr("style")
         }
 
         currentPlans.map(function(plano, index) {
@@ -751,7 +754,7 @@ class Regionalization {
             `);
             }
 
-            if (currentDDD == 62 || currentDDD == 81 || currentDDD == 87) {
+            if (currentDDD == 81 || currentDDD == 87) {
                 $(".linkappsinclusos").remove();
             }
 
