@@ -457,6 +457,10 @@
                     margin-bottom: 0;
                 }
 
+                @media(max-width: 475px) and (min-width: 320px){
+                    margin-top: 165px;
+                }
+
                 .banner-first-block {
                     color: #670099;
                     width: 100%;
@@ -579,7 +583,7 @@
                     display: flex;
                     align-items: center;
                     padding-bottom: 37px;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
                     margin-left: -13px;
 
                     @include desktop {
@@ -610,8 +614,9 @@
                             margin-right: 14px;
 
                             @include mobile {
-                                height: 40px;
                                 margin-right: 5px;
+                                width: auto;
+                                height: 35px;
                             }
                         }
 
@@ -741,16 +746,16 @@
                                 letter-spacing: 0px;
 
                                 @include mobile {
-                                    font-size: 22px;
-                                    margin-top: 11px;
-                                    margin-left: 10px;
+                                    font-size: 11px;
+                                    margin-top: 29px;
+                                    margin-left: 6px;
                                     margin-right: -16px;
                                 }
                                 span {
-                                    font-size: 30px;
+                                    font-size: 23px;
                                     font-family: "ITCOfficinaSerifBookRegular";
-                                    margin-top: -13px;
-                                    margin-left: 3px;
+                                    margin-top: -10px;
+                                    margin-left: 4px;
                                 }
                             }
 
@@ -763,9 +768,9 @@
                                 letter-spacing: -3px;
 
                                 @include mobile {
-                                    font-size: 68px;
-                                    margin-top: 0px;
-                                    margin-left: 14px;
+                                    font-size: 53px;
+                                    margin-top: -10px;
+                                    margin-left: 18px;
                                 }
                             }
 
@@ -779,10 +784,9 @@
                                 line-height: 40px;
 
                                 @include mobile {
-                                    margin-top: -9px;
-                                    font-size: 40px !important;
+                                    font-size: 35px !important;
                                     margin-left: 3px;
-                                    margin-top: 11px;
+                                    margin-top: -10px;
                                     letter-spacing: -2px;
                                 }
                             }
@@ -795,10 +799,9 @@
 
                                 @include mobile {
                                     font-size: 16px !important;
-
-                                    margin-top: 47px !important;
-
+                                    margin-top: 30px !important;
                                     margin-left: -31px !important;
+                                    letter-spacing: 0px;
                                 }
                             }
                         }
@@ -820,7 +823,7 @@
                             @include mobile {
                                 margin-left: 24px;
                                 font-size: 14px;
-                                margin-top: -11px;
+                                margin-top: 5px;
                                 margin-right: -10px;
                             }
                         }

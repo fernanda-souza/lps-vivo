@@ -692,6 +692,8 @@ class Regionalization {
             $(".lp_controle_planos").removeAttr("style")
         }
 
+        $(".container_planos").removeAttr("style")
+
         currentPlans.map(function(plano, index) {
             var prices = `${plano.price.amount}`.split(".");
             var linkPlan = plano.SKU[1];
