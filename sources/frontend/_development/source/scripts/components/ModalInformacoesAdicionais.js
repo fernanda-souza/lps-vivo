@@ -100,22 +100,22 @@ class ModalnformacoesAdicionais {
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238924" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_120711" target="_blank">
                     Pacote 100min Outras Operadoras
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238925" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_101488" target="_blank">
                     Pacote Vivo Internet Noite
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238926" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_101487" target="_blank">
                     Pacote Vivo Internet Fim de Semana
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
                     Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
@@ -146,28 +146,29 @@ class ModalnformacoesAdicionais {
 
             $(".tab__content[data-main-content=3]").html(`<ul>
             ${regulamento}
+            
             <li>
                 <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238923" target="_blank">
                     Pacote Internet 150MB e 400MB
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238924" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_120711" target="_blank">
                     Pacote 100min Outras Operadoras
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238925" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_101488" target="_blank">
                     Pacote Vivo Internet Noite
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238926" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_101487" target="_blank">
                     Pacote Vivo Internet Fim de Semana
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
                     Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
@@ -207,22 +208,22 @@ class ModalnformacoesAdicionais {
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238924" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_120711" target="_blank">
                     Pacote 100min Outras Operadoras
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238925" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_101488" target="_blank">
                     Pacote Vivo Internet Noite
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238926" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_101487" target="_blank">
                     Pacote Vivo Internet Fim de Semana
                 </a>
             </li>
             <li>
-                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_238927" target="_blank">
+                <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
                     Pacote Vivo Gigas para Redes Sociais
                 </a>
             </li>
