@@ -747,7 +747,7 @@ class Regionalization {
                         <p class="precio-plan--big-text">R$ ${prices[0]}</p>
                         <p>,${prices[1]} <span>/mês</span></p>
                     </div>
-                    <p class="disclaimer">Permanência em 12 meses</p>   
+                    <p class="disclaimer"></p>   
                     <div class="assine">
                         <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
                     </div>
