@@ -45,9 +45,11 @@
         }
 
         .tabs__option {
-            padding: 12px 30px;
+            padding: 12px 0;
+            text-align: center;
             border-bottom: 2px solid #ababab;
             height: 46px;
+            width: 138px;
             &.-active {
                 border-bottom: 4px solid #660099;
                 color: #660099;

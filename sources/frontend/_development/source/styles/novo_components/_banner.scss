@@ -77,9 +77,9 @@
             margin-bottom: 0;
             background-image: url(../img/bg_banner_mobile.jpg), linear-gradient(62deg, #7a1b85, #652488);
             height: 410px;
-            background-size: cover;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
+            align-items: baseline;
         }
 
         @media (max-width: 340px) {
@@ -92,6 +92,10 @@
 
         @media (min-width: 769px) and (max-width: 1024px) {
             background-position: -130px 0px;
+        }
+
+        br{
+            display: initial !important;
         }
 
         &__inner {
@@ -109,13 +113,15 @@
 
             @include mobile {
                 flex-direction: column;
-                height: 385px;
+                margin: 0;
+
+                &:first-child {
+                    padding: 0 20px;
+                }
+                
             }
 
             @media screen and (max-width: 767px) {
-                &:first-child {
-                    padding: 30px 30px 15px !important;
-                }
 
                 h2 {
                     margin-top: 0;
@@ -442,12 +448,13 @@
 
                 @include mobile {
                     width: 100%;
-                    margin: 0px;
-                    padding: 30px;
+                    padding: 0 15px;
                     flex-direction: inherit;
                     align-items: flex-start;
                     width: 375px;
                     margin: auto;
+                    margin-top: 130px;
+                    margin-bottom: 0;
                 }
 
                 .banner-first-block {
@@ -562,7 +569,7 @@
                 }
 
                 @media (max-width: 340px) {
-                    margin: -24px 5px 0 5px;
+                    margin: -44px 5px 0 5px;
                 }
 
                 .banner-first-block {
@@ -653,7 +660,7 @@
                                 color: #fc9900;
 
                                 @include mobile {
-                                    font-size: 40px;
+                                    font-size: 31px;
                                     margin-top: 0px;
                                 }
                             }
