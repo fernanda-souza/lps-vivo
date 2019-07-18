@@ -238,7 +238,7 @@ var plansControle = [
         appsimg: "group-apps-semwhats",
         fidelizado: true,
         price: {
-            amount: 54.99,
+            amount: 52.99,
             discount: 0,
             perLine: 0
         }
@@ -255,7 +255,7 @@ var plansControle = [
         appsimg: "group-apps-semwhats",
         fidelizado: true,
         price: {
-            amount: 69.99,
+            amount: 67.99,
             discount: 0,
             perLine: 0
         }
@@ -272,7 +272,7 @@ var plansControle = [
         appsimg: "group-apps-semwhats",
         fidelizado: false,
         price: {
-            amount: 54.99,
+            amount: 52.99,
             discount: 0,
             perLine: 0
         }
@@ -289,7 +289,7 @@ var plansControle = [
         appsimg: "group-apps-semwhats",
         fidelizado: false,
         price: {
-            amount: 54.99,
+            amount: 67.99,
             discount: 0,
             perLine: 0
         }
@@ -306,7 +306,7 @@ var plansControle = [
         appsimg: "group-apps-semwhats",
         fidelizado: false,
         price: {
-            amount: 69.99,
+            amount: 82.99,
             discount: 0,
             perLine: 0
         }

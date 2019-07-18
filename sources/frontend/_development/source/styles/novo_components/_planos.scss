@@ -11,16 +11,25 @@
 .lp_controle_planos {
     position: relative;
 
+    @media(min-width: 1024px){
+        min-height: 330px;
+        margin-bottom: -90px;
+    }
+
     @include mobile {
         padding: 40px 0px;
-        min-height: 360px;
+        min-height: 330px;
     }
 
     .container_planos {
         position: relative;
-
+        min-height: 760px;
         @include desktop {
             margin-top: 45px;
+        }
+
+        br{
+            display: initial !important;
         }
 
         @include mobile {
@@ -42,6 +51,8 @@
         .tabs__header {
             font-size: 16px;
             display: flex;
+            position: relative;
+            z-index: 11;
         }
 
         .tabs__option {
@@ -56,24 +67,50 @@
             }
         }
         .tab__content {
-            display: none;
+        
+            @media(max-width: 767px){
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 110px;
+                width: 100%;
+            }
+
+            @media(min-width:768px){
+                display: none;
+            }
+            
             &.-show {
-                display: flex;
+                
+                @media(max-width: 767px){
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                @media(min-width:768px){
+                    display: flex;
+                }
             }
             .inner-planos {
                 width: 100%;
             }
-        }
 
+
+        }
+        .arroz{
+            width: 244px;
+        }
         .inner-planos-mobile {
             display: block;
             margin: 60px -30px;
             margin-left: 0px !important;
-
+            width: 100%;
             .quantidade-plan {
                 height: 88px;
                 // background-image: linear-gradient(to right, #A42195, #B22895);
             }
+
+            
 
             // cores
             .item-plan:nth-child(1) {
@@ -124,8 +161,10 @@
                 margin: 0px;
                 margin-bottom: 10px;
 
-                &:nth-child(1) {
-                    margin-left: 30px;
+                @media(min-width: 768px){
+                    &:nth-child(1) {
+                        margin-left: 30px;
+                    }
                 }
             }
 
@@ -344,6 +383,13 @@
             margin: 32px auto;
             display: block;
             text-align: center;
+
+            @media(max-width: 767px){
+                position: absolute;
+                bottom: -65px;
+                width: 100%;
+                left: 0;
+            }
 
             a {
                 color: #888888;

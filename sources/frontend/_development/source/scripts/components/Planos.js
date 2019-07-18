@@ -4,7 +4,7 @@ class Planos {
         const slickConfig = {
             dots: true,
             infinite: false,
-            slidesToShow: 1.2,
+            slidesToShow: 1.1,
             slidesToScroll: 1,
             draggable: true,
             centerMode: false,
