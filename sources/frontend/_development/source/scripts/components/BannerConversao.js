@@ -2,7 +2,6 @@ import Banner from "./Banner";
 import Helpers from "../services/Helpers";
 
 class BannerConversao extends Banner {
-
     constructor($holder) {
         super();
         this.holder = $holder;
@@ -10,7 +9,6 @@ class BannerConversao extends Banner {
     }
 
     setupTemplate() {
-
         var htmlCode = `
         <div class="banner-item banner-conversao4">
 
@@ -21,9 +19,7 @@ class BannerConversao extends Banner {
                     <span>&nbsp;</span>
                 </div>
 
-                <h2>PREÇO FIXO E A MAIOR COBERTURA
-                <br/>DE INTERNET MÓVEL DO BRASIL.</h2>
-
+                <h2>Preço fixo e a <strong>maior cobertura</strong><br />de internet móvel do Brasil.</h2>
 
             </div>
 
@@ -45,7 +41,7 @@ class BannerConversao extends Banner {
                         <span class="partir">Por apenas</span>
                         <div class="preco">
                             <span class="preco">R$</span>
-                            <span class="preco">49,</span>
+                            <span class="preco preco-regional">R$</span>
                             <span class="subprice">99</span> 
                             <span> <span style="font-family:Arial;">/</span>mês </span>
                         </div>
@@ -57,20 +53,17 @@ class BannerConversao extends Banner {
                             ASSINE JÁ
                         </a>
                         `;
-                       if(this.helper.isMobile() || this.helper.isTablet())
-                       {
-                        htmlCode+=`<div class="banner-bottom-text">
+        if (this.helper.isMobile() || this.helper.isTablet()) {
+            htmlCode += `<div class="banner-bottom-text">
                                         <a style="color:#fff;text-decoration:none;" href="tel:0800101515">OU LIGUE 0800 10 1515</a>
                                    </div>`;
-                       }
-                       else
-                       {
-                        htmlCode+=`<div class="banner-bottom-text">
+        } else {
+            htmlCode += `<div class="banner-bottom-text">
                                         OU LIGUE 0800 10 1515
                                    </div>`;
-                       }
-                        
-                htmlCode+=`</div>
+        }
+
+        htmlCode += `</div>
 
                 </div>
             </div>
@@ -80,7 +73,6 @@ class BannerConversao extends Banner {
         this.templateHTML = $(htmlCode);
         this.holder.html(this.templateHTML);
     }
-
 }
 
 export default BannerConversao;

@@ -1,4 +1,5 @@
-.informacoes, .informacoes2 {
+.informacoes,
+.informacoes2 {
     cursor: pointer;
 }
 
@@ -29,7 +30,7 @@
             width: 90%;
         }
 
-        strong{
+        strong {
             font-family: "ITCOfficinaSerifBold";
             font-weight: normal !important;
         }
@@ -37,10 +38,10 @@
         .modal-content {
             border-radius: 5px;
             background-color: #333;
-            transition: all .4s ease-in-out;
+            transition: all 0.4s ease-in-out;
             transform: translateX(200%);
 
-            &.active{
+            &.active {
                 transform: translateX(0%);
             }
 
@@ -62,7 +63,6 @@
                     @include border-radius(50%);
                     margin: -43px auto 0 auto;
                 }
-
 
                 .close {
                     margin-top: 3px;
@@ -114,6 +114,7 @@
 
     .modal-dialog {
         width: 90%;
+        max-width: 1024px;
 
         .modal-content {
             background-color: white;
@@ -135,8 +136,8 @@
                     margin-top: 0;
                     display: block;
                     cursor: pointer;
-                    -webkit-transition: -webkit-transform .5s ease-in-out;
-                    transition: transform .5s ease-in-out;
+                    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+                    transition: transform 0.5s ease-in-out;
 
                     &:after,
                     &:before {
@@ -180,7 +181,6 @@
             }
 
             .modal-body {
-
                 .modal-content {
                     width: 100%;
 
@@ -214,7 +214,7 @@
                 }
 
                 .tab__content {
-                    padding: 15px;
+                    padding: 30px;
                     font-size: 16px;
                     display: block;
                     border: 1px solid #ededed;

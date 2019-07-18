@@ -8,25 +8,22 @@ import Compass from "./components/Compass";
 import ServicesCards from "./components/ServicesCards";
 import ModalVivi from "./components/ModalVivi";
 // import ControlParameter from "./components/ControlParameter";
-import Helpers from './services/Helpers';
-import BussolaInput from './components/bussolaInput';
-import Gigas from './components/Gigas';
-import Planos from './components/Planos';
-import Aplicativos from './components/Aplicativos';
-import MenuMobile from './components/MenuMobile';
-import QueryStringHandler from './components/QueryStringHandler';
+import Helpers from "./services/Helpers";
+import BussolaInput from "./components/bussolaInput";
+import Gigas from "./components/Gigas";
+import Planos from "./components/Planos";
+// import Aplicativos from "./components/Aplicativos";
+import MenuMobile from "./components/MenuMobile";
 
 import DataLayer from "./services/DataLayer";
-//import BannerConsideracao from "./components/BannerConsideracao";
 import ChatController from "./components/ChatController";
 
 var helpers = new Helpers();
 window.regionalizationFirstTime = true;
-require('./services/ddds');
+require("./services/ddds");
 require("./services/drag");
 
 class Main {
-
     /**
      * Get Variables from URL.
      */
@@ -39,20 +36,26 @@ class Main {
                 return pair[1];
             }
         }
-        return (false);
+        return false;
     }
 
     /**
      * Defines the location where the "bussola_onpage" will be created.
      */
     insertBussola() {
-        let local = this.getQueryVariable('compass-position');
+        let local = this.getQueryVariable("compass-position");
         let html = "<div class='bussola_onpage'></div>";
 
-        switch(local) {
-            case 'top': $('#bussola-placeholder-top').html(html); break;
-            case 'bottom': $('#bussola-placeholder-bottom').html(html);  break;
-            default: $('#bussola-placeholder-top').html(html);  break;
+        switch (local) {
+            case "top":
+                $("#bussola-placeholder-top").html(html);
+                break;
+            case "bottom":
+                $("#bussola-placeholder-bottom").html(html);
+                break;
+            default:
+                $("#bussola-placeholder-top").html(html);
+                break;
         }
 
         new Compass();
@@ -61,7 +64,6 @@ class Main {
     }
 
     constructor() {
-
         new MobileNav();
         new Header();
         new Features();
@@ -69,48 +71,45 @@ class Main {
         new ServicesCards();
         new ModalVivi();
         new Gigas();
-        new Aplicativos();
+        // new Aplicativos();
         new Planos();
         new MenuMobile();
         new ChatController();
 
-        let querystring  = new QueryStringHandler();
-        querystring.parseURLParam();
-        
+        // let querystring  = new QueryStringHandler();
+        // querystring.parseURLParam();
 
         this.insertBussola();
 
         //dataLayer page-init
         this.datalayer = new DataLayer();
-        this.datalayer.sendDataLayerInit(
-            'page-init',
-            ( this.bussolaInput.getcookie_estado ? this.bussolaInput.getcookie_estado.toLowerCase() : undefined),
-            ( this.bussolaInput.getcookie_cidade ? helpers.stringSanitize( this.bussolaInput.getcookie_cidade ) : undefined),
-            ( this.bussolaInput.getcookie_ddd ? this.bussolaInput.getcookie_ddd : undefined),
-            ( helpers.getUrlParameter( 'id_origem_vivo' ) ? helpers.getUrlParameter( 'id_origem_vivo' ) : undefined )
-        );
+        this.datalayer.sendDataLayerInit("page-init", this.bussolaInput.getcookie_estado ? this.bussolaInput.getcookie_estado.toLowerCase() : undefined, this.bussolaInput.getcookie_cidade ? helpers.stringSanitize(this.bussolaInput.getcookie_cidade) : undefined, this.bussolaInput.getcookie_ddd ? this.bussolaInput.getcookie_ddd : undefined, helpers.getUrlParameter("id_origem_vivo") ? helpers.getUrlParameter("id_origem_vivo") : undefined);
 
-        $('[data-target="link-banner-assine-ja"]').click(function(){
-            if($(this).attr('href') == undefined)
-                $('html, body').animate({
-                    scrollTop: $("#planos").offset().top - $("#header").height() + ( ($(window).width() > 768) ? 100 : 0 )
-                }, 200, 'linear');
-                $("#autocomplete").click();
-                $("#autocomplete").focus();
-        })
+        $('[data-target="link-banner-assine-ja"]').click(function() {
+            if ($(this).attr("href") == undefined)
+                $("html, body").animate(
+                    {
+                        scrollTop: $("#planos").offset().top - $("#header").height() + ($(window).width() > 768 ? 100 : 0)
+                    },
+                    200,
+                    "linear"
+                );
+            $("#autocomplete").click();
+            $("#autocomplete").focus();
+        });
     }
 }
 
-$(window).on('load', function () {
+$(window).on("load", function() {
     $("img.lazyload").lazyload();
     if (helpers.isDesktop()) {
-        $('#btnbackbuss').attr('id', 'btn_cidade');
+        $("#btnbackbuss").attr("id", "btn_cidade");
     } else {
         // $('#autocomplete_input').attr('id', 'autocomplete');
     }
-    
+
     new Main();
-})
+});
 
 // window.enableMobileChat = function() {
 //     if ($(window).width() < 768) {
@@ -122,23 +121,23 @@ $(window).on('load', function () {
 
 let openModal = $(".btnnull");
 //openModal.show();
-openModal.click(function (e) {
+openModal.click(function(e) {
     e.preventDefault();
     $("#modalChatvivi").fadeIn();
 });
 
 let closeModal = $(".btn-fechar");
-closeModal.click(function (e) {
+closeModal.click(function(e) {
     e.preventDefault();
-    $("#modalChatvivi, #modalChatdireto").fadeOut( function(){
-        setTimeout(function(){ 
-            $("#modalChatdireto .box iframe").remove() 
+    $("#modalChatvivi, #modalChatdireto").fadeOut(function() {
+        setTimeout(function() {
+            $("#modalChatdireto .box iframe").remove();
         }, 500);
     });
 });
 
 let openChat = $("#box-btn_right");
-openChat.click(function (e) {
+openChat.click(function(e) {
     // e.preventDefault();
     $("#modalChatvivi").fadeOut("slow");
     $("#web").trigger("click");
@@ -146,13 +145,13 @@ openChat.click(function (e) {
 
 function closeModal() {
     let closeModal = $(".btn-fechar");
-    closeModal.click(function (e) {
+    closeModal.click(function(e) {
         e.preventDefault();
     });
 }
 
 let openChatLeft = $("#box-btn_left");
-openChatLeft.click(function (e) {
+openChatLeft.click(function(e) {
     e.preventDefault();
     var linkerParam;
     ga(function() {
@@ -161,7 +160,7 @@ openChatLeft.click(function (e) {
             linkerParam = trackers[0].get("linkerParam");
         }
     });
-    $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>')
+    $("#modalChatdireto .box").append('<iframe src="https://gvt.custhelp.com/app/chat/chat_launch_movel/p/167" frameborder="0" height="600" width="320" data-hj-ignore-attributes=""></iframe>');
     $("#modalChatvivi").fadeOut("slow");
     $("#modalChatdireto").fadeIn("slow");
 });
