@@ -19,7 +19,7 @@ class BannerConversao extends Banner {
                     <span>&nbsp;</span>
                 </div>
 
-                <h2>Preço fixo e a <strong>maior cobertura</strong><br />de internet móvel do Brasil.</h2>
+                <h2>A <strong>maior cobertura</strong><br />de internet móvel do Brasil.</h2>
 
             </div>
 
