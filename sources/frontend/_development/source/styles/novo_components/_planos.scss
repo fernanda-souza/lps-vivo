@@ -28,6 +28,10 @@
             margin-top: 45px;
         }
 
+        &.pernambuco{
+            min-height: 650px
+        }
+
         br{
             display: initial !important;
         }
@@ -97,6 +101,19 @@
             }
             .inner-planos {
                 width: 100%;
+
+                .blur-gb {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0px;
+                    bottom: 0;
+                    background-image: url(../img/novo/planos_blur_bg.png);
+                    background-size: 1024px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
             }
 
 
@@ -177,7 +194,7 @@
             }
 
             .slick-dots {
-                bottom: -45px;
+                bottom: -32px;
             }
         }
 
@@ -219,6 +236,8 @@
             background-color: white;
             box-shadow: 0px 0px 16px 0 rgba(0, 0, 0, 0.1);
             padding-bottom: 17px;
+
+            
 
             @include mobile {
                 width: 224px;

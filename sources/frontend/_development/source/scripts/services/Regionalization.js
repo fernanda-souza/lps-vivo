@@ -685,13 +685,14 @@ class Regionalization {
             $(".lp_controle_planos").removeAttr("style")
             $(".nacional").hide();
             $(".nao-nacional").show();
-            $(".promo-icons-wrap").find("img").attr("src", "img/groups-icons_apps_pernambuco.png")
+            $(".promo-icons-wrap").find("img").attr("src", "img/groups-icons_apps_pernambuco.png");
         } else {
             $(".nacional").show();
             $(".nao-nacional").hide();
             $(".lp_controle_planos").removeAttr("style")
         }
-
+        $(".blur-gb").hide();
+        $(".on-load").removeAttr("style")
         $(".container_planos").removeAttr("style")
 
         currentPlans.map(function(plano, index) {
@@ -757,7 +758,11 @@ class Regionalization {
             }
 
             if (currentDDD == 81 || currentDDD == 87) {
-                $(".linkappsinclusos").remove();
+                $(".linkappsinclusos").hide();
+                $(".container_planos").addClass("pernambuco")
+            }else{
+                $(".linkappsinclusos").show();
+                $(".container_planos").removeClass("pernambuco")
             }
 
             $(".item-plan")
