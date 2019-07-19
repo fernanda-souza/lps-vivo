@@ -23,7 +23,7 @@
   min-width: 380px;
   background: url($path-img + 'Modal_Migracao_Chat_01.png') 10px top;
   background-size: contain;
-  z-index: 6;
+  z-index: 30;
 
   @include minWidth(426){
     display: none !important;
