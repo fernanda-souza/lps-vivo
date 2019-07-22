@@ -9,10 +9,13 @@
   - Executar gulp prod-ananke antes de subir.
 
 ### Versão
-- **Publicacao_20190718_Controle_SubstituiçãoRegulamentos** - (18/07/2019)
+- **Publicacao_20190722_Controle_TrocaPortfolio** - (22/07/2019)
 
 ### Release notes
-- **Publicacao_20190718_Controle_SubstituiçãoRegulamentos**
+- **Publicacao_20190722_Controle_TrocaPortfolio**
+   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6635
+
+- Publicacao_20190718_Controle_SubstituiçãoRegulamentos
    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6612
 
 - Publicacao_20190619_Controle_SEOTittleDescription
