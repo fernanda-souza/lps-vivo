@@ -740,7 +740,7 @@ class Regionalization {
                         <p><strong>Apps ilimitados</strong><br/>
                             <img class="apps-ilimitados" src="img/icon/icon-${plano.appsimg}.png" />
                         </p>
-                        <p><strong>Ligações ilimitadas</strong> para qualquer operadora do Brasil</p>
+                        <p><strong>Ligações ilimitadas</strong> Locais para todas as operadoras</p>
                         ${plano.hideapps ? `` : `<p><strong>Apps inclusos:</strong> ${plano.appsText}</p>`}
                     </div>
                     <a class="detalhes" href="" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="+beneficios">+ benefícios</a>
