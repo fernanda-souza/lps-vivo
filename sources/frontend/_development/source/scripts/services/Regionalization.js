@@ -662,7 +662,7 @@ class Regionalization {
         this.queryStringHandler = new QueryStringHandler();
         this.queryStringHandler.parseURLParam();
 
-        $("span.preco-regional").text(`${prices[0]}`);
+        $(".banner-price-value").text(`${prices[0]}`);
         // $('.subprice').text(prices[1]);
         if (currentPlans[0].internet == "") {
             $('[data-target="franquia"]').remove();

@@ -18,6 +18,32 @@
     }
 }
 
+.only-desk {
+    display: flex;
+    @include mobile {
+        display: none;
+    }
+}
+
+.only-mobile {
+    display: none;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.promo-icons-wrap2 {
+    img {
+        @include mobile {
+            height: 47px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        @media screen and (min-width: 400px) and (max-width: 475px) {
+            height: 57px;
+        }
+    }
+}
 .section-banner {
     position: relative;
     margin-top: 96px;
@@ -72,13 +98,13 @@
         flex-wrap: wrap;
 
         @include mobile {
-            min-height: 385px;
+            min-height: 530px;
             margin-top: 0;
             margin-bottom: 0;
-            background-image: url(../img/bg_banner_mobile.jpg), linear-gradient(62deg, #7a1b85, #652488);
+            background-image: url(../img/bg_banner_mobile.jpg), linear-gradient(62deg, #f3c266, #fc9900);
             height: 410px;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: 100% 100%;
             align-items: baseline;
         }
 
@@ -442,11 +468,19 @@
 
         &.banner-conversao4 {
             .banner-item__inner {
+                display: flex;
+                flex-direction: column;
+                &:first-child {
+                    width: 43%;
+                }
                 @media (min-width: 769px) and (max-width: 1024px) {
                     padding-left: 130px;
                 }
 
                 @include mobile {
+                    &:first-child {
+                        width: 100%;
+                    }
                     width: 100%;
                     padding: 0 15px;
                     flex-direction: inherit;
@@ -458,7 +492,7 @@
                 }
 
                 @media(max-width: 475px) and (min-width: 320px){
-                    margin-top: 165px;
+                    margin-top: 15px;
                 }
 
                 .banner-first-block {
@@ -466,16 +500,21 @@
                     width: 100%;
                     font-family: "VIVO";
 
+                    .logo {
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+
                     @include desktop {
                         margin-top: 0px;
                     }
 
                     @include mobile {
+                        display: flex;
                         width: 100%;
                         margin-top: 0px;
                         width: 100%;
-                        margin-top: -22px;
-                        margin-left: 40px;
                     }
 
                     span {
@@ -521,43 +560,204 @@
                     }
                 }
 
+                .banner-internet {
+                    flex-direction: row;
+                    display: flex;
+                    @include mobile {
+                        width: 100%;
+                        margin-top: 7px;
+                    }
+                    h2 {
+                        font-size: 75px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin: 0;
+                        letter-spacing: -5px;
+                        @include mobile {
+                            font-size: 38px;
+                            letter-spacing: -1px;
+                            width: 40%;
+                            margin-right: 10px;
+                        }
+                    }
+                    h3 {
+                        font-size: 33px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin: 0;
+                        line-height: 28px;
+                        margin: 13px 0 0 15px;
+                        @include mobile {
+                            font-size: 24px;
+                            margin: 0;
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .apenas {
+                    color: #FFF;
+                    font-size: 14px;
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    margin-top: 5px;
+                    @include mobile {
+                        width: 100%;
+                        margin-bottom: 7px;
+                    }
+                }
+                .banner-price {
+                    display: flex;
+                    flex-direction: row;
+                    transform: translateY(-18px);
+                    &-rs {
+                        color: #712383;
+                        font-size: 22px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin-top: 23px;
+                        @include mobile {
+                            font-size: 16px;
+                            margin-top: 18px;
+                        }
+                    }
+                    &-value {
+                        color: #712383;
+                        font-size: 85px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin-top: 6px;
+                        @include mobile {
+                            font-size: 56px;
+                        }
+                    }
+                    &-cents {
+                        color: #712383;
+                        font-size: 52px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin-top: 10px;
+                        @include mobile {
+                            font-size: 33px;
+                            margin-top: 14px;
+                        }
+                    }
+                    &-month {
+                        color: #712383;
+                        font-size: 27px;
+                        font-family: "ITCOfficinaSerifBold";
+                        align-self: flex-end;
+                        margin-bottom: 40px;
+                        @include mobile {
+                            font-size: 21px;
+                            margin-bottom: 23px;
+                        }
+                    }
+                    &-anual {
+                        color: #FFF;
+                        font-size: 14px;
+                        font-family: "Roboto";
+                        transform: translate(-115px, 63px);
+                        @include mobile {
+                            transform: translate(-80px, 48px); 
+                        }
+                    }
+                }
+
+                .banner-assine {
+                    display: flex;
+                    flex-direction: column;
+                    @include mobile {
+                        flex-direction: row;
+                        width: 100%;
+                    }
+                    a {
+                        color: #FFF;
+                        font-size: 18px;
+                        font-family: "Roboto";
+                        font-weight: bold;
+                        text-align: center;
+                        padding: 14px 90px;
+                        background: #609;
+                        border-radius: 5px;
+                        @include mobile {
+                            font-size: 16px;
+                            width: 80%;
+                            height: 100%;
+                            padding: 14px 10px;
+                        }
+                    }
+                    p {
+                        color: #FFF;
+                        text-align: center;
+                        font-size: 18px;
+                        font-family: "ITCOfficinaSerifBookRegular";
+                        margin-top: 10px;
+                        @include mobile {
+                            font-size: 16px;
+                            margin-left: 10px;
+                            width: 100%;
+                        }
+                        a {
+                            &:last-child {
+                                font-size: 18px;
+                                font-family: "ITCOfficinaSerifBold";
+                                background: none;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                .banner-separator {
+                    text-align: center;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    @include mobile {
+                        flex-direction: row;
+                        align-self: flex-start;
+                    }
+                    .separator {
+                        width: 2px;
+                        height: 190px;
+                        background: #F7BA4C;
+                        margin: 0;
+                        padding: 0;
+                        @include mobile {
+                            flex-direction: row;
+                            width: 73vw;
+                            height: 2px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
                 img {
                     max-height: 120px;
                 }
 
                 h2 {
-                    width: 100%;
                     font-family: "ITCOfficinaSerifBookRegular";
-                    margin-top: 162px;
-                    margin-left: -28px;
                     font-size: 26px;
-
+                    @include mobile {
+                        color: #FFF;
+                        font-size: 18px;
+                        font-family: 'ITCOfficinaSerifBold';
+                        width: 100%;
+                    }
                     strong {
                         font-family: "ITCOfficinaSerifBold";
-                    }
-
-                    @include mobile {
-                        font-size: 20px;
-                        margin-left: 0;
-                        margin-top: -23px;
-                        margin-bottom: 4px;
-                        padding-right: 10px;
-                    }
-
-                    @include desktop {
-                        margin-left: 56px;
                     }
                 }
             }
 
             .left {
-                width: 50%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 55%;
                 padding-left: 0px;
                 font-family: "ITCOfficinaSerifBookRegular";
-
-                @include desktop {
-                    padding-left: 68px;
-                }
+                transform: translateY(50px);
 
                 @include mobile {
                     width: 100%;
@@ -581,10 +781,18 @@
                     padding-left: 0px;
                     margin-top: 41px;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
+                    flex-direction: column;
                     padding-bottom: 37px;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
-                    margin-left: -13px;
+                    margin-left: 20px;
+
+                    .banner-promo-title {
+                        color: #FFF;
+                        font-size: 33px;
+                        font-family: 'ITCOfficinaSerifBold';
+                        margin-top: -30px;
+                        line-height: 29px;
+                    }
 
                     @include desktop {
                         width: 420px;
@@ -610,13 +818,13 @@
                         }
 
                         img {
-                            height: 45px;
+                            height: 65px;
                             margin-right: 14px;
 
                             @include mobile {
                                 margin-right: 5px;
-                                width: auto;
-                                height: 35px;
+                                width: 35px;
+                                height: 35px !important;
                             }
                         }
 
@@ -1006,10 +1214,7 @@
                 }
 
                 h2 {
-                    width: 100%;
                     font-family: "ITCOfficinaSerifBold";
-                    margin-top: 190px;
-                    margin-left: -28px;
                     font-size: 22px;
 
                     @media (max-width: 768px) {
