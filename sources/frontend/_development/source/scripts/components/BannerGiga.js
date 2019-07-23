@@ -43,7 +43,7 @@ class BannerGiga extends Banner {
                         <div class="separator"></div>
                     </div>
                     <div class="banner-first-block">
-                        <h2 class="banner-promo-title">Ligações ilimitadas.</h2>
+                        <h2 class="banner-promo-title">Ligações ilimitadas para todo o Brasil.</h2>
                     </div>
                 </div>
 

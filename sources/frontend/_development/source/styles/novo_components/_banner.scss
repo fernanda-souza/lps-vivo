@@ -98,7 +98,7 @@
         flex-wrap: wrap;
 
         @include mobile {
-            min-height: 530px;
+            min-height: 490px;
             margin-top: 0;
             margin-bottom: 0;
             background-image: url(../img/bg_banner_mobile.jpg), linear-gradient(62deg, #f3c266, #fc9900);
@@ -106,6 +106,10 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
             align-items: baseline;
+        }
+        
+        @media (max-width: 340px) {
+            min-height: 540px;
         }
 
         @media (max-width: 340px) {

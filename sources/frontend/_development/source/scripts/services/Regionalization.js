@@ -686,6 +686,7 @@ class Regionalization {
             $(".nacional").hide();
             $(".nao-nacional").show();
             $(".promo-icons-wrap").find("img").attr("src", "img/groups-icons_apps_pernambuco.png");
+            $(".promo-icons-wrap2").find("img").attr("src", "img/groups-icons_apps_pernambuco.png");
         } else {
             $(".nacional").show();
             $(".nao-nacional").hide();
