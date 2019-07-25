@@ -768,6 +768,8 @@ class Regionalization {
                 $(".linkappsinclusos").show();
                 $(".container_planos").removeClass("pernambuco");
             }
+            let modalInfo = new ModalInformacoesAdicionais();
+            modalInfo.setContent("anual");
 
             $(".item-plan")
                 .css("opacity", "1")
