@@ -682,18 +682,22 @@ class Regionalization {
         $(".item-plan").remove();
 
         if (currentDDD == 81 || currentDDD == 87) {
-            $(".lp_controle_planos").removeAttr("style")
+            $(".lp_controle_planos").removeAttr("style");
             $(".nacional").hide();
             $(".nao-nacional").show();
-            $(".promo-icons-wrap").find("img").attr("src", "img/groups-icons_apps_pernambuco.png");
+            $(".promo-icons-wrap")
+                .find("img")
+                .attr("src", "img/groups-icons_apps_pernambuco.png");
+            $(".lp_controle_conteudos").addClass("regional");
         } else {
             $(".nacional").show();
+            $(".lp_controle_conteudos").removeClass("regional");
             $(".nao-nacional").hide();
-            $(".lp_controle_planos").removeAttr("style")
+            $(".lp_controle_planos").removeAttr("style");
         }
         $(".blur-gb").hide();
-        $(".on-load").removeAttr("style")
-        $(".container_planos").removeAttr("style")
+        $(".on-load").removeAttr("style");
+        $(".container_planos").removeAttr("style");
 
         currentPlans.map(function(plano, index) {
             var prices = `${plano.price.amount}`.split(".");
@@ -759,10 +763,10 @@ class Regionalization {
 
             if (currentDDD == 81 || currentDDD == 87) {
                 $(".linkappsinclusos").hide();
-                $(".container_planos").addClass("pernambuco")
-            }else{
+                $(".container_planos").addClass("pernambuco");
+            } else {
                 $(".linkappsinclusos").show();
-                $(".container_planos").removeClass("pernambuco")
+                $(".container_planos").removeClass("pernambuco");
             }
 
             $(".item-plan")
@@ -789,8 +793,8 @@ class Regionalization {
         $(".informacoes").on("click", function(e) {
             e.preventDefault();
             let modalInfo = new ModalInformacoesAdicionais();
-            modalInfo.setContent( $(this).data("category") );
-            
+            modalInfo.setContent($(this).data("category"));
+
             modalInfo.showModal();
         });
 
