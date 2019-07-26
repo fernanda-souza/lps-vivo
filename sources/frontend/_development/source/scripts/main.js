@@ -12,7 +12,7 @@ import Helpers from "./services/Helpers";
 import BussolaInput from "./components/bussolaInput";
 import Gigas from "./components/Gigas";
 import Planos from "./components/Planos";
-// import Aplicativos from "./components/Aplicativos";
+import Aplicativos from "./components/Aplicativos";
 import MenuMobile from "./components/MenuMobile";
 
 import DataLayer from "./services/DataLayer";
@@ -71,7 +71,7 @@ class Main {
         new ServicesCards();
         new ModalVivi();
         new Gigas();
-        // new Aplicativos();
+        new Aplicativos();
         new Planos();
         new MenuMobile();
         new ChatController();
