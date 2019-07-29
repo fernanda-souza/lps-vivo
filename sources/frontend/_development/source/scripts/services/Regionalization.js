@@ -662,7 +662,7 @@ class Regionalization {
         this.queryStringHandler = new QueryStringHandler();
         this.queryStringHandler.parseURLParam();
 
-        $("span.preco-regional").text(`${prices[0]}`);
+        $(".banner-price-value").text(`${prices[0]}`);
         // $('.subprice').text(prices[1]);
         if (currentPlans[0].internet == "") {
             $('[data-target="franquia"]').remove();
@@ -688,7 +688,9 @@ class Regionalization {
             $(".promo-icons-wrap")
                 .find("img")
                 .attr("src", "img/groups-icons_apps_pernambuco.png");
-            $(".lp_controle_conteudos").addClass("regional");
+            $(".promo-icons-wrap2")
+                .find("img")
+                .attr("src", "img/groups-icons_apps_pernambuco.png");
         } else {
             $(".nacional").show();
             $(".lp_controle_conteudos").removeClass("regional");
