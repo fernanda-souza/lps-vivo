@@ -18,6 +18,32 @@
     }
 }
 
+.only-desk {
+    display: flex;
+    @include mobile {
+        display: none;
+    }
+}
+
+.only-mobile {
+    display: none;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.promo-icons-wrap2 {
+    img {
+        @include mobile {
+            height: 47px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        @media screen and (min-width: 400px) and (max-width: 475px) {
+            height: 57px;
+        }
+    }
+}
 .section-banner {
     position: relative;
     margin-top: 96px;
@@ -72,13 +98,11 @@
         flex-wrap: wrap;
 
         @include mobile {
-            min-height: 385px;
             margin-top: 0;
             margin-bottom: 0;
-            background-image: url(../img/bg_banner_mobile.jpg), linear-gradient(62deg, #7a1b85, #652488);
-            height: 410px;
+            background-image: url(../img/bg_banner_mobile.jpg), linear-gradient(62deg, #f3c266, #fc9900);
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: 100% 100%;
             align-items: baseline;
         }
 
@@ -94,7 +118,7 @@
             background-position: -130px 0px;
         }
 
-        br{
+        br {
             display: initial !important;
         }
 
@@ -106,8 +130,8 @@
             align-items: center;
             width: 50%;
             flex-wrap: wrap;
-            margin-top: 38px;
-            padding-left: 155px;
+            margin-top: 70px;
+            padding-left: 65px;
             align-items: baseline;
             align-items: flex-start;
 
@@ -118,11 +142,9 @@
                 &:first-child {
                     padding: 0 20px;
                 }
-                
             }
 
             @media screen and (max-width: 767px) {
-
                 h2 {
                     margin-top: 0;
                 }
@@ -441,12 +463,385 @@
         }
 
         &.banner-conversao4 {
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 15px;
+            @include desktop {
+                padding-bottom: 0px;
+                padding: 95px;
+                padding-left: 74px;
+            }
+            img {
+                max-width: 100%;
+            }
+            .banner-column {
+                &__one {
+                    @include mobile {
+                        width: 100%;
+                    }
+                    @include desktop {
+                        margin-right: 26px;
+                    }
+                    .banner-internet {
+                        flex-direction: row;
+                        display: flex;
+                        transform: translate(-3px, -25px);
+                        @include mobile {
+                            width: 100%;
+                            margin-top: 7px;
+                            transform: translate(12px, -9px);
+                            margin-bottom: -10px;
+                        }
+                        h2 {
+                            margin: 0;
+                            margin-right: 10px;
+                            font-family: "ITCOfficinaSerifBold";
+                            font-size: 55px;
+                            letter-spacing: -1px;
+                            @include desktop {
+                                margin: 0;
+                                font-size: 110px;
+                                letter-spacing: -7px;
+                            }
+                        }
+                        h3 {
+                            font-size: 41px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin: 0;
+                            line-height: 44px;
+                            margin: 21px 0 0 18px;
+                            @include mobile {
+                                font-size: 24px;
+                                margin: 0;
+                                width: 100%;
+                                margin-top: 19px;
+                            }
+                        }
+                    }
+                    .banner-price {
+                        display: flex;
+                        flex-direction: row;
+                        transform: translate(-5px, -42px);
+                        &-rs {
+                            color: #712383;
+                            font-size: 22px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 31px;
+                            @include mobile {
+                                font-size: 16px;
+                                margin-top: 18px;
+                            }
+                        }
+                        &-value {
+                            color: #712383;
+                            font-size: 85px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 14px;
+                            letter-spacing: -11px;
+                            @include mobile {
+                                font-size: 56px;
+                            }
+                        }
+                        &-cents {
+                            color: #712383;
+                            font-size: 52px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 21px;
+                            margin-left: 7px;
+                            letter-spacing: -3px;
+                            @include mobile {
+                                font-size: 33px;
+                                margin-top: 14px;
+                            }
+                        }
+                        &-month {
+                            color: #712383;
+                            font-size: 27px;
+                            font-family: "ITCOfficinaSerifBold";
+                            align-self: flex-end;
+                            margin-bottom: 36px;
+                            @include mobile {
+                                font-size: 21px;
+                                margin-bottom: 23px;
+                            }
+                        }
+                        &-anual {
+                            color: #660099;
+                            font-size: 14px;
+                            font-family: "Roboto";
+                            transform: translate(-110px, 78px);
+                            @include mobile {
+                                transform: translate(-80px, 48px);
+                            }
+                        }
+                    }
+                    .banner-assine {
+                        flex-direction: row;
+                        align-items: center;
+                        transform: translate(-2px, -21px);
+                        @include mobile {
+                            flex-direction: row;
+                            width: 100%;
+                        }
+                        a {
+                            color: #fff;
+                            font-size: 17px;
+                            font-family: "Roboto";
+                            text-align: center;
+                            padding: 14px 28px;
+                            background: #609;
+                            width: 142px;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 16px;
+                                width: 80%;
+                                height: 100%;
+                                padding: 14px 10px;
+                            }
+                        }
+                        p {
+                            color: #fff;
+                            text-align: center;
+                            font-size: 18px;
+                            font-family: "ITCOfficinaSerifBookRegular";
+                            margin-left: 32px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 16px;
+                                margin-left: 10px;
+                                width: 100%;
+                            }
+                            a {
+                                font-size: 18px;
+                                font-family: "ITCOfficinaSerifBold";
+                                background: none;
+                                padding: 0;
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+                &__two {
+                    width: 270px;
+                    @include mobile {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 0px;
+                    }
+                    .banner-promo-title {
+                        width: auto;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        color: #fff;
+                        font-family: "ITCOfficinaSerifBold";
+                        font-size: 24px;
+                        line-height: 28px;
+                        transform: translate(11px, -2px);
+                        @include desktop {
+                            font-size: 41px;
+                            line-height: 41px;
+                            transform: translate(18px, -1px);
+                        }
+                    }
+                    .promo-icons-wrap {
+                        display: flex;
+                        justify-content: center;
+                        transform: translate(1px, 19px);
+
+                        @include mobile {
+                            margin: 0px;
+                            transform: translate(0px, -6px);
+                        }
+
+                        img {
+                            height: 81px;
+
+                            @include mobile {
+                                margin-right: 5px;
+                                width: 136px;
+                                height: auto;
+                            }
+                        }
+
+                        span {
+                            align-self: flex-end;
+                            font-size: 18px;
+                            line-height: 14px;
+                            align-self: center;
+
+                            @include mobile {
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+                }
+                &__three {
+                    width: 280px;
+                    margin-left: 14px;
+                    @include mobile {
+                        margin-top: 15px;
+                    }
+                    .banner-promo-title {
+                        color: #fff;
+                        font-size: 40px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin-top: 0;
+                        line-height: 46px;
+                        transform: translate(-1px, -5px);
+                        @include mobile {
+                            color: #fff;
+                            font-size: 27px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 0;
+                            line-height: 27px;
+                            transform: translate(-1px, -12px);
+                        }
+                    }
+                    .banner-price {
+                        display: flex;
+                        flex-direction: row;
+                        transform: translate(0px, -12px);
+                        @include mobile {
+                            transform: translate(-2px, -14px);
+                        }
+                        &-rs {
+                            color: #712383;
+                            font-size: 22px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 31px;
+                            @include mobile {
+                                font-size: 16px;
+                                margin-top: 0px;
+                            }
+                        }
+                        &-value {
+                            color: #712383;
+                            font-size: 85px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 14px;
+                            letter-spacing: -11px;
+                            @include mobile {
+                                font-size: 49px;
+                                margin-top: 0px;
+                                transform: translate(-2px, -13px);
+                                letter-spacing: -2px;
+                            }
+                        }
+                        &-cents {
+                            color: #712383;
+                            font-size: 52px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 21px;
+                            margin-left: 7px;
+                            letter-spacing: -3px;
+                            @include mobile {
+                                font-size: 22px;
+                                margin-top: 0px;
+                                transform: translate(-11px, -9px);
+                            }
+                        }
+                        &-month {
+                            color: #712383;
+                            font-size: 27px;
+                            font-family: "ITCOfficinaSerifBold";
+                            align-self: flex-end;
+                            margin-bottom: 36px;
+                            @include mobile {
+                                font-size: 17px;
+                                transform: translate(-11px, -5px);
+                            }
+                        }
+                        &-anual {
+                            color: #660099;
+                            font-size: 14px;
+                            font-family: "Roboto";
+                            transform: translate(-110px, 78px);
+                            @include mobile {
+                                transform: translate(-60px, 19px);
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                    .logo-container {
+                        transform: translate(140px, -68px);
+                        width: 130px;
+                    }
+                    .banner-assine {
+                        flex-direction: row;
+                        align-items: center;
+                        transform: translate(-2px, -21px);
+                        @include mobile {
+                            width: 60%;
+                            transform: translate(-21px, -59px);
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                        a {
+                            color: #fff;
+                            font-size: 17px;
+                            font-family: "Roboto";
+                            text-align: center;
+                            padding: 14px 28px;
+                            background: #609;
+                            width: 142px;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 16px;
+                                width: 80%;
+                                height: 100%;
+                                padding: 14px 10px;
+                            }
+                        }
+                        p {
+                            color: #fff;
+                            text-align: center;
+                            font-size: 18px;
+                            font-family: "ITCOfficinaSerifBookRegular";
+                            margin-left: 32px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 13px;
+                                margin-left: 0px;
+                                width: 100%;
+                            }
+                            a {
+                                font-size: 18px;
+                                font-family: "ITCOfficinaSerifBold";
+                                background: none;
+                                padding: 0;
+                                width: auto;
+                                @include mobile {
+                                    font-size: 13px;
+                                    font-family: "ITCOfficinaSerifBold";
+                                    background: none;
+                                    padding: 0;
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .banner-item__inner {
+                display: flex;
+                flex-direction: column;
+                &:first-child {
+                    width: 43%;
+                }
                 @media (min-width: 769px) and (max-width: 1024px) {
                     padding-left: 130px;
                 }
 
                 @include mobile {
+                    &:first-child {
+                        width: 100%;
+                    }
                     width: 100%;
                     padding: 0 15px;
                     flex-direction: inherit;
@@ -457,8 +852,8 @@
                     margin-bottom: 0;
                 }
 
-                @media(max-width: 475px) and (min-width: 320px){
-                    margin-top: 165px;
+                @media (max-width: 475px) and (min-width: 320px) {
+                    margin-top: 15px;
                 }
 
                 .banner-first-block {
@@ -466,16 +861,21 @@
                     width: 100%;
                     font-family: "VIVO";
 
+                    .logo {
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+
                     @include desktop {
                         margin-top: 0px;
                     }
 
                     @include mobile {
+                        display: flex;
                         width: 100%;
                         margin-top: 0px;
                         width: 100%;
-                        margin-top: -22px;
-                        margin-left: 40px;
                     }
 
                     span {
@@ -521,43 +921,67 @@
                     }
                 }
 
-                img {
-                    max-height: 120px;
+                .apenas {
+                    color: #fff;
+                    font-size: 14px;
+                    font-family: "Roboto";
+                    font-weight: 400;
+                    margin-top: 5px;
+                    @include mobile {
+                        width: 100%;
+                        margin-bottom: 7px;
+                    }
+                }
+
+                .banner-separator {
+                    text-align: center;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    @include mobile {
+                        flex-direction: row;
+                        align-self: flex-start;
+                    }
+                    .separator {
+                        width: 2px;
+                        height: 190px;
+                        background: #f7ba4c;
+                        margin: 0;
+                        padding: 0;
+                        @include mobile {
+                            flex-direction: row;
+                            width: 73vw;
+                            height: 2px;
+                            margin-left: 10px;
+                        }
+                    }
                 }
 
                 h2 {
-                    width: 100%;
                     font-family: "ITCOfficinaSerifBookRegular";
-                    margin-top: 162px;
-                    margin-left: -28px;
                     font-size: 26px;
-
+                    @include mobile {
+                        color: #fff;
+                        font-size: 18px;
+                        font-family: "ITCOfficinaSerifBold";
+                        width: 100%;
+                    }
                     strong {
                         font-family: "ITCOfficinaSerifBold";
-                    }
-
-                    @include mobile {
-                        font-size: 20px;
-                        margin-left: 0;
-                        margin-top: -23px;
-                        margin-bottom: 4px;
-                        padding-right: 10px;
-                    }
-
-                    @include desktop {
-                        margin-left: 56px;
                     }
                 }
             }
 
             .left {
-                width: 50%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 55%;
                 padding-left: 0px;
                 font-family: "ITCOfficinaSerifBookRegular";
-
-                @include desktop {
-                    padding-left: 68px;
-                }
+                transform: translateY(50px);
 
                 @include mobile {
                     width: 100%;
@@ -581,10 +1005,18 @@
                     padding-left: 0px;
                     margin-top: 41px;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
+                    flex-direction: column;
                     padding-bottom: 37px;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
-                    margin-left: -13px;
+                    margin-left: 20px;
+
+                    .banner-promo-title {
+                        color: #fff;
+                        font-size: 33px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin-top: -30px;
+                        line-height: 29px;
+                    }
 
                     @include desktop {
                         width: 420px;
@@ -599,37 +1031,6 @@
                         margin-top: 10px;
                         padding-bottom: 10px;
                         justify-content: center;
-                    }
-
-                    .promo-icons-wrap {
-                        display: flex;
-                        justify-content: center;
-
-                        @include mobile {
-                            margin: 0px;
-                        }
-
-                        img {
-                            height: 45px;
-                            margin-right: 14px;
-
-                            @include mobile {
-                                margin-right: 5px;
-                                width: auto;
-                                height: 35px;
-                            }
-                        }
-
-                        span {
-                            align-self: flex-end;
-                            font-size: 18px;
-                            line-height: 14px;
-                            align-self: center;
-
-                            @include mobile {
-                                font-size: 12px !important;
-                            }
-                        }
                     }
 
                     .promo-text-consideracao2 {
@@ -1006,10 +1407,7 @@
                 }
 
                 h2 {
-                    width: 100%;
                     font-family: "ITCOfficinaSerifBold";
-                    margin-top: 190px;
-                    margin-left: -28px;
                     font-size: 22px;
 
                     @media (max-width: 768px) {
