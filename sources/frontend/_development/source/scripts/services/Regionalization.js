@@ -691,6 +691,7 @@ class Regionalization {
             $(".promo-icons-wrap2")
                 .find("img")
                 .attr("src", "img/groups-icons_apps_pernambuco.png");
+            $(".lp_controle_conteudos").addClass("regional");
         } else {
             $(".nacional").show();
             $(".lp_controle_conteudos").removeClass("regional");
