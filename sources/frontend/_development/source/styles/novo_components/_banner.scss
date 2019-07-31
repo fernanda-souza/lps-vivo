@@ -465,7 +465,7 @@
         &.banner-conversao4 {
             align-items: flex-start;
             justify-content: space-between;
-            padding: 15px;
+            padding: 30px 15px;
             @include desktop {
                 padding-bottom: 0px;
                 padding: 95px;
@@ -775,10 +775,10 @@
                         align-items: center;
                         transform: translate(-2px, -21px);
                         @include mobile {
-                            width: 60%;
-                            transform: translate(-21px, -59px);
+                            width: 100%;
+                            transform: translate(-2px, -59px);
                             align-items: center;
-                            flex-direction: column;
+                            flex-direction: row;
                         }
                         a {
                             color: #fff;
