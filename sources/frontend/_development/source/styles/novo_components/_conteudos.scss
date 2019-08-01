@@ -132,8 +132,13 @@
         }
         &__columns {
             width: 100%;
+
             @include desktop {
-                width: 52%;
+                width: 58%;
+            }
+
+            @media (min-width: 1440px) {
+                width: 57%;
             }
         }
 
@@ -157,13 +162,8 @@
             height: 142px;
         }
 
-        @media screen and (min-width: 1025px) and (max-width: 1170px) {
-            width: 58% !important;
-            padding-right: 25px !important;
-        }
-
-        @media screen and (min-width: 1340px) and (max-width: 1439px) {
-            width: 58% !important;
+        @media screen and (min-width: 1025px) {
+            width: 95% !important;
             padding-right: 25px !important;
         }
 
