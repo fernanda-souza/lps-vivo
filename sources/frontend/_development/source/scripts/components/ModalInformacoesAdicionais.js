@@ -123,7 +123,7 @@ class ModalnformacoesAdicionais {
                             </a>
                         </li>
                         <li>
-                            <a href="https://celular.vivo.com.br/planos/controle/regulamentos/Regulamento-Controle-Nacional-Anual.pdf" target="_blank">
+                            <a href="https://celular.vivo.com.br/planos/controle/regulamentos/Regulamento-Vivo-Controle-Nacional-Anual.pdf" target="_blank">
                                 Regulamento Controle
                             </a>
                         </li>
