@@ -12,11 +12,14 @@
 
 ### Versão
 
-- **Publicacao_20190801_Controle_ErroCarrossel** - (01/08/2019)
+- **Publicacao_20190802_Controle_Bussola** - (02/08/2019)
 
 ### Release notes
 
-- **Publicacao_20190801_Controle_ErroCarrossel**
+- **Publicacao_20190802_Controle_Bussola**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-6867
+
+- Publicacao_20190801_Controle_ErroCarrossel
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6837
 
 - Publicacao_20190729_Controle_PortfolioEtapa2
