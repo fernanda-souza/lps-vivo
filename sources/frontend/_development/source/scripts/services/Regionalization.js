@@ -226,91 +226,91 @@ var plansControle = [
         }
     }),
 
-    new Plan({
-        region: regions.especiais,
-        internet: "4,5GB",
-        TJinternet: "4GB + 500MB de bônus*",
-        mainoffer: true,
-        appname: "vivocontrolenba",
-        SKU: ["VC00031", "VIVOCTRLF53N"],
-        hideapps: true,
-        appsText: "GoRead, Vivo Cloud Sync e NBA",
-        appsimg: "group-apps-semwhats",
-        fidelizado: true,
-        price: {
-            amount: 52.99,
-            discount: 0,
-            perLine: 0
-        }
-    }),
-    new Plan({
-        region: regions.especiais,
-        internet: "5,5GB",
-        TJinternet: "5GB + 500MB de bônus*",
-        mainoffer: true,
-        appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF54N"],
-        hideapps: true,
-        appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
-        appsimg: "group-apps-semwhats",
-        fidelizado: true,
-        price: {
-            amount: 67.99,
-            discount: 0,
-            perLine: 0
-        }
-    }),
-    new Plan({
-        region: regions.especiais,
-        internet: "4GB",
-        TJinternet: "3,5GB + 500MB de bônus*",
-        mainoffer: true,
-        appname: "vivocontrolenba",
-        SKU: ["VC00031", "VIVOCTRLF57N"],
-        hideapps: true,
-        appsText: "GoRead, Vivo Cloud Sync e NBA",
-        appsimg: "group-apps-semwhats",
-        fidelizado: false,
-        price: {
-            amount: 52.99,
-            discount: 0,
-            perLine: 0
-        }
-    }),
-    new Plan({
-        region: regions.especiais,
-        internet: "4,5GB",
-        TJinternet: "4GB + 500MB de bônus*",
-        mainoffer: true,
-        appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF58N"],
-        hideapps: true,
-        appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
-        appsimg: "group-apps-semwhats",
-        fidelizado: false,
-        price: {
-            amount: 67.99,
-            discount: 0,
-            perLine: 0
-        }
-    }),
-    new Plan({
-        region: regions.especiais,
-        internet: "5,5GB",
-        TJinternet: "5GB + 500MB de bônus*",
-        mainoffer: true,
-        appname: "vivocontrolekantoo",
-        SKU: ["VC00030", "VIVOCTRLF59N"],
-        hideapps: true,
-        appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
-        appsimg: "group-apps-semwhats",
-        fidelizado: false,
-        price: {
-            amount: 82.99,
-            discount: 0,
-            perLine: 0
-        }
-    })
+    // new Plan({
+    //     region: regions.especiais,
+    //     internet: "4,5GB",
+    //     TJinternet: "4GB + 500MB de bônus*",
+    //     mainoffer: true,
+    //     appname: "vivocontrolenba",
+    //     SKU: ["VC00031", "VIVOCTRLF53N"],
+    //     hideapps: true,
+    //     appsText: "GoRead, Vivo Cloud Sync e NBA",
+    //     appsimg: "group-apps-semwhats",
+    //     fidelizado: true,
+    //     price: {
+    //         amount: 52.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.especiais,
+    //     internet: "5,5GB",
+    //     TJinternet: "5GB + 500MB de bônus*",
+    //     mainoffer: true,
+    //     appname: "vivocontrolekantoo",
+    //     SKU: ["VC00030", "VIVOCTRLF54N"],
+    //     hideapps: true,
+    //     appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
+    //     appsimg: "group-apps-semwhats",
+    //     fidelizado: true,
+    //     price: {
+    //         amount: 67.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.especiais,
+    //     internet: "4GB",
+    //     TJinternet: "3,5GB + 500MB de bônus*",
+    //     mainoffer: true,
+    //     appname: "vivocontrolenba",
+    //     SKU: ["VC00031", "VIVOCTRLF57N"],
+    //     hideapps: true,
+    //     appsText: "GoRead, Vivo Cloud Sync e NBA",
+    //     appsimg: "group-apps-semwhats",
+    //     fidelizado: false,
+    //     price: {
+    //         amount: 52.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.especiais,
+    //     internet: "4,5GB",
+    //     TJinternet: "4GB + 500MB de bônus*",
+    //     mainoffer: true,
+    //     appname: "vivocontrolekantoo",
+    //     SKU: ["VC00030", "VIVOCTRLF58N"],
+    //     hideapps: true,
+    //     appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
+    //     appsimg: "group-apps-semwhats",
+    //     fidelizado: false,
+    //     price: {
+    //         amount: 67.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // }),
+    // new Plan({
+    //     region: regions.especiais,
+    //     internet: "5,5GB",
+    //     TJinternet: "5GB + 500MB de bônus*",
+    //     mainoffer: true,
+    //     appname: "vivocontrolekantoo",
+    //     SKU: ["VC00030", "VIVOCTRLF59N"],
+    //     hideapps: true,
+    //     appsText: "GoRead, Vivo Cloud Sync, NBA e Kantoo Inglês",
+    //     appsimg: "group-apps-semwhats",
+    //     fidelizado: false,
+    //     price: {
+    //         amount: 82.99,
+    //         discount: 0,
+    //         perLine: 0
+    //     }
+    // })
 ];
 
 plansControle = new RegionItems(plansControle);
@@ -324,11 +324,11 @@ var documentosPromo = [
         link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
     }),
     // ne
-    new Documento({
-        region: regions.especiais,
-        nome: "Regulamento Promoção Vivo Controle Digital",
-        link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
-    })
+    // new Documento({
+    //     region: regions.especiais,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138766"
+    // })
     // // criticos
     // new Documento({
     //     region: regions.criticos,
@@ -364,12 +364,12 @@ var documentosModal = [
         link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_100158",
         lightBox: false
     }),
-    new Documento({
-        region: regions.especiais,
-        nome: "Regulamento Promoção Vivo Controle Digital",
-        link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138767",
-        lightBox: false
-    })
+    // new Documento({
+    //     region: regions.especiais,
+    //     nome: "Regulamento Promoção Vivo Controle Digital",
+    //     link: "https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_138767",
+    //     lightBox: false
+    // })
     // new Documento({
     //     region: regions.ddd21,
     //     nome: "Regulamento Promoção Vivo Controle Digital",
@@ -681,7 +681,7 @@ class Regionalization {
 
         $(".item-plan").remove();
 
-        if (currentDDD == 81 || currentDDD == 87) {
+        if (currentDDD == 999 || currentDDD == 9999) {
             $(".lp_controle_planos").removeAttr("style");
             $(".nacional").hide();
             $(".nao-nacional").show();
@@ -764,7 +764,7 @@ class Regionalization {
             `);
             }
 
-            if (currentDDD == 81 || currentDDD == 87) {
+            if (currentDDD == 999 || currentDDD == 999) {
                 $(".linkappsinclusos").hide();
                 $(".container_planos").addClass("pernambuco");
             } else {
