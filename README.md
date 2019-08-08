@@ -12,14 +12,17 @@
 
 ### Versão
 
-- **Publicacao_20190808_Controle_Bussola** - (08/08/2019)
+- **Publicacao_20190808_Controle_CorreçãoMobile** - (08/08/2019)
 
 ### Release notes
-- **Publicacao_20190808_Controle_Bussola** 
-    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6928
+- **Publicacao_20190808_Controle_CorreçãoMobile**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-6933
+
+- Publicacao_20190808_Controle_Bussola
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-6928
     
 - Publicacao_20190805_Controle_Demandas
-    - https://jira.uhub.biz/browse/WUNBRAVIVOM-6865
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-6865
 
 - Publicacao_20190802_Controle_Bussola
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6867
