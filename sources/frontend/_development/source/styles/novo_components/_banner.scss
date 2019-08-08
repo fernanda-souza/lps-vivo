@@ -650,6 +650,7 @@
                     .promo-icons-wrap {
                         display: flex;
                         justify-content: center;
+                        align-items: center;
                         transform: translate(1px, 19px);
 
                         @include mobile {
