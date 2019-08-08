@@ -79,6 +79,14 @@ class Main {
         // let querystring  = new QueryStringHandler();
         // querystring.parseURLParam();
 
+        var currentDDD = helpers.getCookie('ddd');
+        var regional = helpers.getCookie('estado');
+        
+        if(currentDDD == "" && regional == "") {
+            $(".container_planos .container-box").addClass("hidden");
+            $(".container_modal").removeClass("hidden");
+        }
+
         this.insertBussola();
 
         //dataLayer page-init
