@@ -2,24 +2,23 @@ class ModalnformacoesAdicionais {
     constructor() {
         var that = this;
         this.tabChange(1);
-        
-        $(".modal-header > .modal-close-button").click(function () {
+
+        $(".modal-header > .modal-close-button").click(function() {
             that.hideModal();
         });
 
-        $(".tab_modal").click(function (e) {
-            var current = $(e.currentTarget).data('choose');
+        $(".tab_modal").click(function(e) {
+            var current = $(e.currentTarget).data("choose");
             that.tabChange(current);
         });
     }
 
     setContent(category) {
-        let currentDDD = this.getCookie('controle_ddd');
-        console.log(currentDDD)
-            
-        if(category === "anual"){
+        let currentDDD = this.getCookie("controle_ddd");
+        console.log(currentDDD);
 
-                $(".tab__content[data-main-content=1]").html(`
+        if (category === "anual") {
+            $(".tab__content[data-main-content=1]").html(`
                     <ul>
                         <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
                         <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
@@ -29,7 +28,7 @@ class ModalnformacoesAdicionais {
                     </ul>
                 `);
 
-                $(".tab__content[data-main-content=2]").html(`
+            $(".tab__content[data-main-content=2]").html(`
                 <ul>
                     <li>A franquia de internet é válida pelo período de um mês;</li>
                     <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
@@ -37,7 +36,7 @@ class ModalnformacoesAdicionais {
                     <li>As ligações locais para celulares de outras operadoras são ilimitadas;</li>
                 </ul>
                 `);
-                $(".tab__content[data-main-content=3]").html(`
+            $(".tab__content[data-main-content=3]").html(`
                     <ul>
                         <li>
                             <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
@@ -51,10 +50,10 @@ class ModalnformacoesAdicionais {
                         </li>
                     </ul>
                 `);
-            }
+        }
 
-            if(category === "mensal"){
-                $(".tab__content[data-main-content=1]").html(`
+        if (category === "mensal") {
+            $(".tab__content[data-main-content=1]").html(`
                     <ul>
                         <li>Serviços sujeitos a disponibilidade, interrupções e análise de crédito;</li>
                         <li>Para navegar com a velocidade 4G você precisa ter um aparelho 4G, um chip 4G, um plano 4G e estar na cobertura 4G;</li>
@@ -65,7 +64,7 @@ class ModalnformacoesAdicionais {
                     </ul>
                 `);
 
-                $(".tab__content[data-main-content=2]").html(`
+            $(".tab__content[data-main-content=2]").html(`
                 <ul>
                     <li>A franquia de internet é válida pelo período de um mês;</li>
                     <li>Após atingir o limite de dados do plano contratado, a internet será interrompida até a renovação do seu benefício, que é renovado mensalmente;</li>
@@ -75,7 +74,7 @@ class ModalnformacoesAdicionais {
                 </ul>
                 `);
 
-                $(".tab__content[data-main-content=3]").html(`
+            $(".tab__content[data-main-content=3]").html(`
                     <ul>
                         <li>
                             <a href="https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_255754" target="_blank">
@@ -83,23 +82,20 @@ class ModalnformacoesAdicionais {
                             </a>
                         </li>
                         <li>
-                            <a href="https://celular.vivo.com.br/planos/controle/regulamentos/Regulamento-Controle-Nacional-Mensal.pdf" target="_blank">
+                            <a href="https://celular.vivo.com.br/planos/controle/regulamentos/Regulamento-Vivo-Controle-Nacional-Mensal.pdf" target="_blank">
                                 Regulamento Controle
                             </a>
                         </li>
                     </ul>
                 `);
-            }
- 
-
+        }
 
         $(".tab__content[data-main-content=4]").html(`
             <p>
                 Para mais informações sobre o Plano de Serviço ofertado, regulamento vigente, preços e critérios de reajuste, contrato de 
                 prestação de serviço, dentre outras informações, <a href="https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&amp;_nfpb=true&amp;_pageLabel=P115000498271489154631147&amp;WT.ac=portal.movel.planosdeservicoemvigormovel.planoscontrole.listagemdeplanoscontrole#" target="_blank">clique aqui</a>
             </p>
-        `)
-
+        `);
     }
 
     tabChange(current) {
@@ -113,29 +109,29 @@ class ModalnformacoesAdicionais {
         $("#modalInformacoesAdicionais").show();
         $("html, body").css("overflow", "hidden");
         setTimeout(() => {
-            $("#modalInformacoesAdicionais .modal-content").addClass('active');
+            $("#modalInformacoesAdicionais .modal-content").addClass("active");
         }, 100);
     }
 
     hideModal() {
         setTimeout(() => {
-            $("#modalInformacoesAdicionais .modal-content").removeClass('active');
+            $("#modalInformacoesAdicionais .modal-content").removeClass("active");
         }, 600);
         $("#modalInformacoesAdicionais").hide();
         $("html, body").css("overflow", "auto");
     }
 
     addUrlRegulamento(name, url) {
-        $('.tab__content[data-main-content=3] a.regulamento').attr('href', url);
-        $('.tab__content[data-main-content=3] a.regulamento').html(name);
+        $(".tab__content[data-main-content=3] a.regulamento").attr("href", url);
+        $(".tab__content[data-main-content=3] a.regulamento").html(name);
     }
 
     getCookie(cname) {
         var name = cname + "=";
-        var ca = document.cookie.split(';');
+        var ca = document.cookie.split(";");
         for (var i = 0; i < ca.length; i++) {
             var c = ca[i];
-            while (c.charAt(0) == ' ') {
+            while (c.charAt(0) == " ") {
                 c = c.substring(1);
             }
             if (c.indexOf(name) == 0) {
