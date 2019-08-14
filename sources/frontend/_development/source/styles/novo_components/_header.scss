@@ -24,31 +24,6 @@ header {
         animation-fill-mode: forwards;
     }
 
-    @keyframes stickyshow {
-        from {
-            top: -96px;
-        }
-
-        to {
-            top: 0px;
-        }
-    }
-
-    @keyframes stickyhide {
-        0% {
-            top: 0px;
-        }
-
-        50% {
-            top: -96px;
-        }
-
-        100% {
-            position: absolute;
-            top: 0px;
-        }
-    }
-
     .container-header {
         display: flex;
         height: 96px;

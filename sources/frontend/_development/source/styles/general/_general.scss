@@ -20,69 +20,6 @@ button{
     cursor: pointer;
 }
 
-.btn {
-    color: #fff !important;
-    font-size: 18px;
-    text-align: center;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    display: block;
-    outline: 0;
-    text-decoration: none !important;
-    vertical-align: middle;
-    position: relative;
-    cursor: pointer;
-
-    &.btn--orange {
-        background-color: $orange;
-    }
-}
-
-#box-select {
-    display: none;
-}
-
-.button {
-    border: none;
-    @include font-size(14);
-    color: $white;
-    padding: 10px 15px;
-    background: $orange;
-    @include border-radius(5px);
-    @include transition-duration(0.3s);
-    &:active {
-        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
-    }
-}
-
-.android {
-    background: url("../img/meu-vivo-mais-logo-google-play.png") 10px center
-        no-repeat;
-    @include tablet {
-        background: url("../img/meu-vivo-mais-logo-google-play-roxo.png") 10px
-            center no-repeat;
-        &:hover {
-            background: url("../img/meu-vivo-mais-logo-google-play-roxo.png")
-                17px center no-repeat;
-        }
-    }
-}
-
-.apple {
-    background: url("../img/meu-vivo-mais-logo-app-store.png") 10px center
-        no-repeat;
-    @include tablet {
-        background: url("../img/meu-vivo-mais-logo-app-store-roxo.png") 10px
-            center no-repeat;
-
-        &:hover {
-            background: url("../img/meu-vivo-mais-logo-app-store-roxo.png") 17px
-                center no-repeat;
-        }
-    }
-}
-
 .hw-wrapper {
     position: relative;
     margin: 0 auto;

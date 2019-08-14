@@ -156,7 +156,7 @@ class Aplicativos {
         ];
 
         $(".aplicativo-info")
-            .find("h2")
+            .find("h3")
             .text(fill[slide].title);
         $(".aplicativo-info")
             .find("p")
