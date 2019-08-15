@@ -1,0 +1,416 @@
+.lp_controle_conteudos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+        height: 979px;
+        background-image: url(../img/novo/bg_banner-apps.png);
+        background-position: right 75px;
+        background-repeat: no-repeat;
+    }
+
+    &.regional {
+        justify-content: flex-start;
+        height: 747px;
+
+        @include desktop {
+            height: 634px;
+            background-image: url(../img/novo/bg_banner-apps_regional.png);
+            background-position: right 75px;
+            background-repeat: no-repeat;
+        }
+        .hide {
+            display: none;
+        }
+        .ilimitados-container {
+            @include mobile {
+                background-image: url(../img/novo/bg_banner-apps_regional_mobile.png);
+                background-position: center bottom;
+            }
+        }
+        .app-groups {
+            max-width: 418px;
+            &__item {
+                width: 50%;
+                @include desktop {
+                    width: 33%;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .app-columns__text {
+            &.all {
+                display: none !important;
+            }
+            &.regions {
+                display: block;
+            }
+        }
+        .aplicativos-container {
+            display: none;
+        }
+    }
+    .ilimitados-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1064px;
+        width: 100%;
+        padding: 0px 30px;
+        padding-bottom: 100vw;
+        @include mobile {
+            background-image: url(../img/novo/bg_banner-apps_mobile.png);
+            background-position: center bottom;
+            background-repeat: no-repeat;
+        }
+        @include desktop {
+            margin-bottom: 0px;
+            padding: 0px 60px;
+        }
+        &__title {
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 38px;
+            font-size: 32px;
+            @include desktop {
+                margin-bottom: 30px;
+                font-size: 36px;
+            }
+        }
+        .ilimitados-container__columns {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            @include desktop {
+                height: 470px;
+            }
+
+            .app-columns__column {
+                max-width: 460px;
+            }
+
+            .app-columns__title {
+                margin: 0px 0px 24px;
+                font-size: 28px;
+                font-weight: 800;
+                @include desktop {
+                    font-size: 30px;
+                }
+            }
+            &__text {
+                margin-bottom: 15px;
+                &.all {
+                    display: block;
+                }
+                &.regions {
+                    display: none;
+                }
+            }
+        }
+    }
+    .aplicativos-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1064px;
+        padding: 0px 30px;
+        flex-direction: column;
+        @include mobile {
+            padding-bottom: 90px;
+            padding-top: 20px;
+        }
+        @include desktop {
+            flex-direction: row;
+            padding: 0px 60px;
+            margin-top: 60px;
+        }
+        &__title {
+            width: 100%;
+            @include desktop {
+                width: 35%;
+            }
+        }
+        &__columns {
+            width: 100%;
+
+            @include desktop {
+                width: 58%;
+            }
+
+            @media (min-width: 1440px) {
+                width: 57%;
+            }
+        }
+
+        // @include tablet {
+        //     display: block;
+        //     margin-top: 39px;
+        // }
+
+        // @include mobile {
+        //     display: block;
+        //     margin-top: 39px;
+        // }
+
+        // @include desktop {
+        //     margin-top: 84px;
+        // }
+    }
+    .slider-aplicativos {
+        .slick-track {
+            transition: transform ease-out 0.5s;
+            height: 142px;
+        }
+
+        @media screen and (min-width: 1025px) {
+            width: 95% !important;
+            padding-right: 25px !important;
+        }
+
+        @include desktop {
+            max-width: 550px;
+            padding-top: 9px;
+            padding-right: 0px;
+            height: 152px;
+            margin-bottom: 20px;
+
+            @media screen and (max-width: 1439px) {
+                padding-right: 40px;
+            }
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            margin: -7px -30px 6px -30px;
+            min-height: 193px;
+        }
+
+        .item-aplicativos {
+            width: 128px;
+            height: 128px;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            transition: ease-in-out 0.3s;
+            padding: 0px;
+            cursor: pointer;
+
+            @include desktop {
+                margin-right: -28px;
+                width: 71px;
+                height: 71px;
+                transition: ease-in-out 0.3s;
+
+                &:nth-child(5) {
+                    transition: ease 0.6s;
+                }
+
+                img {
+                    display: block;
+                    width: 64px;
+                    margin: auto;
+                }
+            }
+
+            @include mobile {
+                width: 194px;
+                height: 194px;
+            }
+
+            .img {
+                max-width: 100%;
+                width: 128px;
+                height: 128px;
+                transition: ease-in-out 0.3s;
+
+                @include desktop {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include mobile {
+                    margin: auto;
+                }
+            }
+        }
+
+        .item-aplicativos.slick-slide.slick-current {
+            @include tablet {
+                transform: translateX(20px);
+                -webkit-transform: translateX(20px);
+            }
+
+            @include mobile {
+                transform: scale(1.1);
+
+                img {
+                    margin-top: 10px;
+                }
+            }
+
+            @include desktop {
+                width: 142px;
+                height: 142px;
+                margin-top: 0;
+                transform: translateX(-170px);
+            }
+        }
+
+        .item-aplicativos.slick-slide {
+            @include mobile {
+                transform: scale(0.5);
+                transform-origin: center;
+
+                img {
+                    margin-top: -17px;
+                }
+            }
+
+            @include tablet {
+                transform: scale(0.7);
+                transform-origin: right;
+            }
+
+            @include desktop {
+                margin: 34px 13px 0 0;
+                transform: translateX(-170px);
+            }
+
+            img {
+                margin: auto;
+            }
+        }
+
+        .large-icon {
+            width: 142px;
+            height: 142px;
+
+            img {
+                margin: auto;
+
+                @media screen and (min-width: 1025px) and (max-width: 1170px) {
+                    width: 125px !important;
+                    height: 125px !important;
+                }
+
+                @include desktop {
+                    width: 142px;
+                    height: 142px;
+                    padding: 0px;
+                }
+            }
+
+            .image-aplicativos {
+                width: 128px;
+                height: 128px;
+
+                @include desktop {
+                    width: 142px;
+                    height: 142px;
+                }
+            }
+        }
+        .slick-dots {
+            bottom: -191px;
+            z-index: 2;
+
+            @include tablet {
+                bottom: -25px;
+            }
+
+            @include mobile {
+                bottom: -235px;
+            }
+
+            @include desktop {
+                display: none !important;
+            }
+        }
+    }
+    .app-groups {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 35px;
+        max-width: 310px;
+        &__item {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            margin-bottom: 32px;
+            &:nth-child(3),
+            &:nth-child(4) {
+                @include desktop {
+                    margin-bottom: 0px;
+                }
+            }
+            .icon {
+                margin-right: 14px;
+            }
+            .text {
+            }
+        }
+    }
+    .aplicativo-info {
+        .title {
+            margin: 0;
+        }
+        .text {
+            margin: 16px 0;
+            line-height: 25px;
+        }
+        .link {
+            color: #660099;
+        }
+    }
+    .container-aplicativos {
+        // .info-aplicativos {
+        //     width: 46%;
+
+        //     @media screen and (min-width: 1025px) and (max-width: 1170px) {
+        //         width: 42% !important;
+        //     }
+
+        //     @media screen and (min-width: 1340px) and (max-width: 1439px) {
+        //         width: 42% !important;
+        //     }
+
+        //     h2 {
+        //         @include desktop {
+        //             margin-top: 4px;
+        //         }
+        //     }
+
+        //     @include mobile {
+        //         width: 100%;
+        //         margin-bottom: 46px;
+        //     }
+
+        //     @include tablet {
+        //         width: 100%;
+        //     }
+        // }
+
+        // .aplicativo-info {
+        //     width: 53%;
+        //     margin-top: 0px;
+        //     margin-left: auto;
+        //     margin-bottom: 60px;
+        //     padding-left: 5px;
+
+        //     @include tablet {
+        //         width: 100%;
+        //     }
+
+        //     @include mobile {
+        //         width: 100%;
+
+        //         margin-left: -4px;
+        //         margin-top: -30px;
+        //     }
+
+        // }
+    }
+}

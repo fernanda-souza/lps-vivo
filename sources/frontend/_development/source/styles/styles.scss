@@ -1,0 +1,43 @@
+// VARIABLES
+@import "base/variables";
+
+// MIXINS
+@import "mixins/layout";
+@import "mixins/media-queries";
+@import "mixins/typography";
+@import "mixins/border-radius";
+
+// VENDORS
+@import "vendors/swiper";
+@import "vendors/awesomplete";
+
+// BASE
+@import "base/fonts";
+@import "base/normalize";
+@import "base/scaffolding";
+@import "base/sprites";
+@import "general/general";
+
+// COMPONENTS
+@import "novo_components/general";
+@import "novo_components/header";
+@import "novo_components/menu_mobile";
+@import "novo_components/banner";
+@import "novo_components/vantagens";
+@import "novo_components/conteudos";
+@import "novo_components/planos";
+@import "novo_components/4g";
+@import "novo_components/faq";
+@import "novo_components/modal_bussola";
+@import "novo_components/_modal_informacoes_adicionais";
+@import "novo_components/footer";
+@import "novo_components/_bussola_onpage";
+@import "novo_components/_slick_theme";
+@import "novo_components/_bussola_input";
+@import "novo_components/bussola_onmodal";
+@import "novo_components/chat";
+@import "novo_components/ie";
+@import "novo_components/modal_informacoes_adicionais";
+
+
+

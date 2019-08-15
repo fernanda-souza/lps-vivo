@@ -1,0 +1,221 @@
+@import "../base/variables";
+@import "../base/sprites";
+@import "../mixins/media-queries";
+@import "../mixins/layout";
+
+#livechat-eye-catcher, #livechat-full, #livechat-compact-container {
+  z-index: 10 !important;
+  display: none;
+}
+
+#web {
+    display: none !important;
+}
+
+#triggerAssistant {
+  display: none;
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  min-width: 380px;
+  background: url($path-img + 'Modal_Migracao_Chat_01.png') 10px top;
+  background-size: contain;
+  z-index: 30;
+
+  @include minWidth(426){
+    display: none !important;
+  }
+
+  @include maxWidth(320) {
+    background: url($path-img + 'Modal_Migracao_Chat_01.png') 31px top;
+    background-size: contain;
+  }
+}
+
+#modalChatvivi, #modalChatdireto {
+  display: none;
+  z-index: 52;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include maxWidth(426){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+#modalChatvivi .overlay, #modalChatdireto .overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 52;
+}
+#modalChatvivi .box, #modalChatdireto .box {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 240px;
+  max-width: 812px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 53;
+  background: #FFF;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+
+  @include maxWidth(426){
+    height: 100%;
+    width: 101%;
+  }
+}
+#modalChatvivi .box .btn-fechar, #modalChatdireto .box .btn-fechar {
+  position: absolute;
+  background: url(https://www.vivo.com.br/portalweb/ShowPropertyServlet?nodeId=/UCMRepository/PW_IMG_ICON_CLOSE_SANTA) no-repeat;
+  right: 10px;
+  top: 10px;
+  width: 23px;
+  height: 23px;
+}
+#modalChatvivi .box .icon-central, #modalChatdireto .box .icon-central {
+  position: absolute;
+  top: -30px;
+  margin: 0 -32px;
+
+  @include maxWidth(426){
+    display: none;
+  }
+}
+#modalChatvivi .box .box-title, #modalChatdireto .box .box-title {
+  font-size: 34px;
+  line-height: 34px;
+  // font-family: 'ITCOfficinaSerifBold';
+  font-family: Roboto;
+  margin-top: 60px;
+
+  @include maxWidth(426){
+    font-size: 39px;
+    margin: 90px 0 50px 0;
+  }
+}
+#modalChatvivi .box .box-btn_left, #modalChatvivi .box .box-btn_right, #modalChatdireto .box .box-btn_left, #modalChatdireto .box .box-btn_right {
+  background: #609;
+  color: #FFF;
+  display: inline-block;
+  width: 290px;
+  height: 70px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin: 36px 15px;
+  // font-family: 'ITCOfficinaSerifBookRegular';
+  font-family: Roboto;
+  line-height: 20px;
+  padding-top: 16px;
+  font-size: 16px;
+
+  @include minWidth(426){
+    width: 300px;
+  }
+}
+
+#box-btn_right {
+
+  @include maxWidth(426){
+    display: none !important;
+  }
+}
+
+
+#box-btn_right2 {
+  display: none !important;
+
+  @include maxWidth(426){
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
+
+#modalChatvivi .box .box-btn_left strong, #modalChatvivi .box .box-btn_right strong, #modalChatdireto .box .box-btn_left strong, #modalChatdireto .box .box-btn_right strong {
+  font-size: 22px;
+  // font-family: 'ITCOfficinaSerifBold';
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+#modalChatdireto .box {
+  height: auto;
+  max-width: 510px;
+  padding-top: 20px;
+
+  @include maxWidth(426){
+    height: 100%;
+  }
+}
+#modalChatdireto .box .icon-central {
+  position: absolute;
+  top: -30px;
+  margin: 0 auto;
+  left: 225px;
+}
+
+.btnnull {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 0px;
+  width: 225px;
+  height: 122px;
+  text-indent: -999999px;
+  z-index: 30;
+  cursor: pointer;
+  background: url($path-img + 'PW_IMG_CONTROLE_NEW_CHAT.png') no-repeat;
+
+  @include maxWidth(426){
+    display: none;
+  }
+
+  @include tablet{
+    bottom: 40px;
+    top: unset;
+  }
+}
+
+#geral-home {
+  margin-top: 34px;
+}
+
+.loader {
+  display: inline-block;
+  margin-top: -50px;
+  position: absolute;
+  margin-left: -50px;
+  top: 50%;
+  left: 50%;
+}
+
+.loader p {
+  // font-family: 'ITCOfficinaSerifBookRegular';
+  font-family: Roboto;
+  font-size: 14px;
+  color: #660099;
+  text-align: center;
+}
+
+.loader svg path,
+.loader svg rect {
+  fill: #660099;
+}

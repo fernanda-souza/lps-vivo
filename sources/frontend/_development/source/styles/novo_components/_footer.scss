@@ -1,0 +1,54 @@
+.lp_controle_footer {
+    background: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: -40px;
+
+    @include mobile {
+        padding-top: 31px;
+        padding-bottom: 180px;
+    }
+
+    .container-footer {
+
+        .container-items-footer {
+            display: flex;
+            align-self: start;
+            align-items: center;
+
+            @include mobile {
+                display: block;
+            }
+
+            img {
+                margin: auto;
+
+                @include mobile {
+                    display: block;
+                    margin: 45px auto;
+
+                }
+
+                &:nth-child(1) {
+                    margin-left: -12px;
+
+                    @include mobile {
+                        margin: auto;
+                    }
+                }
+
+                &:nth-child(3) {
+                    margin-right: -7px;
+                    width: 256px;
+
+                    @include mobile {
+                        margin: auto;
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}

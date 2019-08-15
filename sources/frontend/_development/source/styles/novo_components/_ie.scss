@@ -1,0 +1,87 @@
+/* IE11 */
+@media all and (-ms-high-contrast:none) {
+    .section-banner {
+        .banner-item {
+            &.banner-conversao {
+                
+                .banner-content-right{
+                    .banner-preco-wrap{
+        
+                        margin-bottom: 5px;
+                        margin-top: 25px;
+        
+                        .pre-text, .preco-moneda, .preco-value, .preco-cents, .preco-period{
+                            bottom: 0;
+                            top: unset;
+                            line-height: 60px;
+                            display: inline-table;
+                        }
+
+                        .pre-text{
+                            top: -35px;
+                        }
+
+                        .preco-moneda{
+                            top: -18px;
+                        }
+        
+                        .preco-cents{
+                            bottom: unset;
+                            top: -7px;
+                        }
+        
+                        .preco-period{
+                            top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Microsoft Edge Browser 12+ (All) - @supports method */
+@supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) {
+    .section-banner {
+        .banner-item {
+            &.banner-conversao {
+                
+                .banner-content-right{
+                    .banner-preco-wrap{
+        
+                        margin-bottom: 5px;
+                        margin-top: 25px;
+        
+                        .pre-text, .preco-moneda, .preco-value, .preco-cents, .preco-period{
+                            bottom: 0;
+                            top: unset;
+                            line-height: 60px;
+                            display: inline-table;
+                        }
+
+                        .pre-text{
+                            top: -35px;
+                        }
+
+                        .preco-moneda{
+                            top: -18px;
+                        }
+
+                        .preco-value{
+                            top: -5px;
+                        }
+        
+                        .preco-cents{
+                            bottom: unset;
+                            top: -13px;
+                        }
+        
+                        .preco-period{
+                            top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

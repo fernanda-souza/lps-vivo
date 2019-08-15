@@ -1,0 +1,114 @@
+@import "../base/variables";
+@import "../mixins/media-queries";
+@import "../mixins/layout";
+@import "../mixins/border-radius";
+
+.bussola_onmodal_input {
+    width: 100% !important;
+    display: none;
+    margin: 0 15px;
+    position: relative;
+    // margin-top: 27px;
+    
+    .awesomplete {
+        width: 100% !important;
+    }
+    
+    .icon-close {
+        position: absolute;
+        z-index: 1;
+        right: 35px;
+        margin-top: 9px;
+        cursor: pointer;
+        @include desktop {
+            margin-top: 15px;
+            right: 15px;
+        }
+    }
+
+    .awesomplete > ul {
+        overflow: hidden;
+        border-radius: 0 0 6px 6px;
+        display: flex;
+        margin-left: 0px;
+        flex-direction: column;
+    }
+    
+    .awesomplete > ul > li {
+        color: none;
+        font-family: 'Roboto';
+        background: white;
+        font-size: 14px;
+        border-radius: 0;
+        width: 100%;
+        padding: 0 12px;
+        min-height: 50px;
+        line-height: 18px;
+        margin: 0;
+
+        &:hover{
+            background: #E5E5E5;
+        }
+    }
+
+    .awesomplete li[aria-selected="true"] mark {
+        background: white;
+        color: inherit;
+        font-weight: bold;
+    }
+    
+    .awesomplete > ul > li[aria-selected="true"] {
+		background: white;
+		color: inherit;
+    }
+    
+    .awesomplete > ul > li:hover {
+		background: white;
+		color: inherit;
+	}
+
+    
+    input {
+        width: 100% !important;
+        border-radius: 0px;
+        border: 1px solid #E5E5E5;
+        padding-left: 10px;
+        height: 48px;
+        font-family: 'Roboto';
+        font-size: 14px;
+
+        @include desktop {
+            border-radius: 5px;
+            border: 1px solid #999999;
+            padding-left: 12px;
+            height: 48px;
+        }
+    }
+
+    ul {
+        @include desktop {
+            margin-top: -3px;
+        }
+    }
+
+    ul::before {
+        @include desktop {
+            content: none;
+        }
+    }
+}
+
+.bussola_link {
+    display: none;
+    align-self: center;
+
+    @media ( min-width: 769px ) and  (max-width: 1268px ){
+        margin-right: 20px;
+    }
+}
+
+@include mobile {
+    .icon-close {
+        display: none;
+    }
+}

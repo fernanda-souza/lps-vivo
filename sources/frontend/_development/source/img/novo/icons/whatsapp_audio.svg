@@ -1,0 +1,16 @@
+<svg width="22px" height="34px" viewBox="0 0 22 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop_consideracao" transform="translate(-221.000000, -2382.000000)" stroke="#075E54" stroke-width="2">
+            <g id="WHATSAPP" transform="translate(0.000000, 1975.000000)">
+                <g id="audios" transform="translate(222.000000, 408.000000)">
+                    <g id="mic">
+                        <path d="M10,3.17206578e-16 C7.790861,-3.17206578e-16 6,1.91877964 6,4.28571429 L6,15.7142857 C6,18.0812204 7.790861,20 10,20 C12.209139,20 14,18.0812204 14,15.7142857 L14,4.28571429 C14,1.91877964 12.209139,3.17206578e-16 10,3.17206578e-16 Z" id="Shape"></path>
+                        <path d="M20,13 L20,15.8888889 C19.9999999,21.4731014 15.5228474,26 10,26 C4.47715256,26 8.22968411e-08,21.4731014 0,15.8888889 L0,13" id="Shape"></path>
+                        <path d="M11,26 L11,31" id="Shape"></path>
+                        <path d="M4,32 L16,32" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

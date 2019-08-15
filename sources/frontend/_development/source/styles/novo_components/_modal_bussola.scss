@@ -1,0 +1,139 @@
+.hidden {
+    display: none !important; 
+}
+
+.container_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 999;
+
+    @include mobile {
+        margin-top: 35px;
+    }
+
+    .modal_bussola {
+        padding: 40px 80px;
+        background-color: white;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+        align-self: center;
+        width: 944px;
+        margin: 0 auto;
+        margin-top: -35px;
+
+
+        @include mobile {
+            padding: 3px 20px 26px 20px;
+            margin: 0px 8px;
+        }
+
+        .modal_title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+
+            @include mobile {
+                display: block;
+                padding-top: 20px;
+            }
+
+            h2 {
+                margin: 0px;
+
+                @include mobile {
+                    display: inline-block;
+                    width: 89%;
+                    vertical-align: top;
+                }
+
+            }
+
+            img {
+                margin-right: 10px;
+                width: 20px;
+
+
+                @include mobile {
+                    margin-bottom: 15px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .modal_content>form {
+            display: flex;
+            flex-wrap: wrap;
+
+            @include desktop {
+                flex-wrap: nowrap;
+            }
+
+            .awesomplete {
+                width: 100%;
+
+                @include tablet {
+                    width: calc(100% - 164px);
+                }
+
+                @include desktop {
+                    // width: calc(100% - 144px);
+                    width: 100%;
+                    display: inline-block;
+                }
+
+                input {
+                    width: 100%;
+                }
+
+                ul {}
+            }
+
+            input {
+                // width: calc(100% - 144px);
+                border: 1px solid #DDD;
+                padding: 20px;
+                font-size: 16px;
+                height: 56px;
+                width: 100%;
+
+
+                @include mobile {
+                    width: 100%;
+                    margin-bottom: 0px;
+                }
+            }
+
+            .btn-confirmar {
+                background-color: #660099;
+                padding: 20px;
+                margin-left: 20px;
+                border: none;
+                color: white;
+                font-weight: 600;
+                height: 56px;
+                width: auto;
+                margin-top: 0px;
+
+                @include mobile {
+                    width: 100%;
+                    margin: auto;
+                    margin-top: 20px;
+                }
+            }
+
+        }
+    }
+
+    .overlay-bussola {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .9);
+        z-index: -1;
+    }
+}

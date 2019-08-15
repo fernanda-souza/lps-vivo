@@ -1,0 +1,64 @@
+<div class="bussola_onmodal hidden">
+    <!-- <div class="bussola_onmodal-bg"></div> -->
+    <div id="vvpcnvgbuss" class="nova_bussola">
+        <!-- <a href="javascript:void(0)" class="btn-fechar"><img src="img/icon/btn-fechar.png" alt="Fechar modal"></a> -->
+        <div class="container hw-wrapper">
+            <div class="bussola">
+                <span class="icon-close">
+                    <img src="img/bussola/input/close.svg" alt="Ícone fechar" title="Ícone fechar">>
+                </span>
+                <div class="mobile_bussola-bg"></div>
+                <form id="formBussola" class="cf">
+                    <div class="nova_bussola-col nova_bussola-col-50">
+                        <div class="nova_bussola-iconLocation"></div>
+                        <h3 class="title nova_bussola_title-confirme">Confirme sua cidade abaixo para ver ofertas
+                            exclusivas</h3>
+                        <h3 class="title nova_bussola_title-informe">
+                            <img class="only-desk icon_location" src="img/novo/icons/icon_location_b.svg" alt="Ícone da localização" title="Ícone da localização">
+                            <h2 class="nova_bussola_title-informe--userselection">Informe sua cidade e veja ofertas
+                                exclusivas.</h2>
+                            <span class="hidden nova_bussola_title-informe--geoip">
+                                <b class="only-desk">Você está em</b>
+                                <small class="only-mobile">Veja ofertas para</small>
+                                <b class="bussola_subtitle-info--city"></b>
+                                <div class="only-desk" style="display: inline">.</div> <br />
+                                <small class="only-desk">Confirme o seu local pra ver as ofertas exclusivas.</small>
+                                <b class="only-mobile">Confirme sua localização</b>
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="nova_bussola-col nova_bussola-col-50">
+                        <h3 class="bussola_subtitle bussola_subtitle-text">Veja as ofertas do Vivo Controle na sua
+                            região!</h3>
+                        <h3 class="bussola_loading bussola_subtitle bussola_subtitle-text">Localizando...</h3>
+                        <p class="error-select">Selecione uma cidade na lista</p>
+
+                        <div class="bussola_autocomplete bussola_hideonloading">
+                            <div class="bussola_autocomplete-icon--back"></div>
+                            <input type="text" id="autocomplete" placeholder="Informe a sua cidade" />
+                            <div class="bussola_autocomplete-icon"></div>
+                        </div>
+                        <div class="bussola_recomendations bussola_hideonloading only-desk">Sugestões:
+                            <div class="bussola_recomendations-container"></div>
+                        </div>
+                        <a title="botão confirmar" class="btn-confirmar" href="javascript:void(0)" id="submit">Confirmar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container_modal">
+    <div class="modal_bussola">
+        <div class="modal_title">
+            <img src="img/novo/icons/icon_location.svg" alt="Ícone de localização" title="Ícone de localização"/>
+            <h2>Informe sua cidade e veja ofertas exclusivas</h2>
+        </div>
+        <div class="modal_content">
+            <form>
+                <input type="text" id="autocomplete" placeholder="Informe a sua cidade" />
+                <button class="btn-confirmar" href="javascript:void(0)" id="submit">CONFIRMAR</button>
+            </form>
+        </div>
+    </div>
+</div>

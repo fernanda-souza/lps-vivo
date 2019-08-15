@@ -1,0 +1,60 @@
+<div id="modalChatvivi" data-hj-ignore-attributes="" style="display: none;">
+    <div class="overlay" data-hj-ignore-attributes="">&nbsp;</div>
+    <div class="box">
+        <a href="javascript:void()" class="btn-fechar">&nbsp;</a>
+        <img src="img/PW_IMG_ICON_MODAL_SANTA.png" alt="" class="icon-central"
+            data-hj-ignore-attributes="">
+        <h2 class="box-title" data-hj-ignore-attributes="">O que você deseja?</h2>
+        <a href="javascript:void(0)" class="box-btn_left" id="box-btn_left" target="_blank" data-hj-ignore-attributes="" data-analytics-id="option-chat" data-analytics-label ="quero-contratar" >
+            <strong data-hj-ignore-attributes="">Quero contratar</strong>
+            <br data-hj-ignore-attributes="">Plano para o meu celular</a>
+        <a href="https://www.vivo.com.br/portalweb/appmanager/env/web?_nfls=false&_nfpb=true&_pageLabel=vcAtendimentoBook&WT.ac=portal.paravoce.atendimento#" class="box-btn_right" id="box-btn_right" data-hj-ignore-attributes="" target="_blank" data-analytics-id="option-chat" data-analytics-label ="quero-atendimento">
+            <strong data-hj-ignore-attributes="">Quero atendimento</strong>
+            <br data-hj-ignore-attributes="">Sou cliente Vivo e tenho dúvidas</a>
+
+        <a href="https://www.vivo.com.br/celular/atendimento/index.php?produto=movel" class="box-btn_right" id="box-btn_right2" data-hj-ignore-attributes="" target="_blank">
+            <strong data-hj-ignore-attributes="">Quero atendimento</strong>
+            <br data-hj-ignore-attributes="">Sou cliente Vivo e tenho dúvidas</a>
+    </div>
+</div>
+
+<div id="modalChatdireto" data-hj-ignore-attributes="" style="display: none;">
+    <div class="overlay" data-hj-ignore-attributes="">&nbsp;</div>
+    <div class="box">
+        <a href="javascript:void()" class="btn-fechar" data-hj-ignore-attributes="">&nbsp;</a>
+    </div>
+</div>
+
+<a href="javascript:void()" class="btnnull" data-hj-ignore-attributes="" data-analytics-id="click-chat" data-click-analytics="chat-link-modal-1" data-analytics-label ="entrar"  style="display:none;">nova mensagem</a>
+<script type="text/javascript">
+    viviShowerLogic = { 'active': true, 'percent': 100 };
+</script>
+<a id="triggerAssistant" href="javascript:void()" title=""></a>
+
+<script type="text/javascript">
+    var scripts = document.scripts || document.getElementsByTagName('script');
+					
+    function getScriptBySrc(src) {
+        for (var i = 0, l = scripts.length; i < l; i++) {
+            if (scripts[i] && typeof scripts[i].src === 'string' && scripts[i].src.indexOf(src) >= 0) {
+                return scripts[i];
+            }
+        }
+        return null;
+    }
+    
+    /*if (viviShowerLogic.active && viviShowerLogic.percent) {
+        var viviURL          = 'https://vivo-aura-front.everisva.com/js/start.js?channel=portal-b2c-desktop&businesskey=0';
+        var porcentagemTotal = Math.random() * 100;
+        if (porcentagemTotal <= viviShowerLogic.percent) {
+            if (!getScriptBySrc(viviURL)) {
+                (function () {
+                    var node   = document.createElement('script');
+                    node.type  = 'text/javascript';				
+                    node.src   = viviURL;
+                    (document.head || document.getElementsByTagName('head')[0]).appendChild(node);
+                })();
+            }
+        }
+    }*/
+</script>

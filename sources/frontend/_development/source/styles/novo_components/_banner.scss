@@ -1,0 +1,2152 @@
+.regionalized {
+    .section-banner {
+        @include mobile {
+            // margin-top: 134px;
+        }
+    }
+}
+.hide--desk {
+    display: block;
+    @include mobile {
+        display: none;
+    }
+}
+.hide--mobile {
+    display: none;
+    @include mobile {
+        display: inline-block;
+    }
+}
+
+.only-desk {
+    display: flex;
+    @include mobile {
+        display: none;
+    }
+}
+
+.only-mobile {
+    display: none;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.promo-icons-wrap2 {
+    img {
+        @include mobile {
+            height: 47px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        @media screen and (min-width: 400px) and (max-width: 475px) {
+            height: 57px;
+        }
+    }
+}
+.section-banner {
+    position: relative;
+    margin-top: 96px;
+
+    @include mobile {
+        margin-top: 65px;
+    }
+
+    .container-box {
+        max-width: 1366px;
+        padding-left: 0;
+        padding-right: 0;
+
+        h1 {
+            padding: 20px 140px 0;
+            max-width: 1224px;
+            margin: auto;
+
+            @include mobile {
+                width: 100%;
+                padding: 20px 30px 0;
+            }
+
+            @media screen and (max-width: 1344px) and (min-width: 1024px) {
+                width: 100%;
+                padding: 20px 60px 0;
+            }
+        }
+    }
+
+    .top {
+        background-image: url("../img/cards/top.png") !important;
+    }
+
+    .middle {
+        background-image: url("../img/cards/middle.png") !important;
+    }
+
+    .bottom {
+        background-image: url("../img/cards/bottom.png") !important;
+    }
+
+    .banner-item {
+        font-family: Vivo;
+        width: 100%;
+        height: 400px;
+        margin: auto;
+        background-image: url("../img/bg_banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mobile {
+            margin-top: 0;
+            margin-bottom: 0;
+            background-image: url(../img/bg_banner_mobile.jpg), linear-gradient(62deg, #f3c266, #fc9900);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            align-items: baseline;
+        }
+
+        @media (max-width: 340px) {
+            background-position: center top;
+        }
+
+        @media (max-width: 425px) and (min-width: 414px) {
+            background-position: center top, center bottom;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            background-position: -130px 0px;
+        }
+
+        br {
+            display: initial !important;
+        }
+
+        &__inner {
+            max-width: 944px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            width: 50%;
+            flex-wrap: wrap;
+            margin-top: 70px;
+            padding-left: 65px;
+            align-items: baseline;
+            align-items: flex-start;
+
+            @include mobile {
+                flex-direction: column;
+                margin: 0;
+
+                &:first-child {
+                    padding: 0 20px;
+                }
+            }
+
+            @media screen and (max-width: 767px) {
+                h2 {
+                    margin-top: 0;
+                }
+            }
+
+            .banner-content-left {
+                @include mobile {
+                    margin-top: 25px;
+                }
+            }
+
+            .banner-content-right {
+                @include mobile {
+                    margin-top: 10px;
+                }
+            }
+
+            .banner-content-left,
+            .banner-content-right {
+                width: 580px;
+
+                @include mobile {
+                    width: 95%;
+                    max-width: 355px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                h2 {
+                    font-size: 40px;
+                    line-height: 0.9;
+                    margin: 0;
+                    padding-left: 10px;
+
+                    @include mobile {
+                        font-size: 32px;
+                        padding-left: 0;
+                    }
+                }
+
+                .promo-wrap,
+                .promo-text {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .promo-icons-wrap {
+                    margin-bottom: 15px;
+
+                    img {
+                        vertical-align: bottom;
+                        margin-left: 5px;
+                        margin-right: 5px;
+
+                        @include tablet {
+                            margin-left: 0;
+                        }
+
+                        @include mobile {
+                            width: 30px;
+                            height: 30px;
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                        text-align: left;
+                        line-height: 0.7;
+                        margin-top: 0px;
+                        font-size: 20px;
+                        vertical-align: middle;
+                        padding-left: 5px;
+
+                        @include mobile {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .promo-content-first {
+                    .promo-text {
+                        flex-direction: column;
+
+                        span:nth-child(1) {
+                            font-size: 28px;
+
+                            @include tablet {
+                                font-size: 23px;
+                            }
+
+                            @include mobile {
+                                font-size: 17px;
+                            }
+                        }
+
+                        span:nth-child(2) {
+                            font-size: 57px;
+                            line-height: 0.7;
+
+                            @include tablet {
+                                font-size: 47px;
+                            }
+
+                            @include mobile {
+                                font-size: 34px;
+                            }
+                        }
+                    }
+                }
+
+                .promo-content-conector {
+                    @include mobile {
+                        align-self: flex-end;
+                        margin-bottom: 17px;
+                    }
+                }
+
+                .promo-content-second {
+                    .promo-text {
+                        flex-direction: column;
+                        line-height: 0.7;
+                        align-items: flex-start;
+
+                        span:nth-child(1) {
+                            font-size: 30px;
+
+                            @include mobile {
+                                font-size: 20px;
+                            }
+                        }
+
+                        span:nth-child(2) {
+                            font-size: 22.5px;
+
+                            @include mobile {
+                                font-size: 16px;
+                            }
+                        }
+
+                        span:nth-child(3) {
+                            font-size: 20px;
+
+                            @include mobile {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .banner-content-right {
+                width: 250px;
+                margin-left: 80px;
+                text-align: center;
+                font-size: 46px;
+                line-height: 0.7;
+
+                @include tablet {
+                    font-size: 40px;
+                    margin-left: 70px;
+                    margin-right: 10px;
+                }
+
+                @include mobile {
+                    width: 95%;
+                    max-width: 350px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .banner-preco-title {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+                    @include mobile {
+                        border-bottom: 0;
+                        font-size: 40px;
+                        text-align: center;
+                        line-height: 0.6;
+                        width: 38%;
+                        display: inline-block;
+
+                        > div {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .banner-preco-wrap {
+                    display: flex;
+                    height: 70px;
+                    position: relative;
+                    margin-top: 45px;
+
+                    @include mobile {
+                        width: 200px;
+                        margin-left: 0;
+                        margin-right: auto;
+                        display: inline-block;
+                        height: 50%;
+                    }
+
+                    .pre-text {
+                        font-size: 14px;
+                        position: absolute;
+                        left: 0;
+                        top: -30px;
+                        text-align: left;
+
+                        @include tablet {
+                            font-size: 20px;
+                        }
+
+                        @include mobile {
+                            font-size: 14px;
+                            left: 22px;
+                            top: -20px;
+                        }
+                    }
+
+                    .preco-moneda {
+                        font-size: 30px;
+                        position: absolute;
+                        left: 0;
+                        top: -10px;
+
+                        @include mobile {
+                            font-size: 25px;
+                            left: 20px;
+                            top: -7px;
+                        }
+                    }
+
+                    .preco-value {
+                        font-size: 116px;
+                        margin-left: 25px;
+
+                        @include tablet {
+                            font-size: 90px;
+                        }
+
+                        @include mobile {
+                            font-size: 78px;
+                            margin-left: -25px;
+                        }
+                    }
+
+                    .preco-cents {
+                        font-size: 75px;
+                        position: absolute;
+                        right: 25px;
+                        top: -8px;
+
+                        @include desktop {
+                            top: -20px;
+                        }
+
+                        @include tablet {
+                            font-size: 60px;
+                        }
+
+                        @include mobile {
+                            font-size: 52px;
+                        }
+                    }
+
+                    .preco-period {
+                        font-size: 24px;
+                        position: absolute;
+                        right: 30px;
+                        bottom: 20px;
+
+                        @include tablet {
+                            bottom: 28px;
+                        }
+
+                        @include mobile {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .btn-banner {
+                    background-color: #ff9900;
+                    color: #fff;
+                    font-family: Roboto;
+                    font-weight: 700;
+                    padding: 20px 50px;
+                    display: inline-block;
+
+                    @include mobile {
+                        font-size: 14px;
+                        padding: 20px 40px;
+                        margin-left: -40px;
+                        margin-right: 15px;
+                    }
+                }
+
+                .banner-bottom-text {
+                    font-family: Roboto;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #ff9900;
+                    line-height: 1;
+                    margin-top: 20px;
+
+                    @include mobile {
+                        // display: inline-block;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &.banner-conversao4 {
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 30px 15px;
+            @include desktop {
+                padding-bottom: 0px;
+                padding: 95px;
+                padding-left: 74px;
+            }
+            img {
+                max-width: 100%;
+            }
+            .banner-column {
+                &__one {
+                    @include mobile {
+                        width: 100%;
+                    }
+                    @include desktop {
+                        margin-right: 26px;
+                    }
+                    .banner-internet {
+                        flex-direction: row;
+                        display: flex;
+                        transform: translate(-3px, -25px);
+                        @include mobile {
+                            width: 100%;
+                            margin-top: 7px;
+                            transform: translate(12px, -9px);
+                            margin-bottom: -10px;
+                        }
+                        h2 {
+                            margin: 0;
+                            margin-right: 10px;
+                            font-family: "ITCOfficinaSerifBold";
+                            font-size: 55px;
+                            letter-spacing: -1px;
+                            @include desktop {
+                                margin: 0;
+                                font-size: 110px;
+                                letter-spacing: -7px;
+                            }
+                        }
+                        h3 {
+                            font-size: 41px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin: 0;
+                            line-height: 44px;
+                            margin: 21px 0 0 18px;
+                            @include mobile {
+                                font-size: 24px;
+                                margin: 0;
+                                width: 100%;
+                                margin-top: 19px;
+                            }
+                        }
+                    }
+                    .banner-price {
+                        display: flex;
+                        flex-direction: row;
+                        transform: translate(-5px, -42px);
+                        &-rs {
+                            color: #712383;
+                            font-size: 22px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 31px;
+                            @include mobile {
+                                font-size: 16px;
+                                margin-top: 18px;
+                            }
+                        }
+                        &-value {
+                            color: #712383;
+                            font-size: 85px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 14px;
+                            letter-spacing: -11px;
+                            @include mobile {
+                                font-size: 56px;
+                            }
+                        }
+                        &-cents {
+                            color: #712383;
+                            font-size: 52px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 21px;
+                            margin-left: 7px;
+                            letter-spacing: -3px;
+                            @include mobile {
+                                font-size: 33px;
+                                margin-top: 14px;
+                            }
+                        }
+                        &-month {
+                            color: #712383;
+                            font-size: 27px;
+                            font-family: "ITCOfficinaSerifBold";
+                            align-self: flex-end;
+                            margin-bottom: 36px;
+                            @include mobile {
+                                font-size: 21px;
+                                margin-bottom: 23px;
+                            }
+                        }
+                        &-anual {
+                            color: #660099;
+                            font-size: 14px;
+                            font-family: "Roboto";
+                            transform: translate(-110px, 78px);
+                            @include mobile {
+                                transform: translate(-80px, 48px);
+                            }
+                        }
+                    }
+                    .banner-assine {
+                        flex-direction: row;
+                        align-items: center;
+                        transform: translate(-2px, -21px);
+                        @include mobile {
+                            flex-direction: row;
+                            width: 100%;
+                        }
+                        a {
+                            color: #fff;
+                            font-size: 17px;
+                            font-family: "Roboto";
+                            text-align: center;
+                            padding: 14px 28px;
+                            background: #609;
+                            width: 142px;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 16px;
+                                width: 80%;
+                                height: 100%;
+                                padding: 14px 10px;
+                            }
+                        }
+                        p {
+                            color: #fff;
+                            text-align: center;
+                            font-size: 18px;
+                            font-family: "ITCOfficinaSerifBookRegular";
+                            margin-left: 32px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 16px;
+                                margin-left: 10px;
+                                width: 100%;
+                            }
+                            a {
+                                font-size: 18px;
+                                font-family: "ITCOfficinaSerifBold";
+                                background: none;
+                                padding: 0;
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+                &__two {
+                    width: 270px;
+                    @include mobile {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 0px;
+                    }
+                    .banner-promo-title {
+                        width: auto;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        color: #fff;
+                        font-family: "ITCOfficinaSerifBold";
+                        font-size: 24px;
+                        line-height: 28px;
+                        transform: translate(11px, -2px);
+                        @include desktop {
+                            font-size: 41px;
+                            line-height: 41px;
+                            transform: translate(18px, -1px);
+                        }
+                    }
+                    .promo-icons-wrap {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translate(1px, 19px);
+
+                        @include mobile {
+                            margin: 0px;
+                            transform: translate(0px, -6px);
+                        }
+
+                        img {
+                            height: 81px;
+
+                            @include mobile {
+                                margin-right: 5px;
+                                width: 136px;
+                                height: auto;
+                            }
+                        }
+
+                        span {
+                            align-self: flex-end;
+                            font-size: 18px;
+                            line-height: 14px;
+                            align-self: center;
+
+                            @include mobile {
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+                }
+                &__three {
+                    width: 280px;
+                    margin-left: 14px;
+                    @include mobile {
+                        margin-top: 15px;
+                    }
+                    .banner-promo-title {
+                        color: #fff;
+                        font-size: 40px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin-top: 0;
+                        line-height: 46px;
+                        transform: translate(-1px, -5px);
+                        @include mobile {
+                            color: #fff;
+                            font-size: 27px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 0;
+                            line-height: 27px;
+                            transform: translate(-1px, -12px);
+                        }
+                    }
+                    .banner-price {
+                        display: flex;
+                        flex-direction: row;
+                        transform: translate(0px, -12px);
+                        @include mobile {
+                            transform: translate(-2px, -14px);
+                        }
+                        &-rs {
+                            color: #712383;
+                            font-size: 22px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 31px;
+                            @include mobile {
+                                font-size: 16px;
+                                margin-top: 0px;
+                            }
+                        }
+                        &-value {
+                            color: #712383;
+                            font-size: 85px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 14px;
+                            letter-spacing: -11px;
+                            @include mobile {
+                                font-size: 49px;
+                                margin-top: 0px;
+                                transform: translate(-2px, -13px);
+                                letter-spacing: -2px;
+                            }
+                        }
+                        &-cents {
+                            color: #712383;
+                            font-size: 52px;
+                            font-family: "ITCOfficinaSerifBold";
+                            margin-top: 21px;
+                            margin-left: 7px;
+                            letter-spacing: -3px;
+                            @include mobile {
+                                font-size: 22px;
+                                margin-top: 0px;
+                                transform: translate(-11px, -9px);
+                            }
+                        }
+                        &-month {
+                            color: #712383;
+                            font-size: 27px;
+                            font-family: "ITCOfficinaSerifBold";
+                            align-self: flex-end;
+                            margin-bottom: 36px;
+                            @include mobile {
+                                font-size: 17px;
+                                transform: translate(-11px, -5px);
+                            }
+                        }
+                        &-anual {
+                            color: #660099;
+                            font-size: 14px;
+                            font-family: "Roboto";
+                            transform: translate(-110px, 78px);
+                            @include mobile {
+                                transform: translate(-60px, 19px);
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                    .logo-container {
+                        transform: translate(140px, -68px);
+                        width: 130px;
+                    }
+                    .banner-assine {
+                        flex-direction: row;
+                        align-items: center;
+                        transform: translate(-2px, -21px);
+                        @include mobile {
+                            width: 100%;
+                            transform: translate(-2px, -59px);
+                            align-items: center;
+                            flex-direction: row;
+                        }
+                        a {
+                            color: #fff;
+                            font-size: 17px;
+                            font-family: "Roboto";
+                            text-align: center;
+                            padding: 14px 28px;
+                            background: #609;
+                            width: 142px;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 16px;
+                                width: 80%;
+                                height: 100%;
+                                padding: 14px 10px;
+                            }
+                        }
+                        p {
+                            color: #fff;
+                            text-align: center;
+                            font-size: 18px;
+                            font-family: "ITCOfficinaSerifBookRegular";
+                            margin-left: 32px;
+                            display: inline-block;
+                            @include mobile {
+                                font-size: 13px;
+                                margin-left: 0px;
+                                width: 100%;
+                            }
+                            a {
+                                font-size: 18px;
+                                font-family: "ITCOfficinaSerifBold";
+                                background: none;
+                                padding: 0;
+                                width: auto;
+                                @include mobile {
+                                    font-size: 13px;
+                                    font-family: "ITCOfficinaSerifBold";
+                                    background: none;
+                                    padding: 0;
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .banner-item__inner {
+                display: flex;
+                flex-direction: column;
+                &:first-child {
+                    width: 43%;
+                }
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    padding-left: 130px;
+                }
+
+                @include mobile {
+                    &:first-child {
+                        width: 100%;
+                    }
+                    width: 100%;
+                    padding: 0 15px;
+                    flex-direction: inherit;
+                    align-items: flex-start;
+                    width: 375px;
+                    margin: auto;
+                    margin-top: 130px;
+                    margin-bottom: 0;
+                }
+
+                @media (max-width: 475px) and (min-width: 320px) {
+                    margin-top: 15px;
+                }
+
+                .banner-first-block {
+                    color: #670099;
+                    width: 100%;
+                    font-family: "VIVO";
+
+                    .logo {
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+
+                    @include desktop {
+                        margin-top: 0px;
+                    }
+
+                    @include mobile {
+                        display: flex;
+                        width: 100%;
+                        margin-top: 0px;
+                        width: 100%;
+                    }
+
+                    span {
+                        line-height: 28px;
+                        display: block;
+
+                        @include mobile {
+                            line-height: 25px;
+                        }
+
+                        &:nth-child(1) {
+                            font-size: 50.5px;
+
+                            @include mobile {
+                                font-size: 34px;
+                                margin-top: 1px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            font-size: 89.3px;
+                            margin-top: 10px;
+
+                            @include mobile {
+                                font-size: 56.5px;
+                                margin-top: 0px;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            font-size: 41px;
+                            margin-top: 13px;
+
+                            @include mobile {
+                                font-size: 25px;
+                                margin-top: 0px;
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            font-size: 33px;
+                        }
+                    }
+                }
+
+                .apenas {
+                    color: #fff;
+                    font-size: 14px;
+                    font-family: "Roboto";
+                    font-weight: 400;
+                    margin-top: 5px;
+                    @include mobile {
+                        width: 100%;
+                        margin-bottom: 7px;
+                    }
+                }
+
+                .banner-separator {
+                    text-align: center;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    @include mobile {
+                        flex-direction: row;
+                        align-self: flex-start;
+                    }
+                    .separator {
+                        width: 2px;
+                        height: 190px;
+                        background: #f7ba4c;
+                        margin: 0;
+                        padding: 0;
+                        @include mobile {
+                            flex-direction: row;
+                            width: 73vw;
+                            height: 2px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                h2 {
+                    font-family: "ITCOfficinaSerifBookRegular";
+                    font-size: 26px;
+                    @include mobile {
+                        color: #fff;
+                        font-size: 18px;
+                        font-family: "ITCOfficinaSerifBold";
+                        width: 100%;
+                    }
+                    strong {
+                        font-family: "ITCOfficinaSerifBold";
+                    }
+                }
+            }
+
+            .left {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 55%;
+                padding-left: 0px;
+                font-family: "ITCOfficinaSerifBookRegular";
+                transform: translateY(50px);
+
+                @include mobile {
+                    width: 100%;
+                    display: flex;
+                    padding-top: 0px;
+                    justify-content: center;
+                    padding-right: 0;
+                    margin: 0 30px;
+                }
+
+                @media (min-width: 360px) and (max-width: 767px) {
+                    margin: -19px 30px 0 30px;
+                }
+
+                @media (max-width: 340px) {
+                    margin: -44px 5px 0 5px;
+                }
+
+                .banner-first-block {
+                    width: auto;
+                    padding-left: 0px;
+                    margin-top: 41px;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding-bottom: 37px;
+                    margin-left: 20px;
+
+                    .banner-promo-title {
+                        color: #fff;
+                        font-size: 33px;
+                        font-family: "ITCOfficinaSerifBold";
+                        margin-top: -30px;
+                        line-height: 29px;
+                    }
+
+                    @include desktop {
+                        width: 420px;
+                        justify-content: flex-start;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                        margin: 0px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+                        padding-bottom: 10px;
+                        justify-content: center;
+                    }
+
+                    .promo-text-consideracao2 {
+                        color: white;
+                        font-family: "VIVO";
+                        margin-bottom: 10px;
+
+                        @include mobile {
+                            margin-right: 0;
+                            font-family: "Vivo";
+                        }
+
+                        span {
+                            line-height: 30px;
+                            display: block;
+
+                            @include mobile {
+                                font-size: 17px;
+                                line-height: 20px;
+                            }
+
+                            &:nth-child(1) {
+                                font-size: 28px;
+
+                                @include mobile {
+                                    font-size: 20px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 30.5px;
+                                margin-top: -2px;
+                                color: #fc9900;
+
+                                @include mobile {
+                                    font-size: 31px;
+                                    margin-top: 0px;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                font-size: 20px;
+                                line-height: 14px;
+
+                                @include mobile {
+                                    font-size: 31px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .banner-second-block {
+                    display: flex;
+                    margin-top: 8px;
+                    padding-left: 9px;
+
+                    @media all and (-ms-high-contrast: none) {
+                        margin-top: -48px;
+                    }
+
+                    @include mobile {
+                        margin: 8px -51px;
+                        margin-top: 22px;
+                        margin-left: -20px;
+                        margin-right: -20px;
+                    }
+
+                    .preco-container {
+                        width: 100%;
+                        margin-top: -16px;
+                        align-self: flex-start;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+
+                        .partir {
+                            display: block;
+
+                            &:nth-child(1) {
+                                font-size: 15px;
+                                font-family: "ITCOfficinaSerifBold";
+                                margin-top: 66px;
+                                margin-bottom: -24px;
+                                margin-left: -22px;
+
+                                @include mobile {
+                                    margin-left: 25px;
+                                    margin-top: 10px;
+                                    font-size: 11px;
+                                    margin-bottom: -17px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 27px;
+                                margin-top: -7px;
+                            }
+                        }
+
+                        .preco {
+                            display: flex;
+                            // margin-top: 36px;
+                            margin-top: 0px;
+                            font-family: "VIVO";
+
+                            &:nth-child(1) {
+                                font-size: 15px;
+                                font-family: "ITCOfficinaSerifBold";
+                                margin-top: 40px;
+                                margin-bottom: -24px;
+                                margin-left: -28px;
+                                letter-spacing: 0px;
+
+                                @include mobile {
+                                    font-size: 11px;
+                                    margin-top: 29px;
+                                    margin-left: 6px;
+                                    margin-right: -16px;
+                                }
+                                span {
+                                    font-size: 23px;
+                                    font-family: "ITCOfficinaSerifBookRegular";
+                                    margin-top: -10px;
+                                    margin-left: 4px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 84px;
+                                font-family: "ITCOfficinaSerifBold";
+                                font-weight: 100;
+                                margin-top: -23px;
+                                margin-left: 6px;
+                                letter-spacing: -3px;
+
+                                @include mobile {
+                                    font-size: 53px;
+                                    margin-top: -10px;
+                                    margin-left: 18px;
+                                }
+                            }
+
+                            span:nth-child(3) {
+                                font-size: 42px;
+                                text-align: right;
+                                font-family: "ITCOfficinaSerifBold";
+                                display: block;
+                                margin-top: -9px;
+                                margin-left: -6px;
+                                line-height: 40px;
+
+                                @include mobile {
+                                    font-size: 35px !important;
+                                    margin-left: 3px;
+                                    margin-top: -10px;
+                                    letter-spacing: -2px;
+                                }
+                            }
+
+                            span:nth-child(4) {
+                                font-size: 21px !important;
+                                margin-top: 34px !important;
+                                margin-left: -33px !important;
+                                font-family: "ITCOfficinaSerifBookRegular";
+
+                                @include mobile {
+                                    font-size: 16px !important;
+                                    margin-top: 30px !important;
+                                    margin-left: -31px !important;
+                                    letter-spacing: 0px;
+                                }
+                            }
+                        }
+
+                        p[data-target="franquia"] {
+                            display: none;
+
+                            &.regionalized {
+                                display: block;
+                            }
+                        }
+
+                        p {
+                            color: white;
+                            margin-left: -21px;
+                            font-size: 18px;
+                            margin-top: -7px;
+
+                            @include mobile {
+                                margin-left: 24px;
+                                font-size: 14px;
+                                margin-top: 5px;
+                                margin-right: -10px;
+                            }
+                        }
+                    }
+
+                    .banner-third-block {
+                        margin-left: 53px;
+                        margin-top: 40px;
+
+                        @include mobile {
+                            align-self: flex-end;
+                            align-items: center;
+                            margin-bottom: -6px;
+                            margin-left: -18px !important;
+                            margin-top: -3px;
+                            font-size: 17px;
+                        }
+
+                        .btn-banner-consideracao2 {
+                            background-color: #ff9900;
+                            color: #fff;
+                            font-family: Roboto;
+                            padding: 18px 50px;
+                            display: inline-block;
+                            font-size: 14px;
+                            margin-top: 0px;
+                            width: 181px;
+                            font-weight: 700;
+
+                            @include mobile {
+                                background-color: #ff9900;
+                                font-size: 12px;
+                                padding-left: 5px;
+                                padding-right: 5px;
+                                display: inline-block;
+                                text-align: center;
+                                margin-right: 15px;
+                                width: 146px;
+                                margin-top: -46px;
+                                line-height: 9px;
+                            }
+                        }
+
+                        .banner-bottom-text {
+                            font-family: Roboto;
+                            font-weight: 700;
+                            font-size: 14px;
+                            color: #fff;
+                            line-height: 1;
+                            margin-top: 22px;
+                            margin-left: 15px;
+
+                            @include mobile {
+                                color: #fff;
+                                // display: inline-block;
+                                margin-top: 0;
+                                vertical-align: middle;
+                                font-weight: 600;
+                                font-size: 11px;
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.banner-giga {
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+                background-position: -87px 0px;
+            }
+
+            @media (width: 768px) {
+                background-position: center -50px !important;
+            }
+
+            @media (max-width: 768px) {
+                background-image: url("../img/novo/4g_v2_mobile.png") !important;
+                background-size: cover;
+                height: auto;
+                background-color: #7102b8;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            @media (max-width: 340px) {
+                background-position: center center;
+            }
+
+            .banner-item__inner {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                align-items: flex-start;
+                padding-left: 241px;
+                height: auto;
+                margin-top: 38px;
+                padding-left: 160px;
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    padding-left: 130px;
+                }
+
+                @media (max-width: 768px) {
+                    height: 240px;
+                }
+
+                @media (max-width: 768px) {
+                    margin: 0px;
+                    padding: 30px;
+                    flex-direction: inherit;
+                    align-items: flex-start;
+                    width: 375px;
+                    margin: auto;
+                }
+
+                .banner-first-block {
+                    color: #670099;
+                    width: 100%;
+                    font-family: "VIVO";
+
+                    @include desktop {
+                        margin-top: 0px;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                        margin-top: 60px;
+                        width: 100%;
+                        margin-left: 40px;
+                    }
+
+                    span {
+                        line-height: 28px;
+                        display: block;
+
+                        @include mobile {
+                            line-height: 25px;
+                        }
+
+                        &:nth-child(1) {
+                            font-size: 50.5px;
+
+                            @include mobile {
+                                font-size: 34px;
+                                margin-top: 1px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            font-size: 89.3px;
+                            margin-top: 10px;
+
+                            @include mobile {
+                                font-size: 56.5px;
+                                margin-top: 0px;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            font-size: 41px;
+                            margin-top: 13px;
+
+                            @include mobile {
+                                font-size: 25px;
+                                margin-top: 0px;
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            font-size: 33px;
+                        }
+                    }
+                }
+
+                h2 {
+                    font-family: "ITCOfficinaSerifBold";
+                    font-size: 22px;
+
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
+
+                    @media (width: 1024px) {
+                        margin-left: -76px;
+                    }
+                }
+            }
+
+            .left {
+                width: 50%;
+                padding-left: 0px;
+                font-family: "ITCOfficinaSerifBookRegular";
+
+                @include desktop {
+                    padding-left: 90px;
+                }
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    display: flex;
+                    padding-top: 15px;
+                    justify-content: center;
+                    padding-right: 0;
+                    margin: 0px;
+                }
+
+                @media (width: 768px) {
+                    height: 350px;
+                }
+
+                @include tablet {
+                    padding-left: 86px;
+                }
+
+                @include mobile {
+                    margin-top: -20%;
+                }
+
+                @media (max-width: 340px) {
+                    margin: 0px 5px 65px 5px;
+                    margin-top: -43px;
+                }
+
+                .banner-first-block {
+                    width: auto;
+                    padding-left: 0px;
+                    margin-top: 58px;
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 10px;
+                    margin-left: -13px;
+
+                    @include desktop {
+                        margin-left: -40px;
+                        width: 420px;
+                        justify-content: center;
+                    }
+
+                    @media (-ms-high-contrast: none) {
+                        margin-bottom: -60px;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                        margin: 0px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+                        padding-bottom: 0px;
+                        justify-content: center;
+                    }
+                    @include tablet {
+                        margin-left: -33px;
+                    }
+
+                    .promo-plus {
+                        margin-left: 30px;
+
+                        @include mobile {
+                            margin-left: 10px;
+                        }
+
+                        @include tablet {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    .promo-icons-wrap {
+                        display: flex;
+                        justify-content: center;
+
+                        @include mobile {
+                            margin: 0px;
+                        }
+
+                        @media (-ms-high-contrast: none) {
+                            margin-left: -10px;
+                        }
+
+                        img {
+                            width: 55px;
+                            height: 55px;
+                            margin-right: 11px;
+
+                            @media (-ms-high-contrast: none) {
+                                width: auto;
+                                height: 45px;
+                            }
+
+                            @include mobile {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 15px;
+                            }
+
+                            @include tablet {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        span {
+                            align-self: flex-end;
+                            font-size: 18px;
+                            line-height: 14px;
+                            align-self: center;
+
+                            @include mobile {
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+
+                    .promo-text-consideracao2 {
+                        color: white;
+                        font-family: "VIVO";
+                        margin-bottom: 10px;
+
+                        @include mobile {
+                            margin-right: 0;
+                            font-family: "VIVO";
+                        }
+
+                        span {
+                            line-height: 30px;
+                            display: block;
+
+                            @include mobile {
+                                font-size: 17px;
+                                line-height: 20px;
+                            }
+                            @include tablet {
+                                line-height: 23px;
+                            }
+
+                            &:nth-child(1) {
+                                font-size: 28px;
+
+                                @include mobile {
+                                    font-size: 17px;
+                                }
+
+                                @include tablet {
+                                    font-size: 26px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 56.5px;
+                                margin-top: -2px;
+                                color: #fc9900;
+
+                                @include mobile {
+                                    font-size: 33.6px;
+                                    margin-top: 0px;
+                                }
+
+                                @include tablet {
+                                    font-size: 53px;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                font-size: 20px;
+                                line-height: 14px;
+
+                                @include mobile {
+                                    font-size: 31px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .banner-second-block {
+                    display: flex;
+                    margin-left: -21px;
+                    width: 470px;
+
+                    @include mobile {
+                        width: 100%;
+                        margin: 0px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+                        padding-bottom: 20px;
+                        justify-content: center;
+                    }
+
+                    @media (-ms-high-contrast: none) {
+                        margin-top: 42px;
+                    }
+
+                    @media (min-width: 601px) and (max-width: 768px) {
+                        margin-left: 40px;
+                    }
+
+                    .promo-gigas-exc {
+                        color: white;
+                        font-family: "VIVO";
+                        margin-bottom: 10px;
+
+                        @include mobile {
+                            margin-top: 6px;
+                            margin-left: 15px;
+                        }
+
+                        @include tablet {
+                            margin-top: 3px;
+                        }
+
+                        span {
+                            line-height: 25px;
+                            display: block;
+
+                            @include mobile {
+                                font-size: 17px;
+                                line-height: 15px;
+                            }
+
+                            @include tablet {
+                                line-height: 23px;
+                            }
+
+                            &:nth-child(1) {
+                                font-size: 39px;
+
+                                @include mobile {
+                                    font-size: 22px;
+                                }
+
+                                @include tablet {
+                                    font-size: 30px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 29px;
+                                margin-top: -2px;
+                                color: #fc9900;
+
+                                @include mobile {
+                                    font-size: 16.5px;
+                                    margin-top: 0px;
+                                }
+
+                                @include tablet {
+                                    font-size: 22px;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                font-size: 20px;
+                                line-height: 14px;
+
+                                @include mobile {
+                                    font-size: 31px;
+                                }
+                            }
+                        }
+                    }
+
+                    .promo-gigas-apps {
+                        margin-left: 20px;
+                        margin-top: 8px;
+
+                        @include mobile {
+                            margin-top: 5px;
+                            margin-left: 10px;
+                        }
+
+                        > img {
+                            width: 90%;
+                        }
+                    }
+                }
+                .banner-three-block {
+                    display: flex;
+                    margin-top: -22px;
+
+                    @include mobile {
+                        width: 100%;
+                        margin: 0px;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        margin-top: -10px;
+                        padding-bottom: 20px;
+                        justify-content: center;
+                        padding-right: 21px;
+                    }
+
+                    @media all and (-ms-high-contrast: none) {
+                        margin-top: -48px;
+                    }
+
+                    @media (-ms-high-contrast: none) {
+                        margin-bottom: 20px;
+                    }
+
+                    .preco-container {
+                        margin-top: -16px;
+                        align-self: flex-start;
+
+                        @include mobile {
+                            padding-top: 10px;
+                        }
+                        @include tablet {
+                            padding-top: 42px;
+                            margin-left: -21px;
+                        }
+
+                        .partir {
+                            display: block;
+
+                            &:nth-child(1) {
+                                font-size: 14px;
+                                font-family: "VIVO";
+
+                                margin-top: 41px;
+                                margin-bottom: -24px;
+                                margin-left: -23px;
+
+                                @include mobile {
+                                    margin-left: 5px;
+                                    margin-top: 10px;
+                                    font-size: 11px;
+                                    margin-bottom: -17px;
+                                }
+
+                                @include tablet {
+                                    margin-left: 5px;
+                                    margin-top: 10px;
+                                    font-size: 11px;
+                                    margin-bottom: -17px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 27px;
+                                margin-top: -7px;
+                            }
+                        }
+
+                        .preco {
+                            display: flex;
+                            // margin-top: 36px;
+                            margin-top: 0px;
+                            font-family: "VIVO";
+
+                            &:nth-child(1) {
+                                font-size: 24px;
+                                margin-top: 23px;
+                                margin-left: -25px;
+
+                                @include mobile {
+                                    font-size: 22px;
+                                    margin-top: 11px;
+                                    margin-left: 0px;
+                                    margin-right: -16px;
+                                }
+
+                                @include tablet {
+                                    font-size: 22px;
+                                    margin-top: 11px;
+                                    margin-left: 0px;
+                                    margin-right: -16px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 121px;
+                                margin-top: -15px;
+
+                                @include mobile {
+                                    font-size: 68px;
+                                    margin-top: 0px;
+                                    margin-left: 4px;
+                                }
+
+                                @include tablet {
+                                    font-size: 84px;
+                                    margin-top: 0px;
+                                    margin-left: 4px;
+                                }
+                            }
+
+                            span:nth-child(3) {
+                                font-size: 70px;
+                                text-align: right;
+                                display: block;
+                                margin-top: 24px;
+                                margin-left: 0;
+                                line-height: 40px;
+
+                                @include mobile {
+                                    margin-top: -9px;
+                                    font-size: 40px !important;
+                                    margin-left: 3px;
+                                    margin-top: 11px;
+                                }
+                                @include tablet {
+                                    margin-top: -9px;
+                                    font-size: 40px !important;
+                                    margin-left: -8px;
+                                    margin-top: 11px;
+                                }
+                            }
+
+                            span:nth-child(4) {
+                                font-size: 28px;
+                                margin-top: 76px;
+                                margin-left: -66px;
+
+                                @include mobile {
+                                    font-size: 16px;
+
+                                    margin-top: 47px;
+
+                                    margin-left: -41px;
+                                }
+
+                                @include tablet {
+                                    margin-top: 58px;
+                                    margin-left: -30px;
+                                }
+                            }
+                        }
+
+                        > p {
+                            color: white;
+                            margin-left: -21px;
+                            font-size: 18px;
+                            margin-top: -12px;
+                            @include mobile {
+                                font-size: 12px;
+                                margin-left: 4px;
+                                margin-top: -4px;
+                            }
+                            @media (min-width: 600px) and (max-width: 800px) {
+                                margin-top: 5px !important;
+                                margin-left: 6px !important;
+                            }
+                        }
+                    }
+
+                    .banner-third-block {
+                        margin-left: 53px;
+                        margin-top: 50px;
+
+                        @include mobile {
+                            margin-left: 0px;
+                        }
+
+                        .btn-banner-consideracao2 {
+                            background-color: #ff9900;
+                            color: #fff;
+                            font-family: Roboto;
+                            padding: 14px 30px;
+                            display: flex;
+                            font-size: 14px;
+                            margin-top: 0px;
+                            width: 181px;
+                            font-weight: 700;
+                            border-radius: 8px;
+
+                            @include mobile {
+                                background-color: #ff9900;
+                                font-size: 12px;
+                                padding-left: 10px;
+                                padding-right: 5px;
+                                text-align: center;
+                                margin-right: 15px;
+                                width: 146px;
+                                margin-top: -46px;
+                                line-height: 9px;
+                            }
+                            > p {
+                                margin-left: 6px;
+                                padding-top: 3px;
+                                padding-left: 5px;
+                                color: #fff;
+
+                                @include mobile {
+                                    margin-top: 4px;
+                                    margin-left: 3px;
+                                }
+                            }
+                        }
+
+                        .banner-bottom-text {
+                            font-family: Roboto;
+                            font-weight: 700;
+                            font-size: 14px;
+                            color: #fff;
+                            line-height: 1;
+                            margin-top: 12px;
+                            margin-left: 15px;
+
+                            @include mobile {
+                                color: #fff;
+                                // display: inline-block;
+                                margin-top: 0;
+                                vertical-align: middle;
+                                font-weight: 600;
+                                font-size: 11px;
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .promo-content-conector {
+            @include mobile {
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+
+    .banner-conversao,
+    .banner-consideracao,
+    .banner-awareness {
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    @include desktop {
+        .banner-conversao {
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
+            background-repeat: no-repeat;
+        }
+
+        .banner-consideracao {
+            background-image: url("../img/novo/bg-banner-consideracao.png") !important;
+        }
+
+        .banner-awareness {
+            background-image: url("../img/novo/bg-banner-awareness.jpg") !important;
+        }
+    }
+
+    @include tablet {
+        .banner-conversao {
+            background-image: url("../img/novo/bg-banner-conversao-v2.jpg") !important;
+            background-repeat: no-repeat;
+        }
+
+        .banner-consideracao {
+            background-image: url("../img/novo/bg-banner-consideracao.png") !important;
+            background-position: -230px top;
+        }
+
+        .banner-awareness {
+            background-image: url("../img/novo/bg-banner-awareness.jpg") !important;
+        }
+    }
+
+    @include mobile {
+        .banner-conversao {
+            background-image: url("../img/novo/bg-banner-conversao-mobile-crop-v2.png") !important;
+            // background-size: auto 100%;
+            background-size: cover;
+        }
+
+        .banner-consideracao {
+            background-image: url("../img/novo/bg-banner-consideracao-mobile.png") !important;
+            background-size: cover;
+        }
+
+        .banner-awareness {
+            background-image: url("../img/novo/bg-banner-awareness-mobile.png") !important;
+            background-size: cover;
+        }
+    }
+
+    .container_banner_new {
+        @media (max-width: 768px) {
+            height: auto !important;
+        }
+    }
+
+    .container_banner {
+        height: 400px;
+        // background-image: url('../img/novo/banner_4g.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: white;
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            // background-image: url('../img/novo/banner_4g_m.png');
+            background-size: cover;
+            align-items: start;
+            height: auto;
+            box-sizing: content-box;
+
+            &.sem-bussola {
+                padding-top: 0;
+            }
+        }
+
+        @include tablet {
+            // height: calc(100vw / 3.415);
+        }
+
+        .inner-banner {
+            width: 100%;
+
+            @include desktop {
+                margin-top: 38px;
+            }
+
+            @include mobile {
+                margin-top: 0px;
+            }
+
+            .title-banner {
+                max-width: 100%;
+                // font-family: $font-regular;
+                font-size: 48px;
+                margin-top: -26px;
+                line-height: 49px;
+
+                @include mobile {
+                    margin-top: -21px;
+                    line-height: 31px;
+                    font-size: 24px;
+                }
+            }
+
+            h2 {
+                font-size: 20px;
+                margin: 8px 0;
+
+                @include mobile {
+                    margin-top: 10px;
+                }
+            }
+
+            .precio-plan {
+                display: flex;
+                padding: 0;
+
+                @include desktop {
+                    margin: 3px 0;
+                    margin-top: 16px;
+                }
+
+                @include mobile {
+                    margin-bottom: 37px;
+                }
+
+                h1 {
+                    font-weight: 300;
+                    font-size: 48px;
+                }
+
+                p {
+                    font-weight: 300;
+                    color: white;
+                    margin-left: 5px;
+                    font-size: 20px;
+
+                    span {
+                        display: block;
+                        margin-top: -4px;
+                    }
+                }
+            }
+
+            .ver-planos {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: white;
+                background: #660099;
+                border: none;
+                padding: 0 30px;
+                text-align: center;
+                height: 56px;
+                line-height: 56px;
+                align-self: center;
+                width: 181px;
+                margin-left: auto;
+
+                @include desktop {
+                    padding: 19px 48px;
+                }
+
+                @include mobile {
+                    float: left;
+                }
+            }
+
+            .contrate {
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #660099;
+                margin: 0px;
+                margin-top: 18px;
+
+                @include mobile {
+                    float: left;
+                    margin-left: 17px;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}

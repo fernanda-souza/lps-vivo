@@ -1,0 +1,48 @@
+// COLORS
+$body-bg: #fff;
+
+$purple-dk: #461E5F;
+$purple: #609;
+$orange: #FF9901;
+$orange-dark: #F1770B;
+$green: #9ACA41;
+$white: #fff;
+$black: #000;
+$gray-dark: #333;
+$gray-md: #666;
+$gray-light: #999;
+$gray-white: #f1f2f3;
+$gray: #E3E3E3;
+$pink: #EB3C7D;
+$red: #F00;
+$yellow: #FF0;
+$yellow-light: #FADC50;
+
+// FONTS
+// TYPOGRAPHY
+// $font-bold: 'ITCOfficinaSerifBold';
+// $font-regular: 'ITCOfficinaSerifBookRegular';
+$trebuchet: 'Trebuchet MS';
+$font-rob-bd: 'Roboto-Bd';
+$font-rob-md: 'Roboto-Md';
+$font-rob-lt: 'Roboto-Lt';
+$font-rob-rg: 'Roboto-Rg';
+$font-base-family: $trebuchet;
+$font-base-size: '10px';
+$line-base-line-height: '1.2em';
+$link-color: #fff;
+$link-hover-color: #00adf3;
+$link-hover-decoration: 'underline';
+// SIZES
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-large-width: 1344px;
+
+$width-full: 100%;
+$width-md: 970px;
+
+// PATHS
+$path-source: '../';
+$path-node-modules: '../../node_modules/';
+$path-img: '#{$path-source}img/';
+$path-font: '#{$path-source}fonts/';
