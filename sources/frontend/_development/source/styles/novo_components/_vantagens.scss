@@ -58,6 +58,11 @@
 
                     p {
                         line-height: 21px;
+
+                        a {
+                            color: #888888;
+                            text-decoration: underline;
+                        }
                     }
 
                     @include mobile {

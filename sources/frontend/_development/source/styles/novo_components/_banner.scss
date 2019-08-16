@@ -492,24 +492,26 @@
                             transform: translate(12px, -9px);
                             margin-bottom: -10px;
                         }
-                        h2 {
+                        .franquia {
                             margin: 0;
                             margin-right: 10px;
                             font-family: "ITCOfficinaSerifBold";
                             font-size: 55px;
                             letter-spacing: -1px;
+                            color: #fff;
                             @include desktop {
                                 margin: 0;
                                 font-size: 110px;
                                 letter-spacing: -7px;
                             }
                         }
-                        h3 {
+                        .franquia-texto {
                             font-size: 41px;
                             font-family: "ITCOfficinaSerifBold";
                             margin: 0;
                             line-height: 44px;
                             margin: 21px 0 0 18px;
+                            color: #fff;
                             @include mobile {
                                 font-size: 24px;
                                 margin: 0;
