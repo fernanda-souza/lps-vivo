@@ -718,7 +718,11 @@ class Regionalization {
                         </div>
                         <div class="info-plan">
                             <p><strong>Apps ilimitados</strong><br/>
-                                <img class="apps-ilimitados" src="img/icon/icon-${plano.appsimg}.png" />
+                                <picture>
+                                    <source type="image/webp" srcset="img/webp/icon/icon-${plano.appsimg}.webp">
+                                    <source type="image/png" srcset="img/icon/icon-${plano.appsimg}.png">
+                                    <img class="apps-ilimitados" src="img/icon/icon-${plano.appsimg}.png" />
+                                </picture>
                             </p>
                             <p><strong>Ligações ilimitadas</strong> para qualquer operadora do Brasil</p>
                             ${plano.hideapps ? `` : `<p><strong>Apps inclusos:</strong> ${plano.appsText}</p>`}
@@ -730,9 +734,9 @@ class Regionalization {
                         </div>
                         <p class="disclaimer">Permanência em 12 meses</p>   
                         <div class="assine">
-                            <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
+                            <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja" rel="noopener">Assine já</a>
                         </div>
-                        <a class="informacoes" data-category="anual" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
+                        <a class="informacoes" data-category="anual" target="_blank" rel="noopener" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                     </div>
                 `);
             }
@@ -757,9 +761,9 @@ class Regionalization {
                     </div>
                     <p class="disclaimer"></p>   
                     <div class="assine">
-                        <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja">Assine já</a>
+                        <a href="https://planos.vivo.com.br/vivostorefront/contrate?site=vivocontrolle&plano=${linkPlan}&uf=${userReg}&cidade=${getCidade}&origem=lpcontrolegiga" data-analytics-id="click-cta" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="assine-ja" rel="noopener">Assine já</a>
                     </div>
-                    <a class="informacoes" data-category="mensal" target="_blank" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
+                    <a class="informacoes" data-category="mensal" target="_blank" rel="noopener" data-analytics-id="click-more-information" data-analytics-product-name="${plano.internet}" data-analytics-position="card-ofertas" data-analytics-sku="${plano.SKU[1]}" data-analytics-label="informacoes">+Informações</a>
                 </div>
             `);
             }
