@@ -12,10 +12,13 @@
 
 ### Versão
 
-- **Publicacao_20190809_Controle_Regulamento** - (09/08/2019)
+- **Publicacao_20190821_controle_quebradelaout** - (21/08/2019)
 
 ### Release notes
-- **Publicacao_20190809_Controle_Regulamento**
+- **Publicacao_20190821_controle_quebradelaout**
+  - https://jira.uhub.biz/browse/WUNBRAVIVOM-7127
+
+- Publicacao_20190809_Controle_Regulamento
   - https://jira.uhub.biz/browse/WUNBRAVIVOM-6961
 
 - Publicacao_20190808_Controle_CorreçãoMobile
