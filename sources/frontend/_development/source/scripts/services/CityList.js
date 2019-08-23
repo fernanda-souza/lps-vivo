@@ -11431,11 +11431,11 @@ module.exports = {
 			data: "RS",
 			ddd: 51
 		},
-		{	
-			value: "Encantado - RS",
-			data: "RS",
-			ddd: 51
-		},
+		// {	
+		// 	value: "Encantado - RS",
+		// 	data: "RS",
+		// 	ddd: 51
+		// },
 		{	
 			value: "Lagoa Bonita do Sul - RS",
 			data: "RS",
@@ -11816,11 +11816,11 @@ module.exports = {
 			data: "RS",
 			ddd: 51
 		},
-		{	
-			value: "Doutor Ricardo - RS",
-			data: "RS",
-			ddd: 51
-		},
+		// {	
+		// 	value: "Doutor Ricardo - RS",
+		// 	data: "RS",
+		// 	ddd: 51
+		// },
 		{	
 			value: "Santa Clara do Sul - RS",
 			data: "RS",
@@ -12156,11 +12156,11 @@ module.exports = {
 			data: "RS",
 			ddd: 51
 		},
-		{	
-			value: "Anta Gorda - RS",
-			data: "RS",
-			ddd: 51
-		},
+		// {	
+		// 	value: "Anta Gorda - RS",
+		// 	data: "RS",
+		// 	ddd: 51
+		// },
 		{	
 			value: "Bom Princípio - RS",
 			data: "RS",
@@ -12461,11 +12461,11 @@ module.exports = {
 			data: "RS",
 			ddd: 51
 		},
-		{	
-			value: "Muçum - RS",
-			data: "RS",
-			ddd: 51
-		},
+		// {	
+		// 	value: "Muçum - RS",
+		// 	data: "RS",
+		// 	ddd: 51
+		// },
 		{	
 			value: "Travesseiro - RS",
 			data: "RS",
@@ -12506,11 +12506,11 @@ module.exports = {
 			data: "RS",
 			ddd: 51
 		},
-		{	
-			value: "Relvado - RS",
-			data: "RS",
-			ddd: 51
-		},
+		// {	
+		// 	value: "Relvado - RS",
+		// 	data: "RS",
+		// 	ddd: 51
+		// },
 		{	
 			value: "Caraá - RS",
 			data: "RS",
@@ -12826,11 +12826,11 @@ module.exports = {
 			data: "RS",
 			ddd: 51
 		},
-		{	
-			value: "Roca Sales - RS",
-			data: "RS",
-			ddd: 51
-		},
+		// {	
+		// 	value: "Roca Sales - RS",
+		// 	data: "RS",
+		// 	ddd: 51
+		// },
 		{	
 			value: "Portão - RS",
 			data: "RS",
@@ -13191,11 +13191,11 @@ module.exports = {
 			data: "RS",
 			ddd: 51
 		},
-		{	
-			value: "Vespasiano Correa - RS",
-			data: "RS",
-			ddd: 51
-		},
+		// {	
+		// 	value: "Vespasiano Correa - RS",
+		// 	data: "RS",
+		// 	ddd: 51
+		// },
 		{	
 			value: "Mariana Pimentel - RS",
 			data: "RS",
