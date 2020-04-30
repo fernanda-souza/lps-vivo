@@ -43,7 +43,7 @@
     "bodymovin": "^4.13.0",
     "gsap": "^1.20.4",
     "gulp-nunjucks-render": "^2.2.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "npm": "^5.7.1",
     "scrollmagic": "^2.0.6",
     "slick-carousel": "^1.8.1",
