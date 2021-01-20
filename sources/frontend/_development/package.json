@@ -41,7 +41,7 @@
     "@types/gsap": "^1.19.2",
     "awesomplete": "^1.1.2",
     "bodymovin": "^4.13.0",
-    "gsap": "^1.20.4",
+    "gsap": "^3.6.0",
     "gulp-nunjucks-render": "^2.2.2",
     "jquery": "^3.3.1",
     "npm": "^5.7.1",
