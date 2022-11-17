@@ -35,7 +35,7 @@
     "underscore": "^1.8.3",
     "vinyl-named": "^1.1.0",
     "webpack": "^3.0.0",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "@types/gsap": "^1.19.2",
